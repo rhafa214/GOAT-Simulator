@@ -1,0 +1,520 @@
+[
+  {
+    "external_id": "of_br_corinthianssp",
+    "name": "Corinthians SP",
+    "short_name": "Corinthians SP",
+    "city": "São Paulo",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_sãopaulofc",
+    "name": "São Paulo FC",
+    "short_name": "São Paulo FC",
+    "city": "São Paulo",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_palmeirassp",
+    "name": "Palmeiras SP",
+    "short_name": "Palmeiras SP",
+    "city": "São Paulo",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_santossp",
+    "name": "Santos SP",
+    "short_name": "Santos SP",
+    "city": "Santos",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_pontepreta",
+    "name": "Ponte Preta",
+    "short_name": "Ponte Preta",
+    "city": "Campinas",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_cabragantino(1928-2019)",
+    "name": "CA Bragantino (1928-2019)",
+    "short_name": "CA Bragantino (1928-2019)",
+    "city": "Bragança Paulista",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_rbbragantino",
+    "name": "RB Bragantino",
+    "short_name": "RB Bragantino",
+    "city": "2019",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_rbbrasil",
+    "name": "RB Brasil",
+    "short_name": "RB Brasil",
+    "city": "2007",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_oestesp",
+    "name": "Oeste SP",
+    "short_name": "Oeste SP",
+    "city": "Itápolis",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_portuguesa",
+    "name": "Portuguesa",
+    "short_name": "Portuguesa",
+    "city": "São Paulo",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_botafogosp",
+    "name": "Botafogo SP",
+    "short_name": "Botafogo SP",
+    "city": "Ribeirão Preto",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_guaranifc",
+    "name": "Guarani FC",
+    "short_name": "Guarani FC",
+    "city": "1911",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_sãobento",
+    "name": "São Bento",
+    "short_name": "São Bento",
+    "city": "Sorocaba",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_adsãocaetano",
+    "name": "AD São Caetano",
+    "short_name": "AD São Caetano",
+    "city": "1989",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_uniãosãojoão",
+    "name": "União São João",
+    "short_name": "União São João",
+    "city": "1981",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_grêmiobarueri",
+    "name": "Grêmio Barueri",
+    "short_name": "Grêmio Barueri",
+    "city": "1989",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_santoandré",
+    "name": "Santo André",
+    "short_name": "Santo André",
+    "city": "1967",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_sãojosé",
+    "name": "São José",
+    "short_name": "São José",
+    "city": "1933",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_grêmionovorizontino",
+    "name": "Grêmio Novorizontino",
+    "short_name": "Grêmio Novorizontino",
+    "city": "2010",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_mirassolfcsp",
+    "name": "Mirassol FC SP",
+    "short_name": "Mirassol FC SP",
+    "city": "1925",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_ituanofcsp",
+    "name": "Ituano FC SP",
+    "short_name": "Ituano FC SP",
+    "city": "1947",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_botafogorj",
+    "name": "Botafogo RJ",
+    "short_name": "Botafogo RJ",
+    "city": "Rio de Janeiro",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_flamengorj",
+    "name": "Flamengo RJ",
+    "short_name": "Flamengo RJ",
+    "city": "Rio de Janeiro",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_fluminenserj",
+    "name": "Fluminense RJ",
+    "short_name": "Fluminense RJ",
+    "city": "Rio de Janeiro",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_crvascodagama",
+    "name": "CR Vasco da Gama",
+    "short_name": "CR Vasco da Gama",
+    "city": "Rio de Janeiro",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_americarj",
+    "name": "America RJ",
+    "short_name": "America RJ",
+    "city": "1904",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_atléticomg",
+    "name": "Atlético MG",
+    "short_name": "Atlético MG",
+    "city": "Belo Horizonte",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_cruzeiromg",
+    "name": "Cruzeiro MG",
+    "short_name": "Cruzeiro MG",
+    "city": "Belo Horizonte",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_américamg",
+    "name": "América MG",
+    "short_name": "América MG",
+    "city": "Belo Horizonte",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_tupimg",
+    "name": "Tupi MG",
+    "short_name": "Tupi MG",
+    "city": "Juiz de Fora",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_ipatingafutebolclube",
+    "name": "Ipatinga Futebol Clube",
+    "short_name": "Ipatinga Futebol Clube",
+    "city": "1998",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_betimfc",
+    "name": "Betim FC",
+    "short_name": "Betim FC",
+    "city": "2006",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_tombensefc",
+    "name": "Tombense FC",
+    "short_name": "Tombense FC",
+    "city": "Tombos",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_grêmiors",
+    "name": "Grêmio RS",
+    "short_name": "Grêmio RS",
+    "city": "Porto Alegre",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_internacionalportoalegre",
+    "name": "Internacional Porto Alegre",
+    "short_name": "Internacional Porto Alegre",
+    "city": "Porto Alegre",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_brasilrs",
+    "name": "Brasil RS",
+    "short_name": "Brasil RS",
+    "city": "Pelotas",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_esporteclubejuventude",
+    "name": "Esporte Clube Juventude",
+    "short_name": "Esporte Clube Juventude",
+    "city": "1913",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_ypirangafc",
+    "name": "Ypiranga FC",
+    "short_name": "Ypiranga FC",
+    "city": "Erechim",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_américadenatal",
+    "name": "América de Natal",
+    "short_name": "América de Natal",
+    "city": "1915",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_abcfcrn",
+    "name": "ABC FC RN",
+    "short_name": "ABC FC RN",
+    "city": "Natal",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_sousaec",
+    "name": "Sousa EC",
+    "short_name": "Sousa EC",
+    "city": "Sousa",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_atléticopr",
+    "name": "Atlético PR",
+    "short_name": "Atlético PR",
+    "city": "Curitiba",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_coritibapr",
+    "name": "Coritiba PR",
+    "short_name": "Coritiba PR",
+    "city": "Curitiba",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_londrinaec",
+    "name": "Londrina EC",
+    "short_name": "Londrina EC",
+    "city": "Londrina",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_paranáclube",
+    "name": "Paraná Clube",
+    "short_name": "Paraná Clube",
+    "city": "Curitiba",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_operárioferroviário",
+    "name": "Operário Ferroviário",
+    "short_name": "Operário Ferroviário",
+    "city": "Ponta Grossa",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_figueirense",
+    "name": "Figueirense",
+    "short_name": "Figueirense",
+    "city": "Florianópolis",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_chapecoense",
+    "name": "Chapecoense",
+    "short_name": "Chapecoense",
+    "city": "Chapecó",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_criciúmaec",
+    "name": "Criciúma EC",
+    "short_name": "Criciúma EC",
+    "city": "Criciúma",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_avaífc",
+    "name": "Avaí FC",
+    "short_name": "Avaí FC",
+    "city": "Florianópolis",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_joinvilleec",
+    "name": "Joinville EC",
+    "short_name": "Joinville EC",
+    "city": "Joinville",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_brusquefc",
+    "name": "Brusque FC",
+    "short_name": "Brusque FC",
+    "city": "Brusque",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_sportrecife",
+    "name": "Sport Recife",
+    "short_name": "Sport Recife",
+    "city": "Recife",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_santacruz",
+    "name": "Santa Cruz",
+    "short_name": "Santa Cruz",
+    "city": "Recife",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_náuticope",
+    "name": "Náutico PE",
+    "short_name": "Náutico PE",
+    "city": "Recife",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_ecvitória",
+    "name": "EC Vitória",
+    "short_name": "EC Vitória",
+    "city": "Salvador",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_ecbahia",
+    "name": "EC Bahia",
+    "short_name": "EC Bahia",
+    "city": "Salvador",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_goiásec",
+    "name": "Goiás EC",
+    "short_name": "Goiás EC",
+    "city": "Goiânia",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_atléticogo",
+    "name": "Atlético GO",
+    "short_name": "Atlético GO",
+    "city": "Goiânia",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_vilanovago",
+    "name": "Vila Nova GO",
+    "short_name": "Vila Nova GO",
+    "city": "Goiânia",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_ceárasc",
+    "name": "Ceára SC",
+    "short_name": "Ceára SC",
+    "city": "Fortaleza",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_fortalezaec",
+    "name": "Fortaleza EC",
+    "short_name": "Fortaleza EC",
+    "city": "Fortaleza",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_paysandusc",
+    "name": "Paysandu SC",
+    "short_name": "Paysandu SC",
+    "city": "Belém",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_clubedoremo",
+    "name": "Clube do Remo",
+    "short_name": "Clube do Remo",
+    "city": "1905",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_crbal",
+    "name": "CRB AL",
+    "short_name": "CRB AL",
+    "city": "Maceió",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_csalagoano",
+    "name": "CS Alagoano",
+    "short_name": "CS Alagoano",
+    "city": "1913",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_luverdenseec",
+    "name": "Luverdense EC",
+    "short_name": "Luverdense EC",
+    "city": "Lucas do Rio Verde",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_cuiabá",
+    "name": "Cuiabá",
+    "short_name": "Cuiabá",
+    "city": "Cuiabá",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_sampaiocorrêafc",
+    "name": "Sampaio Corrêa FC",
+    "short_name": "Sampaio Corrêa FC",
+    "city": "São Luís › Maranhão",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_desportivaferroviária",
+    "name": "Desportiva Ferroviária",
+    "short_name": "Desportiva Ferroviária",
+    "city": "1963",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_sociedadeesportivadogama",
+    "name": "Sociedade Esportiva do Gama",
+    "short_name": "Sociedade Esportiva do Gama",
+    "city": "1975",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_brasiliensefc",
+    "name": "Brasiliense FC",
+    "short_name": "Brasiliense FC",
+    "city": "2000",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_brasíliafc",
+    "name": "Brasília FC",
+    "short_name": "Brasília FC",
+    "city": "1975",
+    "country": "Brasil"
+  },
+  {
+    "external_id": "of_br_amazonasfc",
+    "name": "Amazonas FC",
+    "short_name": "Amazonas FC",
+    "city": "Manaus",
+    "country": "Brasil"
+  }
+]

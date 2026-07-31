@@ -1,0 +1,54 @@
+[
+  {
+    "id": "club_flamengo",
+    "name": "Clube de Regatas do Flamengo",
+    "short_name": "Flamengo",
+    "nation_id": "nation_brazil",
+    "city_id": "city_rio_de_janeiro",
+    "stadium_id": "stad_maracana",
+    "reputation": 8200,
+    "balance": 150000000,
+    "transfer_budget": 30000000,
+    "colors_primary": "#C8102E",
+    "colors_secondary": "#000000"
+  },
+  {
+    "id": "club_palmeiras",
+    "name": "Sociedade Esportiva Palmeiras",
+    "short_name": "Palmeiras",
+    "nation_id": "nation_brazil",
+    "city_id": "city_sao_paulo",
+    "stadium_id": "stad_allianz_parque",
+    "reputation": 8100,
+    "balance": 120000000,
+    "transfer_budget": 25000000,
+    "colors_primary": "#006437",
+    "colors_secondary": "#FFFFFF"
+  },
+  {
+    "id": "club_sao_paulo",
+    "name": "São Paulo Futebol Clube",
+    "short_name": "São Paulo",
+    "nation_id": "nation_brazil",
+    "city_id": "city_sao_paulo",
+    "stadium_id": "stad_morumbi",
+    "reputation": 7900,
+    "balance": 80000000,
+    "transfer_budget": 15000000,
+    "colors_primary": "#FF0000",
+    "colors_secondary": "#FFFFFF"
+  },
+  {
+    "id": "club_atletico_mineiro",
+    "name": "Clube Atlético Mineiro",
+    "short_name": "Atlético Mineiro",
+    "nation_id": "nation_brazil",
+    "city_id": "city_belo_horizonte",
+    "stadium_id": "stad_mineirao",
+    "reputation": 7800,
+    "balance": 90000000,
+    "transfer_budget": 18000000,
+    "colors_primary": "#000000",
+    "colors_secondary": "#FFFFFF"
+  }
+]

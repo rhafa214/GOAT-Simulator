@@ -1,0 +1,22 @@
+[
+  {
+    "id": "city_rio_de_janeiro",
+    "name": "Rio de Janeiro",
+    "nation_id": "nation_brazil"
+  },
+  {
+    "id": "city_sao_paulo",
+    "name": "São Paulo",
+    "nation_id": "nation_brazil"
+  },
+  {
+    "id": "city_belo_horizonte",
+    "name": "Belo Horizonte",
+    "nation_id": "nation_brazil"
+  },
+  {
+    "id": "city_porto_alegre",
+    "name": "Porto Alegre",
+    "nation_id": "nation_brazil"
+  }
+]

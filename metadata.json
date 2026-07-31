@@ -1,0 +1,6 @@
+{
+  "name": "O Fenômeno",
+  "description": "GOAT Simulator: O simulador de carreira de futebol definitivo com elementos de RPG, gerenciamento, narrativa dinâmica e IA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

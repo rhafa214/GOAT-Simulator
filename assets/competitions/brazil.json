@@ -1,0 +1,26 @@
+[
+  {
+    "id": "comp_bra_serie_a",
+    "name": "Campeonato Brasileiro Série A",
+    "nation_id": "nation_brazil",
+    "type": "LEAGUE",
+    "tier": 1,
+    "reputation": 7500
+  },
+  {
+    "id": "comp_bra_serie_b",
+    "name": "Campeonato Brasileiro Série B",
+    "nation_id": "nation_brazil",
+    "type": "LEAGUE",
+    "tier": 2,
+    "reputation": 5000
+  },
+  {
+    "id": "comp_bra_copa_do_brasil",
+    "name": "Copa do Brasil",
+    "nation_id": "nation_brazil",
+    "type": "CUP",
+    "tier": 1,
+    "reputation": 7000
+  }
+]

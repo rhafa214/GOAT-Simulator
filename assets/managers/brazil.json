@@ -1,0 +1,32 @@
+[
+  {
+    "id": "man_tite",
+    "first_name": "Adenor",
+    "last_name": "Bachi",
+    "nickname": "Tite",
+    "nation_id": "nation_brazil",
+    "club_id": "club_flamengo",
+    "tactical_knowledge": 85,
+    "style": "Possession"
+  },
+  {
+    "id": "man_abel_ferreira",
+    "first_name": "Abel",
+    "last_name": "Ferreira",
+    "nickname": "Abel",
+    "nation_id": "nation_portugal",
+    "club_id": "club_palmeiras",
+    "tactical_knowledge": 88,
+    "style": "Gegenpressing"
+  },
+  {
+    "id": "man_dorival_junior",
+    "first_name": "Dorival",
+    "last_name": "Júnior",
+    "nickname": "Dorival Jr",
+    "nation_id": "nation_brazil",
+    "club_id": "club_sao_paulo",
+    "tactical_knowledge": 82,
+    "style": "Attacking"
+  }
+]

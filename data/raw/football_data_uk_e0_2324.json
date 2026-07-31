@@ -1,0 +1,3042 @@
+[
+  {
+    "date": "11/08/2023",
+    "home_team": "Burnley",
+    "away_team": "Man City",
+    "home_goals": 0,
+    "away_goals": 3,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "12/08/2023",
+    "home_team": "Arsenal",
+    "away_team": "Nott'm Forest",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "12/08/2023",
+    "home_team": "Bournemouth",
+    "away_team": "West Ham",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "P Bankes"
+  },
+  {
+    "date": "12/08/2023",
+    "home_team": "Brighton",
+    "away_team": "Luton",
+    "home_goals": 4,
+    "away_goals": 1,
+    "referee": "D Coote"
+  },
+  {
+    "date": "12/08/2023",
+    "home_team": "Everton",
+    "away_team": "Fulham",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "12/08/2023",
+    "home_team": "Sheffield United",
+    "away_team": "Crystal Palace",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "12/08/2023",
+    "home_team": "Newcastle",
+    "away_team": "Aston Villa",
+    "home_goals": 5,
+    "away_goals": 1,
+    "referee": "A Madley"
+  },
+  {
+    "date": "13/08/2023",
+    "home_team": "Brentford",
+    "away_team": "Tottenham",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "R Jones"
+  },
+  {
+    "date": "13/08/2023",
+    "home_team": "Chelsea",
+    "away_team": "Liverpool",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "14/08/2023",
+    "home_team": "Man United",
+    "away_team": "Wolves",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "18/08/2023",
+    "home_team": "Nott'm Forest",
+    "away_team": "Sheffield United",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "P Bankes"
+  },
+  {
+    "date": "19/08/2023",
+    "home_team": "Fulham",
+    "away_team": "Brentford",
+    "home_goals": 0,
+    "away_goals": 3,
+    "referee": "D Bond"
+  },
+  {
+    "date": "19/08/2023",
+    "home_team": "Liverpool",
+    "away_team": "Bournemouth",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "T Bramall"
+  },
+  {
+    "date": "19/08/2023",
+    "home_team": "Wolves",
+    "away_team": "Brighton",
+    "home_goals": 1,
+    "away_goals": 4,
+    "referee": "A Madley"
+  },
+  {
+    "date": "19/08/2023",
+    "home_team": "Tottenham",
+    "away_team": "Man United",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "19/08/2023",
+    "home_team": "Man City",
+    "away_team": "Newcastle",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "R Jones"
+  },
+  {
+    "date": "20/08/2023",
+    "home_team": "Aston Villa",
+    "away_team": "Everton",
+    "home_goals": 4,
+    "away_goals": 0,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "20/08/2023",
+    "home_team": "West Ham",
+    "away_team": "Chelsea",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "21/08/2023",
+    "home_team": "Crystal Palace",
+    "away_team": "Arsenal",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "D Coote"
+  },
+  {
+    "date": "25/08/2023",
+    "home_team": "Chelsea",
+    "away_team": "Luton",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "R Jones"
+  },
+  {
+    "date": "26/08/2023",
+    "home_team": "Bournemouth",
+    "away_team": "Tottenham",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "26/08/2023",
+    "home_team": "Arsenal",
+    "away_team": "Fulham",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "26/08/2023",
+    "home_team": "Brentford",
+    "away_team": "Crystal Palace",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "P Bankes"
+  },
+  {
+    "date": "26/08/2023",
+    "home_team": "Everton",
+    "away_team": "Wolves",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "26/08/2023",
+    "home_team": "Man United",
+    "away_team": "Nott'm Forest",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "26/08/2023",
+    "home_team": "Brighton",
+    "away_team": "West Ham",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "27/08/2023",
+    "home_team": "Burnley",
+    "away_team": "Aston Villa",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "27/08/2023",
+    "home_team": "Sheffield United",
+    "away_team": "Man City",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "27/08/2023",
+    "home_team": "Newcastle",
+    "away_team": "Liverpool",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "01/09/2023",
+    "home_team": "Luton",
+    "away_team": "West Ham",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "02/09/2023",
+    "home_team": "Sheffield United",
+    "away_team": "Everton",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "A Madley"
+  },
+  {
+    "date": "02/09/2023",
+    "home_team": "Brentford",
+    "away_team": "Bournemouth",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "R Madley"
+  },
+  {
+    "date": "02/09/2023",
+    "home_team": "Burnley",
+    "away_team": "Tottenham",
+    "home_goals": 2,
+    "away_goals": 5,
+    "referee": "D England"
+  },
+  {
+    "date": "02/09/2023",
+    "home_team": "Chelsea",
+    "away_team": "Nott'm Forest",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "02/09/2023",
+    "home_team": "Man City",
+    "away_team": "Fulham",
+    "home_goals": 5,
+    "away_goals": 1,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "02/09/2023",
+    "home_team": "Brighton",
+    "away_team": "Newcastle",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "03/09/2023",
+    "home_team": "Crystal Palace",
+    "away_team": "Wolves",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "R Jones"
+  },
+  {
+    "date": "03/09/2023",
+    "home_team": "Liverpool",
+    "away_team": "Aston Villa",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "03/09/2023",
+    "home_team": "Arsenal",
+    "away_team": "Man United",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "16/09/2023",
+    "home_team": "Wolves",
+    "away_team": "Liverpool",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "16/09/2023",
+    "home_team": "Aston Villa",
+    "away_team": "Crystal Palace",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "D England"
+  },
+  {
+    "date": "16/09/2023",
+    "home_team": "Fulham",
+    "away_team": "Luton",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "16/09/2023",
+    "home_team": "Man United",
+    "away_team": "Brighton",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "16/09/2023",
+    "home_team": "Tottenham",
+    "away_team": "Sheffield United",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "P Bankes"
+  },
+  {
+    "date": "16/09/2023",
+    "home_team": "West Ham",
+    "away_team": "Man City",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "A Madley"
+  },
+  {
+    "date": "16/09/2023",
+    "home_team": "Newcastle",
+    "away_team": "Brentford",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "17/09/2023",
+    "home_team": "Bournemouth",
+    "away_team": "Chelsea",
+    "home_goals": 0,
+    "away_goals": 0,
+    "referee": "D Coote"
+  },
+  {
+    "date": "17/09/2023",
+    "home_team": "Everton",
+    "away_team": "Arsenal",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "18/09/2023",
+    "home_team": "Nott'm Forest",
+    "away_team": "Burnley",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "R Jones"
+  },
+  {
+    "date": "23/09/2023",
+    "home_team": "Crystal Palace",
+    "away_team": "Fulham",
+    "home_goals": 0,
+    "away_goals": 0,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "23/09/2023",
+    "home_team": "Luton",
+    "away_team": "Wolves",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "J Smith"
+  },
+  {
+    "date": "23/09/2023",
+    "home_team": "Man City",
+    "away_team": "Nott'm Forest",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "23/09/2023",
+    "home_team": "Brentford",
+    "away_team": "Everton",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "23/09/2023",
+    "home_team": "Burnley",
+    "away_team": "Man United",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "T Harrington"
+  },
+  {
+    "date": "24/09/2023",
+    "home_team": "Arsenal",
+    "away_team": "Tottenham",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "R Jones"
+  },
+  {
+    "date": "24/09/2023",
+    "home_team": "Brighton",
+    "away_team": "Bournemouth",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "24/09/2023",
+    "home_team": "Chelsea",
+    "away_team": "Aston Villa",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "24/09/2023",
+    "home_team": "Liverpool",
+    "away_team": "West Ham",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "24/09/2023",
+    "home_team": "Sheffield United",
+    "away_team": "Newcastle",
+    "home_goals": 0,
+    "away_goals": 8,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "30/09/2023",
+    "home_team": "Aston Villa",
+    "away_team": "Brighton",
+    "home_goals": 6,
+    "away_goals": 1,
+    "referee": "A Madley"
+  },
+  {
+    "date": "30/09/2023",
+    "home_team": "Bournemouth",
+    "away_team": "Arsenal",
+    "home_goals": 0,
+    "away_goals": 4,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "30/09/2023",
+    "home_team": "Everton",
+    "away_team": "Luton",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "30/09/2023",
+    "home_team": "Man United",
+    "away_team": "Crystal Palace",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "30/09/2023",
+    "home_team": "Newcastle",
+    "away_team": "Burnley",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "T Bramall"
+  },
+  {
+    "date": "30/09/2023",
+    "home_team": "West Ham",
+    "away_team": "Sheffield United",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "G Scott"
+  },
+  {
+    "date": "30/09/2023",
+    "home_team": "Wolves",
+    "away_team": "Man City",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "30/09/2023",
+    "home_team": "Tottenham",
+    "away_team": "Liverpool",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "01/10/2023",
+    "home_team": "Nott'm Forest",
+    "away_team": "Brentford",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "02/10/2023",
+    "home_team": "Fulham",
+    "away_team": "Chelsea",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "03/10/2023",
+    "home_team": "Luton",
+    "away_team": "Burnley",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "P Bankes"
+  },
+  {
+    "date": "07/10/2023",
+    "home_team": "Luton",
+    "away_team": "Tottenham",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "07/10/2023",
+    "home_team": "Burnley",
+    "away_team": "Chelsea",
+    "home_goals": 1,
+    "away_goals": 4,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "07/10/2023",
+    "home_team": "Everton",
+    "away_team": "Bournemouth",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "D Coote"
+  },
+  {
+    "date": "07/10/2023",
+    "home_team": "Fulham",
+    "away_team": "Sheffield United",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "07/10/2023",
+    "home_team": "Man United",
+    "away_team": "Brentford",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "A Madley"
+  },
+  {
+    "date": "07/10/2023",
+    "home_team": "Crystal Palace",
+    "away_team": "Nott'm Forest",
+    "home_goals": 0,
+    "away_goals": 0,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "08/10/2023",
+    "home_team": "Brighton",
+    "away_team": "Liverpool",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "08/10/2023",
+    "home_team": "West Ham",
+    "away_team": "Newcastle",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "P Bankes"
+  },
+  {
+    "date": "08/10/2023",
+    "home_team": "Wolves",
+    "away_team": "Aston Villa",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "R Jones"
+  },
+  {
+    "date": "08/10/2023",
+    "home_team": "Arsenal",
+    "away_team": "Man City",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "21/10/2023",
+    "home_team": "Liverpool",
+    "away_team": "Everton",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "21/10/2023",
+    "home_team": "Bournemouth",
+    "away_team": "Wolves",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "21/10/2023",
+    "home_team": "Brentford",
+    "away_team": "Burnley",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "J Smith"
+  },
+  {
+    "date": "21/10/2023",
+    "home_team": "Man City",
+    "away_team": "Brighton",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "R Jones"
+  },
+  {
+    "date": "21/10/2023",
+    "home_team": "Newcastle",
+    "away_team": "Crystal Palace",
+    "home_goals": 4,
+    "away_goals": 0,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "21/10/2023",
+    "home_team": "Nott'm Forest",
+    "away_team": "Luton",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "21/10/2023",
+    "home_team": "Chelsea",
+    "away_team": "Arsenal",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "21/10/2023",
+    "home_team": "Sheffield United",
+    "away_team": "Man United",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "22/10/2023",
+    "home_team": "Aston Villa",
+    "away_team": "West Ham",
+    "home_goals": 4,
+    "away_goals": 1,
+    "referee": "D Coote"
+  },
+  {
+    "date": "23/10/2023",
+    "home_team": "Tottenham",
+    "away_team": "Fulham",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "27/10/2023",
+    "home_team": "Crystal Palace",
+    "away_team": "Tottenham",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "A Madley"
+  },
+  {
+    "date": "28/10/2023",
+    "home_team": "Chelsea",
+    "away_team": "Brentford",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "28/10/2023",
+    "home_team": "Arsenal",
+    "away_team": "Sheffield United",
+    "home_goals": 5,
+    "away_goals": 0,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "28/10/2023",
+    "home_team": "Bournemouth",
+    "away_team": "Burnley",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "28/10/2023",
+    "home_team": "Wolves",
+    "away_team": "Newcastle",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "29/10/2023",
+    "home_team": "West Ham",
+    "away_team": "Everton",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "29/10/2023",
+    "home_team": "Aston Villa",
+    "away_team": "Luton",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "29/10/2023",
+    "home_team": "Brighton",
+    "away_team": "Fulham",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "29/10/2023",
+    "home_team": "Liverpool",
+    "away_team": "Nott'm Forest",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "29/10/2023",
+    "home_team": "Man United",
+    "away_team": "Man City",
+    "home_goals": 0,
+    "away_goals": 3,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "04/11/2023",
+    "home_team": "Fulham",
+    "away_team": "Man United",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "04/11/2023",
+    "home_team": "Brentford",
+    "away_team": "West Ham",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "T Bramall"
+  },
+  {
+    "date": "04/11/2023",
+    "home_team": "Burnley",
+    "away_team": "Crystal Palace",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "P Bankes"
+  },
+  {
+    "date": "04/11/2023",
+    "home_team": "Everton",
+    "away_team": "Brighton",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "04/11/2023",
+    "home_team": "Man City",
+    "away_team": "Bournemouth",
+    "home_goals": 6,
+    "away_goals": 1,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "04/11/2023",
+    "home_team": "Sheffield United",
+    "away_team": "Wolves",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "R Jones"
+  },
+  {
+    "date": "04/11/2023",
+    "home_team": "Newcastle",
+    "away_team": "Arsenal",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "05/11/2023",
+    "home_team": "Nott'm Forest",
+    "away_team": "Aston Villa",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "05/11/2023",
+    "home_team": "Luton",
+    "away_team": "Liverpool",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "A Madley"
+  },
+  {
+    "date": "06/11/2023",
+    "home_team": "Tottenham",
+    "away_team": "Chelsea",
+    "home_goals": 1,
+    "away_goals": 4,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "11/11/2023",
+    "home_team": "Wolves",
+    "away_team": "Tottenham",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "11/11/2023",
+    "home_team": "Arsenal",
+    "away_team": "Burnley",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "11/11/2023",
+    "home_team": "Crystal Palace",
+    "away_team": "Everton",
+    "home_goals": 2,
+    "away_goals": 3,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "11/11/2023",
+    "home_team": "Man United",
+    "away_team": "Luton",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "G Scott"
+  },
+  {
+    "date": "11/11/2023",
+    "home_team": "Bournemouth",
+    "away_team": "Newcastle",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "12/11/2023",
+    "home_team": "Aston Villa",
+    "away_team": "Fulham",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "12/11/2023",
+    "home_team": "Brighton",
+    "away_team": "Sheffield United",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "12/11/2023",
+    "home_team": "Liverpool",
+    "away_team": "Brentford",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "12/11/2023",
+    "home_team": "West Ham",
+    "away_team": "Nott'm Forest",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "12/11/2023",
+    "home_team": "Chelsea",
+    "away_team": "Man City",
+    "home_goals": 4,
+    "away_goals": 4,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "25/11/2023",
+    "home_team": "Man City",
+    "away_team": "Liverpool",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "25/11/2023",
+    "home_team": "Burnley",
+    "away_team": "West Ham",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "25/11/2023",
+    "home_team": "Luton",
+    "away_team": "Crystal Palace",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "25/11/2023",
+    "home_team": "Newcastle",
+    "away_team": "Chelsea",
+    "home_goals": 4,
+    "away_goals": 1,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "25/11/2023",
+    "home_team": "Nott'm Forest",
+    "away_team": "Brighton",
+    "home_goals": 2,
+    "away_goals": 3,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "25/11/2023",
+    "home_team": "Sheffield United",
+    "away_team": "Bournemouth",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "A Madley"
+  },
+  {
+    "date": "25/11/2023",
+    "home_team": "Brentford",
+    "away_team": "Arsenal",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "26/11/2023",
+    "home_team": "Tottenham",
+    "away_team": "Aston Villa",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "R Jones"
+  },
+  {
+    "date": "26/11/2023",
+    "home_team": "Everton",
+    "away_team": "Man United",
+    "home_goals": 0,
+    "away_goals": 3,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "27/11/2023",
+    "home_team": "Fulham",
+    "away_team": "Wolves",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "02/12/2023",
+    "home_team": "Arsenal",
+    "away_team": "Wolves",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "P Bankes"
+  },
+  {
+    "date": "02/12/2023",
+    "home_team": "Brentford",
+    "away_team": "Luton",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "02/12/2023",
+    "home_team": "Burnley",
+    "away_team": "Sheffield United",
+    "home_goals": 5,
+    "away_goals": 0,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "02/12/2023",
+    "home_team": "Nott'm Forest",
+    "away_team": "Everton",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "02/12/2023",
+    "home_team": "Newcastle",
+    "away_team": "Man United",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "R Jones"
+  },
+  {
+    "date": "03/12/2023",
+    "home_team": "Bournemouth",
+    "away_team": "Aston Villa",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "T Bramall"
+  },
+  {
+    "date": "03/12/2023",
+    "home_team": "Chelsea",
+    "away_team": "Brighton",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "03/12/2023",
+    "home_team": "Liverpool",
+    "away_team": "Fulham",
+    "home_goals": 4,
+    "away_goals": 3,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "03/12/2023",
+    "home_team": "West Ham",
+    "away_team": "Crystal Palace",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "03/12/2023",
+    "home_team": "Man City",
+    "away_team": "Tottenham",
+    "home_goals": 3,
+    "away_goals": 3,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "05/12/2023",
+    "home_team": "Wolves",
+    "away_team": "Burnley",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "05/12/2023",
+    "home_team": "Luton",
+    "away_team": "Arsenal",
+    "home_goals": 3,
+    "away_goals": 4,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "06/12/2023",
+    "home_team": "Brighton",
+    "away_team": "Brentford",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "P Bankes"
+  },
+  {
+    "date": "06/12/2023",
+    "home_team": "Crystal Palace",
+    "away_team": "Bournemouth",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "06/12/2023",
+    "home_team": "Fulham",
+    "away_team": "Nott'm Forest",
+    "home_goals": 5,
+    "away_goals": 0,
+    "referee": "J Smith"
+  },
+  {
+    "date": "06/12/2023",
+    "home_team": "Sheffield United",
+    "away_team": "Liverpool",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "06/12/2023",
+    "home_team": "Aston Villa",
+    "away_team": "Man City",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "06/12/2023",
+    "home_team": "Man United",
+    "away_team": "Chelsea",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "07/12/2023",
+    "home_team": "Everton",
+    "away_team": "Newcastle",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "07/12/2023",
+    "home_team": "Tottenham",
+    "away_team": "West Ham",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "09/12/2023",
+    "home_team": "Crystal Palace",
+    "away_team": "Liverpool",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "A Madley"
+  },
+  {
+    "date": "09/12/2023",
+    "home_team": "Brighton",
+    "away_team": "Burnley",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "09/12/2023",
+    "home_team": "Man United",
+    "away_team": "Bournemouth",
+    "home_goals": 0,
+    "away_goals": 3,
+    "referee": "P Bankes"
+  },
+  {
+    "date": "09/12/2023",
+    "home_team": "Sheffield United",
+    "away_team": "Brentford",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "09/12/2023",
+    "home_team": "Wolves",
+    "away_team": "Nott'm Forest",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "09/12/2023",
+    "home_team": "Aston Villa",
+    "away_team": "Arsenal",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "10/12/2023",
+    "home_team": "Everton",
+    "away_team": "Chelsea",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "10/12/2023",
+    "home_team": "Fulham",
+    "away_team": "West Ham",
+    "home_goals": 5,
+    "away_goals": 0,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "10/12/2023",
+    "home_team": "Luton",
+    "away_team": "Man City",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "10/12/2023",
+    "home_team": "Tottenham",
+    "away_team": "Newcastle",
+    "home_goals": 4,
+    "away_goals": 1,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "15/12/2023",
+    "home_team": "Nott'm Forest",
+    "away_team": "Tottenham",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "16/12/2023",
+    "home_team": "Chelsea",
+    "away_team": "Sheffield United",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "A Madley"
+  },
+  {
+    "date": "16/12/2023",
+    "home_team": "Man City",
+    "away_team": "Crystal Palace",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "16/12/2023",
+    "home_team": "Newcastle",
+    "away_team": "Fulham",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "16/12/2023",
+    "home_team": "Burnley",
+    "away_team": "Everton",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "17/12/2023",
+    "home_team": "Arsenal",
+    "away_team": "Brighton",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "17/12/2023",
+    "home_team": "Brentford",
+    "away_team": "Aston Villa",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "D Coote"
+  },
+  {
+    "date": "17/12/2023",
+    "home_team": "West Ham",
+    "away_team": "Wolves",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "17/12/2023",
+    "home_team": "Liverpool",
+    "away_team": "Man United",
+    "home_goals": 0,
+    "away_goals": 0,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "21/12/2023",
+    "home_team": "Crystal Palace",
+    "away_team": "Brighton",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "22/12/2023",
+    "home_team": "Aston Villa",
+    "away_team": "Sheffield United",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "23/12/2023",
+    "home_team": "West Ham",
+    "away_team": "Man United",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "23/12/2023",
+    "home_team": "Fulham",
+    "away_team": "Burnley",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "R Welch"
+  },
+  {
+    "date": "23/12/2023",
+    "home_team": "Luton",
+    "away_team": "Newcastle",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "D England"
+  },
+  {
+    "date": "23/12/2023",
+    "home_team": "Nott'm Forest",
+    "away_team": "Bournemouth",
+    "home_goals": 2,
+    "away_goals": 3,
+    "referee": "R Jones"
+  },
+  {
+    "date": "23/12/2023",
+    "home_team": "Tottenham",
+    "away_team": "Everton",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "23/12/2023",
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "24/12/2023",
+    "home_team": "Wolves",
+    "away_team": "Chelsea",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "D Coote"
+  },
+  {
+    "date": "26/12/2023",
+    "home_team": "Newcastle",
+    "away_team": "Nott'm Forest",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "26/12/2023",
+    "home_team": "Bournemouth",
+    "away_team": "Fulham",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "26/12/2023",
+    "home_team": "Sheffield United",
+    "away_team": "Luton",
+    "home_goals": 2,
+    "away_goals": 3,
+    "referee": "S Allison"
+  },
+  {
+    "date": "26/12/2023",
+    "home_team": "Burnley",
+    "away_team": "Liverpool",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "26/12/2023",
+    "home_team": "Man United",
+    "away_team": "Aston Villa",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "27/12/2023",
+    "home_team": "Brentford",
+    "away_team": "Wolves",
+    "home_goals": 1,
+    "away_goals": 4,
+    "referee": "A Madley"
+  },
+  {
+    "date": "27/12/2023",
+    "home_team": "Chelsea",
+    "away_team": "Crystal Palace",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "27/12/2023",
+    "home_team": "Everton",
+    "away_team": "Man City",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "28/12/2023",
+    "home_team": "Brighton",
+    "away_team": "Tottenham",
+    "home_goals": 4,
+    "away_goals": 2,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "28/12/2023",
+    "home_team": "Arsenal",
+    "away_team": "West Ham",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "30/12/2023",
+    "home_team": "Luton",
+    "away_team": "Chelsea",
+    "home_goals": 2,
+    "away_goals": 3,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "30/12/2023",
+    "home_team": "Aston Villa",
+    "away_team": "Burnley",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "30/12/2023",
+    "home_team": "Crystal Palace",
+    "away_team": "Brentford",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "R Jones"
+  },
+  {
+    "date": "30/12/2023",
+    "home_team": "Man City",
+    "away_team": "Sheffield United",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "D Coote"
+  },
+  {
+    "date": "30/12/2023",
+    "home_team": "Wolves",
+    "away_team": "Everton",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "T Bramall"
+  },
+  {
+    "date": "30/12/2023",
+    "home_team": "Nott'm Forest",
+    "away_team": "Man United",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "31/12/2023",
+    "home_team": "Fulham",
+    "away_team": "Arsenal",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "J Smith"
+  },
+  {
+    "date": "31/12/2023",
+    "home_team": "Tottenham",
+    "away_team": "Bournemouth",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "01/01/2024",
+    "home_team": "Liverpool",
+    "away_team": "Newcastle",
+    "home_goals": 4,
+    "away_goals": 2,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "02/01/2024",
+    "home_team": "West Ham",
+    "away_team": "Brighton",
+    "home_goals": 0,
+    "away_goals": 0,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "12/01/2024",
+    "home_team": "Burnley",
+    "away_team": "Luton",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "T Harrington"
+  },
+  {
+    "date": "13/01/2024",
+    "home_team": "Chelsea",
+    "away_team": "Fulham",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "13/01/2024",
+    "home_team": "Newcastle",
+    "away_team": "Man City",
+    "home_goals": 2,
+    "away_goals": 3,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "14/01/2024",
+    "home_team": "Everton",
+    "away_team": "Aston Villa",
+    "home_goals": 0,
+    "away_goals": 0,
+    "referee": "D Coote"
+  },
+  {
+    "date": "14/01/2024",
+    "home_team": "Man United",
+    "away_team": "Tottenham",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "20/01/2024",
+    "home_team": "Arsenal",
+    "away_team": "Crystal Palace",
+    "home_goals": 5,
+    "away_goals": 0,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "20/01/2024",
+    "home_team": "Brentford",
+    "away_team": "Nott'm Forest",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "D England"
+  },
+  {
+    "date": "21/01/2024",
+    "home_team": "Sheffield United",
+    "away_team": "West Ham",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "21/01/2024",
+    "home_team": "Bournemouth",
+    "away_team": "Liverpool",
+    "home_goals": 0,
+    "away_goals": 4,
+    "referee": "A Madley"
+  },
+  {
+    "date": "22/01/2024",
+    "home_team": "Brighton",
+    "away_team": "Wolves",
+    "home_goals": 0,
+    "away_goals": 0,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "30/01/2024",
+    "home_team": "Nott'm Forest",
+    "away_team": "Arsenal",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "30/01/2024",
+    "home_team": "Fulham",
+    "away_team": "Everton",
+    "home_goals": 0,
+    "away_goals": 0,
+    "referee": "T Bramall"
+  },
+  {
+    "date": "30/01/2024",
+    "home_team": "Luton",
+    "away_team": "Brighton",
+    "home_goals": 4,
+    "away_goals": 0,
+    "referee": "R Jones"
+  },
+  {
+    "date": "30/01/2024",
+    "home_team": "Crystal Palace",
+    "away_team": "Sheffield United",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "T Harrington"
+  },
+  {
+    "date": "30/01/2024",
+    "home_team": "Aston Villa",
+    "away_team": "Newcastle",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "31/01/2024",
+    "home_team": "Man City",
+    "away_team": "Burnley",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "31/01/2024",
+    "home_team": "Tottenham",
+    "away_team": "Brentford",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "D Coote"
+  },
+  {
+    "date": "31/01/2024",
+    "home_team": "Liverpool",
+    "away_team": "Chelsea",
+    "home_goals": 4,
+    "away_goals": 1,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "01/02/2024",
+    "home_team": "West Ham",
+    "away_team": "Bournemouth",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "01/02/2024",
+    "home_team": "Wolves",
+    "away_team": "Man United",
+    "home_goals": 3,
+    "away_goals": 4,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "03/02/2024",
+    "home_team": "Everton",
+    "away_team": "Tottenham",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "03/02/2024",
+    "home_team": "Brighton",
+    "away_team": "Crystal Palace",
+    "home_goals": 4,
+    "away_goals": 1,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "03/02/2024",
+    "home_team": "Burnley",
+    "away_team": "Fulham",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "D Bond"
+  },
+  {
+    "date": "03/02/2024",
+    "home_team": "Newcastle",
+    "away_team": "Luton",
+    "home_goals": 4,
+    "away_goals": 4,
+    "referee": "T Bramall"
+  },
+  {
+    "date": "03/02/2024",
+    "home_team": "Sheffield United",
+    "away_team": "Aston Villa",
+    "home_goals": 0,
+    "away_goals": 5,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "04/02/2024",
+    "home_team": "Bournemouth",
+    "away_team": "Nott'm Forest",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "R Welch"
+  },
+  {
+    "date": "04/02/2024",
+    "home_team": "Chelsea",
+    "away_team": "Wolves",
+    "home_goals": 2,
+    "away_goals": 4,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "04/02/2024",
+    "home_team": "Man United",
+    "away_team": "West Ham",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "A Madley"
+  },
+  {
+    "date": "04/02/2024",
+    "home_team": "Arsenal",
+    "away_team": "Liverpool",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "05/02/2024",
+    "home_team": "Brentford",
+    "away_team": "Man City",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "10/02/2024",
+    "home_team": "Man City",
+    "away_team": "Everton",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "10/02/2024",
+    "home_team": "Fulham",
+    "away_team": "Bournemouth",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "D England"
+  },
+  {
+    "date": "10/02/2024",
+    "home_team": "Liverpool",
+    "away_team": "Burnley",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "10/02/2024",
+    "home_team": "Luton",
+    "away_team": "Sheffield United",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "10/02/2024",
+    "home_team": "Tottenham",
+    "away_team": "Brighton",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "10/02/2024",
+    "home_team": "Wolves",
+    "away_team": "Brentford",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "10/02/2024",
+    "home_team": "Nott'm Forest",
+    "away_team": "Newcastle",
+    "home_goals": 2,
+    "away_goals": 3,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "11/02/2024",
+    "home_team": "West Ham",
+    "away_team": "Arsenal",
+    "home_goals": 0,
+    "away_goals": 6,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "11/02/2024",
+    "home_team": "Aston Villa",
+    "away_team": "Man United",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "R Jones"
+  },
+  {
+    "date": "12/02/2024",
+    "home_team": "Crystal Palace",
+    "away_team": "Chelsea",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "17/02/2024",
+    "home_team": "Brentford",
+    "away_team": "Liverpool",
+    "home_goals": 1,
+    "away_goals": 4,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "17/02/2024",
+    "home_team": "Burnley",
+    "away_team": "Arsenal",
+    "home_goals": 0,
+    "away_goals": 5,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "17/02/2024",
+    "home_team": "Fulham",
+    "away_team": "Aston Villa",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "L Smith"
+  },
+  {
+    "date": "17/02/2024",
+    "home_team": "Newcastle",
+    "away_team": "Bournemouth",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "17/02/2024",
+    "home_team": "Nott'm Forest",
+    "away_team": "West Ham",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "T Bramall"
+  },
+  {
+    "date": "17/02/2024",
+    "home_team": "Tottenham",
+    "away_team": "Wolves",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "17/02/2024",
+    "home_team": "Man City",
+    "away_team": "Chelsea",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "A Madley"
+  },
+  {
+    "date": "18/02/2024",
+    "home_team": "Sheffield United",
+    "away_team": "Brighton",
+    "home_goals": 0,
+    "away_goals": 5,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "18/02/2024",
+    "home_team": "Luton",
+    "away_team": "Man United",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "D Coote"
+  },
+  {
+    "date": "19/02/2024",
+    "home_team": "Everton",
+    "away_team": "Crystal Palace",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "20/02/2024",
+    "home_team": "Man City",
+    "away_team": "Brentford",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "D England"
+  },
+  {
+    "date": "21/02/2024",
+    "home_team": "Liverpool",
+    "away_team": "Luton",
+    "home_goals": 4,
+    "away_goals": 1,
+    "referee": "A Madley"
+  },
+  {
+    "date": "24/02/2024",
+    "home_team": "Aston Villa",
+    "away_team": "Nott'm Forest",
+    "home_goals": 4,
+    "away_goals": 2,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "24/02/2024",
+    "home_team": "Brighton",
+    "away_team": "Everton",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "T Harrington"
+  },
+  {
+    "date": "24/02/2024",
+    "home_team": "Crystal Palace",
+    "away_team": "Burnley",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "L Smith"
+  },
+  {
+    "date": "24/02/2024",
+    "home_team": "Man United",
+    "away_team": "Fulham",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "24/02/2024",
+    "home_team": "Bournemouth",
+    "away_team": "Man City",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "24/02/2024",
+    "home_team": "Arsenal",
+    "away_team": "Newcastle",
+    "home_goals": 4,
+    "away_goals": 1,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "25/02/2024",
+    "home_team": "Wolves",
+    "away_team": "Sheffield United",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "D Bond"
+  },
+  {
+    "date": "26/02/2024",
+    "home_team": "West Ham",
+    "away_team": "Brentford",
+    "home_goals": 4,
+    "away_goals": 2,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "02/03/2024",
+    "home_team": "Brentford",
+    "away_team": "Chelsea",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "02/03/2024",
+    "home_team": "Everton",
+    "away_team": "West Ham",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "02/03/2024",
+    "home_team": "Fulham",
+    "away_team": "Brighton",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "02/03/2024",
+    "home_team": "Newcastle",
+    "away_team": "Wolves",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "02/03/2024",
+    "home_team": "Nott'm Forest",
+    "away_team": "Liverpool",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "02/03/2024",
+    "home_team": "Tottenham",
+    "away_team": "Crystal Palace",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "02/03/2024",
+    "home_team": "Luton",
+    "away_team": "Aston Villa",
+    "home_goals": 2,
+    "away_goals": 3,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "03/03/2024",
+    "home_team": "Burnley",
+    "away_team": "Bournemouth",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "D Coote"
+  },
+  {
+    "date": "03/03/2024",
+    "home_team": "Man City",
+    "away_team": "Man United",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "A Madley"
+  },
+  {
+    "date": "04/03/2024",
+    "home_team": "Sheffield United",
+    "away_team": "Arsenal",
+    "home_goals": 0,
+    "away_goals": 6,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "09/03/2024",
+    "home_team": "Man United",
+    "away_team": "Everton",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "09/03/2024",
+    "home_team": "Bournemouth",
+    "away_team": "Sheffield United",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "09/03/2024",
+    "home_team": "Crystal Palace",
+    "away_team": "Luton",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "S Singh"
+  },
+  {
+    "date": "09/03/2024",
+    "home_team": "Wolves",
+    "away_team": "Fulham",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "T Harrington"
+  },
+  {
+    "date": "09/03/2024",
+    "home_team": "Arsenal",
+    "away_team": "Brentford",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "R Jones"
+  },
+  {
+    "date": "10/03/2024",
+    "home_team": "Aston Villa",
+    "away_team": "Tottenham",
+    "home_goals": 0,
+    "away_goals": 4,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "10/03/2024",
+    "home_team": "Brighton",
+    "away_team": "Nott'm Forest",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "10/03/2024",
+    "home_team": "West Ham",
+    "away_team": "Burnley",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "D England"
+  },
+  {
+    "date": "10/03/2024",
+    "home_team": "Liverpool",
+    "away_team": "Man City",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "11/03/2024",
+    "home_team": "Chelsea",
+    "away_team": "Newcastle",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "13/03/2024",
+    "home_team": "Bournemouth",
+    "away_team": "Luton",
+    "home_goals": 4,
+    "away_goals": 3,
+    "referee": "S Allison"
+  },
+  {
+    "date": "16/03/2024",
+    "home_team": "Burnley",
+    "away_team": "Brentford",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "D Bond"
+  },
+  {
+    "date": "16/03/2024",
+    "home_team": "Luton",
+    "away_team": "Nott'm Forest",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "D England"
+  },
+  {
+    "date": "16/03/2024",
+    "home_team": "Fulham",
+    "away_team": "Tottenham",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "R Jones"
+  },
+  {
+    "date": "17/03/2024",
+    "home_team": "West Ham",
+    "away_team": "Aston Villa",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "30/03/2024",
+    "home_team": "Newcastle",
+    "away_team": "West Ham",
+    "home_goals": 4,
+    "away_goals": 3,
+    "referee": "R Jones"
+  },
+  {
+    "date": "30/03/2024",
+    "home_team": "Bournemouth",
+    "away_team": "Everton",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "30/03/2024",
+    "home_team": "Chelsea",
+    "away_team": "Burnley",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "D England"
+  },
+  {
+    "date": "30/03/2024",
+    "home_team": "Nott'm Forest",
+    "away_team": "Crystal Palace",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "30/03/2024",
+    "home_team": "Sheffield United",
+    "away_team": "Fulham",
+    "home_goals": 3,
+    "away_goals": 3,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "30/03/2024",
+    "home_team": "Tottenham",
+    "away_team": "Luton",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "30/03/2024",
+    "home_team": "Aston Villa",
+    "away_team": "Wolves",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "30/03/2024",
+    "home_team": "Brentford",
+    "away_team": "Man United",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "31/03/2024",
+    "home_team": "Liverpool",
+    "away_team": "Brighton",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "D Coote"
+  },
+  {
+    "date": "31/03/2024",
+    "home_team": "Man City",
+    "away_team": "Arsenal",
+    "home_goals": 0,
+    "away_goals": 0,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "02/04/2024",
+    "home_team": "Newcastle",
+    "away_team": "Everton",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "T Harrington"
+  },
+  {
+    "date": "02/04/2024",
+    "home_team": "Nott'm Forest",
+    "away_team": "Fulham",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "02/04/2024",
+    "home_team": "Bournemouth",
+    "away_team": "Crystal Palace",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "G Scott"
+  },
+  {
+    "date": "02/04/2024",
+    "home_team": "Burnley",
+    "away_team": "Wolves",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "T Bramall"
+  },
+  {
+    "date": "02/04/2024",
+    "home_team": "West Ham",
+    "away_team": "Tottenham",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "03/04/2024",
+    "home_team": "Arsenal",
+    "away_team": "Luton",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "03/04/2024",
+    "home_team": "Brentford",
+    "away_team": "Brighton",
+    "home_goals": 0,
+    "away_goals": 0,
+    "referee": "A Madley"
+  },
+  {
+    "date": "03/04/2024",
+    "home_team": "Man City",
+    "away_team": "Aston Villa",
+    "home_goals": 4,
+    "away_goals": 1,
+    "referee": "D England"
+  },
+  {
+    "date": "04/04/2024",
+    "home_team": "Liverpool",
+    "away_team": "Sheffield United",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "04/04/2024",
+    "home_team": "Chelsea",
+    "away_team": "Man United",
+    "home_goals": 4,
+    "away_goals": 3,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "06/04/2024",
+    "home_team": "Crystal Palace",
+    "away_team": "Man City",
+    "home_goals": 2,
+    "away_goals": 4,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "06/04/2024",
+    "home_team": "Aston Villa",
+    "away_team": "Brentford",
+    "home_goals": 3,
+    "away_goals": 3,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "06/04/2024",
+    "home_team": "Everton",
+    "away_team": "Burnley",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "06/04/2024",
+    "home_team": "Fulham",
+    "away_team": "Newcastle",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "S Allison"
+  },
+  {
+    "date": "06/04/2024",
+    "home_team": "Luton",
+    "away_team": "Bournemouth",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "A Madley"
+  },
+  {
+    "date": "06/04/2024",
+    "home_team": "Wolves",
+    "away_team": "West Ham",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "T Harrington"
+  },
+  {
+    "date": "06/04/2024",
+    "home_team": "Brighton",
+    "away_team": "Arsenal",
+    "home_goals": 0,
+    "away_goals": 3,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "07/04/2024",
+    "home_team": "Man United",
+    "away_team": "Liverpool",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "07/04/2024",
+    "home_team": "Sheffield United",
+    "away_team": "Chelsea",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "R Jones"
+  },
+  {
+    "date": "07/04/2024",
+    "home_team": "Tottenham",
+    "away_team": "Nott'm Forest",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "13/04/2024",
+    "home_team": "Newcastle",
+    "away_team": "Tottenham",
+    "home_goals": 4,
+    "away_goals": 0,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "13/04/2024",
+    "home_team": "Brentford",
+    "away_team": "Sheffield United",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "S Barrott"
+  },
+  {
+    "date": "13/04/2024",
+    "home_team": "Burnley",
+    "away_team": "Brighton",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "13/04/2024",
+    "home_team": "Man City",
+    "away_team": "Luton",
+    "home_goals": 5,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "13/04/2024",
+    "home_team": "Nott'm Forest",
+    "away_team": "Wolves",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "13/04/2024",
+    "home_team": "Bournemouth",
+    "away_team": "Man United",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "T Harrington"
+  },
+  {
+    "date": "14/04/2024",
+    "home_team": "Liverpool",
+    "away_team": "Crystal Palace",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "14/04/2024",
+    "home_team": "West Ham",
+    "away_team": "Fulham",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "14/04/2024",
+    "home_team": "Arsenal",
+    "away_team": "Aston Villa",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "D Coote"
+  },
+  {
+    "date": "15/04/2024",
+    "home_team": "Chelsea",
+    "away_team": "Everton",
+    "home_goals": 6,
+    "away_goals": 0,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "20/04/2024",
+    "home_team": "Luton",
+    "away_team": "Brentford",
+    "home_goals": 1,
+    "away_goals": 5,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "20/04/2024",
+    "home_team": "Sheffield United",
+    "away_team": "Burnley",
+    "home_goals": 1,
+    "away_goals": 4,
+    "referee": "A Madley"
+  },
+  {
+    "date": "20/04/2024",
+    "home_team": "Wolves",
+    "away_team": "Arsenal",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "21/04/2024",
+    "home_team": "Everton",
+    "away_team": "Nott'm Forest",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "21/04/2024",
+    "home_team": "Aston Villa",
+    "away_team": "Bournemouth",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "21/04/2024",
+    "home_team": "Crystal Palace",
+    "away_team": "West Ham",
+    "home_goals": 5,
+    "away_goals": 2,
+    "referee": "G Scott"
+  },
+  {
+    "date": "21/04/2024",
+    "home_team": "Fulham",
+    "away_team": "Liverpool",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "23/04/2024",
+    "home_team": "Arsenal",
+    "away_team": "Chelsea",
+    "home_goals": 5,
+    "away_goals": 0,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "24/04/2024",
+    "home_team": "Wolves",
+    "away_team": "Bournemouth",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "24/04/2024",
+    "home_team": "Crystal Palace",
+    "away_team": "Newcastle",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "T Bramall"
+  },
+  {
+    "date": "24/04/2024",
+    "home_team": "Everton",
+    "away_team": "Liverpool",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "A Madley"
+  },
+  {
+    "date": "24/04/2024",
+    "home_team": "Man United",
+    "away_team": "Sheffield United",
+    "home_goals": 4,
+    "away_goals": 2,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "25/04/2024",
+    "home_team": "Brighton",
+    "away_team": "Man City",
+    "home_goals": 0,
+    "away_goals": 4,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "27/04/2024",
+    "home_team": "West Ham",
+    "away_team": "Liverpool",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "27/04/2024",
+    "home_team": "Fulham",
+    "away_team": "Crystal Palace",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "27/04/2024",
+    "home_team": "Man United",
+    "away_team": "Burnley",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "27/04/2024",
+    "home_team": "Newcastle",
+    "away_team": "Sheffield United",
+    "home_goals": 5,
+    "away_goals": 1,
+    "referee": "T Harrington"
+  },
+  {
+    "date": "27/04/2024",
+    "home_team": "Wolves",
+    "away_team": "Luton",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "D Coote"
+  },
+  {
+    "date": "27/04/2024",
+    "home_team": "Everton",
+    "away_team": "Brentford",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "D England"
+  },
+  {
+    "date": "27/04/2024",
+    "home_team": "Aston Villa",
+    "away_team": "Chelsea",
+    "home_goals": 2,
+    "away_goals": 2,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "28/04/2024",
+    "home_team": "Bournemouth",
+    "away_team": "Brighton",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "28/04/2024",
+    "home_team": "Tottenham",
+    "away_team": "Arsenal",
+    "home_goals": 2,
+    "away_goals": 3,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "28/04/2024",
+    "home_team": "Nott'm Forest",
+    "away_team": "Man City",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "02/05/2024",
+    "home_team": "Chelsea",
+    "away_team": "Tottenham",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "R Jones"
+  },
+  {
+    "date": "03/05/2024",
+    "home_team": "Luton",
+    "away_team": "Everton",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "T Robinson"
+  },
+  {
+    "date": "04/05/2024",
+    "home_team": "Arsenal",
+    "away_team": "Bournemouth",
+    "home_goals": 3,
+    "away_goals": 0,
+    "referee": "D Coote"
+  },
+  {
+    "date": "04/05/2024",
+    "home_team": "Brentford",
+    "away_team": "Fulham",
+    "home_goals": 0,
+    "away_goals": 0,
+    "referee": "G Scott"
+  },
+  {
+    "date": "04/05/2024",
+    "home_team": "Burnley",
+    "away_team": "Newcastle",
+    "home_goals": 1,
+    "away_goals": 4,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "04/05/2024",
+    "home_team": "Sheffield United",
+    "away_team": "Nott'm Forest",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "04/05/2024",
+    "home_team": "Man City",
+    "away_team": "Wolves",
+    "home_goals": 5,
+    "away_goals": 1,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "05/05/2024",
+    "home_team": "Brighton",
+    "away_team": "Aston Villa",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "R Jones"
+  },
+  {
+    "date": "05/05/2024",
+    "home_team": "Chelsea",
+    "away_team": "West Ham",
+    "home_goals": 5,
+    "away_goals": 0,
+    "referee": "A Madley"
+  },
+  {
+    "date": "05/05/2024",
+    "home_team": "Liverpool",
+    "away_team": "Tottenham",
+    "home_goals": 4,
+    "away_goals": 2,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "06/05/2024",
+    "home_team": "Crystal Palace",
+    "away_team": "Man United",
+    "home_goals": 4,
+    "away_goals": 0,
+    "referee": "J Gillett "
+  },
+  {
+    "date": "11/05/2024",
+    "home_team": "Fulham",
+    "away_team": "Man City",
+    "home_goals": 0,
+    "away_goals": 4,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "11/05/2024",
+    "home_team": "Bournemouth",
+    "away_team": "Brentford",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "M Donohue"
+  },
+  {
+    "date": "11/05/2024",
+    "home_team": "Everton",
+    "away_team": "Sheffield United",
+    "home_goals": 1,
+    "away_goals": 0,
+    "referee": "S Attwell"
+  },
+  {
+    "date": "11/05/2024",
+    "home_team": "Newcastle",
+    "away_team": "Brighton",
+    "home_goals": 1,
+    "away_goals": 1,
+    "referee": "D England"
+  },
+  {
+    "date": "11/05/2024",
+    "home_team": "Tottenham",
+    "away_team": "Burnley",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "J Gillett"
+  },
+  {
+    "date": "11/05/2024",
+    "home_team": "West Ham",
+    "away_team": "Luton",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "11/05/2024",
+    "home_team": "Wolves",
+    "away_team": "Crystal Palace",
+    "home_goals": 1,
+    "away_goals": 3,
+    "referee": "T Bramall"
+  },
+  {
+    "date": "11/05/2024",
+    "home_team": "Nott'm Forest",
+    "away_team": "Chelsea",
+    "home_goals": 2,
+    "away_goals": 3,
+    "referee": "T Harrington"
+  },
+  {
+    "date": "12/05/2024",
+    "home_team": "Man United",
+    "away_team": "Arsenal",
+    "home_goals": 0,
+    "away_goals": 1,
+    "referee": "P Tierney"
+  },
+  {
+    "date": "13/05/2024",
+    "home_team": "Aston Villa",
+    "away_team": "Liverpool",
+    "home_goals": 3,
+    "away_goals": 3,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "14/05/2024",
+    "home_team": "Tottenham",
+    "away_team": "Man City",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "15/05/2024",
+    "home_team": "Brighton",
+    "away_team": "Chelsea",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "M Salisbury"
+  },
+  {
+    "date": "15/05/2024",
+    "home_team": "Man United",
+    "away_team": "Newcastle",
+    "home_goals": 3,
+    "away_goals": 2,
+    "referee": "R Jones"
+  },
+  {
+    "date": "19/05/2024",
+    "home_team": "Arsenal",
+    "away_team": "Everton",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "M Oliver"
+  },
+  {
+    "date": "19/05/2024",
+    "home_team": "Brentford",
+    "away_team": "Newcastle",
+    "home_goals": 2,
+    "away_goals": 4,
+    "referee": "S Hooper"
+  },
+  {
+    "date": "19/05/2024",
+    "home_team": "Brighton",
+    "away_team": "Man United",
+    "home_goals": 0,
+    "away_goals": 2,
+    "referee": "C Pawson"
+  },
+  {
+    "date": "19/05/2024",
+    "home_team": "Burnley",
+    "away_team": "Nott'm Forest",
+    "home_goals": 1,
+    "away_goals": 2,
+    "referee": "G Scott"
+  },
+  {
+    "date": "19/05/2024",
+    "home_team": "Chelsea",
+    "away_team": "Bournemouth",
+    "home_goals": 2,
+    "away_goals": 1,
+    "referee": "A Taylor"
+  },
+  {
+    "date": "19/05/2024",
+    "home_team": "Crystal Palace",
+    "away_team": "Aston Villa",
+    "home_goals": 5,
+    "away_goals": 0,
+    "referee": "D Bond"
+  },
+  {
+    "date": "19/05/2024",
+    "home_team": "Liverpool",
+    "away_team": "Wolves",
+    "home_goals": 2,
+    "away_goals": 0,
+    "referee": "C Kavanagh"
+  },
+  {
+    "date": "19/05/2024",
+    "home_team": "Luton",
+    "away_team": "Fulham",
+    "home_goals": 2,
+    "away_goals": 4,
+    "referee": "M Donohue"
+  },
+  {
+    "date": "19/05/2024",
+    "home_team": "Man City",
+    "away_team": "West Ham",
+    "home_goals": 3,
+    "away_goals": 1,
+    "referee": "J Brooks"
+  },
+  {
+    "date": "19/05/2024",
+    "home_team": "Sheffield United",
+    "away_team": "Tottenham",
+    "home_goals": 0,
+    "away_goals": 3,
+    "referee": "A Madley"
+  }
+]

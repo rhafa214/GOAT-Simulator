@@ -1,0 +1,2032 @@
+[
+  {
+    "external_id": "of_eng_arsenalfc",
+    "name": "Arsenal FC",
+    "short_name": "Arsenal FC",
+    "city": "London (Highbury)",
+    "country": "Inglaterra",
+    "founded": 1886,
+    "stadium": "Emirates Stadium",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Arsenal.png"
+  },
+  {
+    "external_id": "of_eng_chelseafc",
+    "name": "Chelsea FC",
+    "short_name": "Chelsea FC",
+    "city": "London (Fulham)",
+    "country": "Inglaterra",
+    "founded": 1905,
+    "stadium": "Stamford Bridge",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Chelsea.png"
+  },
+  {
+    "external_id": "of_eng_tottenhamhotspurfc",
+    "name": "Tottenham Hotspur FC",
+    "short_name": "Tottenham Hotspur FC",
+    "city": "London (Tottenham)",
+    "country": "Inglaterra",
+    "founded": 1882,
+    "stadium": "White Hart Lane",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Tottenham%20Hotspur.png"
+  },
+  {
+    "external_id": "of_eng_westhamunitedfc",
+    "name": "West Ham United FC",
+    "short_name": "West Ham United FC",
+    "city": "London (Upton Park)",
+    "country": "Inglaterra",
+    "founded": 1895,
+    "stadium": "Boleyn Ground",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/West%20Ham.png"
+  },
+  {
+    "external_id": "of_eng_fulhamfc",
+    "name": "Fulham FC",
+    "short_name": "Fulham FC",
+    "city": "London (Fulham)",
+    "country": "Inglaterra",
+    "founded": 1879,
+    "stadium": "Craven Cottage",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Fulham.png"
+  },
+  {
+    "external_id": "of_eng_charltonathleticfc",
+    "name": "Charlton Athletic FC",
+    "short_name": "Charlton Athletic FC",
+    "city": "London (Charlton)",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "The Valley",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_crystalpalacefc",
+    "name": "Crystal Palace FC",
+    "short_name": "Crystal Palace FC",
+    "city": "London (Selhurst)",
+    "country": "Inglaterra",
+    "founded": 1905,
+    "stadium": "Selhurst Park",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Crystal%20Palace.png"
+  },
+  {
+    "external_id": "of_eng_wimbledonfc",
+    "name": "Wimbledon FC",
+    "short_name": "Wimbledon FC",
+    "city": "London (Wimbledon)",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_afcwimbledon",
+    "name": "AFC Wimbledon",
+    "short_name": "AFC Wimbledon",
+    "city": "London",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Kingsmeadow",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_kingstonianfc",
+    "name": "Kingstonian FC",
+    "short_name": "Kingstonian FC",
+    "city": "London (Kingston upon Thames)",
+    "country": "Inglaterra",
+    "founded": 1885,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_queensparkrangersfc",
+    "name": "Queens Park Rangers FC",
+    "short_name": "Queens Park Rangers FC",
+    "city": "London (Shepherd's Bush)",
+    "country": "Inglaterra",
+    "founded": 1882,
+    "stadium": "Loftus Road",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_millwallfc",
+    "name": "Millwall FC",
+    "short_name": "Millwall FC",
+    "city": "London (South Bermondsey)        # London (South Bermondsey) or  London-South Bermondsey",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "The Den",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_brentfordfc",
+    "name": "Brentford FC",
+    "short_name": "Brentford FC",
+    "city": "London (Brentford)        #  London (Brentford)  or London-Brentford",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Griffin Park",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Brentford.png"
+  },
+  {
+    "external_id": "of_eng_leytonorientfc",
+    "name": "Leyton Orient FC",
+    "short_name": "Leyton Orient FC",
+    "city": "London",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Brisbane Road",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_barnetfc",
+    "name": "Barnet FC",
+    "short_name": "Barnet FC",
+    "city": "London",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "The Hive Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_dagenhamredbridgefc",
+    "name": "Dagenham & Redbridge FC",
+    "short_name": "Dagenham & Redbridge FC",
+    "city": "London",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Victoria Road",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_bromleyfc",
+    "name": "Bromley FC",
+    "short_name": "Bromley FC",
+    "city": "London",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_hayesyeadingunitedfc",
+    "name": "Hayes & Yeading United FC",
+    "short_name": "Hayes & Yeading United FC",
+    "city": "London",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_wellingunitedfc",
+    "name": "Welling United FC",
+    "short_name": "Welling United FC",
+    "city": "London",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_suttonunitedfc",
+    "name": "Sutton United FC",
+    "short_name": "Sutton United FC",
+    "city": "London",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_thamesafc19281932",
+    "name": "Thames AFC (1928-1932)",
+    "short_name": "Thames AFC (1928-1932)",
+    "city": "London",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_hamptonrichmondboroughfc",
+    "name": "Hampton & Richmond Borough FC",
+    "short_name": "Hampton & Richmond Borough FC",
+    "city": "London (Hampton)",
+    "country": "Inglaterra",
+    "founded": 1921,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_haringeyboroughfc",
+    "name": "Haringey Borough FC",
+    "short_name": "Haringey Borough FC",
+    "city": "London (Tottenham)",
+    "country": "Inglaterra",
+    "founded": 1973,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_carshaltonathleticfc",
+    "name": "Carshalton Athletic FC",
+    "short_name": "Carshalton Athletic FC",
+    "city": "London (Sutton)",
+    "country": "Inglaterra",
+    "founded": 1905,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_dulwichhamletfc",
+    "name": "Dulwich Hamlet FC",
+    "short_name": "Dulwich Hamlet FC",
+    "city": "London",
+    "country": "Inglaterra",
+    "founded": 1893,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_wealdstonefc",
+    "name": "Wealdstone FC",
+    "short_name": "Wealdstone FC",
+    "city": "London (Ruislip)",
+    "country": "Inglaterra",
+    "founded": 1899,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_evertonfc",
+    "name": "Everton FC",
+    "short_name": "Everton FC",
+    "city": "Liverpool (Walton) › Lancashire",
+    "country": "Inglaterra",
+    "founded": 1878,
+    "stadium": "Goodison Park",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Everton.png"
+  },
+  {
+    "external_id": "of_eng_liverpoolfc",
+    "name": "Liverpool FC",
+    "short_name": "Liverpool FC",
+    "city": "Liverpool (Anfield) › Lancashire",
+    "country": "Inglaterra",
+    "founded": 1892,
+    "stadium": "Anfield",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Liverpool.png"
+  },
+  {
+    "external_id": "of_eng_blackburnroversfc",
+    "name": "Blackburn Rovers FC",
+    "short_name": "Blackburn Rovers FC",
+    "city": "Blackburn › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Ewood Park",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_burnleyfc",
+    "name": "Burnley FC",
+    "short_name": "Burnley FC",
+    "city": "Burnley › Lancashire",
+    "country": "Inglaterra",
+    "founded": 1882,
+    "stadium": "Turf Moor",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Burnley.png"
+  },
+  {
+    "external_id": "of_eng_blackpoolfc",
+    "name": "Blackpool FC",
+    "short_name": "Blackpool FC",
+    "city": "Blackpool › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Bloomfield Road",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_southshorefc",
+    "name": "South Shore FC",
+    "short_name": "South Shore FC",
+    "city": "Blackpool › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_prestonnorthendfc",
+    "name": "Preston North End FC",
+    "short_name": "Preston North End FC",
+    "city": "Preston › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Deepdale",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_afcfylde",
+    "name": "AFC Fylde",
+    "short_name": "AFC Fylde",
+    "city": "Wesham › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_darwenfc18702009",
+    "name": "Darwen FC (1870-2009)",
+    "short_name": "Darwen FC (1870-2009)",
+    "city": "Darwen › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_bootlefc18791893",
+    "name": "Bootle FC (1879-1893)",
+    "short_name": "Bootle FC (1879-1893)",
+    "city": "Bootle › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_nelsonfc",
+    "name": "Nelson FC",
+    "short_name": "Nelson FC",
+    "city": "Nelson",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_manchesterunitedfc",
+    "name": "Manchester United FC",
+    "short_name": "Manchester United FC",
+    "city": "Manchester (Old Trafford)",
+    "country": "Inglaterra",
+    "founded": 1878,
+    "stadium": "Old Trafford",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Manchester%20United.png"
+  },
+  {
+    "external_id": "of_eng_manchestercityfc",
+    "name": "Manchester City FC",
+    "short_name": "Manchester City FC",
+    "city": "Manchester",
+    "country": "Inglaterra",
+    "founded": 1880,
+    "stadium": "Etihad Stadium",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Manchester%20City.png"
+  },
+  {
+    "external_id": "of_eng_oldhamathleticafc",
+    "name": "Oldham Athletic AFC",
+    "short_name": "Oldham Athletic AFC",
+    "city": "Oldham › Greater Manchester",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Boundary Park",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_boltonwanderersfc",
+    "name": "Bolton Wanderers FC",
+    "short_name": "Bolton Wanderers FC",
+    "city": "Bolton › Greater Manchester",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Macron Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_wiganathleticfc",
+    "name": "Wigan Athletic FC",
+    "short_name": "Wigan Athletic FC",
+    "city": "Wigan › Greater Manchester",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "DW Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_wiganboroughfc19201931",
+    "name": "Wigan Borough FC (1920-1931)",
+    "short_name": "Wigan Borough FC (1920-1931)",
+    "city": "Wigan › Greater Manchester    #  Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_athertoncollieries",
+    "name": "Atherton Collieries",
+    "short_name": "Atherton Collieries",
+    "city": "Atherton › Greater Manchester    # in the Metropolitan Borough of Wigan",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_stockportcountyfc",
+    "name": "Stockport County FC",
+    "short_name": "Stockport County FC",
+    "city": "Stockport › Greater Manchester",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_buryfc",
+    "name": "Bury FC",
+    "short_name": "Bury FC",
+    "city": "Bury › Greater Manchester",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Gigg Lane",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_rochdaleafc",
+    "name": "Rochdale AFC",
+    "short_name": "Rochdale AFC",
+    "city": "Rochdale › Greater Manchester",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Spotland Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_altrinchamfc",
+    "name": "Altrincham FC",
+    "short_name": "Altrincham FC",
+    "city": "Altrincham › Greater Manchester",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_droylsdenfc",
+    "name": "Droylsden FC",
+    "short_name": "Droylsden FC",
+    "city": "Droylsden › Greater Manchester",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_hydeunitedfc",
+    "name": "Hyde United FC",
+    "short_name": "Hyde United FC",
+    "city": "Hyde › Greater Manchester",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_stalybridgecelticfc",
+    "name": "Stalybridge Celtic FC",
+    "short_name": "Stalybridge Celtic FC",
+    "city": "Stalybridge › Greater Manchester",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_salfordcityfc",
+    "name": "Salford City FC",
+    "short_name": "Salford City FC",
+    "city": "Salford › Greater Manchester",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_astonvillafc",
+    "name": "Aston Villa FC",
+    "short_name": "Aston Villa FC",
+    "city": "Birmingham › Warwickshire",
+    "country": "Inglaterra",
+    "founded": 1874,
+    "stadium": "Villa Park",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Aston%20Villa.png"
+  },
+  {
+    "external_id": "of_eng_birminghamcityfc",
+    "name": "Birmingham City FC",
+    "short_name": "Birmingham City FC",
+    "city": "Birmingham › Warwickshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "St Andrew's",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_newcastleunitedfc",
+    "name": "Newcastle United FC",
+    "short_name": "Newcastle United FC",
+    "city": "Newcastle upon Tyne › Northumberland",
+    "country": "Inglaterra",
+    "founded": 1892,
+    "stadium": "St James' Park",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Newcastle%20United.png"
+  },
+  {
+    "external_id": "of_eng_newcastlewestendfc",
+    "name": "Newcastle West End FC",
+    "short_name": "Newcastle West End FC",
+    "city": "Newcastle upon Tyne › Northumberland",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_newcastleeastendfc",
+    "name": "Newcastle East End FC",
+    "short_name": "Newcastle East End FC",
+    "city": "Newcastle upon Tyne › Northumberland",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_ashingtonafc",
+    "name": "Ashington AFC",
+    "short_name": "Ashington AFC",
+    "city": "Ashington › Northumberland",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_southshieldsfc",
+    "name": "South Shields FC",
+    "short_name": "South Shields FC",
+    "city": "South Shields › Tyne and Wear",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_gatesheadfc",
+    "name": "Gateshead FC",
+    "short_name": "Gateshead FC",
+    "city": "Gateshead › Tyne and Wear",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_southamptonfc",
+    "name": "Southampton FC",
+    "short_name": "Southampton FC",
+    "city": "Southampton › Hampshire",
+    "country": "Inglaterra",
+    "founded": 1885,
+    "stadium": "St Mary's Stadium",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Southampton.png"
+  },
+  {
+    "external_id": "of_eng_aldershottownfc",
+    "name": "Aldershot Town FC",
+    "short_name": "Aldershot Town FC",
+    "city": "Aldershot › Hampshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_portsmouthfc",
+    "name": "Portsmouth FC",
+    "short_name": "Portsmouth FC",
+    "city": "Portsmouth › Hampshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Fratton Park",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_eastleighfc",
+    "name": "Eastleigh FC",
+    "short_name": "Eastleigh FC",
+    "city": "Eastleigh › Hampshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_havantwaterloovillefc",
+    "name": "Havant & Waterlooville FC",
+    "short_name": "Havant & Waterlooville FC",
+    "city": "Havant › Hampshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_sunderlandafc",
+    "name": "Sunderland AFC",
+    "short_name": "Sunderland AFC",
+    "city": "Sunderland",
+    "country": "Inglaterra",
+    "founded": 1879,
+    "stadium": "Stadium of Light",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_leicestercityfc",
+    "name": "Leicester City FC",
+    "short_name": "Leicester City FC",
+    "city": "Leicester",
+    "country": "Inglaterra",
+    "founded": 1884,
+    "stadium": "King Power Stadium",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Leicester%20City.png"
+  },
+  {
+    "external_id": "of_eng_loughboroughfc18861900",
+    "name": "Loughborough FC (1886-1900)",
+    "short_name": "Loughborough FC (1886-1900)",
+    "city": "Loughborough › Leicestershire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_westbromwichalbionfc",
+    "name": "West Bromwich Albion FC",
+    "short_name": "West Bromwich Albion FC",
+    "city": "West Bromwich › West Midlands",
+    "country": "Inglaterra",
+    "founded": 1878,
+    "stadium": "The Hawthorns",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_coventrycityfc",
+    "name": "Coventry City FC",
+    "short_name": "Coventry City FC",
+    "city": "Coventry › West Midlands",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Ricoh Arena",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_wolverhamptonwanderersfc",
+    "name": "Wolverhampton Wanderers FC",
+    "short_name": "Wolverhampton Wanderers FC",
+    "city": "Wolverhampton › West Midlands",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Molineux",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Wolverhampton%20Wanderers.png"
+  },
+  {
+    "external_id": "of_eng_walsallfc",
+    "name": "Walsall FC",
+    "short_name": "Walsall FC",
+    "city": "Walsall › West Midlands",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Bescot Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_solihullmoorsfc",
+    "name": "Solihull Moors FC",
+    "short_name": "Solihull Moors FC",
+    "city": "Solihull › West Midlands",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_staffordrangersfc",
+    "name": "Stafford Rangers FC",
+    "short_name": "Stafford Rangers FC",
+    "city": "Stafford › West Midlands",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_stourbridgefc",
+    "name": "Stourbridge FC",
+    "short_name": "Stourbridge FC",
+    "city": "Stourbridge › West Midlands",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_yorkcityfc",
+    "name": "York City FC",
+    "short_name": "York City FC",
+    "city": "York › North Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Bootham Crescent",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_middlesbroughfc",
+    "name": "Middlesbrough FC",
+    "short_name": "Middlesbrough FC",
+    "city": "Middlesbrough › North Yorkshire",
+    "country": "Inglaterra",
+    "founded": 1876,
+    "stadium": "Riverside Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_middlesbroughironopolisfc18891894",
+    "name": "Middlesbrough Ironopolis FC (1889-1894)",
+    "short_name": "Middlesbrough Ironopolis FC (1889-1894)",
+    "city": "Middlesbrough › North Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_scarboroughathleticfc",
+    "name": "Scarborough Athletic FC",
+    "short_name": "Scarborough Athletic FC",
+    "city": "Scarborough › North Yorkshire",
+    "country": "Inglaterra",
+    "founded": 2007,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_scarboroughfc18792007",
+    "name": "Scarborough FC (1879-2007)",
+    "short_name": "Scarborough FC (1879-2007)",
+    "city": "Scarborough › North Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_harrogatetownafc",
+    "name": "Harrogate Town AFC",
+    "short_name": "Harrogate Town AFC",
+    "city": "Harrogate › North Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_leedsunitedfc",
+    "name": "Leeds United FC",
+    "short_name": "Leeds United FC",
+    "city": "Leeds › West Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Elland Road",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Leeds%20United.png"
+  },
+  {
+    "external_id": "of_eng_leedscityfc19041919",
+    "name": "Leeds City FC (1904-1919)",
+    "short_name": "Leeds City FC (1904-1919)",
+    "city": "Leeds › West Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_bradfordcityafc",
+    "name": "Bradford City AFC",
+    "short_name": "Bradford City AFC",
+    "city": "Bradford › West Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Valley Parade",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_bradfordparkavenueafc",
+    "name": "Bradford Park Avenue AFC",
+    "short_name": "Bradford Park Avenue AFC",
+    "city": "Bradford › West Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_huddersfieldtownafc",
+    "name": "Huddersfield Town AFC",
+    "short_name": "Huddersfield Town AFC",
+    "city": "Huddersfield › West Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "John Smith's Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_fchalifaxtown",
+    "name": "FC Halifax Town",
+    "short_name": "FC Halifax Town",
+    "city": "Halifax › West Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_farsleycelticfc",
+    "name": "Farsley Celtic FC",
+    "short_name": "Farsley Celtic FC",
+    "city": "Farsley › West Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_guiseleyafc",
+    "name": "Guiseley AFC",
+    "short_name": "Guiseley AFC",
+    "city": "Guiseley › West Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_hullcityafc",
+    "name": "Hull City AFC",
+    "short_name": "Hull City AFC",
+    "city": "Hull › East Yorkshire",
+    "country": "Inglaterra",
+    "founded": 1904,
+    "stadium": "KC Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_northferribyunitedafc",
+    "name": "North Ferriby United AFC",
+    "short_name": "North Ferriby United AFC",
+    "city": "North Ferriby › East Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_sheffieldwednesdayfc",
+    "name": "Sheffield Wednesday FC",
+    "short_name": "Sheffield Wednesday FC",
+    "city": "Sheffield (Owlerton) › South Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Hillsborough",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_sheffieldunitedfc",
+    "name": "Sheffield United FC",
+    "short_name": "Sheffield United FC",
+    "city": "Sheffield (Highfield) › South Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Bramall Lane",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Sheffield%20United.png"
+  },
+  {
+    "external_id": "of_eng_barnsleyfc",
+    "name": "Barnsley FC",
+    "short_name": "Barnsley FC",
+    "city": "Barnsley › South Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Oakwell",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_rotherhamunitedfc",
+    "name": "Rotherham United FC",
+    "short_name": "Rotherham United FC",
+    "city": "Rotherham › South Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "New York Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_rotherhamcountyfc18701925",
+    "name": "Rotherham County FC (1870-1925)",
+    "short_name": "Rotherham County FC (1870-1925)",
+    "city": "Rotherham › South Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_rotherhamtownfc18991925",
+    "name": "Rotherham Town FC (1899-1925)",
+    "short_name": "Rotherham Town FC (1899-1925)",
+    "city": "Rotherham › South Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_doncasterroversfc",
+    "name": "Doncaster Rovers FC",
+    "short_name": "Doncaster Rovers FC",
+    "city": "Doncaster › South Yorkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Keepmoat Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_stokecityfc",
+    "name": "Stoke City FC",
+    "short_name": "Stoke City FC",
+    "city": "Stoke-on-Trent › Staffordshire",
+    "country": "Inglaterra",
+    "founded": 1863,
+    "stadium": "Britannia Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_portvalefc",
+    "name": "Port Vale FC",
+    "short_name": "Port Vale FC",
+    "city": "Stoke-on-Trent › Staffordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Vale Park",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_burtonalbionfc",
+    "name": "Burton Albion FC",
+    "short_name": "Burton Albion FC",
+    "city": "Burton upon Trent › Staffordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Pirelli Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_burtonunitedfc19011910",
+    "name": "Burton United FC (1901-1910)",
+    "short_name": "Burton United FC (1901-1910)",
+    "city": "Burton upon Trent › Staffordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_burtonswiftsfc18711901",
+    "name": "Burton Swifts FC (1871-1901)",
+    "short_name": "Burton Swifts FC (1871-1901)",
+    "city": "Burton upon Trent › Staffordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_burtonwanderersfc18711901",
+    "name": "Burton Wanderers FC (1871-1901)",
+    "short_name": "Burton Wanderers FC (1871-1901)",
+    "city": "Burton upon Trent › Staffordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_tamworthfc",
+    "name": "Tamworth FC",
+    "short_name": "Tamworth FC",
+    "city": "Tamworth › Staffordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_derbycountyfc",
+    "name": "Derby County FC",
+    "short_name": "Derby County FC",
+    "city": "Derby › Derbyshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "iPro Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_norwichcityfc",
+    "name": "Norwich City FC",
+    "short_name": "Norwich City FC",
+    "city": "Norwich › Norfolk",
+    "country": "Inglaterra",
+    "founded": 1890,
+    "stadium": "Carrow Road",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_kingslynnfc",
+    "name": "King's Lynn FC",
+    "short_name": "King's Lynn FC",
+    "city": "King's Lynn › Norfolk",
+    "country": "Inglaterra",
+    "founded": 2010,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_watfordfc",
+    "name": "Watford FC",
+    "short_name": "Watford FC",
+    "city": "Watford › Hertfordshire",
+    "country": "Inglaterra",
+    "founded": 1881,
+    "stadium": "Vicarage Road",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_hitchintownfc",
+    "name": "Hitchin Town FC",
+    "short_name": "Hitchin Town FC",
+    "city": "Hitchin › Hertfordshire",
+    "country": "Inglaterra",
+    "founded": 1928,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_oxfordunitedfc",
+    "name": "Oxford United FC",
+    "short_name": "Oxford United FC",
+    "city": "Oxford › Oxfordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Kassam Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_oxfordcityfc",
+    "name": "Oxford City FC",
+    "short_name": "Oxford City FC",
+    "city": "Oxford (Marston)  › Oxfordshire",
+    "country": "Inglaterra",
+    "founded": 1883,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_peterboroughunitedfc",
+    "name": "Peterborough United FC",
+    "short_name": "Peterborough United FC",
+    "city": "Peterborough › Cambridgeshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Abax Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_cambridgeunitedfc",
+    "name": "Cambridge United FC",
+    "short_name": "Cambridge United FC",
+    "city": "Cambridge › Cambridgeshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Abbey Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_histonfc",
+    "name": "Histon FC",
+    "short_name": "Histon FC",
+    "city": "Histon and Impington › Cambridgeshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_ipswichtownfc",
+    "name": "Ipswich Town FC",
+    "short_name": "Ipswich Town FC",
+    "city": "Ipswich › Suffolk",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Portman Road",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_nottscountyfc",
+    "name": "Notts County FC",
+    "short_name": "Notts County FC",
+    "city": "Nottingham › Nottinghamshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Meadow Lane",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_nottinghamforestfc",
+    "name": "Nottingham Forest FC",
+    "short_name": "Nottingham Forest FC",
+    "city": "West Bridgford › Nottinghamshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "City Ground",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Nottingham%20Forest.png"
+  },
+  {
+    "external_id": "of_eng_mansfieldtownfc",
+    "name": "Mansfield Town FC",
+    "short_name": "Mansfield Town FC",
+    "city": "Mansfield › Nottinghamshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Field Mill",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_afcbournemouth",
+    "name": "AFC Bournemouth",
+    "short_name": "AFC Bournemouth",
+    "city": "Bournemouth › Dorset",
+    "country": "Inglaterra",
+    "founded": 1890,
+    "stadium": "Dean Court",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Bournemouth.png"
+  },
+  {
+    "external_id": "of_eng_weymouthfc",
+    "name": "Weymouth FC",
+    "short_name": "Weymouth FC",
+    "city": "Weymouth › Dorset",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_readingfc",
+    "name": "Reading FC",
+    "short_name": "Reading FC",
+    "city": "Reading › Berkshire",
+    "country": "Inglaterra",
+    "founded": 1871,
+    "stadium": "Madejski Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_maidenheadunitedfc",
+    "name": "Maidenhead United FC",
+    "short_name": "Maidenhead United FC",
+    "city": "Maidenhead › Berkshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_sloughtownfc",
+    "name": "Slough Town FC",
+    "short_name": "Slough Town FC",
+    "city": "Slough › Berkshire",
+    "country": "Inglaterra",
+    "founded": 1893,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_brightonhovealbionfc",
+    "name": "Brighton & Hove Albion FC",
+    "short_name": "Brighton & Hove Albion FC",
+    "city": "Falmer › East Sussex     # Brighton?",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "American Express Stadium",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Brighton%20%26%20Hove%20Albion.png"
+  },
+  {
+    "external_id": "of_eng_eastbourneboroughfc",
+    "name": "Eastbourne Borough FC",
+    "short_name": "Eastbourne Borough FC",
+    "city": "Eastbourne › East Sussex",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_lewesfc",
+    "name": "Lewes FC",
+    "short_name": "Lewes FC",
+    "city": "Lewes › East Sussex",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_crawleytownfc",
+    "name": "Crawley Town FC",
+    "short_name": "Crawley Town FC",
+    "city": "Crawley › West Sussex",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Broadfield Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_chichestercityfc",
+    "name": "Chichester City FC",
+    "short_name": "Chichester City FC",
+    "city": "Chichester › West Sussex",
+    "country": "Inglaterra",
+    "founded": 2000,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_swindontownfc",
+    "name": "Swindon Town FC",
+    "short_name": "Swindon Town FC",
+    "city": "Swindon › Wiltshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "County Ground",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_chippenhamtownfc",
+    "name": "Chippenham Town FC",
+    "short_name": "Chippenham Town FC",
+    "city": "Chippenham › Wiltshire",
+    "country": "Inglaterra",
+    "founded": 1873,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_colchesterunitedfc",
+    "name": "Colchester United FC",
+    "short_name": "Colchester United FC",
+    "city": "Colchester › Essex",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Colchester Community Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_southendunitedfc",
+    "name": "Southend United FC",
+    "short_name": "Southend United FC",
+    "city": "Southend-on-Sea › Essex",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Roots Hall",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_braintreetownfc",
+    "name": "Braintree Town FC",
+    "short_name": "Braintree Town FC",
+    "city": "Braintree › Essex",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_graysathleticfc",
+    "name": "Grays Athletic FC",
+    "short_name": "Grays Athletic FC",
+    "city": "Grays › Essex",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_canveyislandfc",
+    "name": "Canvey Island FC",
+    "short_name": "Canvey Island FC",
+    "city": "Canvey Island › Essex",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_billericaytownfc",
+    "name": "Billericay Town FC",
+    "short_name": "Billericay Town FC",
+    "city": "Billericay › Essex",
+    "country": "Inglaterra",
+    "founded": 1880,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_maldontiptreefc",
+    "name": "Maldon & Tiptree FC",
+    "short_name": "Maldon & Tiptree FC",
+    "city": "Maldon › Essex",
+    "country": "Inglaterra",
+    "founded": 1946,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_lincolncityfc",
+    "name": "Lincoln City FC",
+    "short_name": "Lincoln City FC",
+    "city": "Lincoln › Lincolnshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_scunthorpeunitedfc",
+    "name": "Scunthorpe United FC",
+    "short_name": "Scunthorpe United FC",
+    "city": "Scunthorpe › Lincolnshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Glanford Park",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_bostonunitedfc",
+    "name": "Boston United FC",
+    "short_name": "Boston United FC",
+    "city": "Boston › Lincolnshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_gainsboroughtrinityfc",
+    "name": "Gainsborough Trinity FC",
+    "short_name": "Gainsborough Trinity FC",
+    "city": "Gainsborough › Lincolnshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_grimsbytownfc",
+    "name": "Grimsby Town FC",
+    "short_name": "Grimsby Town FC",
+    "city": "Cleethorpes › North East Lincolnshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_bristolcityfc",
+    "name": "Bristol City FC",
+    "short_name": "Bristol City FC",
+    "city": "Bristol",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Ashton Gate",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_bristolroversfc",
+    "name": "Bristol Rovers FC",
+    "short_name": "Bristol Rovers FC",
+    "city": "Bristol",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Memorial Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_tranmereroversfc",
+    "name": "Tranmere Rovers FC",
+    "short_name": "Tranmere Rovers FC",
+    "city": "Birkenhead › Merseyside",
+    "country": "Inglaterra",
+    "founded": 1884,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_southportfc",
+    "name": "Southport FC",
+    "short_name": "Southport FC",
+    "city": "Southport › Merseyside",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_newbrightontowerfc18981901",
+    "name": "New Brighton Tower FC (1898-1901)",
+    "short_name": "New Brighton Tower FC (1898-1901)",
+    "city": "New Brighton › Merseyside",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_plymouthargylefc",
+    "name": "Plymouth Argyle FC",
+    "short_name": "Plymouth Argyle FC",
+    "city": "Plymouth › Devon",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Home Park",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_exetercityfc",
+    "name": "Exeter City FC",
+    "short_name": "Exeter City FC",
+    "city": "Exeter › Devon",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "St James Park",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_torquayunitedfc",
+    "name": "Torquay United FC",
+    "short_name": "Torquay United FC",
+    "city": "Torquay › Devon",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_gillinghamfc",
+    "name": "Gillingham FC",
+    "short_name": "Gillingham FC",
+    "city": "Gillingham › Kent",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Priestfield Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_maidstoneunitedfc",
+    "name": "Maidstone United FC",
+    "short_name": "Maidstone United FC",
+    "city": "Maidstone › Kent",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_dartfordfc",
+    "name": "Dartford FC",
+    "short_name": "Dartford FC",
+    "city": "Dartford › Kent",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_doverathleticfc",
+    "name": "Dover Athletic FC",
+    "short_name": "Dover Athletic FC",
+    "city": "Dover › Kent",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_ebbsfleetunitedfc",
+    "name": "Ebbsfleet United FC",
+    "short_name": "Ebbsfleet United FC",
+    "city": "Northfleet › Kent",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_lutontownfc",
+    "name": "Luton Town FC",
+    "short_name": "Luton Town FC",
+    "city": "Luton › Bedfordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Kenilworth Road",
+    "logo": "https://raw.githubusercontent.com/qiulot/clublogos/master/Luton%20Town.png"
+  },
+  {
+    "external_id": "of_eng_miltonkeynesdonsfc",
+    "name": "Milton Keynes Dons FC",
+    "short_name": "Milton Keynes Dons FC",
+    "city": "Milton Keynes › Buckinghamshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Stadium:mk",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_wycombewanderersfc",
+    "name": "Wycombe Wanderers FC",
+    "short_name": "Wycombe Wanderers FC",
+    "city": "High Wycombe › Buckinghamshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Adams Park",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_yeoviltownfc",
+    "name": "Yeovil Town FC",
+    "short_name": "Yeovil Town FC",
+    "city": "Yeovil › Somerset",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Huish Park",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_bathcityfc",
+    "name": "Bath City FC",
+    "short_name": "Bath City FC",
+    "city": "Bath › Somerset",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_westonsupermareafc",
+    "name": "Weston-super-Mare AFC",
+    "short_name": "Weston-super-Mare AFC",
+    "city": "Weston-super-Mare › Somerset",
+    "country": "Inglaterra",
+    "founded": 1948,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_forestgreenroversfc",
+    "name": "Forest Green Rovers FC",
+    "short_name": "Forest Green Rovers FC",
+    "city": "Nailsworth › Gloucestershire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_cheltenhamtownfc",
+    "name": "Cheltenham Town FC",
+    "short_name": "Cheltenham Town FC",
+    "city": "Cheltenham › Gloucestershire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_kidderminsterharriersfc",
+    "name": "Kidderminster Harriers FC",
+    "short_name": "Kidderminster Harriers FC",
+    "city": "Kidderminster › Worcestershire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_wokingfc",
+    "name": "Woking FC",
+    "short_name": "Woking FC",
+    "city": "Woking › Surrey",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_metropolitanpolicefc",
+    "name": "Metropolitan Police FC",
+    "short_name": "Metropolitan Police FC",
+    "city": "East Molesey › Surrey",
+    "country": "Inglaterra",
+    "founded": 1919,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_dorkingwanderersfc",
+    "name": "Dorking Wanderers FC",
+    "short_name": "Dorking Wanderers FC",
+    "city": "Dorking › Surrey",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_chesterfieldfc",
+    "name": "Chesterfield FC",
+    "short_name": "Chesterfield FC",
+    "city": "Chesterfield › Derbyshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Proact Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_alfretontownfc",
+    "name": "Alfreton Town FC",
+    "short_name": "Alfreton Town FC",
+    "city": "Alfreton › Derbyshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_glossopnorthendafc",
+    "name": "Glossop North End AFC",
+    "short_name": "Glossop North End AFC",
+    "city": "Glossop › Derbyshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_carlisleunitedfc",
+    "name": "Carlisle United FC",
+    "short_name": "Carlisle United FC",
+    "city": "Carlisle › Cumbria",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Brunton Park",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_barrowafc",
+    "name": "Barrow AFC",
+    "short_name": "Barrow AFC",
+    "city": "Barrow-in-Furness › Cumbria",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_workingtonafc",
+    "name": "Workington AFC",
+    "short_name": "Workington AFC",
+    "city": "Workington › Cumbria",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_northamptontownfc",
+    "name": "Northampton Town FC",
+    "short_name": "Northampton Town FC",
+    "city": "Northampton › Northamptonshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Sixfields Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_rushdendiamonds19922011",
+    "name": "Rushden & Diamonds (1992-2011)",
+    "short_name": "Rushden & Diamonds (1992-2011)",
+    "city": "Rushden › Northamptonshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_afcrushdendiamonds",
+    "name": "AFC Rushden & Diamonds",
+    "short_name": "AFC Rushden & Diamonds",
+    "city": "Rushden › Northamptonshire",
+    "country": "Inglaterra",
+    "founded": 2011,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_ketteringtownfc",
+    "name": "Kettering Town FC",
+    "short_name": "Kettering Town FC",
+    "city": "Kettering › Northamptonshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_shrewsburytownfc",
+    "name": "Shrewsbury Town FC",
+    "short_name": "Shrewsbury Town FC",
+    "city": "Shrewsbury › Shropshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "New Meadow",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_telfordunitedfc18722004",
+    "name": "Telford United FC (1872-2004)",
+    "short_name": "Telford United FC (1872-2004)",
+    "city": "Telford › Shropshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_afctelfordunited",
+    "name": "AFC Telford United",
+    "short_name": "AFC Telford United",
+    "city": "Telford › Shropshire",
+    "country": "Inglaterra",
+    "founded": 2004,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_chesterfc",
+    "name": "Chester FC",
+    "short_name": "Chester FC",
+    "city": "Chester › Cheshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_crewealexandrafc",
+    "name": "Crewe Alexandra FC",
+    "short_name": "Crewe Alexandra FC",
+    "city": "Crewe › Cheshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Gresty Road",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_macclesfieldtownfc",
+    "name": "Macclesfield Town FC",
+    "short_name": "Macclesfield Town FC",
+    "city": "Macclesfield › Cheshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_northwichvictoriafc",
+    "name": "Northwich Victoria FC",
+    "short_name": "Northwich Victoria FC",
+    "city": "Northwich › Cheshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_nantwichtownfc",
+    "name": "Nantwich Town FC",
+    "short_name": "Nantwich Town FC",
+    "city": "Nantwich › Cheshire",
+    "country": "Inglaterra",
+    "founded": 1884,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_fleetwoodtownfc",
+    "name": "Fleetwood Town FC",
+    "short_name": "Fleetwood Town FC",
+    "city": "Fleetwood › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Highbury Stadium",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_accringtonstanleyfc",
+    "name": "Accrington Stanley FC",
+    "short_name": "Accrington Stanley FC",
+    "city": "Accrington › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Crown Ground",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_accringtonfc18781896",
+    "name": "Accrington FC (1878-1896)",
+    "short_name": "Accrington FC (1878-1896)",
+    "city": "Accrington › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_morecambefc",
+    "name": "Morecambe FC",
+    "short_name": "Morecambe FC",
+    "city": "Morecambe › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Globe Arena",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_chorleyfc",
+    "name": "Chorley FC",
+    "short_name": "Chorley FC",
+    "city": "Chorley › Lancashire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_herefordfc2014",
+    "name": "Hereford FC (2014-)",
+    "short_name": "Hereford FC (2014-)",
+    "city": "Hereford › Herefordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_herefordunitedfc19242014",
+    "name": "Hereford United FC (1924-2014)",
+    "short_name": "Hereford United FC (1924-2014)",
+    "city": "Hereford › Herefordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_stalbanscityfc",
+    "name": "St. Albans City FC",
+    "short_name": "St. Albans City FC",
+    "city": "St. Albans  › Hertfordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_borehamwoodfc",
+    "name": "Boreham Wood FC",
+    "short_name": "Boreham Wood FC",
+    "city": "Borehamwood › Hertfordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_stevenagefc",
+    "name": "Stevenage FC",
+    "short_name": "Stevenage FC",
+    "city": "Stevenage   › Hertfordshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Broadhall Way",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_hartlepoolunitedfc",
+    "name": "Hartlepool United FC",
+    "short_name": "Hartlepool United FC",
+    "city": "Hartlepool › Durham",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": "Victoria Park",
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_darlingtonfc",
+    "name": "Darlington FC",
+    "short_name": "Darlington FC",
+    "city": "Darlington › Durham",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_durhamcityafc",
+    "name": "Durham City AFC",
+    "short_name": "Durham City AFC",
+    "city": "Durham › Durham",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_salisburycityfc19472014",
+    "name": "Salisbury City FC (1947-2014)",
+    "short_name": "Salisbury City FC (1947-2014)",
+    "city": "Salisbury › Wiltshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_salisburyfc2015",
+    "name": "Salisbury FC (2015-)",
+    "short_name": "Salisbury FC (2015-)",
+    "city": "Salisbury › Wiltshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_nuneatonboroughfc",
+    "name": "Nuneaton Borough FC",
+    "short_name": "Nuneaton Borough FC",
+    "city": "Nuneaton › Warwickshire",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  },
+  {
+    "external_id": "of_eng_berwickrangers",
+    "name": "Berwick Rangers",
+    "short_name": "Berwick Rangers",
+    "city": "Berwick-upon-Tweed",
+    "country": "Inglaterra",
+    "founded": null,
+    "stadium": null,
+    "logo": null
+  }
+]

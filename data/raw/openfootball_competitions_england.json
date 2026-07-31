@@ -1,0 +1,37 @@
+[
+  {
+    "external_id": "comp_eng_premier_league",
+    "name": "Premier League",
+    "country": "Inglaterra",
+    "level": 1,
+    "type": "LEAGUE"
+  },
+  {
+    "external_id": "comp_eng_championship",
+    "name": "Championship",
+    "country": "Inglaterra",
+    "level": 2,
+    "type": "LEAGUE"
+  },
+  {
+    "external_id": "comp_eng_league_1",
+    "name": "League One",
+    "country": "Inglaterra",
+    "level": 3,
+    "type": "LEAGUE"
+  },
+  {
+    "external_id": "comp_eng_league_2",
+    "name": "League Two",
+    "country": "Inglaterra",
+    "level": 4,
+    "type": "LEAGUE"
+  },
+  {
+    "external_id": "comp_eng_national_league",
+    "name": "National League",
+    "country": "Inglaterra",
+    "level": 5,
+    "type": "LEAGUE"
+  }
+]

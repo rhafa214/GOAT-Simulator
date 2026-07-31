@@ -1,0 +1,37 @@
+[
+  {
+    "id": "stad_maracana",
+    "name": "Maracanã",
+    "city_id": "city_rio_de_janeiro",
+    "capacity": 78838,
+    "quality": 90
+  },
+  {
+    "id": "stad_allianz_parque",
+    "name": "Allianz Parque",
+    "city_id": "city_sao_paulo",
+    "capacity": 43713,
+    "quality": 95
+  },
+  {
+    "id": "stad_morumbi",
+    "name": "Morumbi",
+    "city_id": "city_sao_paulo",
+    "capacity": 66795,
+    "quality": 85
+  },
+  {
+    "id": "stad_mineirao",
+    "name": "Mineirão",
+    "city_id": "city_belo_horizonte",
+    "capacity": 61927,
+    "quality": 88
+  },
+  {
+    "id": "stad_beira_rio",
+    "name": "Beira-Rio",
+    "city_id": "city_porto_alegre",
+    "capacity": 50128,
+    "quality": 87
+  }
+]

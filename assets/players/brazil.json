@@ -1,0 +1,94 @@
+[
+  {
+    "id": "pla_gabigol",
+    "first_name": "Gabriel",
+    "last_name": "Barbosa",
+    "nickname": "Gabigol",
+    "birth_date": "1996-08-30",
+    "nation_id": "nation_brazil",
+    "club_id": "club_flamengo",
+    "position": "ST",
+    "status": "ACTIVE",
+    "current_ability": 82,
+    "potential_ability": 84,
+    "attributes": {
+      "pac": 80,
+      "sho": 85,
+      "pas": 72,
+      "dri": 81,
+      "def": 35,
+      "phy": 75,
+      "fitness": 100,
+      "morale": 80
+    }
+  },
+  {
+    "id": "pla_raphael_veiga",
+    "first_name": "Raphael",
+    "last_name": "Veiga",
+    "nickname": "Veiga",
+    "birth_date": "1995-06-19",
+    "nation_id": "nation_brazil",
+    "club_id": "club_palmeiras",
+    "position": "CAM",
+    "status": "ACTIVE",
+    "current_ability": 83,
+    "potential_ability": 83,
+    "attributes": {
+      "pac": 76,
+      "sho": 84,
+      "pas": 85,
+      "dri": 82,
+      "def": 50,
+      "phy": 70,
+      "fitness": 100,
+      "morale": 90
+    }
+  },
+  {
+    "id": "pla_lucas_moura",
+    "first_name": "Lucas",
+    "last_name": "Moura",
+    "nickname": "Lucas",
+    "birth_date": "1992-08-13",
+    "nation_id": "nation_brazil",
+    "club_id": "club_sao_paulo",
+    "position": "RW",
+    "status": "ACTIVE",
+    "current_ability": 81,
+    "potential_ability": 81,
+    "attributes": {
+      "pac": 86,
+      "sho": 78,
+      "pas": 75,
+      "dri": 85,
+      "def": 40,
+      "phy": 68,
+      "fitness": 100,
+      "morale": 85
+    }
+  },
+  {
+    "id": "pla_hulk",
+    "first_name": "Givanildo",
+    "last_name": "Vieira de Sousa",
+    "nickname": "Hulk",
+    "birth_date": "1986-07-25",
+    "nation_id": "nation_brazil",
+    "club_id": "club_atletico_mineiro",
+    "position": "ST",
+    "status": "ACTIVE",
+    "current_ability": 82,
+    "potential_ability": 82,
+    "attributes": {
+      "pac": 78,
+      "sho": 88,
+      "pas": 76,
+      "dri": 80,
+      "def": 45,
+      "phy": 92,
+      "fitness": 100,
+      "morale": 90
+    }
+  }
+]

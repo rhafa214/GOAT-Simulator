@@ -1,0 +1,4185 @@
+{
+  "invalid": [
+    {
+      "data": {
+        "date": "11/08/2023",
+        "home_team": "Burnley",
+        "away_team": "Man City",
+        "home_goals": 0,
+        "away_goals": 3,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/08/2023",
+        "home_team": "Arsenal",
+        "away_team": "Nott'm Forest",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/08/2023",
+        "home_team": "Bournemouth",
+        "away_team": "West Ham",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "P Bankes"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/08/2023",
+        "home_team": "Brighton",
+        "away_team": "Luton",
+        "home_goals": 4,
+        "away_goals": 1,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/08/2023",
+        "home_team": "Everton",
+        "away_team": "Fulham",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/08/2023",
+        "home_team": "Sheffield United",
+        "away_team": "Crystal Palace",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/08/2023",
+        "home_team": "Newcastle",
+        "away_team": "Aston Villa",
+        "home_goals": 5,
+        "away_goals": 1,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/08/2023",
+        "home_team": "Brentford",
+        "away_team": "Tottenham",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/08/2023",
+        "home_team": "Chelsea",
+        "away_team": "Liverpool",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "14/08/2023",
+        "home_team": "Man United",
+        "away_team": "Wolves",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "18/08/2023",
+        "home_team": "Nott'm Forest",
+        "away_team": "Sheffield United",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "P Bankes"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/08/2023",
+        "home_team": "Fulham",
+        "away_team": "Brentford",
+        "home_goals": 0,
+        "away_goals": 3,
+        "referee": "D Bond"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/08/2023",
+        "home_team": "Liverpool",
+        "away_team": "Bournemouth",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "T Bramall"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/08/2023",
+        "home_team": "Wolves",
+        "away_team": "Brighton",
+        "home_goals": 1,
+        "away_goals": 4,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/08/2023",
+        "home_team": "Tottenham",
+        "away_team": "Man United",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/08/2023",
+        "home_team": "Man City",
+        "away_team": "Newcastle",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "20/08/2023",
+        "home_team": "Aston Villa",
+        "away_team": "Everton",
+        "home_goals": 4,
+        "away_goals": 0,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "20/08/2023",
+        "home_team": "West Ham",
+        "away_team": "Chelsea",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/08/2023",
+        "home_team": "Crystal Palace",
+        "away_team": "Arsenal",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "25/08/2023",
+        "home_team": "Chelsea",
+        "away_team": "Luton",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/08/2023",
+        "home_team": "Bournemouth",
+        "away_team": "Tottenham",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/08/2023",
+        "home_team": "Arsenal",
+        "away_team": "Fulham",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/08/2023",
+        "home_team": "Brentford",
+        "away_team": "Crystal Palace",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "P Bankes"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/08/2023",
+        "home_team": "Everton",
+        "away_team": "Wolves",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/08/2023",
+        "home_team": "Man United",
+        "away_team": "Nott'm Forest",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/08/2023",
+        "home_team": "Brighton",
+        "away_team": "West Ham",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/08/2023",
+        "home_team": "Burnley",
+        "away_team": "Aston Villa",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/08/2023",
+        "home_team": "Sheffield United",
+        "away_team": "Man City",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/08/2023",
+        "home_team": "Newcastle",
+        "away_team": "Liverpool",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "01/09/2023",
+        "home_team": "Luton",
+        "away_team": "West Ham",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/09/2023",
+        "home_team": "Sheffield United",
+        "away_team": "Everton",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/09/2023",
+        "home_team": "Brentford",
+        "away_team": "Bournemouth",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "R Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/09/2023",
+        "home_team": "Burnley",
+        "away_team": "Tottenham",
+        "home_goals": 2,
+        "away_goals": 5,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/09/2023",
+        "home_team": "Chelsea",
+        "away_team": "Nott'm Forest",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/09/2023",
+        "home_team": "Man City",
+        "away_team": "Fulham",
+        "home_goals": 5,
+        "away_goals": 1,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/09/2023",
+        "home_team": "Brighton",
+        "away_team": "Newcastle",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/09/2023",
+        "home_team": "Crystal Palace",
+        "away_team": "Wolves",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/09/2023",
+        "home_team": "Liverpool",
+        "away_team": "Aston Villa",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/09/2023",
+        "home_team": "Arsenal",
+        "away_team": "Man United",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/09/2023",
+        "home_team": "Wolves",
+        "away_team": "Liverpool",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/09/2023",
+        "home_team": "Aston Villa",
+        "away_team": "Crystal Palace",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/09/2023",
+        "home_team": "Fulham",
+        "away_team": "Luton",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/09/2023",
+        "home_team": "Man United",
+        "away_team": "Brighton",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/09/2023",
+        "home_team": "Tottenham",
+        "away_team": "Sheffield United",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "P Bankes"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/09/2023",
+        "home_team": "West Ham",
+        "away_team": "Man City",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/09/2023",
+        "home_team": "Newcastle",
+        "away_team": "Brentford",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/09/2023",
+        "home_team": "Bournemouth",
+        "away_team": "Chelsea",
+        "home_goals": 0,
+        "away_goals": 0,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/09/2023",
+        "home_team": "Everton",
+        "away_team": "Arsenal",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "18/09/2023",
+        "home_team": "Nott'm Forest",
+        "away_team": "Burnley",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/09/2023",
+        "home_team": "Crystal Palace",
+        "away_team": "Fulham",
+        "home_goals": 0,
+        "away_goals": 0,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/09/2023",
+        "home_team": "Luton",
+        "away_team": "Wolves",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "J Smith"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/09/2023",
+        "home_team": "Man City",
+        "away_team": "Nott'm Forest",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/09/2023",
+        "home_team": "Brentford",
+        "away_team": "Everton",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/09/2023",
+        "home_team": "Burnley",
+        "away_team": "Man United",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "T Harrington"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/09/2023",
+        "home_team": "Arsenal",
+        "away_team": "Tottenham",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/09/2023",
+        "home_team": "Brighton",
+        "away_team": "Bournemouth",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/09/2023",
+        "home_team": "Chelsea",
+        "away_team": "Aston Villa",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/09/2023",
+        "home_team": "Liverpool",
+        "away_team": "West Ham",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/09/2023",
+        "home_team": "Sheffield United",
+        "away_team": "Newcastle",
+        "home_goals": 0,
+        "away_goals": 8,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/09/2023",
+        "home_team": "Aston Villa",
+        "away_team": "Brighton",
+        "home_goals": 6,
+        "away_goals": 1,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/09/2023",
+        "home_team": "Bournemouth",
+        "away_team": "Arsenal",
+        "home_goals": 0,
+        "away_goals": 4,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/09/2023",
+        "home_team": "Everton",
+        "away_team": "Luton",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/09/2023",
+        "home_team": "Man United",
+        "away_team": "Crystal Palace",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/09/2023",
+        "home_team": "Newcastle",
+        "away_team": "Burnley",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "T Bramall"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/09/2023",
+        "home_team": "West Ham",
+        "away_team": "Sheffield United",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "G Scott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/09/2023",
+        "home_team": "Wolves",
+        "away_team": "Man City",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/09/2023",
+        "home_team": "Tottenham",
+        "away_team": "Liverpool",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "01/10/2023",
+        "home_team": "Nott'm Forest",
+        "away_team": "Brentford",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/10/2023",
+        "home_team": "Fulham",
+        "away_team": "Chelsea",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/10/2023",
+        "home_team": "Luton",
+        "away_team": "Burnley",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "P Bankes"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "07/10/2023",
+        "home_team": "Luton",
+        "away_team": "Tottenham",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "07/10/2023",
+        "home_team": "Burnley",
+        "away_team": "Chelsea",
+        "home_goals": 1,
+        "away_goals": 4,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "07/10/2023",
+        "home_team": "Everton",
+        "away_team": "Bournemouth",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "07/10/2023",
+        "home_team": "Fulham",
+        "away_team": "Sheffield United",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "07/10/2023",
+        "home_team": "Man United",
+        "away_team": "Brentford",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "07/10/2023",
+        "home_team": "Crystal Palace",
+        "away_team": "Nott'm Forest",
+        "home_goals": 0,
+        "away_goals": 0,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "08/10/2023",
+        "home_team": "Brighton",
+        "away_team": "Liverpool",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "08/10/2023",
+        "home_team": "West Ham",
+        "away_team": "Newcastle",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "P Bankes"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "08/10/2023",
+        "home_team": "Wolves",
+        "away_team": "Aston Villa",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "08/10/2023",
+        "home_team": "Arsenal",
+        "away_team": "Man City",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/10/2023",
+        "home_team": "Liverpool",
+        "away_team": "Everton",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/10/2023",
+        "home_team": "Bournemouth",
+        "away_team": "Wolves",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/10/2023",
+        "home_team": "Brentford",
+        "away_team": "Burnley",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "J Smith"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/10/2023",
+        "home_team": "Man City",
+        "away_team": "Brighton",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/10/2023",
+        "home_team": "Newcastle",
+        "away_team": "Crystal Palace",
+        "home_goals": 4,
+        "away_goals": 0,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/10/2023",
+        "home_team": "Nott'm Forest",
+        "away_team": "Luton",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/10/2023",
+        "home_team": "Chelsea",
+        "away_team": "Arsenal",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/10/2023",
+        "home_team": "Sheffield United",
+        "away_team": "Man United",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "22/10/2023",
+        "home_team": "Aston Villa",
+        "away_team": "West Ham",
+        "home_goals": 4,
+        "away_goals": 1,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/10/2023",
+        "home_team": "Tottenham",
+        "away_team": "Fulham",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/10/2023",
+        "home_team": "Crystal Palace",
+        "away_team": "Tottenham",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "28/10/2023",
+        "home_team": "Chelsea",
+        "away_team": "Brentford",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "28/10/2023",
+        "home_team": "Arsenal",
+        "away_team": "Sheffield United",
+        "home_goals": 5,
+        "away_goals": 0,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "28/10/2023",
+        "home_team": "Bournemouth",
+        "away_team": "Burnley",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "28/10/2023",
+        "home_team": "Wolves",
+        "away_team": "Newcastle",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "29/10/2023",
+        "home_team": "West Ham",
+        "away_team": "Everton",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "29/10/2023",
+        "home_team": "Aston Villa",
+        "away_team": "Luton",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "29/10/2023",
+        "home_team": "Brighton",
+        "away_team": "Fulham",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "29/10/2023",
+        "home_team": "Liverpool",
+        "away_team": "Nott'm Forest",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "29/10/2023",
+        "home_team": "Man United",
+        "away_team": "Man City",
+        "home_goals": 0,
+        "away_goals": 3,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/11/2023",
+        "home_team": "Fulham",
+        "away_team": "Man United",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/11/2023",
+        "home_team": "Brentford",
+        "away_team": "West Ham",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "T Bramall"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/11/2023",
+        "home_team": "Burnley",
+        "away_team": "Crystal Palace",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "P Bankes"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/11/2023",
+        "home_team": "Everton",
+        "away_team": "Brighton",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/11/2023",
+        "home_team": "Man City",
+        "away_team": "Bournemouth",
+        "home_goals": 6,
+        "away_goals": 1,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/11/2023",
+        "home_team": "Sheffield United",
+        "away_team": "Wolves",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/11/2023",
+        "home_team": "Newcastle",
+        "away_team": "Arsenal",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "05/11/2023",
+        "home_team": "Nott'm Forest",
+        "away_team": "Aston Villa",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "05/11/2023",
+        "home_team": "Luton",
+        "away_team": "Liverpool",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/11/2023",
+        "home_team": "Tottenham",
+        "away_team": "Chelsea",
+        "home_goals": 1,
+        "away_goals": 4,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/11/2023",
+        "home_team": "Wolves",
+        "away_team": "Tottenham",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/11/2023",
+        "home_team": "Arsenal",
+        "away_team": "Burnley",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/11/2023",
+        "home_team": "Crystal Palace",
+        "away_team": "Everton",
+        "home_goals": 2,
+        "away_goals": 3,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/11/2023",
+        "home_team": "Man United",
+        "away_team": "Luton",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "G Scott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/11/2023",
+        "home_team": "Bournemouth",
+        "away_team": "Newcastle",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/11/2023",
+        "home_team": "Aston Villa",
+        "away_team": "Fulham",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/11/2023",
+        "home_team": "Brighton",
+        "away_team": "Sheffield United",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/11/2023",
+        "home_team": "Liverpool",
+        "away_team": "Brentford",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/11/2023",
+        "home_team": "West Ham",
+        "away_team": "Nott'm Forest",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/11/2023",
+        "home_team": "Chelsea",
+        "away_team": "Man City",
+        "home_goals": 4,
+        "away_goals": 4,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "25/11/2023",
+        "home_team": "Man City",
+        "away_team": "Liverpool",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "25/11/2023",
+        "home_team": "Burnley",
+        "away_team": "West Ham",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "25/11/2023",
+        "home_team": "Luton",
+        "away_team": "Crystal Palace",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "25/11/2023",
+        "home_team": "Newcastle",
+        "away_team": "Chelsea",
+        "home_goals": 4,
+        "away_goals": 1,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "25/11/2023",
+        "home_team": "Nott'm Forest",
+        "away_team": "Brighton",
+        "home_goals": 2,
+        "away_goals": 3,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "25/11/2023",
+        "home_team": "Sheffield United",
+        "away_team": "Bournemouth",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "25/11/2023",
+        "home_team": "Brentford",
+        "away_team": "Arsenal",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/11/2023",
+        "home_team": "Tottenham",
+        "away_team": "Aston Villa",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/11/2023",
+        "home_team": "Everton",
+        "away_team": "Man United",
+        "home_goals": 0,
+        "away_goals": 3,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/11/2023",
+        "home_team": "Fulham",
+        "away_team": "Wolves",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/12/2023",
+        "home_team": "Arsenal",
+        "away_team": "Wolves",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "P Bankes"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/12/2023",
+        "home_team": "Brentford",
+        "away_team": "Luton",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/12/2023",
+        "home_team": "Burnley",
+        "away_team": "Sheffield United",
+        "home_goals": 5,
+        "away_goals": 0,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/12/2023",
+        "home_team": "Nott'm Forest",
+        "away_team": "Everton",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/12/2023",
+        "home_team": "Newcastle",
+        "away_team": "Man United",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/12/2023",
+        "home_team": "Bournemouth",
+        "away_team": "Aston Villa",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "T Bramall"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/12/2023",
+        "home_team": "Chelsea",
+        "away_team": "Brighton",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/12/2023",
+        "home_team": "Liverpool",
+        "away_team": "Fulham",
+        "home_goals": 4,
+        "away_goals": 3,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/12/2023",
+        "home_team": "West Ham",
+        "away_team": "Crystal Palace",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/12/2023",
+        "home_team": "Man City",
+        "away_team": "Tottenham",
+        "home_goals": 3,
+        "away_goals": 3,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "05/12/2023",
+        "home_team": "Wolves",
+        "away_team": "Burnley",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "05/12/2023",
+        "home_team": "Luton",
+        "away_team": "Arsenal",
+        "home_goals": 3,
+        "away_goals": 4,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/12/2023",
+        "home_team": "Brighton",
+        "away_team": "Brentford",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "P Bankes"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/12/2023",
+        "home_team": "Crystal Palace",
+        "away_team": "Bournemouth",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/12/2023",
+        "home_team": "Fulham",
+        "away_team": "Nott'm Forest",
+        "home_goals": 5,
+        "away_goals": 0,
+        "referee": "J Smith"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/12/2023",
+        "home_team": "Sheffield United",
+        "away_team": "Liverpool",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/12/2023",
+        "home_team": "Aston Villa",
+        "away_team": "Man City",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/12/2023",
+        "home_team": "Man United",
+        "away_team": "Chelsea",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "07/12/2023",
+        "home_team": "Everton",
+        "away_team": "Newcastle",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "07/12/2023",
+        "home_team": "Tottenham",
+        "away_team": "West Ham",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "09/12/2023",
+        "home_team": "Crystal Palace",
+        "away_team": "Liverpool",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "09/12/2023",
+        "home_team": "Brighton",
+        "away_team": "Burnley",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "09/12/2023",
+        "home_team": "Man United",
+        "away_team": "Bournemouth",
+        "home_goals": 0,
+        "away_goals": 3,
+        "referee": "P Bankes"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "09/12/2023",
+        "home_team": "Sheffield United",
+        "away_team": "Brentford",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "09/12/2023",
+        "home_team": "Wolves",
+        "away_team": "Nott'm Forest",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "09/12/2023",
+        "home_team": "Aston Villa",
+        "away_team": "Arsenal",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/12/2023",
+        "home_team": "Everton",
+        "away_team": "Chelsea",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/12/2023",
+        "home_team": "Fulham",
+        "away_team": "West Ham",
+        "home_goals": 5,
+        "away_goals": 0,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/12/2023",
+        "home_team": "Luton",
+        "away_team": "Man City",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/12/2023",
+        "home_team": "Tottenham",
+        "away_team": "Newcastle",
+        "home_goals": 4,
+        "away_goals": 1,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "15/12/2023",
+        "home_team": "Nott'm Forest",
+        "away_team": "Tottenham",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/12/2023",
+        "home_team": "Chelsea",
+        "away_team": "Sheffield United",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/12/2023",
+        "home_team": "Man City",
+        "away_team": "Crystal Palace",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/12/2023",
+        "home_team": "Newcastle",
+        "away_team": "Fulham",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/12/2023",
+        "home_team": "Burnley",
+        "away_team": "Everton",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/12/2023",
+        "home_team": "Arsenal",
+        "away_team": "Brighton",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/12/2023",
+        "home_team": "Brentford",
+        "away_team": "Aston Villa",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/12/2023",
+        "home_team": "West Ham",
+        "away_team": "Wolves",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/12/2023",
+        "home_team": "Liverpool",
+        "away_team": "Man United",
+        "home_goals": 0,
+        "away_goals": 0,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/12/2023",
+        "home_team": "Crystal Palace",
+        "away_team": "Brighton",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "22/12/2023",
+        "home_team": "Aston Villa",
+        "away_team": "Sheffield United",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/12/2023",
+        "home_team": "West Ham",
+        "away_team": "Man United",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/12/2023",
+        "home_team": "Fulham",
+        "away_team": "Burnley",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "R Welch"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/12/2023",
+        "home_team": "Luton",
+        "away_team": "Newcastle",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/12/2023",
+        "home_team": "Nott'm Forest",
+        "away_team": "Bournemouth",
+        "home_goals": 2,
+        "away_goals": 3,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/12/2023",
+        "home_team": "Tottenham",
+        "away_team": "Everton",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/12/2023",
+        "home_team": "Liverpool",
+        "away_team": "Arsenal",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/12/2023",
+        "home_team": "Wolves",
+        "away_team": "Chelsea",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/12/2023",
+        "home_team": "Newcastle",
+        "away_team": "Nott'm Forest",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/12/2023",
+        "home_team": "Bournemouth",
+        "away_team": "Fulham",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/12/2023",
+        "home_team": "Sheffield United",
+        "away_team": "Luton",
+        "home_goals": 2,
+        "away_goals": 3,
+        "referee": "S Allison"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/12/2023",
+        "home_team": "Burnley",
+        "away_team": "Liverpool",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/12/2023",
+        "home_team": "Man United",
+        "away_team": "Aston Villa",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/12/2023",
+        "home_team": "Brentford",
+        "away_team": "Wolves",
+        "home_goals": 1,
+        "away_goals": 4,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/12/2023",
+        "home_team": "Chelsea",
+        "away_team": "Crystal Palace",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/12/2023",
+        "home_team": "Everton",
+        "away_team": "Man City",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "28/12/2023",
+        "home_team": "Brighton",
+        "away_team": "Tottenham",
+        "home_goals": 4,
+        "away_goals": 2,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "28/12/2023",
+        "home_team": "Arsenal",
+        "away_team": "West Ham",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/12/2023",
+        "home_team": "Luton",
+        "away_team": "Chelsea",
+        "home_goals": 2,
+        "away_goals": 3,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/12/2023",
+        "home_team": "Aston Villa",
+        "away_team": "Burnley",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/12/2023",
+        "home_team": "Crystal Palace",
+        "away_team": "Brentford",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/12/2023",
+        "home_team": "Man City",
+        "away_team": "Sheffield United",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/12/2023",
+        "home_team": "Wolves",
+        "away_team": "Everton",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "T Bramall"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/12/2023",
+        "home_team": "Nott'm Forest",
+        "away_team": "Man United",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "31/12/2023",
+        "home_team": "Fulham",
+        "away_team": "Arsenal",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "J Smith"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "31/12/2023",
+        "home_team": "Tottenham",
+        "away_team": "Bournemouth",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "01/01/2024",
+        "home_team": "Liverpool",
+        "away_team": "Newcastle",
+        "home_goals": 4,
+        "away_goals": 2,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/01/2024",
+        "home_team": "West Ham",
+        "away_team": "Brighton",
+        "home_goals": 0,
+        "away_goals": 0,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/01/2024",
+        "home_team": "Burnley",
+        "away_team": "Luton",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "T Harrington"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/01/2024",
+        "home_team": "Chelsea",
+        "away_team": "Fulham",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/01/2024",
+        "home_team": "Newcastle",
+        "away_team": "Man City",
+        "home_goals": 2,
+        "away_goals": 3,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "14/01/2024",
+        "home_team": "Everton",
+        "away_team": "Aston Villa",
+        "home_goals": 0,
+        "away_goals": 0,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "14/01/2024",
+        "home_team": "Man United",
+        "away_team": "Tottenham",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "20/01/2024",
+        "home_team": "Arsenal",
+        "away_team": "Crystal Palace",
+        "home_goals": 5,
+        "away_goals": 0,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "20/01/2024",
+        "home_team": "Brentford",
+        "away_team": "Nott'm Forest",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/01/2024",
+        "home_team": "Sheffield United",
+        "away_team": "West Ham",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/01/2024",
+        "home_team": "Bournemouth",
+        "away_team": "Liverpool",
+        "home_goals": 0,
+        "away_goals": 4,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "22/01/2024",
+        "home_team": "Brighton",
+        "away_team": "Wolves",
+        "home_goals": 0,
+        "away_goals": 0,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/01/2024",
+        "home_team": "Nott'm Forest",
+        "away_team": "Arsenal",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/01/2024",
+        "home_team": "Fulham",
+        "away_team": "Everton",
+        "home_goals": 0,
+        "away_goals": 0,
+        "referee": "T Bramall"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/01/2024",
+        "home_team": "Luton",
+        "away_team": "Brighton",
+        "home_goals": 4,
+        "away_goals": 0,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/01/2024",
+        "home_team": "Crystal Palace",
+        "away_team": "Sheffield United",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "T Harrington"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/01/2024",
+        "home_team": "Aston Villa",
+        "away_team": "Newcastle",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "31/01/2024",
+        "home_team": "Man City",
+        "away_team": "Burnley",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "31/01/2024",
+        "home_team": "Tottenham",
+        "away_team": "Brentford",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "31/01/2024",
+        "home_team": "Liverpool",
+        "away_team": "Chelsea",
+        "home_goals": 4,
+        "away_goals": 1,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "01/02/2024",
+        "home_team": "West Ham",
+        "away_team": "Bournemouth",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "01/02/2024",
+        "home_team": "Wolves",
+        "away_team": "Man United",
+        "home_goals": 3,
+        "away_goals": 4,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/02/2024",
+        "home_team": "Everton",
+        "away_team": "Tottenham",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/02/2024",
+        "home_team": "Brighton",
+        "away_team": "Crystal Palace",
+        "home_goals": 4,
+        "away_goals": 1,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/02/2024",
+        "home_team": "Burnley",
+        "away_team": "Fulham",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "D Bond"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/02/2024",
+        "home_team": "Newcastle",
+        "away_team": "Luton",
+        "home_goals": 4,
+        "away_goals": 4,
+        "referee": "T Bramall"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/02/2024",
+        "home_team": "Sheffield United",
+        "away_team": "Aston Villa",
+        "home_goals": 0,
+        "away_goals": 5,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/02/2024",
+        "home_team": "Bournemouth",
+        "away_team": "Nott'm Forest",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "R Welch"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/02/2024",
+        "home_team": "Chelsea",
+        "away_team": "Wolves",
+        "home_goals": 2,
+        "away_goals": 4,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/02/2024",
+        "home_team": "Man United",
+        "away_team": "West Ham",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/02/2024",
+        "home_team": "Arsenal",
+        "away_team": "Liverpool",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "05/02/2024",
+        "home_team": "Brentford",
+        "away_team": "Man City",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/02/2024",
+        "home_team": "Man City",
+        "away_team": "Everton",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/02/2024",
+        "home_team": "Fulham",
+        "away_team": "Bournemouth",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/02/2024",
+        "home_team": "Liverpool",
+        "away_team": "Burnley",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/02/2024",
+        "home_team": "Luton",
+        "away_team": "Sheffield United",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/02/2024",
+        "home_team": "Tottenham",
+        "away_team": "Brighton",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/02/2024",
+        "home_team": "Wolves",
+        "away_team": "Brentford",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/02/2024",
+        "home_team": "Nott'm Forest",
+        "away_team": "Newcastle",
+        "home_goals": 2,
+        "away_goals": 3,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/02/2024",
+        "home_team": "West Ham",
+        "away_team": "Arsenal",
+        "home_goals": 0,
+        "away_goals": 6,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/02/2024",
+        "home_team": "Aston Villa",
+        "away_team": "Man United",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/02/2024",
+        "home_team": "Crystal Palace",
+        "away_team": "Chelsea",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/02/2024",
+        "home_team": "Brentford",
+        "away_team": "Liverpool",
+        "home_goals": 1,
+        "away_goals": 4,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/02/2024",
+        "home_team": "Burnley",
+        "away_team": "Arsenal",
+        "home_goals": 0,
+        "away_goals": 5,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/02/2024",
+        "home_team": "Fulham",
+        "away_team": "Aston Villa",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "L Smith"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/02/2024",
+        "home_team": "Newcastle",
+        "away_team": "Bournemouth",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/02/2024",
+        "home_team": "Nott'm Forest",
+        "away_team": "West Ham",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "T Bramall"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/02/2024",
+        "home_team": "Tottenham",
+        "away_team": "Wolves",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/02/2024",
+        "home_team": "Man City",
+        "away_team": "Chelsea",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "18/02/2024",
+        "home_team": "Sheffield United",
+        "away_team": "Brighton",
+        "home_goals": 0,
+        "away_goals": 5,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "18/02/2024",
+        "home_team": "Luton",
+        "away_team": "Man United",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/02/2024",
+        "home_team": "Everton",
+        "away_team": "Crystal Palace",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "20/02/2024",
+        "home_team": "Man City",
+        "away_team": "Brentford",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/02/2024",
+        "home_team": "Liverpool",
+        "away_team": "Luton",
+        "home_goals": 4,
+        "away_goals": 1,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/02/2024",
+        "home_team": "Aston Villa",
+        "away_team": "Nott'm Forest",
+        "home_goals": 4,
+        "away_goals": 2,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/02/2024",
+        "home_team": "Brighton",
+        "away_team": "Everton",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "T Harrington"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/02/2024",
+        "home_team": "Crystal Palace",
+        "away_team": "Burnley",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "L Smith"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/02/2024",
+        "home_team": "Man United",
+        "away_team": "Fulham",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/02/2024",
+        "home_team": "Bournemouth",
+        "away_team": "Man City",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/02/2024",
+        "home_team": "Arsenal",
+        "away_team": "Newcastle",
+        "home_goals": 4,
+        "away_goals": 1,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "25/02/2024",
+        "home_team": "Wolves",
+        "away_team": "Sheffield United",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "D Bond"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "26/02/2024",
+        "home_team": "West Ham",
+        "away_team": "Brentford",
+        "home_goals": 4,
+        "away_goals": 2,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/03/2024",
+        "home_team": "Brentford",
+        "away_team": "Chelsea",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/03/2024",
+        "home_team": "Everton",
+        "away_team": "West Ham",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/03/2024",
+        "home_team": "Fulham",
+        "away_team": "Brighton",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/03/2024",
+        "home_team": "Newcastle",
+        "away_team": "Wolves",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/03/2024",
+        "home_team": "Nott'm Forest",
+        "away_team": "Liverpool",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/03/2024",
+        "home_team": "Tottenham",
+        "away_team": "Crystal Palace",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/03/2024",
+        "home_team": "Luton",
+        "away_team": "Aston Villa",
+        "home_goals": 2,
+        "away_goals": 3,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/03/2024",
+        "home_team": "Burnley",
+        "away_team": "Bournemouth",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/03/2024",
+        "home_team": "Man City",
+        "away_team": "Man United",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/03/2024",
+        "home_team": "Sheffield United",
+        "away_team": "Arsenal",
+        "home_goals": 0,
+        "away_goals": 6,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "09/03/2024",
+        "home_team": "Man United",
+        "away_team": "Everton",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "09/03/2024",
+        "home_team": "Bournemouth",
+        "away_team": "Sheffield United",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "09/03/2024",
+        "home_team": "Crystal Palace",
+        "away_team": "Luton",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "S Singh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "09/03/2024",
+        "home_team": "Wolves",
+        "away_team": "Fulham",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "T Harrington"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "09/03/2024",
+        "home_team": "Arsenal",
+        "away_team": "Brentford",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/03/2024",
+        "home_team": "Aston Villa",
+        "away_team": "Tottenham",
+        "home_goals": 0,
+        "away_goals": 4,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/03/2024",
+        "home_team": "Brighton",
+        "away_team": "Nott'm Forest",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/03/2024",
+        "home_team": "West Ham",
+        "away_team": "Burnley",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "10/03/2024",
+        "home_team": "Liverpool",
+        "away_team": "Man City",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/03/2024",
+        "home_team": "Chelsea",
+        "away_team": "Newcastle",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/03/2024",
+        "home_team": "Bournemouth",
+        "away_team": "Luton",
+        "home_goals": 4,
+        "away_goals": 3,
+        "referee": "S Allison"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/03/2024",
+        "home_team": "Burnley",
+        "away_team": "Brentford",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "D Bond"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/03/2024",
+        "home_team": "Luton",
+        "away_team": "Nott'm Forest",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "16/03/2024",
+        "home_team": "Fulham",
+        "away_team": "Tottenham",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "17/03/2024",
+        "home_team": "West Ham",
+        "away_team": "Aston Villa",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/03/2024",
+        "home_team": "Newcastle",
+        "away_team": "West Ham",
+        "home_goals": 4,
+        "away_goals": 3,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/03/2024",
+        "home_team": "Bournemouth",
+        "away_team": "Everton",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/03/2024",
+        "home_team": "Chelsea",
+        "away_team": "Burnley",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/03/2024",
+        "home_team": "Nott'm Forest",
+        "away_team": "Crystal Palace",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/03/2024",
+        "home_team": "Sheffield United",
+        "away_team": "Fulham",
+        "home_goals": 3,
+        "away_goals": 3,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/03/2024",
+        "home_team": "Tottenham",
+        "away_team": "Luton",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/03/2024",
+        "home_team": "Aston Villa",
+        "away_team": "Wolves",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "30/03/2024",
+        "home_team": "Brentford",
+        "away_team": "Man United",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "31/03/2024",
+        "home_team": "Liverpool",
+        "away_team": "Brighton",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "31/03/2024",
+        "home_team": "Man City",
+        "away_team": "Arsenal",
+        "home_goals": 0,
+        "away_goals": 0,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/04/2024",
+        "home_team": "Newcastle",
+        "away_team": "Everton",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "T Harrington"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/04/2024",
+        "home_team": "Nott'm Forest",
+        "away_team": "Fulham",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/04/2024",
+        "home_team": "Bournemouth",
+        "away_team": "Crystal Palace",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "G Scott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/04/2024",
+        "home_team": "Burnley",
+        "away_team": "Wolves",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "T Bramall"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/04/2024",
+        "home_team": "West Ham",
+        "away_team": "Tottenham",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/04/2024",
+        "home_team": "Arsenal",
+        "away_team": "Luton",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/04/2024",
+        "home_team": "Brentford",
+        "away_team": "Brighton",
+        "home_goals": 0,
+        "away_goals": 0,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/04/2024",
+        "home_team": "Man City",
+        "away_team": "Aston Villa",
+        "home_goals": 4,
+        "away_goals": 1,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/04/2024",
+        "home_team": "Liverpool",
+        "away_team": "Sheffield United",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/04/2024",
+        "home_team": "Chelsea",
+        "away_team": "Man United",
+        "home_goals": 4,
+        "away_goals": 3,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/04/2024",
+        "home_team": "Crystal Palace",
+        "away_team": "Man City",
+        "home_goals": 2,
+        "away_goals": 4,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/04/2024",
+        "home_team": "Aston Villa",
+        "away_team": "Brentford",
+        "home_goals": 3,
+        "away_goals": 3,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/04/2024",
+        "home_team": "Everton",
+        "away_team": "Burnley",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/04/2024",
+        "home_team": "Fulham",
+        "away_team": "Newcastle",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "S Allison"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/04/2024",
+        "home_team": "Luton",
+        "away_team": "Bournemouth",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/04/2024",
+        "home_team": "Wolves",
+        "away_team": "West Ham",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "T Harrington"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/04/2024",
+        "home_team": "Brighton",
+        "away_team": "Arsenal",
+        "home_goals": 0,
+        "away_goals": 3,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "07/04/2024",
+        "home_team": "Man United",
+        "away_team": "Liverpool",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "07/04/2024",
+        "home_team": "Sheffield United",
+        "away_team": "Chelsea",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "07/04/2024",
+        "home_team": "Tottenham",
+        "away_team": "Nott'm Forest",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/04/2024",
+        "home_team": "Newcastle",
+        "away_team": "Tottenham",
+        "home_goals": 4,
+        "away_goals": 0,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/04/2024",
+        "home_team": "Brentford",
+        "away_team": "Sheffield United",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "S Barrott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/04/2024",
+        "home_team": "Burnley",
+        "away_team": "Brighton",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/04/2024",
+        "home_team": "Man City",
+        "away_team": "Luton",
+        "home_goals": 5,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/04/2024",
+        "home_team": "Nott'm Forest",
+        "away_team": "Wolves",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/04/2024",
+        "home_team": "Bournemouth",
+        "away_team": "Man United",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "T Harrington"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "14/04/2024",
+        "home_team": "Liverpool",
+        "away_team": "Crystal Palace",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "14/04/2024",
+        "home_team": "West Ham",
+        "away_team": "Fulham",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "14/04/2024",
+        "home_team": "Arsenal",
+        "away_team": "Aston Villa",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "15/04/2024",
+        "home_team": "Chelsea",
+        "away_team": "Everton",
+        "home_goals": 6,
+        "away_goals": 0,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "20/04/2024",
+        "home_team": "Luton",
+        "away_team": "Brentford",
+        "home_goals": 1,
+        "away_goals": 5,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "20/04/2024",
+        "home_team": "Sheffield United",
+        "away_team": "Burnley",
+        "home_goals": 1,
+        "away_goals": 4,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "20/04/2024",
+        "home_team": "Wolves",
+        "away_team": "Arsenal",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/04/2024",
+        "home_team": "Everton",
+        "away_team": "Nott'm Forest",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/04/2024",
+        "home_team": "Aston Villa",
+        "away_team": "Bournemouth",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/04/2024",
+        "home_team": "Crystal Palace",
+        "away_team": "West Ham",
+        "home_goals": 5,
+        "away_goals": 2,
+        "referee": "G Scott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "21/04/2024",
+        "home_team": "Fulham",
+        "away_team": "Liverpool",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "23/04/2024",
+        "home_team": "Arsenal",
+        "away_team": "Chelsea",
+        "home_goals": 5,
+        "away_goals": 0,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/04/2024",
+        "home_team": "Wolves",
+        "away_team": "Bournemouth",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/04/2024",
+        "home_team": "Crystal Palace",
+        "away_team": "Newcastle",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "T Bramall"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/04/2024",
+        "home_team": "Everton",
+        "away_team": "Liverpool",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "24/04/2024",
+        "home_team": "Man United",
+        "away_team": "Sheffield United",
+        "home_goals": 4,
+        "away_goals": 2,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "25/04/2024",
+        "home_team": "Brighton",
+        "away_team": "Man City",
+        "home_goals": 0,
+        "away_goals": 4,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/04/2024",
+        "home_team": "West Ham",
+        "away_team": "Liverpool",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/04/2024",
+        "home_team": "Fulham",
+        "away_team": "Crystal Palace",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/04/2024",
+        "home_team": "Man United",
+        "away_team": "Burnley",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/04/2024",
+        "home_team": "Newcastle",
+        "away_team": "Sheffield United",
+        "home_goals": 5,
+        "away_goals": 1,
+        "referee": "T Harrington"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/04/2024",
+        "home_team": "Wolves",
+        "away_team": "Luton",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/04/2024",
+        "home_team": "Everton",
+        "away_team": "Brentford",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "27/04/2024",
+        "home_team": "Aston Villa",
+        "away_team": "Chelsea",
+        "home_goals": 2,
+        "away_goals": 2,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "28/04/2024",
+        "home_team": "Bournemouth",
+        "away_team": "Brighton",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "28/04/2024",
+        "home_team": "Tottenham",
+        "away_team": "Arsenal",
+        "home_goals": 2,
+        "away_goals": 3,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "28/04/2024",
+        "home_team": "Nott'm Forest",
+        "away_team": "Man City",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "02/05/2024",
+        "home_team": "Chelsea",
+        "away_team": "Tottenham",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "03/05/2024",
+        "home_team": "Luton",
+        "away_team": "Everton",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "T Robinson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/05/2024",
+        "home_team": "Arsenal",
+        "away_team": "Bournemouth",
+        "home_goals": 3,
+        "away_goals": 0,
+        "referee": "D Coote"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/05/2024",
+        "home_team": "Brentford",
+        "away_team": "Fulham",
+        "home_goals": 0,
+        "away_goals": 0,
+        "referee": "G Scott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/05/2024",
+        "home_team": "Burnley",
+        "away_team": "Newcastle",
+        "home_goals": 1,
+        "away_goals": 4,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/05/2024",
+        "home_team": "Sheffield United",
+        "away_team": "Nott'm Forest",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "04/05/2024",
+        "home_team": "Man City",
+        "away_team": "Wolves",
+        "home_goals": 5,
+        "away_goals": 1,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "05/05/2024",
+        "home_team": "Brighton",
+        "away_team": "Aston Villa",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "05/05/2024",
+        "home_team": "Chelsea",
+        "away_team": "West Ham",
+        "home_goals": 5,
+        "away_goals": 0,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "05/05/2024",
+        "home_team": "Liverpool",
+        "away_team": "Tottenham",
+        "home_goals": 4,
+        "away_goals": 2,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "06/05/2024",
+        "home_team": "Crystal Palace",
+        "away_team": "Man United",
+        "home_goals": 4,
+        "away_goals": 0,
+        "referee": "J Gillett "
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/05/2024",
+        "home_team": "Fulham",
+        "away_team": "Man City",
+        "home_goals": 0,
+        "away_goals": 4,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/05/2024",
+        "home_team": "Bournemouth",
+        "away_team": "Brentford",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "M Donohue"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/05/2024",
+        "home_team": "Everton",
+        "away_team": "Sheffield United",
+        "home_goals": 1,
+        "away_goals": 0,
+        "referee": "S Attwell"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/05/2024",
+        "home_team": "Newcastle",
+        "away_team": "Brighton",
+        "home_goals": 1,
+        "away_goals": 1,
+        "referee": "D England"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/05/2024",
+        "home_team": "Tottenham",
+        "away_team": "Burnley",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "J Gillett"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/05/2024",
+        "home_team": "West Ham",
+        "away_team": "Luton",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/05/2024",
+        "home_team": "Wolves",
+        "away_team": "Crystal Palace",
+        "home_goals": 1,
+        "away_goals": 3,
+        "referee": "T Bramall"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "11/05/2024",
+        "home_team": "Nott'm Forest",
+        "away_team": "Chelsea",
+        "home_goals": 2,
+        "away_goals": 3,
+        "referee": "T Harrington"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "12/05/2024",
+        "home_team": "Man United",
+        "away_team": "Arsenal",
+        "home_goals": 0,
+        "away_goals": 1,
+        "referee": "P Tierney"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "13/05/2024",
+        "home_team": "Aston Villa",
+        "away_team": "Liverpool",
+        "home_goals": 3,
+        "away_goals": 3,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "14/05/2024",
+        "home_team": "Tottenham",
+        "away_team": "Man City",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "15/05/2024",
+        "home_team": "Brighton",
+        "away_team": "Chelsea",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "M Salisbury"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "15/05/2024",
+        "home_team": "Man United",
+        "away_team": "Newcastle",
+        "home_goals": 3,
+        "away_goals": 2,
+        "referee": "R Jones"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/05/2024",
+        "home_team": "Arsenal",
+        "away_team": "Everton",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "M Oliver"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/05/2024",
+        "home_team": "Brentford",
+        "away_team": "Newcastle",
+        "home_goals": 2,
+        "away_goals": 4,
+        "referee": "S Hooper"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/05/2024",
+        "home_team": "Brighton",
+        "away_team": "Man United",
+        "home_goals": 0,
+        "away_goals": 2,
+        "referee": "C Pawson"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/05/2024",
+        "home_team": "Burnley",
+        "away_team": "Nott'm Forest",
+        "home_goals": 1,
+        "away_goals": 2,
+        "referee": "G Scott"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/05/2024",
+        "home_team": "Chelsea",
+        "away_team": "Bournemouth",
+        "home_goals": 2,
+        "away_goals": 1,
+        "referee": "A Taylor"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/05/2024",
+        "home_team": "Crystal Palace",
+        "away_team": "Aston Villa",
+        "home_goals": 5,
+        "away_goals": 0,
+        "referee": "D Bond"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/05/2024",
+        "home_team": "Liverpool",
+        "away_team": "Wolves",
+        "home_goals": 2,
+        "away_goals": 0,
+        "referee": "C Kavanagh"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/05/2024",
+        "home_team": "Luton",
+        "away_team": "Fulham",
+        "home_goals": 2,
+        "away_goals": 4,
+        "referee": "M Donohue"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/05/2024",
+        "home_team": "Man City",
+        "away_team": "West Ham",
+        "home_goals": 3,
+        "away_goals": 1,
+        "referee": "J Brooks"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "date": "19/05/2024",
+        "home_team": "Sheffield United",
+        "away_team": "Tottenham",
+        "home_goals": 0,
+        "away_goals": 3,
+        "referee": "A Madley"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    }
+  ],
+  "warnings": []
+}

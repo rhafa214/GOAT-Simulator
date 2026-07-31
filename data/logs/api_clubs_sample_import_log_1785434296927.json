@@ -1,0 +1,57 @@
+{
+  "invalid": [
+    {
+      "data": {
+        "external_id": null,
+        "name": "Botafogo B Fictício",
+        "city": "Rio de Janeiro",
+        "country": "Brasil"
+      },
+      "reason": "ID Externo ausente. Não pode ser vinculado a uma base oficial."
+    },
+    {
+      "data": {
+        "external_id": 131,
+        "name": "",
+        "country": "Brasil"
+      },
+      "reason": "Nome Oficial ausente."
+    }
+  ],
+  "warnings": [
+    {
+      "data": {
+        "external_id": "130",
+        "official_name": "Grêmio Foot-Ball Porto Alegrense",
+        "short_name": "Grêmio",
+        "abbreviation": null,
+        "city": "Desconhecida",
+        "state": null,
+        "country": "Brasil",
+        "stadium_name": null,
+        "stadium_capacity": null,
+        "foundation_year": 1903,
+        "colors": [],
+        "logo_url": null
+      },
+      "warning": "Cidade desconhecida. Preenchido com placeholder temporário, requer curadoria."
+    },
+    {
+      "data": {
+        "external_id": "130",
+        "official_name": "Grêmio Foot-Ball Porto Alegrense",
+        "short_name": "Grêmio",
+        "abbreviation": null,
+        "city": "Desconhecida",
+        "state": null,
+        "country": "Brasil",
+        "stadium_name": null,
+        "stadium_capacity": null,
+        "foundation_year": 1903,
+        "colors": [],
+        "logo_url": null
+      },
+      "warning": "Informações de estádio incompletas (nome ou capacidade ausente)."
+    }
+  ]
+}

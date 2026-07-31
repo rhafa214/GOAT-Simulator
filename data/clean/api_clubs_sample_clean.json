@@ -1,0 +1,33 @@
+[
+  {
+    "external_id": "127",
+    "official_name": "Clube de Regatas do Flamengo",
+    "short_name": "Flamengo",
+    "abbreviation": "FLA",
+    "city": "Rio de Janeiro",
+    "state": "RJ",
+    "country": "Brasil",
+    "stadium_name": "Maracanã",
+    "stadium_capacity": 78838,
+    "foundation_year": 1895,
+    "colors": [
+      "#C8102E",
+      "#000000"
+    ],
+    "logo_url": null
+  },
+  {
+    "external_id": "130",
+    "official_name": "Grêmio Foot-Ball Porto Alegrense",
+    "short_name": "Grêmio",
+    "abbreviation": null,
+    "city": "Desconhecida",
+    "state": null,
+    "country": "Brasil",
+    "stadium_name": null,
+    "stadium_capacity": null,
+    "foundation_year": 1903,
+    "colors": [],
+    "logo_url": null
+  }
+]
