@@ -2,7 +2,7 @@ import React from 'react';
 import { useGameEngine } from '../../engine/GameEngine';
 import { motion } from 'motion/react';
 import { Trophy, Star, ArrowRight, Play, Goal, ArrowUpRight, ActivitySquare } from 'lucide-react';
-import { PlayerAvatar } from '../ui/PlayerAvatar';
+import { PlayerPortrait } from '../ui/PlayerPortrait';
 
 export default function PostMatchScreen() {
   const { state, dispatch } = useGameEngine();

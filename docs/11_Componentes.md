@@ -26,3 +26,11 @@ Componentes que consomem o banco diretamente ou via adaptadores:
 
 ## 5. Próximo Passo
 Com os componentes definidos, a última etapa de planejamento antes de voltarmos ao código é o **Design System**, onde definiremos a paleta de cores, tipografia, espaçamentos e a estética geral (UI/UX) do simulador.
+
+
+## Refatoração de Avatares (2026-07-31)
+Os componentes responsáveis por renderizar e orquestrar o avatar 3D foram refatorados para nomes inequívocos e responsabilidades mais claras:
+- **AvatarScene**: (antigo `PlayerAvatar.tsx` 3D) Responsável pelo Canvas Three.js, luzes, câmera e setup do ambiente 3D.
+- **AvatarModel**: (inalterado) Responsável apenas por carregar a malha e animações do modelo ou um fallback procedural.
+- **PlayerPortrait**: (antigo `PlayerAvatar.tsx` UI) Um wrapper React que usa os dados do jogador atual (state) e injeta como props para o `AvatarScene`. É o componente que deve ser importado pelas telas.
+- O arquivo `AvatarManager.tsx` foi removido por ser inútil e causar confusão no controle de estado, que agora flui naturalmente por props desde o `GameEngine`.

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { useGameEngine } from '../../engine/GameEngine';
+import { usePlayer } from '../../engine/selectors';
+import { useGameActions } from '../../engine/actions';
 import { motion } from 'motion/react';
 
 export default function CreationBasicInfo() {
-  const { state, dispatch } = useGameEngine();
-  const [name, setName] = useState(state.player.name);
-  const [nationality, setNationality] = useState(state.player.nationality || 'BR');
+  const player = usePlayer();
+  const actions = useGameActions();
+  const [name, setName] = useState(player.name);
+  const [nationality, setNationality] = useState(player.nationality || 'BR');
 
   const NATIONS = [
     { code: 'BR', name: 'Brasil' },
@@ -20,8 +22,8 @@ export default function CreationBasicInfo() {
 
   const handleNext = () => {
     if (!name.trim()) return;
-    dispatch({ type: 'INITIALIZE_PLAYER', payload: { name, nationality } });
-    dispatch({ type: 'CHANGE_PHASE', payload: 'CREATION_POSITION' });
+    actions.initializePlayer({ name, nationality });
+    actions.advancePhase('CREATION_POSITION');
   };
 
   return (

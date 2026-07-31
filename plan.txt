@@ -1,0 +1,29 @@
+Divisão de Ações do Reducer:
+
+1. playerReducer:
+- INITIALIZE_PLAYER
+- TRAIN_ATTRIBUTE
+
+2. careerReducer:
+- SETUP_CAREER (atualiza currentClub, nextMatch)
+
+3. financeReducer:
+- SETUP_CAREER (atualiza weeklyWage)
+
+4. narrativeReducer:
+- ADD_NEWS
+
+5. flowReducer:
+- CHANGE_PHASE
+- SET_DRAFT_LENGTH (se aplicável ao flow)
+- SETUP_CAREER (muda phase para 'HUB')
+
+6. rootReducer (Cross-cutting operations delegadas para funções puras):
+- ADVANCE_WEEK (chama advanceWeekLogic)
+- ADVANCE_MONTH (chama advanceWeekLogic em loop)
+- RESOLVE_EVENT (chama resolveEventLogic)
+
+GameEngine.tsx conterá:
+- Contexto (GameContext)
+- Provider (GameProvider)
+- Hook (useGameEngine)

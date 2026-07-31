@@ -143,12 +143,57 @@ export interface Financials {
   assets: string[]; // Cars, Mansions (can unlock events)
 }
 
+export type NewsCategory = 'partida' | 'transferência' | 'lesão' | 'prêmio' | 'recorde' | 'convocação' | 'título' | 'entrevista' | 'rumor';
+
 export interface NewsItem {
   id: string;
-  title: string;
-  content: string;
-  date: number; // week number
-  type: 'match' | 'transfer' | 'gossip' | 'interview';
+  headline: string;
+  summary: string;
+  date: string;
+  week: number;
+  year: number;
+  category: NewsCategory;
+  relatedEntities: string[];
+  importance: number;
+  source: string;
+  read?: boolean;
+}
+
+import { Season } from './core/domain/seasonEngine';
+
+
+export interface PlayerContract {
+  salary: number;
+  duration: number;
+  bonuses: number;
+  marketValue: number;
+  expirationYear: number;
+}
+
+export interface Agent {
+  name: string;
+  level: number; // 1-100 or 1-5
+  negotiationSkill: number; // 1-100
+}
+
+export type ProposalStatus = 'generated' | 'presented' | 'negotiating' | 'accepted' | 'rejected' | 'expired' | 'withdrawn';
+
+export interface TransferProposal {
+  id: string;
+  clubId: string;
+  clubName: string;
+  offerSalary: number;
+  offerDuration: number;
+  transferFee: number;
+  status: ProposalStatus;
+  weekGenerated: number;
+  yearGenerated: number;
+}
+
+export interface TransferState {
+  isTransferRequested: boolean;
+  isListed: boolean;
+  activeProposals: TransferProposal[];
 }
 
 export interface GameState {
@@ -157,6 +202,9 @@ export interface GameState {
   player: PlayerAttributes;
   career: {
     currentClub: Club | null;
+    contract?: PlayerContract;
+    agent?: Agent;
+    transferState?: TransferState;
     nationalTeam: string | null;
     shirtNumber: number;
     isCaptain: boolean;
@@ -167,7 +215,8 @@ export interface GameState {
     currentSeasonStats: SeasonRecord;
     transfers: TransferRecord[];
     matches: MatchStats[];
-    nextMatch: { opponent: string; opponentLogo?: string; isHome: boolean; competition: string } | null;
+    nextMatch: { opponent: string; opponentLogo?: string; isHome: boolean; competition: string; fixtureId?: string } | null;
+    currentSeason?: Season;
     awards: {
       ballonDor: number;
       goldenBoot: number;
@@ -178,8 +227,9 @@ export interface GameState {
   finances: Financials;
   narrative: {
     activeEvents: GameEvent[];
-    flags: Record<string, boolean | number | string>; // For long-term narrative memory (e.g., 'betrayed_real_madrid': true)
+    flags: Record<string, boolean | number | string>;
     news: NewsItem[];
+    eventHistory: Record<string, number>;
   };
 }
 
@@ -212,10 +262,29 @@ export interface GameEvent {
   id: string;
   title: string;
   description: string;
+  category?: string;
   imageType?: 'press' | 'training' | 'party' | 'match' | 'injury';
   condition: (state: GameState) => boolean;
   options: EventOption[];
-  weight: number; // Probabilidade de acontecer dentro de sua raridade
+  weight: number; // Base probability weight
   rarity?: 'small' | 'medium' | 'large' | 'historic';
-  isUrgent: boolean; // Se true, interrompe a simulação (ex: Lesão grave)
+  isUrgent: boolean;
+  cooldown?: number; // In weeks
+  expiresIn?: number; // In weeks
+  tags?: string[];
+  priority?: number;
+  interruptSimulation?: boolean;
 }
+
+export type GameAction = 
+  | { type: 'SET_STATE'; payload: GameState } 
+  | { type: 'CHANGE_PHASE'; payload: GameState['phase'] }
+  | { type: 'SETUP_CAREER'; payload: { club: Club } }
+  | { type: 'ADVANCE_WEEK' }
+  | { type: 'SET_DRAFT_LENGTH'; payload: 'SHORT' | 'LONG' }
+  | { type: 'ADVANCE_MONTH' }
+  | { type: 'PLAY_MATCH'; payload: MatchStats }
+  | { type: 'RESOLVE_EVENT'; payload: { eventId: string; optionId: string } }
+  | { type: 'INITIALIZE_PLAYER'; payload: Partial<GameState['player']> }
+  | { type: 'TRAIN_ATTRIBUTE'; payload: 'SHO' | 'PAS' | 'DRI' | 'DEF' }
+  | { type: 'ADD_NEWS'; payload: Omit<NewsItem, 'id'> };

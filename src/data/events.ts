@@ -10,6 +10,7 @@ export const GAME_EVENTS: GameEvent[] = [
     weight: 20,
     rarity: 'large',
     isUrgent: false,
+    cooldown: 4,
     options: [
       {
         id: 'OPT_SUPPORT',
@@ -40,6 +41,7 @@ export const GAME_EVENTS: GameEvent[] = [
     weight: 40,
     rarity: 'medium',
     isUrgent: true,
+    cooldown: 12,
     options: [
       {
         id: 'OPT_REST',
@@ -64,6 +66,7 @@ export const GAME_EVENTS: GameEvent[] = [
     weight: 0,
     rarity: 'historic',
     isUrgent: true,
+    cooldown: 4,
     options: [
       {
         id: 'OPT_ACCEPT',
@@ -81,6 +84,7 @@ export const GAME_EVENTS: GameEvent[] = [
     weight: 30,
     rarity: 'medium',
     isUrgent: false,
+    cooldown: 4,
     options: [
       {
         id: 'OPT_ACCEPT_MONEY',
@@ -105,6 +109,7 @@ export const GAME_EVENTS: GameEvent[] = [
     weight: 15,
     rarity: 'large',
     isUrgent: true,
+    cooldown: 24,
     options: [
       {
         id: 'OPT_APOLOGIZE',
@@ -135,6 +140,7 @@ export const GAME_EVENTS: GameEvent[] = [
     weight: 5,
     rarity: 'historic',
     isUrgent: false,
+    cooldown: 1000,
     options: [
       {
         id: 'OPT_MARRY',
@@ -158,6 +164,7 @@ export const GAME_EVENTS: GameEvent[] = [
     weight: 10,
     rarity: 'large',
     isUrgent: false,
+    cooldown: 4,
     options: [
       {
         id: 'OPT_ACCEPT_DOC',
@@ -181,6 +188,7 @@ export const GAME_EVENTS: GameEvent[] = [
     weight: 10,
     rarity: 'large',
     isUrgent: true,
+    cooldown: 4,
     options: [
       {
         id: 'OPT_ACCEPT_ARABIA',
@@ -205,6 +213,7 @@ export const GAME_EVENTS: GameEvent[] = [
     weight: 15,
     rarity: 'small',
     isUrgent: false,
+    cooldown: 20,
     options: [
       {
         id: 'OPT_APOLOGIZE_FIGHT',
@@ -228,6 +237,7 @@ export const GAME_EVENTS: GameEvent[] = [
     weight: 10,
     rarity: 'historic',
     isUrgent: false,
+    cooldown: 4,
     options: [
       {
         id: 'OPT_CELEBRATE_NT',
@@ -245,6 +255,7 @@ export const GAME_EVENTS: GameEvent[] = [
     weight: 5,
     rarity: 'historic',
     isUrgent: false,
+    cooldown: 4,
     options: [
       {
         id: 'OPT_FLIRT',

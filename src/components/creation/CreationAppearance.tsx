@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useGameEngine } from "../../engine/GameEngine";
 import { motion } from "motion/react";
-import { PlayerAvatar } from "../ui/PlayerAvatar";
+import { PlayerPortrait } from "../ui/PlayerPortrait";
 import { PhysicalAppearance } from "../../types";
 
 const SKIN_COLORS = [
@@ -113,7 +113,7 @@ export default function CreationAppearance() {
         
         {/* Full body 3D Avatar */}
         <div className="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing">
-            <PlayerAvatar player={{ ...state.player, appearance }} className="w-full h-full" />
+            <PlayerPortrait player={{ ...state.player, appearance }} className="w-full h-full" />
         </div>
         
         {/* Overlaid Info */}

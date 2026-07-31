@@ -1,5 +1,6 @@
 import React from 'react';
-import { useGameEngine } from '../../engine/GameEngine';
+import { usePlayer, useCareer, useFinances, useOverall } from '../../engine/selectors';
+import { useGameActions } from '../../engine/actions';
 import { 
   Trophy, 
   Calendar, 
@@ -11,14 +12,24 @@ import {
   Shield,
   Goal
 } from 'lucide-react';
-import { PlayerAvatar } from '../ui/PlayerAvatar';
+import { PlayerPortrait } from '../ui/PlayerPortrait';
+import { useSimulation } from '../../hooks/useSimulation';
+import { SimulationModal } from './SimulationModal';
+import { SimulationMode } from '../../core/domain/simulationEngine';
+import { ChevronDown, FastForward } from 'lucide-react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts';
 
 export default function DashboardView() {
-  const { state, dispatch } = useGameEngine();
-  const { player, career, finances } = state;
+  const player = usePlayer();
+  const career = useCareer();
+  const finances = useFinances();
+  const overall = useOverall();
+  const actions = useGameActions();
+  const simulation = useSimulation();
+  const [showSimMenu, setShowSimMenu] = React.useState(false);
   
-  const overall = Math.floor(Object.values(player.technical || {}).reduce((a, b) => a + (b as number), 0) / Math.max(1, Object.keys(player.technical || {}).length)) || 70;
+  
+  
   
   // Dummy data for the graph
   const evolutionData = [
@@ -40,7 +51,7 @@ export default function DashboardView() {
           <div className="flex items-center gap-6">
             {/* Avatar */}
             <div className="w-24 h-24 rounded-full bg-black/50 border-2 border-white/10 overflow-hidden flex-shrink-0">
-              <PlayerAvatar player={player} className="w-full h-full scale-150 translate-y-4" />
+              <PlayerPortrait player={player} className="w-full h-full scale-150 translate-y-4" />
             </div>
             
             {/* Info */}
@@ -144,16 +155,39 @@ export default function DashboardView() {
                 </div>
               </div>
               
-              <div className="text-xs text-zinc-500 text-center mb-6">
-                Domingo, 20 Mai {career.year}<br/>16:00
+              
+                            <div className="text-xs text-zinc-500 text-center mb-6">
+                Semana {career.week}, {career.year}
               </div>
               
-              <button 
-                onClick={() => dispatch({ type: 'ADVANCE_WEEK' })}
-                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 rounded-lg transition-colors text-sm"
-              >
-                IR PARA O JOGO
-              </button>
+              <div className="w-full relative">
+                <div className="flex gap-2">
+                  <button 
+                    onClick={() => simulation.startSimulation({ mode: 'NEXT_MATCH' })}
+                    className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 rounded-lg transition-colors text-sm flex items-center justify-center gap-2"
+                  >
+                    IR PARA O JOGO
+                  </button>
+                  <button
+                    onClick={() => setShowSimMenu(!showSimMenu)}
+                    className="px-4 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-400 rounded-lg transition-colors flex items-center justify-center"
+                  >
+                    <FastForward size={18} />
+                  </button>
+                </div>
+
+                {showSimMenu && (
+                  <div className="absolute bottom-full left-0 w-full mb-2 bg-[#1A1C23] border border-white/10 rounded-xl shadow-2xl overflow-hidden z-20 flex flex-col">
+                    <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider p-3 pb-1">Opções de Simulação</div>
+                    <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'ONE_MONTH' }) }} className="text-left px-4 py-3 text-sm text-zinc-300 hover:bg-white/5 transition-colors">1 Mês</button>
+                    <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'THREE_MONTHS' }) }} className="text-left px-4 py-3 text-sm text-zinc-300 hover:bg-white/5 transition-colors">3 Meses</button>
+                    <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'SIX_MONTHS' }) }} className="text-left px-4 py-3 text-sm text-zinc-300 hover:bg-white/5 transition-colors">6 Meses</button>
+                    <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'TRANSFER_WINDOW' }) }} className="text-left px-4 py-3 text-sm text-zinc-300 hover:bg-white/5 transition-colors">Próx. Janela de Transf.</button>
+                    <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'END_OF_SEASON' }) }} className="text-left px-4 py-3 text-sm text-zinc-300 hover:bg-white/5 transition-colors">Final da Temporada</button>
+                  </div>
+                )}
+              </div>
+
             </div>
           ) : (
             <div className="flex-1 flex items-center justify-center text-zinc-500 text-sm">
@@ -287,6 +321,16 @@ export default function DashboardView() {
         </div>
         
       </div>
+    <SimulationModal 
+        isOpen={simulation.isSimulating || simulation.result !== null}
+        isSimulating={simulation.isSimulating}
+        progress={simulation.progress}
+        result={simulation.result}
+        targetMode={simulation.targetMode}
+        interimState={simulation.interimState}
+        onCancel={simulation.cancelSimulation}
+        onApply={simulation.applyResult}
+      />
     </div>
   );
 }

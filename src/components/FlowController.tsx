@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGameEngine } from '../engine/GameEngine';
+import { useGamePhase, usePlayer } from '../engine/selectors';
 import CreationBasicInfo from './creation/CreationBasicInfo';
 import CreationPosition from './creation/CreationPosition';
 import CreationAppearance from './creation/CreationAppearance';
@@ -14,7 +14,8 @@ import MuseumView from './museum/MuseumView';
 import PostMatchScreen from './hub/PostMatchScreen';
 
 export default function FlowController() {
-  const { state } = useGameEngine();
+  const phase = useGamePhase();
+  const player = usePlayer();
 
   return (
     <div className="flex-1 w-full min-h-screen flex flex-col relative overflow-hidden bg-black text-zinc-100 font-sans selection:bg-yellow-500/30">
@@ -39,15 +40,15 @@ export default function FlowController() {
         </div>
 
         <div className="flex items-center gap-4">
-           {state.player.name && (
+           {player.name && (
               <div className="flex items-center gap-3 bg-white/5 backdrop-blur-xl px-4 py-2 rounded-2xl border border-white/10 shadow-lg">
                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                  <span className="text-sm font-bold text-white/90 tracking-wide">
-                   {state.player.name}
+                   {player.name}
                  </span>
                  <div className="h-4 w-[1px] bg-white/10 mx-1" />
                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">
-                   Idade: {state.player.age}
+                   Idade: {player.age}
                  </span>
               </div>
            )}
@@ -55,18 +56,18 @@ export default function FlowController() {
       </header>
 
       <main className="flex-1 flex flex-col items-center justify-center p-6 relative z-10">
-        {state.phase === 'CREATION_BASIC_INFO' && <CreationBasicInfo />}
-        {state.phase === 'CREATION_POSITION' && <CreationPosition />}
-        {state.phase === 'CREATION_APPEARANCE' && <CreationAppearance />}
-        {state.phase === 'CREATION_DRAFT_LENGTH' && <CreationDraftLength />}
-        {state.phase === 'CREATION_ATTRIBUTES' && <CreationAttributes />}
-        {state.phase === 'CREATION_PERSONALITY' && <CreationPersonality />}
-        {state.phase === 'DRAFT_CLUB' && <CreationDraftClub />}
+        {phase === 'CREATION_BASIC_INFO' && <CreationBasicInfo />}
+        {phase === 'CREATION_POSITION' && <CreationPosition />}
+        {phase === 'CREATION_APPEARANCE' && <CreationAppearance />}
+        {phase === 'CREATION_DRAFT_LENGTH' && <CreationDraftLength />}
+        {phase === 'CREATION_ATTRIBUTES' && <CreationAttributes />}
+        {phase === 'CREATION_PERSONALITY' && <CreationPersonality />}
+        {phase === 'DRAFT_CLUB' && <CreationDraftClub />}
         
-        {state.phase === 'EVENT' && <EventScreen />}
-        {state.phase === 'POST_MATCH' && <PostMatchScreen />}
-        {state.phase === 'HUB' && <MainHub />}
-        {state.phase === 'RETIREMENT' && <MuseumView />}
+        {phase === 'EVENT' && <EventScreen />}
+        {phase === 'POST_MATCH' && <PostMatchScreen />}
+        {phase === 'HUB' && <MainHub />}
+        {phase === 'RETIREMENT' && <MuseumView />}
       </main>
     </div>
   );

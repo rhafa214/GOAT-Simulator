@@ -2,7 +2,7 @@ import React from 'react';
 import { useGameEngine } from '../../engine/GameEngine';
 import { motion } from 'motion/react';
 import { Trophy, Calendar, Star, Medal, ArrowRightLeft, Shirt, Target, Activity, Shield, Camera, Film, Users, BookOpen, Quote, Home, ArrowRight } from 'lucide-react';
-import { PlayerAvatar } from '../ui/PlayerAvatar';
+import { PlayerPortrait } from '../ui/PlayerPortrait';
 
 export default function MuseumView() {
   const { state, dispatch } = useGameEngine();
@@ -44,7 +44,7 @@ export default function MuseumView() {
          <div className="flex items-center gap-8">
             <div className="w-32 h-32 rounded-full overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(234,179,8,0.3)] bg-gradient-to-br from-yellow-500 to-yellow-900 relative">
                <div className="absolute inset-0 bg-black/40 mix-blend-overlay" />
-               <PlayerAvatar player={player} className="w-full h-full scale-[1.3] mt-6 relative z-10 drop-shadow-2xl" />
+               <PlayerPortrait player={player} className="w-full h-full scale-[1.3] mt-6 relative z-10 drop-shadow-2xl" />
             </div>
             <div>
                <motion.div 
@@ -143,7 +143,7 @@ export default function MuseumView() {
                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <div className="bg-white/5 backdrop-blur-xl p-3 rounded-[2rem] border border-white/10 transform md:rotate-2 hover:rotate-0 hover:scale-105 transition-all shadow-2xl">
                      <div className="w-full h-72 bg-black/50 rounded-2xl overflow-hidden relative sepia-[.4] contrast-125 grayscale-[.2]">
-                        <PlayerAvatar player={player} className="w-full h-full scale-[2] mt-12" />
+                        <PlayerPortrait player={player} className="w-full h-full scale-[2] mt-12" />
                      </div>
                      <div className="p-6 text-center">
                         <div className="font-serif italic text-3xl text-white/90">O Início de Tudo</div>
@@ -153,7 +153,7 @@ export default function MuseumView() {
                   
                   <div className="bg-white/5 backdrop-blur-xl p-3 rounded-[2rem] border border-white/10 transform md:-rotate-2 hover:rotate-0 hover:scale-105 transition-all shadow-2xl">
                      <div className="w-full h-72 bg-black/50 rounded-2xl overflow-hidden relative brightness-110 contrast-150 saturate-150">
-                        <PlayerAvatar player={player} className="w-full h-full scale-[1.5] mt-4" />
+                        <PlayerPortrait player={player} className="w-full h-full scale-[1.5] mt-4" />
                      </div>
                      <div className="p-6 text-center">
                         <div className="font-serif italic text-3xl text-white/90">Auge da Forma</div>
@@ -163,7 +163,7 @@ export default function MuseumView() {
                   
                   <div className="bg-white/5 backdrop-blur-xl p-3 rounded-[2rem] border border-white/10 transform md:rotate-2 hover:rotate-0 hover:scale-105 transition-all shadow-2xl">
                      <div className="w-full h-72 bg-black/50 rounded-2xl overflow-hidden relative grayscale contrast-125">
-                        <PlayerAvatar player={player} className="w-full h-full scale-[1.8] mt-8" />
+                        <PlayerPortrait player={player} className="w-full h-full scale-[1.8] mt-8" />
                      </div>
                      <div className="p-6 text-center">
                         <div className="font-serif italic text-3xl text-white/90">O Adeus</div>
