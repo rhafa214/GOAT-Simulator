@@ -8,7 +8,7 @@ export function useGameActions() {
     setState: (state: GameState) => dispatch({ type: 'SET_STATE', payload: state }),
     advancePhase: (phase: GameState['phase']) => dispatch({ type: 'CHANGE_PHASE', payload: phase }),
     initializePlayer: (data: Partial<GameState['player']>) => dispatch({ type: 'INITIALIZE_PLAYER', payload: data }),
-    setDraftLength: (length: 'SHORT' | 'LONG') => dispatch({ type: 'SET_DRAFT_LENGTH', payload: length }),
+    setDraftLength: (length: 'QUICK' | 'COMPLETE') => dispatch({ type: 'SET_DRAFT_LENGTH', payload: length }),
     setupCareer: (club: Club) => dispatch({ type: 'SETUP_CAREER', payload: { club } }),
     trainAttribute: (attr: 'SHO' | 'PAS' | 'DRI' | 'DEF') => dispatch({ type: 'TRAIN_ATTRIBUTE', payload: attr }),
     advanceWeek: () => dispatch({ type: 'ADVANCE_WEEK' }),

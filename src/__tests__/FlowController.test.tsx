@@ -35,6 +35,6 @@ describe('FlowController', () => {
     
     // We expect the CreationBasicInfo component to render initially.
     // We can just check for the header or title text that should exist.
-    expect(screen.getByText(/GOAT Simulator/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/GOAT Simulator/i)[0]).toBeInTheDocument();
   });
 });

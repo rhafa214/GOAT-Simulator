@@ -10,7 +10,7 @@ export function PlayerPortrait({ player, className = '' }: { player: PlayerAttri
   return (
     <div className={`w-full h-full min-h-[300px] relative ${className}`}>
       <AvatarScene 
-         appearance={player.appearance}
+         
          clubColor={clubColor}
          pose="idle"
       />

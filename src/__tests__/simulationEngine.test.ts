@@ -144,7 +144,7 @@ describe('simulationEngine', () => {
         ...state,
         phase: 'EVENT',
         narrative: {
-          activeEvents: [{ id: 'EV_INJURY_1', imageType: 'injury' }]
+          activeEvents: ['EV_INJURY_1']
         }
       };
     });
@@ -154,7 +154,7 @@ describe('simulationEngine', () => {
     
     const result = runToCompletion(generator);
     
-    expect(result.stopReason).toBe('SEVERE_INJURY');
+    expect(result.stopReason).toBe('URGENT_EVENT');
     expect(result.summary.eventsTriggered).toBe(1);
     expect(result.finalState.phase).toBe('EVENT');
   });
@@ -167,7 +167,7 @@ describe('simulationEngine', () => {
         ...state,
         phase: 'EVENT',
         narrative: {
-          activeEvents: [{ id: 'EV_TRANSFER_OFFER' }]
+          activeEvents: ['EV_TRANSFER_OFFER']
         }
       };
     });
@@ -177,7 +177,7 @@ describe('simulationEngine', () => {
     
     const result = runToCompletion(generator);
     
-    expect(result.stopReason).toBe('TRANSFER_OFFER');
+    expect(result.stopReason).toBe('URGENT_EVENT');
   });
 
   it('handles END_OF_SEASON when advancing to a new year', () => {

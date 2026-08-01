@@ -11,7 +11,7 @@ describe('GameEngine', () => {
     const { result } = renderHook(() => useGameEngine(), { wrapper });
     
     expect(result.current.state).toBeDefined();
-    expect(result.current.state.phase).toBe('CREATION_BASIC_INFO');
+    expect(result.current.state.phase).toBe('MAIN_MENU');
     expect(result.current.state.player).toBeDefined();
   });
 

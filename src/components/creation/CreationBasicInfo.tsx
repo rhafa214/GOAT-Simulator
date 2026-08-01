@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { usePlayer } from '../../engine/selectors';
 import { useGameActions } from '../../engine/actions';
 import { motion } from 'motion/react';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, Button } from '../ui';
 
 export default function CreationBasicInfo() {
   const player = usePlayer();
   const actions = useGameActions();
+  
   const [name, setName] = useState(player.name);
   const [nationality, setNationality] = useState(player.nationality || 'BR');
 
@@ -30,47 +32,49 @@ export default function CreationBasicInfo() {
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="max-w-md w-full bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 p-8 rounded-3xl shadow-2xl"
+      className="max-w-md w-full mx-auto"
     >
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-black mb-2">Quem é você?</h2>
-        <p className="text-zinc-400">O primeiro passo de uma lenda começa com o nome.</p>
-      </div>
-
-      <div className="space-y-6">
-        <div>
-          <label className="text-xs text-zinc-400 font-bold uppercase block mb-2">Nome do Jogador</label>
-          <input 
-            type="text" 
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Seu nome"
-            maxLength={18}
-            className="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-4 text-lg outline-none focus:border-yellow-500 transition-colors"
-          />
-        </div>
-
-        <div>
-          <label className="text-xs text-zinc-400 font-bold uppercase block mb-2">Nacionalidade</label>
-          <select 
-            value={nationality}
-            onChange={(e) => setNationality(e.target.value)}
-            className="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-4 text-lg outline-none focus:border-yellow-500 transition-colors appearance-none"
+      <Card variant="elevated">
+        <CardHeader className="text-center pb-8">
+          <CardTitle className="text-3xl font-bold mb-2">Quem é você?</CardTitle>
+          <CardDescription>O primeiro passo de uma lenda começa com o nome.</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div className="space-y-2">
+            <label className="text-xs font-semibold text-white/60 uppercase tracking-wider block">Nome do Jogador</label>
+            <input 
+              type="text" 
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Seu nome"
+              maxLength={18}
+              className="w-full bg-black/50 border border-white/10 rounded-md px-4 py-3 text-white outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
+            />
+          </div>
+          
+          <div className="space-y-2">
+            <label className="text-xs font-semibold text-white/60 uppercase tracking-wider block">Nacionalidade</label>
+            <select 
+              value={nationality}
+              onChange={(e) => setNationality(e.target.value)}
+              className="w-full bg-black/50 border border-white/10 rounded-md px-4 py-3 text-white outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all appearance-none"
+            >
+              {NATIONS.map(n => (
+                <option key={n.code} value={n.code} className="bg-zinc-900">{n.name}</option>
+              ))}
+            </select>
+          </div>
+          
+          <Button 
+            onClick={handleNext}
+            disabled={!name.trim()}
+            className="w-full mt-4 font-bold uppercase tracking-wide"
+            size="lg"
           >
-            {NATIONS.map(n => (
-              <option key={n.code} value={n.code}>{n.name}</option>
-            ))}
-          </select>
-        </div>
-
-        <button 
-          onClick={handleNext}
-          disabled={!name.trim()}
-          className="w-full bg-yellow-500 text-yellow-950 font-bold text-lg py-4 rounded-xl hover:bg-yellow-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed mt-4"
-        >
-          Avançar
-        </button>
-      </div>
+            Avançar
+          </Button>
+        </CardContent>
+      </Card>
     </motion.div>
   );
 }

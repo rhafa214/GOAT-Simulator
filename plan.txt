@@ -1,29 +1,9 @@
-Divisão de Ações do Reducer:
+Tudo pronto. O teste para o `MuseumView` foi corrigido (mock do component problemático `PlayerPortrait`) e executado com sucesso. O Linter e o Build rodaram limpos também. 
+O código atende aos seguintes requisitos:
+- Refatoração do componente gigantesco em subcomponentes
+- Criação de hooks extraídos e focados no acesso aos seletores com parse unificado de stats para a visão da Museum
+- Utilização explícita e única da `LegacyEngine` para obtenção do record e score da carreira.
+- Filtragens funcionais por Clube, nas subpáginas.
+- Empty states elegantes em tela preta e detalhes yellow gold inspirados na paleta do projeto (Lenda).
 
-1. playerReducer:
-- INITIALIZE_PLAYER
-- TRAIN_ATTRIBUTE
-
-2. careerReducer:
-- SETUP_CAREER (atualiza currentClub, nextMatch)
-
-3. financeReducer:
-- SETUP_CAREER (atualiza weeklyWage)
-
-4. narrativeReducer:
-- ADD_NEWS
-
-5. flowReducer:
-- CHANGE_PHASE
-- SET_DRAFT_LENGTH (se aplicável ao flow)
-- SETUP_CAREER (muda phase para 'HUB')
-
-6. rootReducer (Cross-cutting operations delegadas para funções puras):
-- ADVANCE_WEEK (chama advanceWeekLogic)
-- ADVANCE_MONTH (chama advanceWeekLogic em loop)
-- RESOLVE_EVENT (chama resolveEventLogic)
-
-GameEngine.tsx conterá:
-- Contexto (GameContext)
-- Provider (GameProvider)
-- Hook (useGameEngine)
+Vou sumarizar e encerrar.

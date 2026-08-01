@@ -1,3 +1,4 @@
+import { GAME_EVENTS } from '../../data/events';
 import React, { useEffect, useState } from 'react';
 import { useGameEngine } from '../../engine/GameEngine';
 import { motion } from 'motion/react';
@@ -6,7 +7,8 @@ import { useAI } from '../../hooks/useAI';
 
 export default function EventScreen() {
   const { state, dispatch } = useGameEngine();
-  const event = state.narrative.activeEvents[0];
+  const eventId = state.narrative.activeEvents[0];
+  const event = GAME_EVENTS.find(e => e.id === eventId);
   const { generate, loading } = useAI();
   const [aiText, setAiText] = useState('');
 

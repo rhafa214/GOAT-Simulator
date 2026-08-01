@@ -1,9 +1,12 @@
+import { AvatarManagerProvider } from '../core/domain/avatar/AvatarManager';
 import React from 'react';
 import { render } from '@testing-library/react';
 import { expect, test, describe, vi } from 'vitest';
 import { PlayerPortrait } from '../components/ui/PlayerPortrait';
 import AvatarScene from '../components/3d/AvatarScene';
 import AvatarModel from '../components/3d/AvatarModel';
+
+
 import { GameProvider } from '../engine/GameEngine';
 
 // Mock Three.js/Fiber elements since they don't render in jsdom easily
@@ -58,14 +61,14 @@ const mockPlayer = {
 describe('Avatar Components', () => {
   test('AvatarModel renders without crashing', () => {
     const { container } = render(
-      <AvatarModel appearance={mockAppearance} clubColor="#ff0000" pose="idle" />
+      <AvatarManagerProvider initialAppearance={mockAppearance}><AvatarModel clubColor="#ff0000" pose="idle" /></AvatarManagerProvider>
     );
     expect(container).toBeDefined();
   });
 
   test('AvatarScene renders Canvas and Model', () => {
     const { getByTestId } = render(
-      <AvatarScene appearance={mockAppearance} clubColor="#ff0000" pose="idle" />
+      <AvatarManagerProvider initialAppearance={mockAppearance}><AvatarScene clubColor="#ff0000" pose="idle" /></AvatarManagerProvider>
     );
     expect(getByTestId('mock-canvas')).toBeDefined();
   });
@@ -73,7 +76,7 @@ describe('Avatar Components', () => {
   test('PlayerPortrait renders correctly wrapped with GameProvider', () => {
     const { getByTestId } = render(
       <GameProvider>
-        <PlayerPortrait player={mockPlayer} />
+        <AvatarManagerProvider initialAppearance={mockPlayer.appearance}><PlayerPortrait player={mockPlayer} /></AvatarManagerProvider>
       </GameProvider>
     );
     expect(getByTestId('mock-canvas')).toBeDefined();

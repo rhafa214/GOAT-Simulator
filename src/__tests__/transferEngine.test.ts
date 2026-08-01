@@ -88,7 +88,9 @@ describe('TransferEngine', () => {
       transferFee: 1000000,
       status: 'generated' as const,
       weekGenerated: 26,
-      yearGenerated: 2024
+      yearGenerated: 2024,
+      expectedRole: 'Reserva',
+      negotiationRounds: 0
     };
 
     // Agent with 100 skill should succeed
@@ -108,7 +110,9 @@ describe('TransferEngine', () => {
       transferFee: 5000000,
       status: 'generated' as const,
       weekGenerated: 26,
-      yearGenerated: 2024
+      yearGenerated: 2024,
+      expectedRole: 'Reserva',
+      negotiationRounds: 0
     };
 
     state.career.transferState!.activeProposals.push(proposal);
@@ -132,7 +136,9 @@ describe('TransferEngine', () => {
       transferFee: 5000000,
       status: 'generated' as const,
       weekGenerated: 26,
-      yearGenerated: 2024
+      yearGenerated: 2024,
+      expectedRole: 'Reserva',
+      negotiationRounds: 0
     };
 
     state.career.transferState!.activeProposals.push(proposal);
@@ -150,8 +156,10 @@ describe('TransferEngine', () => {
       offerDuration: 4,
       transferFee: 5000000,
       status: 'generated' as const,
-      weekGenerated: 20, // 6 weeks ago
-      yearGenerated: 2024
+      weekGenerated: 20,
+      yearGenerated: 2024,
+      expectedRole: 'Reserva',
+      negotiationRounds: 0
     };
 
     state.career.transferState!.activeProposals.push(proposal);

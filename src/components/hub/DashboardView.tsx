@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { usePlayer, useCareer, useFinances, useOverall } from '../../engine/selectors';
 import { useGameActions } from '../../engine/actions';
 import { 
@@ -10,13 +10,15 @@ import {
   Play,
   ArrowRight,
   Shield,
-  Goal
+  Goal,
+  FastForward,
+  ChevronDown
 } from 'lucide-react';
 import { PlayerPortrait } from '../ui/PlayerPortrait';
 import { useSimulation } from '../../hooks/useSimulation';
 import { SimulationModal } from './SimulationModal';
-import { SimulationMode } from '../../core/domain/simulationEngine';
-import { ChevronDown, FastForward } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, Badge, Button, Progress, Stat, SectionHeader, Panel, Tabs, TabsList, TabsTrigger, TabsContent } from '../ui';
+import NewsFeed from './NewsFeed';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts';
 
 export default function DashboardView() {
@@ -24,12 +26,9 @@ export default function DashboardView() {
   const career = useCareer();
   const finances = useFinances();
   const overall = useOverall();
-  const actions = useGameActions();
   const simulation = useSimulation();
-  const [showSimMenu, setShowSimMenu] = React.useState(false);
   
-  
-  
+  const [showSimMenu, setShowSimMenu] = useState(false);
   
   // Dummy data for the graph
   const evolutionData = [
@@ -41,287 +40,237 @@ export default function DashboardView() {
   ];
 
   return (
-    <div className="flex flex-col gap-6 pb-12">
-      {/* 1. PLAYER PROFILE CARD */}
-      <div className="w-full bg-[#1A1C23] border border-white/5 rounded-2xl p-6 relative overflow-hidden shadow-xl">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
-        
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative z-10">
-          
-          <div className="flex items-center gap-6">
-            {/* Avatar */}
-            <div className="w-24 h-24 rounded-full bg-black/50 border-2 border-white/10 overflow-hidden flex-shrink-0">
-              <PlayerPortrait player={player} className="w-full h-full scale-150 translate-y-4" />
-            </div>
-            
-            {/* Info */}
-            <div>
-              <div className="flex items-center gap-3 mb-1">
-                <h2 className="text-2xl font-bold text-white">{player.name}</h2>
-                <span className="px-2 py-0.5 bg-green-500/20 text-green-400 text-[10px] font-bold uppercase rounded border border-green-500/20">
-                  Titular
-                </span>
-              </div>
-              <div className="text-sm text-zinc-400 flex items-center gap-2">
-                {player.position} <span className="w-1 h-1 rounded-full bg-zinc-600"></span> {player.age} anos <span className="w-1 h-1 rounded-full bg-zinc-600"></span> Brasil
-              </div>
-            </div>
-          </div>
-          
-          <div className="flex items-center gap-8">
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full border-4 border-green-500 flex items-center justify-center mb-1 bg-black/30 shadow-[0_0_15px_rgba(34,197,94,0.3)]">
-                <span className="text-2xl font-black text-white">{overall}</span>
-              </div>
-              <span className="text-[10px] text-zinc-500 font-bold tracking-widest">GER</span>
-            </div>
-            
-            <div className="flex flex-col gap-3">
-              <div className="flex justify-between items-center gap-4 text-sm">
-                <span className="text-zinc-400">NÍVEL DE FAMA</span>
-                <span className="text-yellow-400 flex items-center gap-1 font-medium"><Star size={14} className="fill-yellow-400" /> Ídolo Local</span>
-              </div>
-              <div className="flex justify-between items-center gap-4 text-sm">
-                <span className="text-zinc-400">MORAL</span>
-                <span className="text-green-400 flex items-center gap-1 font-medium">Muito Feliz</span>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        
-        {/* Bottom Stats Row */}
-        <div className="mt-8 pt-4 border-t border-white/5 flex flex-wrap gap-8 justify-between relative z-10">
-          <div className="flex items-center gap-3">
-            <div className="text-xs text-zinc-500 font-medium">Clube</div>
-            <div className="flex items-center gap-2 text-sm font-bold text-white">
-              {career.currentClub?.logo && <img src={career.currentClub.logo} alt="Club" className="w-5 h-5 object-contain" />}
-              {career.currentClub?.name || 'Agente Livre'}
-            </div>
-          </div>
-          <div className="flex flex-col gap-1">
-            <div className="text-xs text-zinc-500 font-medium">Número</div>
-            <div className="text-sm font-bold text-white">{career.shirtNumber || 10}</div>
-          </div>
-          <div className="flex flex-col gap-1">
-            <div className="text-xs text-zinc-500 font-medium">Contrato</div>
-            <div className="text-sm font-bold text-white">{career.year + 4}</div>
-          </div>
-          <div className="flex flex-col gap-1">
-            <div className="text-xs text-zinc-500 font-medium">Salário</div>
-            <div className="text-sm font-bold text-white">R$ {(finances.weeklyWage / 1000).toFixed(0)}k</div>
-          </div>
-          <div className="flex flex-col gap-1">
-            <div className="text-xs text-zinc-500 font-medium">Valor de Mercado</div>
-            <div className="text-sm font-bold text-white">R$ 78M</div>
-          </div>
-        </div>
-      </div>
+    <div className="flex flex-col lg:flex-row gap-6 pb-12">
       
-      {/* 2. MIDDLE ROW */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {/* LEFT COLUMN: IDENTITY & CONDITION */}
+      <div className="w-full lg:w-1/3 flex flex-col gap-6">
         
-        {/* Next Match */}
-        <div className="bg-[#1A1C23] border border-white/5 rounded-2xl p-6 flex flex-col">
-          <div className="text-xs font-bold text-zinc-400 tracking-wider mb-6">PRÓXIMO JOGO</div>
-          
-          {career.nextMatch ? (
-            <div className="flex-1 flex flex-col items-center justify-center">
-              <div className="text-sm text-zinc-300 mb-6">{career.nextMatch.competition}</div>
+        {/* Player Identity Card */}
+        <Card variant="elevated" className="relative overflow-hidden bg-white/5">
+          <CardContent className="p-0">
+            <div className="relative h-48 bg-zinc-900 border-b border-white/10 flex items-center justify-center overflow-hidden">
+              {/* Subtle background glow */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-amber-500/10 rounded-full blur-[60px]" />
+              <PlayerPortrait player={player} className="w-full h-full scale-[1.5] translate-y-8 z-0" />
               
-              <div className="flex items-center justify-center w-full gap-4 mb-8">
-                <div className="flex flex-col items-center flex-1">
-                  <div className="w-16 h-16 bg-black/30 rounded-full flex items-center justify-center mb-3 border border-white/5 p-2">
-                    {career.nextMatch.isHome ? (
-                      career.currentClub?.logo ? <img src={career.currentClub.logo} alt="Home" className="w-full h-full object-contain" /> : <div className="text-xs font-bold truncate px-1">{career.currentClub?.name.substring(0,3)}</div>
-                    ) : (
-                      career.nextMatch.opponentLogo ? <img src={career.nextMatch.opponentLogo} alt="Away" className="w-full h-full object-contain" /> : <div className="text-xs font-bold truncate px-1">{career.nextMatch.opponent.substring(0,3)}</div>
-                    )}
-                  </div>
-                  <div className="text-[10px] uppercase font-bold text-white tracking-wider text-center line-clamp-1">{career.nextMatch.isHome ? career.currentClub?.name : career.nextMatch.opponent}</div>
-                </div>
-                
-                <div className="text-xl font-black text-zinc-600 px-2">X</div>
-                
-                <div className="flex flex-col items-center flex-1">
-                  <div className="w-16 h-16 bg-black/30 rounded-full flex items-center justify-center mb-3 border border-white/5 p-2">
-                    {!career.nextMatch.isHome ? (
-                      career.currentClub?.logo ? <img src={career.currentClub.logo} alt="Home" className="w-full h-full object-contain" /> : <div className="text-xs font-bold truncate px-1">{career.currentClub?.name.substring(0,3)}</div>
-                    ) : (
-                      career.nextMatch.opponentLogo ? <img src={career.nextMatch.opponentLogo} alt="Away" className="w-full h-full object-contain" /> : <div className="text-xs font-bold truncate px-1">{career.nextMatch.opponent.substring(0,3)}</div>
-                    )}
-                  </div>
-                  <div className="text-[10px] uppercase font-bold text-white tracking-wider text-center line-clamp-1">{!career.nextMatch.isHome ? career.currentClub?.name : career.nextMatch.opponent}</div>
-                </div>
+              {/* Overlay GER */}
+              <div className="absolute top-4 right-4 z-20 flex flex-col items-center">
+                <div className="text-3xl font-black text-white drop-shadow-md">{overall}</div>
+                <div className="text-[10px] text-amber-500 font-bold tracking-widest uppercase">GER</div>
               </div>
-              
-              
-                            <div className="text-xs text-zinc-500 text-center mb-6">
-                Semana {career.week}, {career.year}
-              </div>
-              
-              <div className="w-full relative">
-                <div className="flex gap-2">
-                  <button 
-                    onClick={() => simulation.startSimulation({ mode: 'NEXT_MATCH' })}
-                    className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 rounded-lg transition-colors text-sm flex items-center justify-center gap-2"
-                  >
-                    IR PARA O JOGO
-                  </button>
-                  <button
-                    onClick={() => setShowSimMenu(!showSimMenu)}
-                    className="px-4 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-400 rounded-lg transition-colors flex items-center justify-center"
-                  >
-                    <FastForward size={18} />
-                  </button>
-                </div>
+            </div>
 
-                {showSimMenu && (
-                  <div className="absolute bottom-full left-0 w-full mb-2 bg-[#1A1C23] border border-white/10 rounded-xl shadow-2xl overflow-hidden z-20 flex flex-col">
-                    <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider p-3 pb-1">Opções de Simulação</div>
-                    <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'ONE_MONTH' }) }} className="text-left px-4 py-3 text-sm text-zinc-300 hover:bg-white/5 transition-colors">1 Mês</button>
-                    <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'THREE_MONTHS' }) }} className="text-left px-4 py-3 text-sm text-zinc-300 hover:bg-white/5 transition-colors">3 Meses</button>
-                    <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'SIX_MONTHS' }) }} className="text-left px-4 py-3 text-sm text-zinc-300 hover:bg-white/5 transition-colors">6 Meses</button>
-                    <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'TRANSFER_WINDOW' }) }} className="text-left px-4 py-3 text-sm text-zinc-300 hover:bg-white/5 transition-colors">Próx. Janela de Transf.</button>
-                    <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'END_OF_SEASON' }) }} className="text-left px-4 py-3 text-sm text-zinc-300 hover:bg-white/5 transition-colors">Final da Temporada</button>
-                  </div>
-                )}
+            <div className="p-6">
+              <div className="flex items-center gap-2 mb-1">
+                <h2 className="text-2xl font-bold tracking-tight text-white">{player.name}</h2>
+                <Badge variant="gold" className="ml-2">Titular</Badge>
+              </div>
+              
+              <div className="text-sm font-medium text-white/60 flex items-center gap-2 mb-6">
+                <span>{player.position}</span>
+                <span className="w-1 h-1 rounded-full bg-white/20" />
+                <span>{player.age} anos</span>
+                <span className="w-1 h-1 rounded-full bg-white/20" />
+                <span>BR</span>
               </div>
 
-            </div>
-          ) : (
-            <div className="flex-1 flex items-center justify-center text-zinc-500 text-sm">
-              Sem jogos agendados
-            </div>
-          )}
-        </div>
-        
-        {/* Recent Performance */}
-        <div className="bg-[#1A1C23] border border-white/5 rounded-2xl p-6 flex flex-col">
-          <div className="text-xs font-bold text-zinc-400 tracking-wider mb-4">DESEMPENHO RECENTE</div>
-          
-          <div className="flex flex-col gap-3 flex-1 overflow-y-auto custom-scrollbar">
-            {career.matches.length > 0 ? career.matches.slice(0, 4).map((match, i) => (
-              <div key={i} className="flex items-center justify-between p-3 bg-black/20 rounded-lg border border-white/5">
-                <div className="flex items-center gap-2 flex-1">
-                   <div className="w-6 h-6 flex items-center justify-center bg-white/5 rounded">
-                     {career.currentClub?.logo ? <img src={career.currentClub.logo} className="w-4 h-4 object-contain" /> : <Trophy size={10} />}
-                   </div>
-                   <div className="text-xs text-white truncate max-w-[80px]">{career.currentClub?.name}</div>
+              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden shrink-0">
+                    {career.currentClub?.logo ? (
+                      <img src={career.currentClub.logo} alt="Club" className="w-6 h-6 object-contain" />
+                    ) : (
+                      <Shield size={18} className="text-white/40" />
+                    )}
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-semibold text-white/40 uppercase tracking-widest">Clube</div>
+                    <div className="text-sm font-bold text-white line-clamp-1">{career.currentClub?.name || 'Agente Livre'}</div>
+                  </div>
                 </div>
-                <div className="text-xs font-bold text-white mx-2">{Math.floor(Math.random()*4)} - {Math.floor(Math.random()*4)}</div>
-                <div className="flex items-center justify-end gap-2 flex-1">
-                   <div className="text-xs text-white truncate max-w-[80px]">{match.opponent}</div>
-                   <div className="w-6 h-6 flex items-center justify-center bg-white/5 rounded">
-                     {match.opponentLogo ? <img src={match.opponentLogo} className="w-4 h-4 object-contain" /> : <Shield size={10} />}
-                   </div>
-                </div>
-                <div className={`ml-4 w-8 h-8 rounded flex items-center justify-center text-xs font-bold ${match.rating >= 8 ? 'bg-green-500/20 text-green-400' : match.rating >= 6 ? 'bg-zinc-500/20 text-zinc-300' : 'bg-red-500/20 text-red-400'}`}>
-                  {match.rating.toFixed(1)}
+                <div className="flex flex-col justify-center">
+                  <div className="text-[10px] font-semibold text-white/40 uppercase tracking-widest">Camisa</div>
+                  <div className="text-sm font-bold text-white">{career.shirtNumber || 10}</div>
                 </div>
               </div>
-            )) : (
-              <div className="flex-1 flex items-center justify-center text-zinc-500 text-sm">
-                Nenhum jogo disputado
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Condition Panel */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-sm uppercase tracking-widest text-white/60">Condição Atual</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col gap-5">
+            <div>
+              <div className="flex justify-between items-end mb-2">
+                <span className="text-xs font-semibold text-white/60 uppercase">Fitness</span>
+                <span className="text-sm font-bold text-white">90%</span>
+              </div>
+              <Progress value={90} indicatorColor="bg-emerald-500" />
+            </div>
+            
+            <div className="flex justify-between items-center py-3 border-t border-white/5">
+              <span className="text-xs font-semibold text-white/60 uppercase">Moral</span>
+              <Badge variant="success">Excelente</Badge>
+            </div>
+            
+            <div className="flex justify-between items-center pt-3 border-t border-white/5">
+              <span className="text-xs font-semibold text-white/60 uppercase">Forma</span>
+              <span className="text-sm font-bold text-emerald-400 flex items-center gap-1">
+                <TrendingUp size={14} /> Em Alta
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* RIGHT COLUMN: ACTION & CONTEXT */}
+      <div className="w-full lg:w-2/3 flex flex-col gap-6">
+        
+        {/* Next Match Card */}
+        <Card variant="elevated" className="border-amber-500/20 bg-white/5 overflow-visible z-10">
+          <CardContent className="p-6 md:p-8">
+            <SectionHeader title="Próximo Desafio" description={career.nextMatch?.competition || "Amistoso"} />
+            
+            {career.nextMatch ? (
+              <div className="flex flex-col">
+                
+                <div className="flex items-center justify-between mb-8">
+                  {/* Home */}
+                  <div className="flex flex-col items-center flex-1">
+                    <div className="w-20 h-20 bg-black/50 rounded-full flex items-center justify-center mb-4 border border-white/10 p-4">
+                      {career.nextMatch.isHome ? (
+                        career.currentClub?.logo ? <img src={career.currentClub.logo} alt="Home" className="w-full h-full object-contain" /> : <Shield size={24} className="text-white/40" />
+                      ) : (
+                        career.nextMatch.opponentLogo ? <img src={career.nextMatch.opponentLogo} alt="Away" className="w-full h-full object-contain" /> : <Shield size={24} className="text-white/40" />
+                      )}
+                    </div>
+                    <div className="text-xs font-bold text-white uppercase tracking-wider text-center">
+                      {career.nextMatch.isHome ? career.currentClub?.name : career.nextMatch.opponent}
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col items-center mx-4">
+                    <div className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-1">VS</div>
+                    <div className="text-sm font-bold text-white">FORA</div>
+                  </div>
+                  
+                  {/* Away */}
+                  <div className="flex flex-col items-center flex-1">
+                    <div className="w-20 h-20 bg-black/50 rounded-full flex items-center justify-center mb-4 border border-white/10 p-4">
+                      {!career.nextMatch.isHome ? (
+                        career.currentClub?.logo ? <img src={career.currentClub.logo} alt="Home" className="w-full h-full object-contain" /> : <Shield size={24} className="text-white/40" />
+                      ) : (
+                        career.nextMatch.opponentLogo ? <img src={career.nextMatch.opponentLogo} alt="Away" className="w-full h-full object-contain" /> : <Shield size={24} className="text-white/40" />
+                      )}
+                    </div>
+                    <div className="text-xs font-bold text-white uppercase tracking-wider text-center">
+                      {!career.nextMatch.isHome ? career.currentClub?.name : career.nextMatch.opponent}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Simulation Controls */}
+                <div className="w-full relative mt-4 z-20">
+                  <div className="flex gap-2">
+                    <Button 
+                      variant="primary" 
+                      size="lg" 
+                      className="flex-1 font-bold text-sm tracking-wider uppercase"
+                      onClick={() => simulation.startSimulation({ mode: 'NEXT_MATCH' })}
+                    >
+                      Jogar Partida
+                    </Button>
+                    <Button
+                      variant="secondary"
+                      size="lg"
+                      onClick={() => setShowSimMenu(!showSimMenu)}
+                      className="px-4"
+                    >
+                      <FastForward size={20} />
+                    </Button>
+                  </div>
+
+                  {showSimMenu && (
+                    <div className="absolute top-full right-0 mt-2 w-48 bg-zinc-900 border border-white/10 rounded-md shadow-2xl flex flex-col py-1 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+                      <div className="px-3 py-2 text-[10px] font-bold text-white/40 uppercase tracking-widest bg-black/20">Simular até</div>
+                      <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'ONE_MONTH' }) }} className="text-left px-4 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">1 Mês</button>
+                      <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'THREE_MONTHS' }) }} className="text-left px-4 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">3 Meses</button>
+                      <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'SIX_MONTHS' }) }} className="text-left px-4 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">6 Meses</button>
+                      <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'TRANSFER_WINDOW' }) }} className="text-left px-4 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Fim da Janela</button>
+                      <button onClick={() => { setShowSimMenu(false); simulation.startSimulation({ mode: 'END_OF_SEASON' }) }} className="text-left px-4 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">Final da Temporada</button>
+                    </div>
+                  )}
+                </div>
+
+              </div>
+            ) : (
+              <div className="py-12 flex flex-col items-center justify-center text-center">
+                <Calendar className="w-12 h-12 text-white/20 mb-4" />
+                <h4 className="text-lg font-semibold text-white">Semana Livre</h4>
+                <p className="text-sm text-white/60 mt-1 max-w-sm">Nenhum jogo agendado. Aproveite para treinar ou recuperar seu condicionamento.</p>
+                <div className="mt-8 w-full flex gap-2">
+                  <Button variant="primary" size="lg" className="flex-1 font-bold text-sm tracking-wider uppercase" onClick={() => simulation.startSimulation({ mode: 'NEXT_MATCH' })}>
+                    Avançar Semana
+                  </Button>
+                </div>
               </div>
             )}
-          </div>
-          
-          <button className="text-xs text-indigo-400 hover:text-indigo-300 text-center mt-4 w-full">Ver todas</button>
-        </div>
-        
-        {/* Evolution */}
-        <div className="bg-[#1A1C23] border border-white/5 rounded-2xl p-6 flex flex-col">
-          <div className="text-xs font-bold text-zinc-400 tracking-wider mb-4">EVOLUÇÃO DO JOGADOR</div>
-          
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 rounded-full border-2 border-green-500 flex items-center justify-center bg-black/30">
-              <span className="text-lg font-black text-white">{overall}</span>
-            </div>
-            <div>
-              <div className="text-green-400 font-bold flex items-center gap-1"><TrendingUp size={14} /> +5</div>
-              <div className="text-[10px] text-zinc-500">Desde o início da temporada</div>
-            </div>
-          </div>
-          
-          <div className="flex-1 w-full h-32 relative">
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={evolutionData} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
-                <XAxis dataKey="name" stroke="#52525b" fontSize={10} tickLine={false} axisLine={false} />
-                <YAxis domain={['dataMin - 2', 'dataMax + 2']} stroke="#52525b" fontSize={10} tickLine={false} axisLine={false} />
-                <Tooltip 
-                  contentStyle={{ backgroundColor: '#0B0C10', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px' }}
-                  itemStyle={{ color: '#22c55e' }}
-                />
-                <Line type="monotone" dataKey="ovr" stroke="#22c55e" strokeWidth={2} dot={{ r: 4, fill: '#1A1C23', stroke: '#22c55e', strokeWidth: 2 }} activeDot={{ r: 6 }} />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
+
+        {/* Secondary Info (Tabs) */}
+        <Card className="flex-1">
+          <CardContent className="p-0 h-full flex flex-col">
+            <Tabs defaultValue="news" className="w-full h-full flex flex-col">
+              <div className="px-6 pt-6 pb-2 border-b border-white/5">
+                <TabsList>
+                  <TabsTrigger value="news">Notícias</TabsTrigger>
+                  <TabsTrigger value="stats">Desempenho</TabsTrigger>
+                </TabsList>
+              </div>
+              
+              <TabsContent value="news" className="p-6 flex-1 m-0 h-[300px]">
+                <NewsFeed />
+              </TabsContent>
+              
+              <TabsContent value="stats" className="p-6 m-0 h-[300px]">
+                <div className="flex flex-col gap-6 h-full">
+                  <div className="flex items-center gap-4 shrink-0">
+                    <div className="w-12 h-12 rounded-full border-2 border-emerald-500 flex items-center justify-center bg-emerald-500/10">
+                      <span className="text-lg font-black text-emerald-400">{overall}</span>
+                    </div>
+                    <div>
+                      <div className="text-emerald-400 font-bold flex items-center gap-1"><TrendingUp size={14} /> +5 GER</div>
+                      <div className="text-[10px] text-white/40 uppercase tracking-widest">Desde o início da temporada</div>
+                    </div>
+                  </div>
+                  
+                  <div className="w-full flex-1 min-h-[150px]">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <LineChart data={evolutionData} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
+                        <XAxis dataKey="name" stroke="#ffffff40" fontSize={10} tickLine={false} axisLine={false} />
+                        <YAxis domain={['dataMin - 2', 'dataMax + 2']} stroke="#ffffff40" fontSize={10} tickLine={false} axisLine={false} />
+                        <Tooltip 
+                          contentStyle={{ backgroundColor: '#09090b', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px' }}
+                          itemStyle={{ color: '#34d399' }}
+                        />
+                        <Line type="monotone" dataKey="ovr" stroke="#34d399" strokeWidth={2} dot={{ r: 4, fill: '#000', stroke: '#34d399', strokeWidth: 2 }} activeDot={{ r: 6 }} />
+                      </LineChart>
+                    </ResponsiveContainer>
+                  </div>
+                </div>
+              </TabsContent>
+            </Tabs>
+          </CardContent>
+        </Card>
         
       </div>
       
-      {/* 3. BOTTOM ROW */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
-        {/* Season Stats */}
-        <div className="bg-[#1A1C23] border border-white/5 rounded-2xl p-6">
-          <div className="text-xs font-bold text-zinc-400 tracking-wider mb-6">ESTATÍSTICAS DA TEMPORADA</div>
-          <div className="flex justify-between items-center text-center">
-            <div className="flex flex-col gap-2">
-               <div className="w-8 h-8 mx-auto bg-white/5 rounded flex items-center justify-center text-zinc-400"><Play size={14} /></div>
-               <div className="text-xs text-zinc-500">Jogos</div>
-               <div className="text-xl font-bold text-white">{career.currentSeasonStats.matchesPlayed}</div>
-            </div>
-            <div className="flex flex-col gap-2">
-               <div className="w-8 h-8 mx-auto bg-white/5 rounded flex items-center justify-center text-zinc-400"><Goal size={14} /></div>
-               <div className="text-xs text-zinc-500">Gols</div>
-               <div className="text-xl font-bold text-white">{career.currentSeasonStats.goals}</div>
-            </div>
-            <div className="flex flex-col gap-2">
-               <div className="w-8 h-8 mx-auto bg-white/5 rounded flex items-center justify-center text-zinc-400"><ArrowRight size={14} /></div>
-               <div className="text-xs text-zinc-500">Assistências</div>
-               <div className="text-xl font-bold text-white">{career.currentSeasonStats.assists}</div>
-            </div>
-            <div className="flex flex-col gap-2">
-               <div className="w-8 h-8 mx-auto bg-white/5 rounded flex items-center justify-center text-zinc-400"><Star size={14} /></div>
-               <div className="text-xs text-zinc-500">Nota Média</div>
-               <div className="text-xl font-bold text-white">{career.currentSeasonStats.avgRating.toFixed(1)}</div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Objectives */}
-        <div className="bg-[#1A1C23] border border-white/5 rounded-2xl p-6">
-          <div className="text-xs font-bold text-zinc-400 tracking-wider mb-4">OBJETIVOS</div>
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center justify-between text-sm">
-              <span className="text-zinc-300"><span className="w-1.5 h-1.5 rounded-full bg-zinc-600 inline-block mr-2" /> Vencer o Brasileirão</span>
-              <CheckCircle size={16} className="text-green-500" />
-            </div>
-            <div className="flex items-center justify-between text-sm">
-              <span className="text-zinc-300"><span className="w-1.5 h-1.5 rounded-full bg-zinc-600 inline-block mr-2" /> Marcar 20 gols</span>
-              <CheckCircle size={16} className="text-green-500" />
-            </div>
-            <div className="flex items-center justify-between text-sm">
-              <span className="text-zinc-300"><span className="w-1.5 h-1.5 rounded-full bg-zinc-600 inline-block mr-2" /> Vencer a Libertadores</span>
-              <Star size={16} className="text-green-500" />
-            </div>
-          </div>
-        </div>
-        
-        {/* News */}
-        <div className="bg-[#1A1C23] border border-white/5 rounded-2xl p-6">
-          <div className="text-xs font-bold text-zinc-400 tracking-wider mb-4">NOTÍCIAS</div>
-          <div className="flex flex-col gap-3">
-             <div className="text-sm text-zinc-300 truncate">João Silva é eleito o jogador do mês de abril</div>
-             <div className="text-sm text-zinc-300 truncate">Interesse do Manchester United em João Silva</div>
-             <div className="text-sm text-zinc-300 truncate">Flamengo avança na Libertadores</div>
-          </div>
-        </div>
-        
-      </div>
-    <SimulationModal 
+      <SimulationModal 
         isOpen={simulation.isSimulating || simulation.result !== null}
         isSimulating={simulation.isSimulating}
         progress={simulation.progress}

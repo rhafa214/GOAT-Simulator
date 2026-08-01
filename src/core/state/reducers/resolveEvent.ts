@@ -5,7 +5,8 @@ import { SeededRNG } from '../../../utils/rng';
 // from '../../../data/events';
 
 export function resolveEventLogic(state: GameState, payload: { eventId: string; optionId: string }): GameState {
-  const event = state.narrative.activeEvents.find(e => e.id === payload.eventId);
+  const eventId = state.narrative.activeEvents.find(id => id === payload.eventId);
+  const event = GAME_EVENTS.find(e => e.id === eventId);
   if (!event) return state;
 
   const option = event.options.find(o => o.id === payload.optionId);
@@ -43,10 +44,10 @@ export function resolveEventLogic(state: GameState, payload: { eventId: string; 
 
   // Check if another event is triggered by this one
   let nextPhase = state.phase;
-  let nextEvents: GameEvent[] = [];
+  let nextEvents: string[] = [];
   if (effect.triggerNextEvent) {
     const next = GAME_EVENTS.find(e => e.id === effect.triggerNextEvent);
-    if (next) nextEvents = [next];
+    if (next) nextEvents = [next.id];
   } else {
     nextPhase = 'HUB';
   }

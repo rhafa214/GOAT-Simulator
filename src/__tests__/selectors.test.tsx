@@ -12,7 +12,7 @@ describe('Selectors and Actions', () => {
 
   it('provides the default player and phase', () => {
     const { result } = renderHook(() => ({ phase: useGamePhase(), player: usePlayer() }), { wrapper });
-    expect(result.current.phase).toBe('CREATION_BASIC_INFO');
+    expect(result.current.phase).toBe('MAIN_MENU');
     expect(result.current.player.name).toBe('');
   });
 

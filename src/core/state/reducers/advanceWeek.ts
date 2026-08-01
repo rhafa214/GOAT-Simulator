@@ -1,3 +1,4 @@
+import { PlayerProgressionEngine, ProgressionParams } from '../../domain/progressionEngine';
 import { simulateMatch, SimulateMatchParams } from '../../domain/matchEngine';
 import { toLegacyMatchStats } from '../../domain/matchAdapter';
 import { ALL_CLUBS } from '../../../data/database';
@@ -5,6 +6,8 @@ import { GameState, GameEvent, MatchStats } from '../../../types';
 import { rng } from '../../../utils/rng';
 import { eventEngine } from '../../domain/eventEngine';
 import { newsEngine } from '../../domain/newsEngine';
+import { TransferEngine } from '../../domain/transferEngine';
+import { TransferProposal } from '../../../types';
 // from '../../domain/eventEngine';
 import { registerMatchResult, getNextFixtureForClub, advanceSeasonWeek, getMatchImportance, finishSeason, createSeason, registerLeagueCompetition } from '../../domain/seasonEngine';
 
@@ -138,11 +141,165 @@ export function advanceWeekLogic(state: GameState): GameState {
      if (matchLog.injured) nextSeasonStats.injuries++;
      if (matchLog.motm) nextSeasonStats.motm++;
      if (matchLog.wasCaptain) nextSeasonStats.captaincies++;
+
+    // --- Progression Engine ---
+    if (!newPlayer.progression) {
+      newPlayer.progression = PlayerProgressionEngine.initializeProgression(rng, 80 + Math.floor(avgTechnical / 5));
+    }
+
+    const plan = newPlayer.trainingPlan || { focus: 'GENERAL', intensity: 'MEDIUM' };
+    let trainingLoad = 50;
+    let fitnessDrain = 0;
+    
+    if (plan.intensity === 'LOW') {
+      trainingLoad = 25;
+      fitnessDrain = 10;
+    } else if (plan.intensity === 'MEDIUM') {
+      trainingLoad = 50;
+      fitnessDrain = 20;
+    } else if (plan.intensity === 'HIGH') {
+      trainingLoad = 80;
+      fitnessDrain = 35;
+    }
+
+    if (plan.focus === 'REST') {
+      trainingLoad = 0;
+      fitnessDrain = -30; // Heals fitness
+    } else if (plan.focus === 'RECOVERY') {
+      trainingLoad = 10;
+      fitnessDrain = -15; // Heals some fitness
+    }
+    
+    // Apply fitness drain
+    newPlayer.rpg.fitness = Math.max(0, Math.min(100, newPlayer.rpg.fitness - fitnessDrain));
+
+    // Injury risk from training
+    let isInjuredInTraining = false;
+    let trainingInjurySeverity = 0;
+    if (plan.focus !== 'REST' && plan.focus !== 'RECOVERY' && newPlayer.rpg.fitness < 40) {
+      const risk = (40 - newPlayer.rpg.fitness) + (plan.intensity === 'HIGH' ? 20 : 0);
+      if (rng.chance(risk / 2)) {
+         isInjuredInTraining = true;
+         trainingInjurySeverity = rng.integer(10, 50);
+      }
+    }
+
+    // Chemistry boosts relationships
+    if (plan.focus === 'CHEMISTRY') {
+       newPlayer.relationships.squad = Math.min(100, newPlayer.relationships.squad + 2);
+       newPlayer.rpg.morale = Math.min(100, newPlayer.rpg.morale + 2);
+    }
+
+    
+    const progParams: ProgressionParams = {
+      age: newPlayer.age,
+      position: newPlayer.position || '',
+      personality: newPlayer.personality || '',
+      dna: newPlayer.dna || [],
+      minutesPlayed: matchLog ? matchLog.minutesPlayed : 0,
+      matchRating: matchLog ? matchLog.rating : 0,
+
+      trainingFocus: plan.focus,
+      trainingLoad,
+      isInjured: matchLog ? matchLog.injured : isInjuredInTraining,
+      injurySeverity: (matchLog && matchLog.injured) ? rng.integer(1, 100) : trainingInjurySeverity,
+
+      clubFacilitiesLevel: state.career.currentClub ? (6 - state.career.currentClub.tier) * 20 : 50,
+      coachQuality: state.career.currentClub ? (6 - state.career.currentClub.tier) * 20 : 50
+    };
+
+    const progResult = PlayerProgressionEngine.processWeek(
+      newPlayer.technical,
+      newPlayer.progression,
+      progParams,
+      rng
+    );
+    
+    newPlayer.technical = progResult.technical;
+    newPlayer.progression = progResult.progression;
+    // --- End Progression Engine ---
+
      
      if (currentSeasonState && state.career.nextMatch.fixtureId) {
          currentSeasonState = registerMatchResult(currentSeasonState, state.career.nextMatch.fixtureId, aggregate.result.homeScore, aggregate.result.awayScore);
      }
+  } else {
+    // --- Progression Engine (No Match) ---
+    if (!newPlayer.progression) {
+       const avgTechnical = Object.values(state.player.technical).reduce((a, b) => a + b, 0) / 17;
+       newPlayer.progression = PlayerProgressionEngine.initializeProgression(rng, 80 + Math.floor(avgTechnical / 5));
+    }
+
+    const plan = newPlayer.trainingPlan || { focus: 'GENERAL', intensity: 'MEDIUM' };
+    let trainingLoad = 50;
+    let fitnessDrain = 0;
+    
+    if (plan.intensity === 'LOW') {
+      trainingLoad = 25;
+      fitnessDrain = 10;
+    } else if (plan.intensity === 'MEDIUM') {
+      trainingLoad = 50;
+      fitnessDrain = 20;
+    } else if (plan.intensity === 'HIGH') {
+      trainingLoad = 80;
+      fitnessDrain = 35;
+    }
+
+    if (plan.focus === 'REST') {
+      trainingLoad = 0;
+      fitnessDrain = -30; // Heals fitness
+    } else if (plan.focus === 'RECOVERY') {
+      trainingLoad = 10;
+      fitnessDrain = -15; // Heals some fitness
+    }
+    
+    // Apply fitness drain
+    newPlayer.rpg.fitness = Math.max(0, Math.min(100, newPlayer.rpg.fitness - fitnessDrain));
+
+    // Injury risk from training
+    let isInjuredInTraining = false;
+    let trainingInjurySeverity = 0;
+    if (plan.focus !== 'REST' && plan.focus !== 'RECOVERY' && newPlayer.rpg.fitness < 40) {
+      const risk = (40 - newPlayer.rpg.fitness) + (plan.intensity === 'HIGH' ? 20 : 0);
+      if (rng.chance(risk / 2)) {
+         isInjuredInTraining = true;
+         trainingInjurySeverity = rng.integer(10, 50);
+      }
+    }
+
+    // Chemistry boosts relationships
+    if (plan.focus === 'CHEMISTRY') {
+       newPlayer.relationships.squad = Math.min(100, newPlayer.relationships.squad + 2);
+       newPlayer.rpg.morale = Math.min(100, newPlayer.rpg.morale + 2);
+    }
+
+    const progParams: ProgressionParams = {
+      age: newPlayer.age,
+      position: newPlayer.position || '',
+      personality: newPlayer.personality || '',
+      dna: newPlayer.dna || [],
+      minutesPlayed: 0,
+      matchRating: 0,
+
+      trainingFocus: plan.focus,
+      trainingLoad,
+      isInjured: isInjuredInTraining,
+      injurySeverity: trainingInjurySeverity,
+
+      clubFacilitiesLevel: state.career.currentClub ? (6 - state.career.currentClub.tier) * 20 : 50,
+      coachQuality: state.career.currentClub ? (6 - state.career.currentClub.tier) * 20 : 50
+    };
+    const progResult = PlayerProgressionEngine.processWeek(
+      newPlayer.technical,
+      newPlayer.progression,
+      progParams,
+      rng
+    );
+    newPlayer.technical = progResult.technical;
+    newPlayer.progression = progResult.progression;
+    // --- End Progression Engine ---
   }
+
 
   const newMatches = matchLog ? [matchLog, ...state.career.matches] : state.career.matches;
 
@@ -178,7 +335,46 @@ export function advanceWeekLogic(state: GameState): GameState {
   }
 
   // Trigger events using Event Engine
+  
+  const transferEngine = new TransferEngine(rng.random());
+  
+  // Clean up proposals
+  let tState = { ...state, career: { ...state.career, week: nextWeek > 52 ? 1 : nextWeek, year: nextYear } }; // Mocking time progression for cleanup
+  tState = transferEngine.cleanupProposals(tState);
+  
+  // Attempt to generate proposals
+  const newProposals = transferEngine.generateInterest(tState);
+  if (newProposals.length > 0) {
+    if (!tState.career.transferState) {
+       tState.career.transferState = { isTransferRequested: false, isListed: false, activeProposals: [] };
+    }
+    tState.career.transferState.activeProposals = [...tState.career.transferState.activeProposals, ...newProposals];
+    
+    // Override phase to TRANSFERS if any proposal was generated
+    return {
+      ...tState,
+      phase: 'TRANSFERS',
+      player: newPlayer,
+      career: {
+        ...tState.career,
+        season: nextSeason,
+        history: nextHistory,
+        currentSeasonStats: nextSeasonStats,
+        matches: newMatches,
+        nextMatch: nextMatchInfo as any,
+        currentSeason: currentSeasonState
+      },
+      finances: { ...tState.finances, balance: newBalance }
+    };
+  }
+
+  // We should pass the updated active proposals back to the main state if no new ones but we cleaned up
+  if (tState.career.transferState) {
+    state.career.transferState = tState.career.transferState;
+  }
+
   const triggeredEvents = eventEngine.evaluateEvents(state, rng);
+
   const triggeredEvent = triggeredEvents.length > 0 ? triggeredEvents[0] : null;
 
   const nextState: GameState = { 
@@ -205,7 +401,7 @@ export function advanceWeekLogic(state: GameState): GameState {
       phase: 'EVENT',
       narrative: {
         ...state.narrative,
-        activeEvents: [triggeredEvent],
+        activeEvents: [triggeredEvent.id],
         eventHistory: {
            ...(state.narrative.eventHistory || {}),
            [triggeredEvent.id]: currentAbsWeek

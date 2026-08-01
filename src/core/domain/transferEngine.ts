@@ -116,7 +116,11 @@ export class TransferEngine {
     
     const transferFee = Math.round(marketValue * (0.8 + (this.rng.random() * 0.4)));
 
+    const expectedRole = overall > 85 ? 'Craque do Time' : overall > 75 ? 'Titular Absoluto' : overall > 65 ? 'Titular' : 'Reserva';
+
     return {
+      expectedRole,
+      negotiationRounds: 0,
       id: `prop_${Date.now()}_${club.id}_${Math.floor(this.rng.random() * 1000)}`,
       clubId: club.id,
       clubName: club.name,
@@ -180,7 +184,11 @@ export class TransferEngine {
       // Transfer fee offered to current club
       const transferFee = Math.round(marketValue * (0.8 + (this.rng.random() * 0.4)));
 
+      const expectedRole = overall > 85 ? 'Craque do Time' : overall > 75 ? 'Titular Absoluto' : overall > 65 ? 'Titular' : 'Reserva';
+
       proposals.push({
+        expectedRole,
+        negotiationRounds: 0,
         id: `prop_${Date.now()}_${club.id}_${Math.floor(this.rng.random() * 1000)}`,
         clubId: club.id,
         clubName: club.name,
@@ -202,6 +210,11 @@ export class TransferEngine {
   public negotiateProposal(proposal: TransferProposal, action: 'demand_more_salary' | 'demand_shorter_duration' | 'demand_longer_duration', agentSkill: number): TransferProposal {
     const updated = { ...proposal };
     updated.status = 'negotiating';
+    updated.negotiationRounds = (updated.negotiationRounds || 0) + 1;
+    if (updated.negotiationRounds >= 3) {
+      updated.status = 'withdrawn';
+      return updated;
+    }
     
     const successChance = agentSkill / 100; // 0.0 to 1.0
     const isSuccess = this.rng.random() < successChance;

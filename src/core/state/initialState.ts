@@ -58,7 +58,7 @@ export const DEFAULT_SEASON_STATS = {
 
 export function createInitialGameState(options?: Partial<GameState>): GameState {
   const baseState: GameState = {
-    phase: 'CREATION_BASIC_INFO',
+    phase: 'MAIN_MENU',
     player: {
       name: '',
       avatarUrl: '',

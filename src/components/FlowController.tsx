@@ -12,6 +12,8 @@ import EventScreen from './events/EventScreen';
 import MuseumView from './museum/MuseumView';
 
 import PostMatchScreen from './hub/PostMatchScreen';
+import TransferHub from '../presentation/features/transfers/TransferHub';
+import MainMenu from './menu/MainMenu';
 
 export default function FlowController() {
   const phase = useGamePhase();
@@ -56,6 +58,7 @@ export default function FlowController() {
       </header>
 
       <main className="flex-1 flex flex-col items-center justify-center p-6 relative z-10">
+        {phase === 'MAIN_MENU' && <MainMenu />}
         {phase === 'CREATION_BASIC_INFO' && <CreationBasicInfo />}
         {phase === 'CREATION_POSITION' && <CreationPosition />}
         {phase === 'CREATION_APPEARANCE' && <CreationAppearance />}
@@ -68,6 +71,7 @@ export default function FlowController() {
         {phase === 'POST_MATCH' && <PostMatchScreen />}
         {phase === 'HUB' && <MainHub />}
         {phase === 'RETIREMENT' && <MuseumView />}
+        {phase === 'TRANSFERS' && <TransferHub />}
       </main>
     </div>
   );

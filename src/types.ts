@@ -1,3 +1,21 @@
+
+export type TrainingSessionType = 
+  | 'FINISHING' 
+  | 'CREATION' 
+  | 'DRIBBLING' 
+  | 'PHYSICAL' 
+  | 'DEFENDING' 
+  | 'SET_PIECES' 
+  | 'RECOVERY' 
+  | 'CHEMISTRY' 
+  | 'POSITIONAL' 
+  | 'REST' 
+  | 'GENERAL';
+
+export interface TrainingPlan {
+  focus: TrainingSessionType;
+  intensity: 'LOW' | 'MEDIUM' | 'HIGH';
+}
 /**
  * GOAT Simulator - Core Types & Architecture
  * 
@@ -11,7 +29,8 @@ export type TechnicalStat = 'PAC' | 'SHO' | 'PAS' | 'DRI' | 'DEF' | 'PHY' | 'HEA
 export type RPGStat = 'morale' | 'fitness' | 'fame' | 'fans' | 'LDR' | 'DET' | 'COM';
 export type RelationshipTarget = 'fans' | 'manager' | 'press' | 'squad';
 
-export type GamePhase = 
+export type GamePhase = 'MAIN_MENU'
+  | 'TRANSFERS'
   | 'CREATION_BASIC_INFO'
   | 'CREATION_POSITION'
   | 'CREATION_APPEARANCE'
@@ -61,7 +80,22 @@ export interface PhysicalAppearance {
   celebration: string;
 }
 
+
+export interface PlayerDNA {
+  id: string;
+  type: 'TRAIT' | 'TENDENCY' | 'MODIFIER' | 'SYNERGY' | 'CONFLICT';
+  name: string;
+  description: string;
+  rarity: 'COMMON' | 'EPIC' | 'LEGENDARY';
+  originId: string;
+}
+
+import { ProgressionState } from "./core/domain/progressionEngine";
+
 export interface PlayerAttributes {
+  progression?: ProgressionState;
+  trainingPlan?: TrainingPlan;
+  dna?: PlayerDNA[];
   technical: Record<TechnicalStat, number>;
   rpg: Record<RPGStat, number>;
   relationships: Record<RelationshipTarget, number>;
@@ -184,6 +218,8 @@ export interface TransferProposal {
   clubName: string;
   offerSalary: number;
   offerDuration: number;
+  expectedRole: string;
+  negotiationRounds: number;
   transferFee: number;
   status: ProposalStatus;
   weekGenerated: number;
@@ -196,9 +232,39 @@ export interface TransferState {
   activeProposals: TransferProposal[];
 }
 
+
+export type DraftMode = 'QUICK' | 'COMPLETE';
+
+export interface DraftOption {
+  idolId: string;
+  name: string;
+  nationality: string;
+  positionOrEra: string;
+  photoUrl?: string;
+  attributeValue: number;
+  dna?: PlayerDNA;
+}
+
+export interface DraftRound {
+  attributeId: TechnicalStat;
+  options: DraftOption[];
+  selectedOptionId?: string; // Idol id
+}
+
+export interface DraftState {
+  mode: DraftMode;
+  seed: number;
+  currentRoundIndex: number;
+  rounds: DraftRound[];
+  acquiredDNA: PlayerDNA[];
+  usedIdols: string[]; // Track to avoid duplication
+}
+
 export interface GameState {
+  draftState?: DraftState;
+  saveSlot?: string;
   phase: GamePhase;
-  draftLength?: 'SHORT' | 'LONG';
+  draftLength?: 'QUICK' | 'COMPLETE';
   player: PlayerAttributes;
   career: {
     currentClub: Club | null;
@@ -226,7 +292,7 @@ export interface GameState {
   };
   finances: Financials;
   narrative: {
-    activeEvents: GameEvent[];
+    activeEvents: string[];
     flags: Record<string, boolean | number | string>;
     news: NewsItem[];
     eventHistory: Record<string, number>;
@@ -277,14 +343,18 @@ export interface GameEvent {
 }
 
 export type GameAction = 
+  | { type: 'INIT_DRAFT'; payload: { mode: DraftMode; seed?: number } }
+  | { type: 'SELECT_DRAFT_OPTION'; payload: string }
+  | { type: 'COMPLETE_DRAFT' }
   | { type: 'SET_STATE'; payload: GameState } 
   | { type: 'CHANGE_PHASE'; payload: GameState['phase'] }
   | { type: 'SETUP_CAREER'; payload: { club: Club } }
   | { type: 'ADVANCE_WEEK' }
-  | { type: 'SET_DRAFT_LENGTH'; payload: 'SHORT' | 'LONG' }
+  | { type: 'SET_DRAFT_LENGTH'; payload: 'QUICK' | 'COMPLETE' }
   | { type: 'ADVANCE_MONTH' }
   | { type: 'PLAY_MATCH'; payload: MatchStats }
   | { type: 'RESOLVE_EVENT'; payload: { eventId: string; optionId: string } }
   | { type: 'INITIALIZE_PLAYER'; payload: Partial<GameState['player']> }
   | { type: 'TRAIN_ATTRIBUTE'; payload: 'SHO' | 'PAS' | 'DRI' | 'DEF' }
+  | { type: 'SET_TRAINING_PLAN'; payload: TrainingPlan }
   | { type: 'ADD_NEWS'; payload: Omit<NewsItem, 'id'> };

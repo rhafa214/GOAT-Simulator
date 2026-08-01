@@ -1,3 +1,4 @@
+import { GAME_EVENTS } from '../../data/events';
 import { GameState } from '../../types';
 import { advanceWeekLogic } from '../state/reducers/advanceWeek';
 import { getMatchImportance } from './seasonEngine';
@@ -161,9 +162,18 @@ export function* runSimulation(
       nextState = { ...nextState, phase: 'HUB' };
     }
 
+    
+    if (nextState.phase === 'TRANSFERS') {
+      stopReason = 'TRANSFER_OFFER';
+      currentState = nextState;
+      break;
+    }
+
     if (nextState.phase === 'EVENT') {
+
       summary.eventsTriggered++;
-      const activeEvent = nextState.narrative.activeEvents[0];
+      const eventId = nextState.narrative.activeEvents[0];
+      const activeEvent = GAME_EVENTS.find(e => e.id === eventId);
       if (activeEvent) {
         const id = activeEvent.id.toUpperCase();
         if (id.includes('TRANSFER')) stopReason = 'TRANSFER_OFFER';

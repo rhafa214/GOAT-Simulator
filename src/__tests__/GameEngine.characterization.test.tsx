@@ -1,3 +1,4 @@
+import { GAME_EVENTS } from '../data/events';
 import React from 'react';
 import { renderHook, act } from '@testing-library/react';
 import { expect, test, describe, vi, beforeEach, afterEach } from 'vitest';
@@ -27,7 +28,7 @@ describe('GameEngine Characterization', () => {
     const { result } = setup();
     const state = result.current.state;
     
-    expect(state.phase).toBe('CREATION_BASIC_INFO');
+    expect(state.phase).toBe('MAIN_MENU');
     expect(state.player.age).toBe(17);
     expect(state.player.technical.PAC).toBe(50);
     expect(state.finances.balance).toBe(0);
@@ -53,10 +54,10 @@ describe('GameEngine Characterization', () => {
     const { result } = setup();
     
     act(() => {
-      result.current.dispatch({ type: 'SET_DRAFT_LENGTH', payload: 'LONG' });
+      result.current.dispatch({ type: 'SET_DRAFT_LENGTH', payload: 'COMPLETE' });
     });
     
-    expect(result.current.state.draftLength).toBe('LONG');
+    expect(result.current.state.draftLength).toBe('COMPLETE');
   });
 
   test('SETUP_CAREER sets club, weekly wage, nextMatch and changes phase to HUB', () => {
@@ -96,29 +97,17 @@ describe('GameEngine Characterization', () => {
     expect(result.current.state.phase).toBe('DRAFT_CLUB');
   });
 
-  test('TRAIN_ATTRIBUTE increases technical stat and consumes fitness', () => {
+  test('SET_TRAINING_PLAN updates the training plan', () => {
     const { result } = setup();
     
-    // Set initial fitness to allow training
     act(() => {
-      // We don't have a direct way to set fitness via action, but we can verify it fails if fitness is 0
-      // Currently fitness starts at 100 in INITIAL_STATE
-    });
-    
-    const initialFitness = result.current.state.player.rpg.fitness;
-    const initialSho = result.current.state.player.technical.SHO;
-    const initialHea = result.current.state.player.technical.HEA;
-    
-    act(() => {
-      result.current.dispatch({ type: 'TRAIN_ATTRIBUTE', payload: 'SHO' });
+      result.current.dispatch({ type: 'SET_TRAINING_PLAN', payload: { focus: 'FINISHING', intensity: 'HIGH' } });
     });
     
     const state = result.current.state;
-    // For age < 23 (starts at 17), ageMultiplier is 1.5. growth is 0.5 * 1.5 = 0.75
-    // secondary is 0.2 * 1.5 = 0.3
-    expect(state.player.rpg.fitness).toBe(initialFitness - 20);
-    expect(state.player.technical.SHO).toBe(initialSho + 0.75);
-    expect(state.player.technical.HEA).toBe(initialHea + 0.3);
+    expect(state.player.trainingPlan).toBeDefined();
+    expect(state.player.trainingPlan?.focus).toBe('FINISHING');
+    expect(state.player.trainingPlan?.intensity).toBe('HIGH');
   });
 
   test('ADD_NEWS appends a news item', () => {
@@ -234,7 +223,7 @@ describe('GameEngine Characterization', () => {
     expect(state.phase).toBe('EVENT');
     expect(state.narrative.activeEvents.length).toBeGreaterThan(0);
     
-    const event = state.narrative.activeEvents[0];
+    const event = GAME_EVENTS.find(e => e.id === state.narrative.activeEvents[0]);
     const option = event.options[0];
     
     act(() => {
