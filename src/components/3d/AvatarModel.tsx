@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Group } from 'three';
-import { useAvatarManager } from '../../core/domain/avatar/AvatarManager';
+import { useAvatarManager } from './AvatarManager';
 
 interface AvatarModelProps {
   clubColor: string;

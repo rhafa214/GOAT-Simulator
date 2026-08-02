@@ -15,7 +15,7 @@ export interface Country {
   code: string;
 }
 
-export interface Competition {
+export interface CompetitionData {
   id: string;
   name: string;
   prestige: number;
@@ -38,7 +38,7 @@ class FootballDataRepositoryImpl {
     { id: 'eng', name: 'Inglaterra', code: 'EN' },
   ];
 
-  private competitions: Competition[] = [
+  private competitions: CompetitionData[] = [
     { id: 'cup_nat', name: 'Copa Nacional', prestige: 50 },
     { id: 'league_nat', name: 'Liga Nacional', prestige: 70 },
     { id: 'cup_cont', name: 'Liga Continental', prestige: 100 },
@@ -53,7 +53,8 @@ class FootballDataRepositoryImpl {
     // but the importer provided them from a GitHub source. 
     // Fallback logic implemented:
     
-    const parseClub = (c: any, defaultLeague: string, defaultColor: string, defaultRep: number): Club => {
+    type ImportedClub = { official_name?: string, short_name?: string, logo_url?: string, external_id: string, colors?: string[] };
+    const parseClub = (c: ImportedClub, defaultLeague: string, defaultColor: string, defaultRep: number): Club => {
       const name = c.official_name || c.short_name || 'Unknown Club';
       const logo = c.logo_url || null; 
       
@@ -73,12 +74,12 @@ class FootballDataRepositoryImpl {
       };
     };
 
-    englandClubs.forEach((c: any) => {
+    englandClubs.forEach((c: ImportedClub) => {
       const club = parseClub(c, 'Premier League (Inglaterra)', '#e53238', 80);
       this.clubsMap.set(club.id, club);
     });
 
-    brazilClubs.forEach((c: any) => {
+    brazilClubs.forEach((c: ImportedClub) => {
       const club = parseClub(c, 'Série A (Brasil)', '#00d2ff', 75);
       this.clubsMap.set(club.id, club);
     });
@@ -109,7 +110,7 @@ class FootballDataRepositoryImpl {
     return this.clubsMap.get(id);
   }
 
-  getCompetitions(): Competition[] {
+  getCompetitions(): CompetitionData[] {
     return this.competitions;
   }
   

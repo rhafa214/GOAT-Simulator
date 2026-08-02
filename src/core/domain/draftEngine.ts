@@ -41,7 +41,7 @@ export class DraftEngine {
 
     const state: DraftState = {
       mode,
-      seed: (this.rng as any).seed,
+      seed: this.rng.seed,
       currentRoundIndex: 0,
       rounds,
       acquiredDNA: [],

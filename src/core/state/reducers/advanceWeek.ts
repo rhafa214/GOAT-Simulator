@@ -2,6 +2,7 @@ import { PlayerProgressionEngine, ProgressionParams } from '../../domain/progres
 import { simulateMatch, SimulateMatchParams } from '../../domain/matchEngine';
 import { toLegacyMatchStats } from '../../domain/matchAdapter';
 import { ALL_CLUBS } from '../../../data/database';
+import { MatchImportance } from "../../domain/match";
 import { GameState, GameEvent, MatchStats } from '../../../types';
 import { rng } from '../../../utils/rng';
 import { eventEngine } from '../../domain/eventEngine';
@@ -81,7 +82,7 @@ export function advanceWeekLogic(state: GameState): GameState {
      const myClubName = state.career.currentClub?.name || 'My Team';
      const avgTechnical = Object.values(state.player.technical).reduce((a, b) => a + b, 0) / 17;
      
-     let importance: any = 'MEDIUM';
+     let importance: MatchImportance = 'MEDIUM';
      if (currentSeasonState && state.career.nextMatch.fixtureId) {
          importance = getMatchImportance(currentSeasonState, state.career.nextMatch.fixtureId);
      }
@@ -361,7 +362,7 @@ export function advanceWeekLogic(state: GameState): GameState {
         history: nextHistory,
         currentSeasonStats: nextSeasonStats,
         matches: newMatches,
-        nextMatch: nextMatchInfo as any,
+        nextMatch: nextMatchInfo as NonNullable<GameState["career"]["nextMatch"]>,
         currentSeason: currentSeasonState
       },
       finances: { ...tState.finances, balance: newBalance }
@@ -388,7 +389,7 @@ export function advanceWeekLogic(state: GameState): GameState {
         history: nextHistory,
         currentSeasonStats: nextSeasonStats,
         matches: newMatches,
-        nextMatch: nextMatchInfo as any,
+        nextMatch: nextMatchInfo as NonNullable<GameState["career"]["nextMatch"]>,
         currentSeason: currentSeasonState
      },
      finances: { ...state.finances, balance: newBalance }

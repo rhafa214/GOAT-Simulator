@@ -53,8 +53,8 @@ export default function MainMenu() {
       } else {
         setError('Não foi possível carregar o save.');
       }
-    } catch (e: any) {
-      setError(`Erro ao carregar: ${e.message}`);
+    } catch (e) {
+      setError(`Erro ao carregar: ${(e as Error).message || "Erro desconhecido"}`);
     }
   };
 
@@ -95,8 +95,8 @@ export default function MainMenu() {
         service.importSave(newSlotId, json);
         setView('main');
         refreshSaves();
-      } catch (err: any) {
-        setError(`Erro ao importar: ${err.message}`);
+      } catch (err) {
+        setError(`Erro ao importar: ${(err as Error).message || "Erro desconhecido"}`);
       }
     };
     reader.readAsText(file);
@@ -109,8 +109,8 @@ export default function MainMenu() {
       service.importSave(newSlotId, importJson);
       setView('main');
       refreshSaves();
-    } catch (err: any) {
-      setError(`Erro ao importar: ${err.message}`);
+    } catch (err) {
+      setError(`Erro ao importar: ${(err as Error).message || "Erro desconhecido"}`);
     }
   };
 

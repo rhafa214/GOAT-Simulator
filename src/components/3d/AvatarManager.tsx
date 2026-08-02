@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useMemo } from 'react';
-import { PhysicalAppearance } from '../../../types';
-import { AppearanceValidator } from './AppearanceValidator';
-import { DEFAULT_APPEARANCE } from './AvatarCatalog';
+import { PhysicalAppearance } from '../../types';
+import { AppearanceValidator } from '../../core/domain/avatar/AppearanceValidator';
+import { DEFAULT_APPEARANCE } from '../../core/domain/avatar/AvatarCatalog';
 
 interface AvatarManagerContextType {
   appearance: PhysicalAppearance;

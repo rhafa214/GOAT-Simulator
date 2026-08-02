@@ -36,7 +36,7 @@ export function careerReducer(state: GameState["career"], action: GameAction): G
          ...state, 
          currentClub: currentClub, 
          currentSeason: season,
-         nextMatch: nextMatchInfo as any 
+         nextMatch: nextMatchInfo as NonNullable<GameState["career"]["nextMatch"]> 
        };
     }
     default:

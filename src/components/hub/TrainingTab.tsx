@@ -82,7 +82,7 @@ export default function TrainingTab() {
                      }`}
                    >
                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center bg-black/40 ${session.color}`}>
-                       <Icon size={20} />
+                       <Icon />
                      </div>
                      <div>
                        <div className="font-bold text-white text-xs uppercase tracking-widest">{session.label}</div>
@@ -101,7 +101,7 @@ export default function TrainingTab() {
                 return (
                   <button
                     key={intensity.id}
-                    onClick={() => setSelectedIntensity(intensity.id as any)}
+                    onClick={() => setSelectedIntensity(intensity.id as 'LOW'|'MEDIUM'|'HIGH')}
                     disabled={isDisabled}
                     className={`flex flex-col items-center justify-center gap-1 p-3 rounded-[1rem] border transition-all ${
                       isDisabled ? 'opacity-30 cursor-not-allowed bg-black/20 border-white/5' :

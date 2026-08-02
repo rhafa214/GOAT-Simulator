@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
-import { useGameSelector } from '../../engine/selectors';
-import { LegacyEngine } from '../../core/domain/legacyEngine';
-import { SeasonRecord } from '../../types';
+import { useGameSelector } from '../engine/selectors';
+import { LegacyEngine } from '../core/domain/legacyEngine';
+import { SeasonRecord } from '../types';
 
 export function useMuseumData() {
   const player = useGameSelector(state => state.player);

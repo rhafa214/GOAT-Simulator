@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Trophy, Calendar, Star, Medal, ArrowRightLeft, Shirt, Target, Activity, Shield, BookOpen, Clock, Zap, Home } from 'lucide-react';
-import { useMuseumData } from './useMuseumData';
+import { useMuseumData } from './../../hooks/useMuseumData';
 import { PlayerPortrait } from '../ui/PlayerPortrait';
 
 export function EmptyState({ icon: Icon, title, description }: { icon: any, title: string, description: string }) {
   return (
     <div className="flex flex-col items-center justify-center p-12 text-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] max-w-2xl mx-auto shadow-2xl">
       <div className="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center mb-6 text-zinc-500">
-        <Icon size={40} />
+        <Icon />
       </div>
       <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">{title}</h3>
       <p className="text-zinc-400 font-serif text-lg">{description}</p>
@@ -123,7 +123,7 @@ export function LegacySection() {
 function StatCard({ label, value, icon: Icon, color }: { label: string, value: number, icon: any, color: string }) {
   return (
     <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 text-center hover:scale-105 transition-transform shadow-xl">
-      <Icon size={24} className={`mx-auto mb-3 ${color}`} />
+      <Icon />
       <div className="text-2xl font-black text-white">{value.toLocaleString()}</div>
       <div className="text-[10px] text-zinc-500 uppercase tracking-widest mt-1 font-bold">{label}</div>
     </div>

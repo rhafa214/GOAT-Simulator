@@ -1,3 +1,5 @@
+import { Season, SeasonCompetition, SeasonSummary } from '../../types';
+import { MatchImportance } from "./match";
 import { IRNG } from '../../utils/rng';
 import { 
   Competition, 
@@ -9,32 +11,8 @@ import {
   getKnockoutChampion
 } from './competition';
 
-export interface SeasonCompetition {
-  competition: Competition;
-  teams: string[]; // Club IDs
-  fixtures: CompetitionFixture[];
-  standings: TeamStanding[];
-  isFinished: boolean;
-  championId?: string;
-}
 
-export interface Season {
-  id: string;
-  year: number;
-  competitions: SeasonCompetition[];
-  currentWeek: number;
-  isFinished: boolean;
-}
 
-export interface SeasonSummary {
-  year: number;
-  competitionResults: {
-    competitionId: string;
-    competitionName: string;
-    championId: string;
-    standings: TeamStanding[];
-  }[];
-}
 
 // 1. Create season
 export function createSeason(year: number): Season {
@@ -131,7 +109,6 @@ export function registerMatchResult(
 }
 
 // 5. Identify important matches
-export type MatchImportance = 'LOW' | 'MEDIUM' | 'HIGH' | 'DERBY' | 'FINAL';
 
 export function getMatchImportance(season: Season, fixtureId: string): MatchImportance {
   for (const comp of season.competitions) {

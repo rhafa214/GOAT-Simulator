@@ -90,7 +90,6 @@ export interface PlayerDNA {
   originId: string;
 }
 
-import { ProgressionState } from "./core/domain/progressionEngine";
 
 export interface PlayerAttributes {
   progression?: ProgressionState;
@@ -193,7 +192,6 @@ export interface NewsItem {
   read?: boolean;
 }
 
-import { Season } from './core/domain/seasonEngine';
 
 
 export interface PlayerContract {
@@ -358,3 +356,43 @@ export type GameAction =
   | { type: 'TRAIN_ATTRIBUTE'; payload: 'SHO' | 'PAS' | 'DRI' | 'DEF' }
   | { type: 'SET_TRAINING_PLAN'; payload: TrainingPlan }
   | { type: 'ADD_NEWS'; payload: Omit<NewsItem, 'id'> };
+
+import { Competition, CompetitionFixture, TeamStanding } from './core/domain/competition';
+
+export interface ProgressionState {
+  developmentPoints: Partial<Record<TechnicalStat, number>>;
+  temporaryForm: number; // -10 to 10
+  potential: number; // 1-99
+  consistency: number; // 1-20
+  growthCurve: 'EARLY_PEAK' | 'NORMAL' | 'LATE_BLOOMER';
+  peakAge: number;
+  declineAge: number;
+  milestones: string[];
+}
+
+export interface SeasonCompetition {
+  competition: Competition;
+  teams: string[]; // Club IDs
+  fixtures: CompetitionFixture[];
+  standings: TeamStanding[];
+  isFinished: boolean;
+  championId?: string;
+}
+
+export interface Season {
+  id: string;
+  year: number;
+  competitions: SeasonCompetition[];
+  currentWeek: number;
+  isFinished: boolean;
+}
+
+export interface SeasonSummary {
+  year: number;
+  competitionResults: {
+    competitionId: string;
+    competitionName: string;
+    championId: string;
+    standings: TeamStanding[];
+  }[];
+}

@@ -2,11 +2,11 @@ import React from 'react';
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import MuseumView from '../MuseumView';
-import * as useMuseumDataModule from '../useMuseumData';
-import { AvatarManagerProvider } from '../../../core/domain/avatar/AvatarManager';
+import * as useMuseumDataModule from '../../../hooks/useMuseumData';
+import { AvatarManagerProvider } from '../../3d/AvatarManager';
 
 // Mock the hook
-vi.mock('../useMuseumData', () => ({
+vi.mock('../../../hooks/useMuseumData', () => ({
   useMuseumData: vi.fn()
 }));
 

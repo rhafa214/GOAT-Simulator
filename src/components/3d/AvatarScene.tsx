@@ -2,7 +2,7 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, ContactShadows, PerspectiveCamera } from '@react-three/drei';
 import AvatarModel from './AvatarModel';
-import { useAvatarManager } from '../../core/domain/avatar/AvatarManager';
+import { useAvatarManager } from './AvatarManager';
 
 interface AvatarSceneProps {
   clubColor?: string;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Calendar, Trophy, Medal, Target, Shield, Clock, Activity, ArrowRightLeft, Star, Shirt, History, BarChart } from 'lucide-react';
-import { useMuseumData } from './useMuseumData';
+import { useMuseumData } from './../../hooks/useMuseumData';
 import { PlayerPortrait } from '../ui/PlayerPortrait';
 import { 
   TimelineSection, SeasonsSection, LegacySection, 

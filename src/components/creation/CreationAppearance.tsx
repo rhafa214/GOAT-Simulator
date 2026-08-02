@@ -89,7 +89,7 @@ export default function CreationAppearance() {
     state.player.appearance,
   );
 
-  const update = (key: keyof PhysicalAppearance, value: any) => {
+  const update = (key: keyof PhysicalAppearance, value: number | string | boolean) => {
     setAppearance((prev) => ({ ...prev, [key]: value }));
   };
 

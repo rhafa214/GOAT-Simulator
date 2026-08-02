@@ -1,18 +1,8 @@
-import { TechnicalStat, Position, PersonalityTrait, PlayerDNA, TrainingSessionType } from '../../types';
+import { TechnicalStat, Position, PersonalityTrait, PlayerDNA, TrainingSessionType, ProgressionState } from '../../types';
 import { IRNG } from '../../utils/rng';
 
 export type PositionCategory = 'ATTACKER' | 'MIDFIELDER' | 'DEFENDER' | 'GOALKEEPER';
 
-export interface ProgressionState {
-  developmentPoints: Partial<Record<TechnicalStat, number>>;
-  temporaryForm: number; // -10 to 10
-  potential: number; // 1-99
-  consistency: number; // 1-20
-  growthCurve: 'EARLY_PEAK' | 'NORMAL' | 'LATE_BLOOMER';
-  peakAge: number;
-  declineAge: number;
-  milestones: string[];
-}
 
 export interface ProgressionParams {
   age: number;

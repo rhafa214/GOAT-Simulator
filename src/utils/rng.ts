@@ -46,7 +46,7 @@ export class DefaultRNG implements IRNG {
 }
 
 export class SeededRNG extends DefaultRNG {
-  private seed: number;
+  public seed: number;
 
   constructor(seed: number) {
     super();

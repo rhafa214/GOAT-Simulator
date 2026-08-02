@@ -3,7 +3,7 @@ import { AVATAR_CATALOG, DEFAULT_APPEARANCE, AvatarPartCategory } from './Avatar
 
 export class AppearanceValidator {
   static validate(appearance: Partial<PhysicalAppearance>): PhysicalAppearance {
-    const validApp: any = { ...DEFAULT_APPEARANCE };
+    const validApp: Partial<PhysicalAppearance> = { ...DEFAULT_APPEARANCE };
 
     const hexColorRegex = /^[0-9A-Fa-f]{6}$/;
 

@@ -1,4 +1,4 @@
-import { AvatarManagerProvider } from '../core/domain/avatar/AvatarManager';
+import { AvatarManagerProvider } from '../components/3d/AvatarManager';
 import React from 'react';
 import { render, act } from '@testing-library/react';
 import { expect, test, describe, vi } from 'vitest';

@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { PlayerProgressionEngine, ProgressionState, ProgressionParams } from '../core/domain/progressionEngine';
+import { PlayerProgressionEngine, ProgressionParams } from '../core/domain/progressionEngine';
+import { ProgressionState } from '../types';
 import { TechnicalStat } from '../types';
 import { IRNG, SeededRNG } from '../utils/rng';
 
