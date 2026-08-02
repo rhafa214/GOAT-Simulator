@@ -53,7 +53,7 @@ describe('advanceWeek integration with Season Engine v1', () => {
     state.career = careerReducer(state.career, { 
       type: 'SETUP_CAREER', 
       payload: { 
-        club: { id: 'of_br_corinthianssp', name: 'Corinthians SP', tier: 1, reputation: 90, baseSalary: 10000, league: 'Série A (Brasil)', primaryColor: 'white' } 
+        club: { id: 'of_eng_arsenalfc', name: 'Arsenal FC', tier: 1, reputation: 90, baseSalary: 10000, league: 'Premier League (Inglaterra)', primaryColor: '#e53238' } 
       } 
     });
 

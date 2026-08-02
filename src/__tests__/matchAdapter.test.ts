@@ -40,7 +40,7 @@ describe('matchAdapter', () => {
 
     const legacy = toLegacyMatchStats(aggregate, 'Team A');
 
-    expect(legacy).toEqual({
+    expect(legacy).toEqual(expect.objectContaining({
       id: 'match_123',
       week: 10,
       year: 2024,
@@ -58,7 +58,7 @@ describe('matchAdapter', () => {
       motm: true,
       injured: false,
       wasCaptain: true,
-    });
+    }));
   });
 
   it('converts legacy MatchStats to MatchAggregate', () => {

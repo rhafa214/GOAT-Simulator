@@ -1,11 +1,12 @@
 import React from 'react';
-import { render, screen, fireEvent, act } from '@testing-library/react';
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import CreationAttributes from '../components/creation/CreationAttributes';
 import * as GameEngine from '../engine/GameEngine';
 
 vi.mock('../engine/GameEngine', () => ({
   useGameEngine: vi.fn(),
+  GameProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>
 }));
 
 describe('CreationAttributes', () => {
@@ -24,16 +25,18 @@ describe('CreationAttributes', () => {
     });
   });
 
-  it('renders mode selection initially', () => {
+  it('renders DraftExperience component correctly', () => {
     render(<CreationAttributes />);
-    expect(screen.getByText('Estratégico')).toBeDefined();
-    expect(screen.getByText('Scout (Às Cegas)')).toBeDefined();
+    expect(screen.getByText(/Draft Rápido/i)).toBeInTheDocument();
+    expect(screen.getByText(/Blind Draft/i)).toBeInTheDocument();
+    expect(screen.getByText(/Atributo Alvo — Rodada 1/i)).toBeInTheDocument();
   });
 
-  it('starts draft when a mode is selected', () => {
+  it('allows card inspection and confirmation', () => {
     render(<CreationAttributes />);
-    fireEvent.click(screen.getByText('Scout (Às Cegas)'));
-    // Should now render the first category title
-    expect(screen.getByText('Escolha um atributo')).toBeDefined();
+    const card1 = screen.getByLabelText(/Carta 1/i);
+    fireEvent.click(card1);
+
+    expect(screen.getByRole('button', { name: /Confirmar Escolha/i })).toBeInTheDocument();
   });
 });

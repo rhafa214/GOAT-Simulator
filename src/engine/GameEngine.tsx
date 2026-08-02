@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, ReactNode } from 'react';
+import React, { createContext, useContext, useReducer, ReactNode, useEffect, useRef, useState, useMemo } from 'react';
 import { GameState, GameAction } from '../types';
 import { createInitialGameState } from '../core/state/initialState';
 import { gameReducer } from '../core/state/reducers';
@@ -10,23 +10,31 @@ const GameContext = createContext<{
   dispatch: React.Dispatch<GameAction>;
 }>({ state: createInitialGameState(), dispatch: () => null });
 
-
 export function GameProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(gameReducer, createInitialGameState());
-  const [showAutosave, setShowAutosave] = React.useState(false);
-  const saveService = React.useMemo(() => new SaveGameService(new LocalStorageSaveRepository()), []);
-  const lastSavedWeek = React.useRef(state.career?.week);
+  const [showAutosave, setShowAutosave] = useState(false);
+  const saveService = useMemo(() => new SaveGameService(new LocalStorageSaveRepository()), []);
+  const lastSavedWeek = useRef(state.career?.week);
+  const lastSavedPhase = useRef(state.phase);
 
-  React.useEffect(() => {
-    // Autosave when week changes, and we have a valid slot
-    if (state.saveSlot && state.career && state.career.week !== lastSavedWeek.current) {
-      lastSavedWeek.current = state.career.week;
-      try {
-        saveService.saveGame(state.saveSlot, state);
-        setShowAutosave(true);
-        setTimeout(() => setShowAutosave(false), 2000);
-      } catch (e) {
-        console.error("Autosave failed", e);
+  useEffect(() => {
+    // Synchronize ref on external state change if slot changed
+    if (state.saveSlot && (state.career?.week !== lastSavedWeek.current || state.phase !== lastSavedPhase.current)) {
+      const weekChanged = state.career && state.career.week !== lastSavedWeek.current;
+      const phaseChanged = state.phase !== lastSavedPhase.current && ['HUB', 'END_OF_SEASON', 'RETIREMENT'].includes(state.phase);
+
+      if (weekChanged || phaseChanged) {
+        lastSavedWeek.current = state.career?.week;
+        lastSavedPhase.current = state.phase;
+
+        try {
+          saveService.saveGame(state.saveSlot, state);
+          setShowAutosave(true);
+          const timer = setTimeout(() => setShowAutosave(false), 2000);
+          return () => clearTimeout(timer);
+        } catch (e) {
+          console.error("Autosave failed", e);
+        }
       }
     }
   }, [state, saveService]);

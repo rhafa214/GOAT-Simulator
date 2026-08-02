@@ -34,10 +34,45 @@ export function advanceWeekLogic(state: GameState): GameState {
   if (nextWeek > 52) {
      nextSeason++;
      nextYear++;
+
+     const trophies: string[] = [];
+     const awards: string[] = [];
+
+     if (currentSeasonState) {
+         currentSeasonState = finishSeason(currentSeasonState);
+         if (state.career.currentClub) {
+             for (const comp of currentSeasonState.competitions) {
+                 if (comp.championId === state.career.currentClub.id) {
+                     trophies.push(comp.competition.name);
+                 }
+             }
+         }
+     }
+
+     if (nextSeasonStats.matchesPlayed >= 5) {
+         if (nextSeasonStats.goals >= 20 || nextSeasonStats.avgRating >= 8.0) {
+             awards.push("Ballon d'Or");
+             if (state.career.awards) state.career.awards.ballonDor++;
+         }
+         if (nextSeasonStats.goals >= 25) {
+             awards.push('Golden Boot');
+             if (state.career.awards) state.career.awards.goldenBoot++;
+         }
+         if (nextSeasonStats.avgRating >= 7.5) {
+             awards.push('TOTY');
+             if (state.career.awards) state.career.awards.toty++;
+         }
+     }
+
      nextHistory.push({
         ...nextSeasonStats,
         year: state.career.year,
-        clubId: state.career.currentClub?.id || ''
+        clubId: state.career.currentClub?.id || '',
+        clubName: state.career.currentClub?.name || 'Sem Clube',
+        salary: state.career.contract?.salary || state.finances.weeklyWage || 0,
+        shirtNumber: state.career.shirtNumber || 99,
+        trophies,
+        awards
      });
      
      // reset season stats
@@ -53,13 +88,10 @@ export function advanceWeekLogic(state: GameState): GameState {
         injuries: 0,
         motm: 0,
         captaincies: 0,
+        trophies: [],
+        awards: []
      });
      newPlayer.age++;
-     
-     
-     if (currentSeasonState) {
-         currentSeasonState = finishSeason(currentSeasonState);
-     }
      
      // Create a new season for the new year (migrates old saves too)
      if (state.career.currentClub) {

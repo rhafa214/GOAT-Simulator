@@ -63,12 +63,12 @@ describe('GameEngine Characterization', () => {
   test('SETUP_CAREER sets club, weekly wage, nextMatch and changes phase to HUB', () => {
     const { result } = setup();
     const mockClub = {
-      id: 'of_br_corinthianssp',
-      name: 'Corinthians SP',
+      id: 'of_eng_arsenalfc',
+      name: 'Arsenal FC',
       tier: 1,
-      league: 'Série A (Brasil)',
+      league: 'Premier League (Inglaterra)',
       baseSalary: 15000,
-      primaryColor: '#000000',
+      primaryColor: '#e53238',
       reputation: 80,
     };
     

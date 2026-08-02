@@ -1,113 +1,153 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { useGameEngine } from '../../engine/GameEngine';
-import { motion } from 'motion/react';
-import { Trophy, Star, ArrowRight, Play, Goal, ArrowUpRight, ActivitySquare } from 'lucide-react';
-import { PlayerPortrait } from '../ui/PlayerPortrait';
+import { generateMatchStory, PostMatchLevel } from '../postMatch/postMatchStoryEngine';
+import { PostMatchCompact } from '../postMatch/PostMatchCompact';
+import { PostMatchComplete } from '../postMatch/PostMatchComplete';
+import { PostMatchHistoric } from '../postMatch/PostMatchHistoric';
+import { Trophy, ArrowLeft, Layers, ArrowRight } from 'lucide-react';
+import { GoatButton } from '../ui/goat';
 
 export default function PostMatchScreen() {
   const { state, dispatch } = useGameEngine();
   const lastMatch = state.career.matches[0];
-  const { player, career } = state;
 
-  if (!lastMatch) return null;
+  const [levelOverride, setLevelOverride] = useState<PostMatchLevel | null>(null);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes((e.target as HTMLElement)?.tagName)) {
+        return;
+      }
+
+      if (e.key === 'Escape' || e.key === 'Enter') {
+        e.preventDefault();
+        handleContinue();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [dispatch]);
+
+  const handleContinue = () => {
+    dispatch({ type: 'CHANGE_PHASE', payload: 'HUB' });
+  };
+
+  if (!lastMatch) {
+    return (
+      <div className="flex flex-col items-center justify-center p-12 text-center text-zinc-400 gap-4">
+        <Trophy className="w-12 h-12 text-zinc-600 animate-pulse" />
+        <p className="text-sm font-bold uppercase tracking-wider">Nenhum relatório de partida recente encontrado.</p>
+        <GoatButton variant="secondary" onClick={handleContinue}>
+          Voltar ao Hub
+        </GoatButton>
+      </div>
+    );
+  }
+
+  const generatedStory = generateMatchStory(state, lastMatch);
+  const activeLevel = levelOverride || generatedStory.level;
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="max-w-4xl w-full bg-zinc-900/90 backdrop-blur-xl border border-zinc-800 p-8 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden flex flex-col items-center justify-center text-center"
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.4 }}
+      data-testid="post-match-screen"
+      className="w-full max-w-7xl mx-auto p-4 md:p-6 pb-20 flex flex-col gap-6"
     >
-      {/* Glow Effects */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-500/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-600/10 rounded-full blur-[120px] pointer-events-none" />
+      {/* Top Bar: Return & Level Selector */}
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <GoatButton
+          data-testid="back-to-hub-button"
+          variant="ghost"
+          size="sm"
+          leftIcon={<ArrowLeft className="w-4 h-4" />}
+          onClick={handleContinue}
+          className="text-zinc-400 hover:text-white"
+        >
+          Voltar ao Hub (ESC)
+        </GoatButton>
 
-      <h2 className="text-sm font-bold text-yellow-500 uppercase tracking-[0.2em] mb-2 z-10 flex items-center gap-2">
-        <Trophy size={16} /> Relatório da Partida
-      </h2>
-      <div className="flex items-center justify-center gap-6 mb-12 z-10 w-full px-4">
-        <div className="flex flex-col items-center gap-4 w-2/5">
-          {lastMatch.home ? (
-            career.currentClub?.logo ? <img src={career.currentClub.logo} alt="Home" className="w-24 h-24 object-contain drop-shadow-2xl" referrerPolicy="no-referrer" /> : null
-          ) : (
-            lastMatch.opponentLogo ? <img src={lastMatch.opponentLogo} alt="Home" className="w-24 h-24 object-contain drop-shadow-2xl" referrerPolicy="no-referrer" /> : null
-          )}
-          <h3 className="text-2xl md:text-4xl font-black drop-shadow-lg text-center leading-tight">
-            {lastMatch.home ? career.currentClub?.name : lastMatch.opponent} 
-          </h3>
-        </div>
-        
-        <div className="text-zinc-600 font-serif italic text-2xl md:text-4xl w-1/5 text-center">vs</div> 
-        
-        <div className="flex flex-col items-center gap-4 w-2/5">
-          {!lastMatch.home ? (
-            career.currentClub?.logo ? <img src={career.currentClub.logo} alt="Away" className="w-24 h-24 object-contain drop-shadow-2xl" referrerPolicy="no-referrer" /> : null
-          ) : (
-            lastMatch.opponentLogo ? <img src={lastMatch.opponentLogo} alt="Away" className="w-24 h-24 object-contain drop-shadow-2xl" referrerPolicy="no-referrer" /> : null
-          )}
-          <h3 className="text-2xl md:text-4xl font-black drop-shadow-lg text-center leading-tight">
-            {!lastMatch.home ? career.currentClub?.name : lastMatch.opponent}
-          </h3>
+        {/* Presentation Level Selector */}
+        <div className="flex items-center gap-1.5 bg-zinc-900/80 border border-zinc-800 p-1 rounded-xl">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 px-2 flex items-center gap-1">
+            <Layers className="w-3 h-3" /> Nível:
+          </span>
+
+          <button
+            data-testid="level-compact-btn"
+            onClick={() => setLevelOverride('COMPACT')}
+            className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+              activeLevel === 'COMPACT'
+                ? 'bg-amber-500 text-black shadow-sm'
+                : 'text-zinc-400 hover:text-white'
+            }`}
+          >
+            1. Compacto
+          </button>
+
+          <button
+            data-testid="level-complete-btn"
+            onClick={() => setLevelOverride('COMPLETE')}
+            className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+              activeLevel === 'COMPLETE'
+                ? 'bg-amber-500 text-black shadow-sm'
+                : 'text-zinc-400 hover:text-white'
+            }`}
+          >
+            2. Completo
+          </button>
+
+          <button
+            data-testid="level-historic-btn"
+            onClick={() => setLevelOverride('HISTORIC')}
+            className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+              activeLevel === 'HISTORIC'
+                ? 'bg-amber-500 text-black shadow-sm'
+                : 'text-zinc-400 hover:text-white'
+            }`}
+          >
+            3. Histórico
+          </button>
         </div>
       </div>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10 mb-12">
-         {/* Rating */}
-         <div className="bg-black/50 border border-white/5 rounded-3xl p-6 flex flex-col items-center justify-center shadow-inner">
-            <div className={`text-6xl font-black mb-2 drop-shadow-md ${lastMatch.rating >= 8 ? 'text-yellow-500' : lastMatch.rating >= 6 ? 'text-zinc-300' : 'text-red-500'}`}>
-               {lastMatch.rating.toFixed(1)}
-            </div>
-            <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Nota da Partida</div>
-         </div>
+      {/* Main View Level Render */}
+      <AnimatePresence mode="wait">
+        {activeLevel === 'COMPACT' && (
+          <PostMatchCompact
+            key="compact"
+            match={lastMatch}
+            story={generatedStory}
+            state={state}
+            onContinue={handleContinue}
+          />
+        )}
 
-         {/* Goals/Assists */}
-         <div className="bg-black/50 border border-white/5 rounded-3xl p-6 flex flex-col items-center justify-center shadow-inner relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/50 to-transparent pointer-events-none" />
-            <div className="flex w-full justify-around mb-2">
-               <div className="text-center">
-                  <div className="text-5xl font-black text-white">{lastMatch.goals}</div>
-                  <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Gols</div>
-               </div>
-               <div className="w-px h-12 bg-white/10" />
-               <div className="text-center">
-                  <div className="text-5xl font-black text-white">{lastMatch.assists}</div>
-                  <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Assist.</div>
-               </div>
-            </div>
-         </div>
+        {activeLevel === 'COMPLETE' && (
+          <PostMatchComplete
+            key="complete"
+            match={lastMatch}
+            story={generatedStory}
+            state={state}
+            onContinue={handleContinue}
+          />
+        )}
 
-         {/* MOTM / Events */}
-         <div className="bg-black/50 border border-white/5 rounded-3xl p-6 flex flex-col items-center justify-center shadow-inner">
-            {lastMatch.motm ? (
-               <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mb-3">
-                     <Star size={32} className="text-yellow-500 fill-yellow-500" />
-                  </div>
-                  <div className="text-sm font-bold text-yellow-500 uppercase tracking-widest text-center">Homem<br/>do Jogo</div>
-               </div>
-            ) : lastMatch.injured ? (
-               <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-3">
-                     <ActivitySquare size={32} className="text-red-500" />
-                  </div>
-                  <div className="text-sm font-bold text-red-500 uppercase tracking-widest text-center">Lesionado</div>
-               </div>
-            ) : (
-               <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mb-3">
-                     <Play size={24} className="text-zinc-500" />
-                  </div>
-                  <div className="text-sm font-bold text-zinc-500 uppercase tracking-widest text-center">{lastMatch.minutesPlayed}'<br/>Jogados</div>
-               </div>
-            )}
-         </div>
-      </div>
-
-      <button 
-        onClick={() => dispatch({ type: 'CHANGE_PHASE', payload: 'HUB' })}
-        className="w-full md:w-auto px-12 py-5 bg-white text-black font-black uppercase tracking-widest rounded-2xl hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] flex items-center justify-center gap-3 relative z-10"
-      >
-        Continuar Carreira <ArrowRight size={20} />
-      </button>
+        {activeLevel === 'HISTORIC' && (
+          <PostMatchHistoric
+            key="historic"
+            match={lastMatch}
+            story={generatedStory}
+            state={state}
+            onContinue={handleContinue}
+          />
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }

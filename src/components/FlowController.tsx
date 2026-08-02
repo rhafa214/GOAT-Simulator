@@ -13,6 +13,7 @@ const MainHub = lazy(() => import('./hub/MainHub'));
 const EventScreen = lazy(() => import('./events/EventScreen'));
 const MuseumView = lazy(() => import('./museum/MuseumView'));
 const PostMatchScreen = lazy(() => import('./hub/PostMatchScreen'));
+const MatchDayScreen = lazy(() => import('./match/MatchDayScreen'));
 const TransferHub = lazy(() => import('../presentation/features/transfers/TransferHub'));
 const MainMenu = lazy(() => import('./menu/MainMenu'));
 
@@ -39,33 +40,35 @@ export default function FlowController() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-[0.03] mix-blend-overlay" />
       </div>
 
-      {/* Header */}
-      <header className="p-4 md:p-6 flex items-center justify-between bg-black/40 backdrop-blur-3xl border-b border-white/5 sticky top-0 z-50 transition-all duration-500">
-        <div className="flex items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-yellow-500 to-orange-500 flex items-center justify-center text-black font-black text-xl shadow-[0_0_20px_rgba(234,179,8,0.2)]">
-            F
+      {/* Header (Shown only during non-HUB phases to avoid duplicate menus) */}
+      {phase !== 'HUB' && (
+        <header className="p-4 md:p-6 flex items-center justify-between bg-black/40 backdrop-blur-3xl border-b border-white/5 sticky top-0 z-50 transition-all duration-500">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-yellow-500 to-orange-500 flex items-center justify-center text-black font-black text-xl shadow-[0_0_20px_rgba(234,179,8,0.2)]">
+              F
+            </div>
+            <div className="hidden sm:block">
+              <h1 className="text-xl font-bold tracking-tight text-white/90">GOAT Simulator</h1>
+              <p className="text-xs text-zinc-500 font-bold uppercase tracking-wider">O Fenômeno</p>
+            </div>
           </div>
-          <div className="hidden sm:block">
-            <h1 className="text-xl font-bold tracking-tight text-white/90">GOAT Simulator</h1>
-            <p className="text-xs text-zinc-500 font-bold uppercase tracking-wider">O Fenômeno</p>
-          </div>
-        </div>
 
-        <div className="flex items-center gap-4">
-           {player.name && (
-              <div className="flex items-center gap-3 bg-white/5 backdrop-blur-xl px-4 py-2 rounded-2xl border border-white/10 shadow-lg">
-                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                 <span className="text-sm font-bold text-white/90 tracking-wide">
-                   {player.name}
-                 </span>
-                 <div className="h-4 w-[1px] bg-white/10 mx-1" />
-                 <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">
-                   Idade: {player.age}
-                 </span>
-              </div>
-           )}
-        </div>
-      </header>
+          <div className="flex items-center gap-4">
+             {player.name && (
+                <div className="flex items-center gap-3 bg-white/5 backdrop-blur-xl px-4 py-2 rounded-2xl border border-white/10 shadow-lg">
+                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                   <span className="text-sm font-bold text-white/90 tracking-wide">
+                     {player.name}
+                   </span>
+                   <div className="h-4 w-[1px] bg-white/10 mx-1" />
+                   <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">
+                     Idade: {player.age}
+                   </span>
+                </div>
+             )}
+          </div>
+        </header>
+      )}
 
       <main className="flex-1 flex flex-col items-center justify-center p-6 relative z-10">
         <Suspense fallback={<LoadingScreen />}>
@@ -79,6 +82,7 @@ export default function FlowController() {
           {phase === 'DRAFT_CLUB' && <CreationDraftClub />}
           
           {phase === 'EVENT' && <EventScreen />}
+          {phase === 'MATCH' && <MatchDayScreen />}
           {phase === 'POST_MATCH' && <PostMatchScreen />}
           {phase === 'HUB' && <MainHub />}
           {phase === 'RETIREMENT' && <MuseumView />}

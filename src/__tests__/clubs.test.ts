@@ -1,5 +1,5 @@
 import { expect, test, describe } from 'vitest';
-import { ALL_CLUBS, MOCK_STARTER_CLUBS } from '../data/database';
+import { ALL_CLUBS, STARTER_CLUBS } from '../data/database';
 
 describe('Club Data', () => {
   test('ALL_CLUBS should contain imported clubs', () => {
@@ -8,8 +8,8 @@ describe('Club Data', () => {
     expect(ALL_CLUBS[0].league).toBeDefined();
   });
 
-  test('MOCK_STARTER_CLUBS should have logos', () => {
-    expect(MOCK_STARTER_CLUBS.length).toBeGreaterThan(0);
-    expect(MOCK_STARTER_CLUBS[0].logo).toBeDefined();
+  test('STARTER_CLUBS should be validated clubs', () => {
+    expect(STARTER_CLUBS.length).toBe(20);
+    expect(STARTER_CLUBS.every(c => c.validationStatus === 'VALIDATED')).toBe(true);
   });
 });

@@ -2,10 +2,17 @@ import { MatchStats } from '../../types';
 import { MatchAggregate } from './match';
 
 export function toLegacyMatchStats(aggregate: MatchAggregate, playerTeamIdOrName: string): MatchStats {
-  const { fixture, playerPerformance } = aggregate;
+  const { fixture, playerPerformance, result, events } = aggregate;
   
   const isHome = fixture.homeTeam.name === playerTeamIdOrName || fixture.homeTeam.id === playerTeamIdOrName;
   const opponent = isHome ? fixture.awayTeam : fixture.homeTeam;
+
+  const eventSummaries = events?.map(e => ({
+    id: e.id,
+    minute: e.minute,
+    type: e.type,
+    player: e.player.name
+  })) || [];
 
   return {
     id: fixture.id,
@@ -25,6 +32,12 @@ export function toLegacyMatchStats(aggregate: MatchAggregate, playerTeamIdOrName
     motm: playerPerformance?.isMotm || false,
     injured: playerPerformance?.injured || false,
     wasCaptain: playerPerformance?.isCaptain || false,
+    homeScore: result?.homeScore,
+    awayScore: result?.awayScore,
+    yellowCards: playerPerformance?.yellowCards || 0,
+    redCards: playerPerformance?.redCards || 0,
+    events: eventSummaries,
+    importance: fixture.context.importance,
   };
 }
 

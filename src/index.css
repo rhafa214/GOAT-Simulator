@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @layer utilities {
+  .font-goat-display {
+    font-family: 'Bebas Neue', 'Oswald', 'Impact', 'Arial Narrow', sans-serif;
+  }
+  .font-goat-body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  .goat-gold-glow {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
+  }
+  .goat-gold-text-glow {
+    text-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+  }
   .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
   }
@@ -37,4 +50,5 @@
     backface-visibility: hidden;
   }
 }
+
 

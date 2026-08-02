@@ -81,7 +81,15 @@ export default function TransferHub() {
   return (
     <div className="w-full max-w-6xl mx-auto flex flex-col gap-6 p-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-black text-white tracking-tight">Caixa de Entrada</h2>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => dispatch({ type: 'SET_STATE', payload: { ...state, phase: 'HUB' } })}
+            className="px-4 py-2 bg-zinc-900 border border-zinc-800 text-amber-400 hover:bg-zinc-800 rounded-xl text-xs font-bold transition-colors"
+          >
+            ← Voltar ao Hub
+          </button>
+          <h2 className="text-3xl font-black text-white tracking-tight">Mercado de Transferências</h2>
+        </div>
         <span className="px-4 py-1.5 bg-yellow-500/10 text-yellow-500 rounded-full text-sm font-bold border border-yellow-500/20">
           {activeProposals.length} Oferta(s)
         </span>

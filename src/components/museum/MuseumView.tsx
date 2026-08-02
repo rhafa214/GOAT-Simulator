@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Calendar, Trophy, Medal, Target, Shield, Clock, Activity, ArrowRightLeft, Star, Shirt, History, BarChart } from 'lucide-react';
+import { Calendar, Trophy, Medal, Target, Shield, Clock, Activity, ArrowRightLeft, Star, Shirt, History, BarChart, ArrowLeft } from 'lucide-react';
 import { useMuseumData } from './../../hooks/useMuseumData';
 import { PlayerPortrait } from '../ui/PlayerPortrait';
+import { useGameEngine } from '../../engine/GameEngine';
 import { 
   TimelineSection, SeasonsSection, LegacySection, 
   TrophiesSection, AwardsSection, RecordsSection, 
@@ -26,6 +27,7 @@ const TABS = [
 
 export default function MuseumView() {
   const { player } = useMuseumData();
+  const { state, dispatch } = useGameEngine();
   const [activeTab, setActiveTab] = useState(TABS[0].id);
 
   return (
@@ -42,6 +44,13 @@ export default function MuseumView() {
       {/* Header */}
       <header className="p-8 md:px-12 md:pt-12 md:pb-6 border-b border-white/5 flex flex-col lg:flex-row justify-between items-center relative z-10 gap-8">
          <div className="flex items-center gap-8">
+            <button
+              onClick={() => dispatch({ type: 'CHANGE_PHASE', payload: 'HUB' })}
+              className="flex items-center gap-2 px-4 py-2 bg-zinc-900 border border-zinc-800 text-amber-400 hover:bg-zinc-800 rounded-xl text-xs font-bold transition-colors"
+            >
+              <ArrowLeft size={16} /> Voltar ao Hub
+            </button>
+
             <div className="w-24 h-24 rounded-full overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(234,179,8,0.3)] bg-gradient-to-br from-yellow-500 to-yellow-900 relative">
                <div className="absolute inset-0 bg-black/40 mix-blend-overlay" />
                <PlayerPortrait player={player} className="w-full h-full scale-[1.3] mt-4 relative z-10 drop-shadow-2xl" />

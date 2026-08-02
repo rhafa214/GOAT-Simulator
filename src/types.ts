@@ -115,7 +115,21 @@ export interface Club {
   baseSalary: number;
   league: string;
   primaryColor: string;
-  logo?: string;
+  logo?: string | null;
+  leagueId?: string | null;
+  leagueName?: string | null;
+  division?: number | string | null;
+  season?: string | null;
+  validationStatus?: 'VALIDATED' | 'UNCLASSIFIED' | 'FLAGGED';
+  dataSource?: string | null;
+}
+
+export interface MatchEventSummary {
+  id: string;
+  minute: number;
+  type: 'GOAL' | 'ASSIST' | 'YELLOW_CARD' | 'RED_CARD' | 'INJURY' | 'SUB_IN' | 'SUB_OUT';
+  player: string;
+  isUser?: boolean;
 }
 
 export interface MatchStats {
@@ -136,6 +150,19 @@ export interface MatchStats {
   motm: boolean;
   injured: boolean;
   wasCaptain: boolean;
+  homeScore?: number;
+  awayScore?: number;
+  yellowCards?: number;
+  redCards?: number;
+  events?: MatchEventSummary[];
+  importance?: 'LOW' | 'MEDIUM' | 'HIGH' | 'DERBY' | 'FINAL';
+  isHistoric?: boolean;
+  isSavedInMuseum?: boolean;
+  milestone?: string;
+  trophyWon?: string;
+  headline?: string;
+  decisiveMoment?: string;
+  historicNarrative?: string;
 }
 
 export interface SeasonRecord {
@@ -355,7 +382,8 @@ export type GameAction =
   | { type: 'INITIALIZE_PLAYER'; payload: Partial<GameState['player']> }
   | { type: 'TRAIN_ATTRIBUTE'; payload: 'SHO' | 'PAS' | 'DRI' | 'DEF' }
   | { type: 'SET_TRAINING_PLAN'; payload: TrainingPlan }
-  | { type: 'ADD_NEWS'; payload: Omit<NewsItem, 'id'> };
+  | { type: 'ADD_NEWS'; payload: Omit<NewsItem, 'id'> }
+  | { type: 'SAVE_HISTORIC_MATCH'; payload: { matchId: string } };
 
 import { Competition, CompetitionFixture, TeamStanding } from './core/domain/competition';
 
