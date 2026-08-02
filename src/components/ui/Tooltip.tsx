@@ -12,6 +12,7 @@ export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
   ({ content, children, position = 'top', delay = 300, className, ...props }, ref) => {
     const [isVisible, setIsVisible] = useState(false);
     const timeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+    const [tooltipId] = useState(() => `tooltip-${Math.random().toString(36).substring(2, 9)}`);
 
     const handleMouseEnter = () => {
       timeoutRef.current = setTimeout(() => setIsVisible(true), delay);
@@ -37,11 +38,13 @@ export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
         onMouseLeave={handleMouseLeave}
         onFocus={handleMouseEnter}
         onBlur={handleMouseLeave}
+        aria-describedby={isVisible ? tooltipId : undefined}
         {...props}
       >
         {children}
         {isVisible && (
           <div 
+            id={tooltipId}
             role="tooltip"
             className={cn(
               'absolute z-50 px-2 py-1 text-xs font-medium text-white bg-zinc-900 border border-white/10 rounded-sm shadow-xl whitespace-nowrap motion-safe:animate-in motion-safe:fade-in-0 motion-safe:zoom-in-95',

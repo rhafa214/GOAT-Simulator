@@ -75,7 +75,7 @@ function generateOptions(categoryKey: string): DraftPlayer[] {
 
 export default function CreationAttributes() {
   const { state, dispatch } = useGameEngine();
-  const activeCategories = state.draftLength === 'SHORT' ? DRAFT_CATEGORIES.slice(0, 8) : DRAFT_CATEGORIES;
+  const activeCategories = state.draftLength === 'QUICK' ? DRAFT_CATEGORIES.slice(0, 8) : DRAFT_CATEGORIES;
   const TOTAL_STEPS = activeCategories.length;
   const [draftMode, setDraftMode] = useState<'SELECT' | 'STRATEGIC' | 'SCOUT'>('SELECT');
   const [currentStep, setCurrentStep] = useState(0);
@@ -147,7 +147,7 @@ export default function CreationAttributes() {
       if (cat.type === 'rpg') rpg[cat.id] = valWithBonus;
     });
 
-    if (state.draftLength === 'SHORT') {
+    if (state.draftLength === 'QUICK') {
       // Auto-calculate remaining stats based on primary stats
       technical['HEA'] = Math.floor((technical['PHY'] + technical['DEF']) / 2);
       technical['VIS'] = Math.floor((technical['PAS'] + technical['DRI']) / 2);

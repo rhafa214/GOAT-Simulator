@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { useGameEngine } from '../../engine/GameEngine';
 
-export default function PlayerRadarChart() {
+const PlayerRadarChart = memo(function PlayerRadarChart() {
   const { state } = useGameEngine();
   const { technical } = state.player;
 
@@ -26,4 +26,6 @@ export default function PlayerRadarChart() {
       </ResponsiveContainer>
     </div>
   );
-}
+});
+
+export default PlayerRadarChart;

@@ -59,10 +59,12 @@ export default function MuseumView() {
 
       {/* Tabs Navigation */}
       <div className="relative z-10 px-8 md:px-12 py-4 border-b border-white/5 overflow-x-auto hide-scrollbar">
-        <div className="flex gap-2">
+        <div className="flex gap-2" role="tablist" aria-label="Seções do Museu">
            {TABS.map(tab => (
              <button 
                key={tab.id}
+               role="tab"
+               aria-selected={activeTab === tab.id}
                onClick={() => setActiveTab(tab.id)}
                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-widest whitespace-nowrap transition-all ${
                  activeTab === tab.id 

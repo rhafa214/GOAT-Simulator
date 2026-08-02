@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { usePlayer, useCareer, useFinances, useOverall } from '../../engine/selectors';
 import { useGameActions } from '../../engine/actions';
 import { 
@@ -19,7 +19,7 @@ import { useSimulation } from '../../hooks/useSimulation';
 import { SimulationModal } from './SimulationModal';
 import { Card, CardContent, CardHeader, CardTitle, Badge, Button, Progress, Stat, SectionHeader, Panel, Tabs, TabsList, TabsTrigger, TabsContent } from '../ui';
 import NewsFeed from './NewsFeed';
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts';
+import PlayerEvolutionChart from './PlayerEvolutionChart';
 
 export default function DashboardView() {
   const player = usePlayer();
@@ -249,19 +249,7 @@ export default function DashboardView() {
                     </div>
                   </div>
                   
-                  <div className="w-full flex-1 min-h-[150px]">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <LineChart data={evolutionData} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
-                        <XAxis dataKey="name" stroke="#ffffff40" fontSize={10} tickLine={false} axisLine={false} />
-                        <YAxis domain={['dataMin - 2', 'dataMax + 2']} stroke="#ffffff40" fontSize={10} tickLine={false} axisLine={false} />
-                        <Tooltip 
-                          contentStyle={{ backgroundColor: '#09090b', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px' }}
-                          itemStyle={{ color: '#34d399' }}
-                        />
-                        <Line type="monotone" dataKey="ovr" stroke="#34d399" strokeWidth={2} dot={{ r: 4, fill: '#000', stroke: '#34d399', strokeWidth: 2 }} activeDot={{ r: 6 }} />
-                      </LineChart>
-                    </ResponsiveContainer>
-                  </div>
+                  <PlayerEvolutionChart evolutionData={evolutionData} />
                 </div>
               </TabsContent>
             </Tabs>

@@ -34,6 +34,7 @@ export default function CreationDraftLength() {
       <div className="flex flex-col md:flex-row gap-8 w-full">
         {/* Modo Rápido */}
         <button 
+          aria-pressed={selected === 'QUICK'}
           onClick={() => setSelected('QUICK')}
           className={`flex-1 relative group bg-white/5 backdrop-blur-xl border-2 rounded-[2rem] p-8 text-left transition-all duration-300 overflow-hidden ${selected === 'QUICK' ? 'border-yellow-500 shadow-[0_0_40px_rgba(234,179,8,0.3)] scale-105' : 'border-white/10 hover:border-yellow-500/50 hover:bg-white/10'}`}
         >
@@ -58,6 +59,7 @@ export default function CreationDraftLength() {
 
         {/* Modo Completo */}
         <button 
+          aria-pressed={selected === 'COMPLETE'}
           onClick={() => setSelected('COMPLETE')}
           className={`flex-1 relative group bg-white/5 backdrop-blur-xl border-2 rounded-[2rem] p-8 text-left transition-all duration-300 overflow-hidden ${selected === 'COMPLETE' ? 'border-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.3)] scale-105' : 'border-white/10 hover:border-blue-500/50 hover:bg-white/10'}`}
         >

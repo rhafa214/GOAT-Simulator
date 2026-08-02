@@ -49,10 +49,12 @@ export default function MainHub() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-2">
+          <nav className="hidden md:flex items-center gap-2" role="tablist" aria-label="Navegação Principal">
             {TABS.map((tab) => (
               <button
                 key={tab.id}
+                role="tab"
+                aria-selected={activeTab === tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-sm text-sm font-medium transition-colors ${
                   activeTab === tab.id
@@ -118,11 +120,14 @@ export default function MainHub() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
+            role="dialog"
+            aria-label="Menu Mobile"
             className="md:hidden fixed inset-0 z-30 top-[73px] bg-black border-b border-white/10 p-4 flex flex-col gap-2"
           >
             {TABS.map((tab) => (
               <button
                 key={tab.id}
+                aria-current={activeTab === tab.id ? 'page' : undefined}
                 onClick={() => {
                   setActiveTab(tab.id);
                   setIsMobileMenuOpen(false);

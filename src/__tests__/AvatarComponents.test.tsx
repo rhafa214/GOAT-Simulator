@@ -1,6 +1,6 @@
 import { AvatarManagerProvider } from '../core/domain/avatar/AvatarManager';
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import { expect, test, describe, vi } from 'vitest';
 import { PlayerPortrait } from '../components/ui/PlayerPortrait';
 import AvatarScene from '../components/3d/AvatarScene';
@@ -73,12 +73,16 @@ describe('Avatar Components', () => {
     expect(getByTestId('mock-canvas')).toBeDefined();
   });
 
-  test('PlayerPortrait renders correctly wrapped with GameProvider', () => {
+  test('PlayerPortrait renders correctly wrapped with GameProvider', async () => {
     const { getByTestId } = render(
       <GameProvider>
         <AvatarManagerProvider initialAppearance={mockPlayer.appearance}><PlayerPortrait player={mockPlayer} /></AvatarManagerProvider>
       </GameProvider>
     );
+    // Because AvatarScene is now lazy-loaded, we need to wait for it
+    await act(async () => {
+       await new Promise(resolve => setTimeout(resolve, 100)); // allow lazy component to load
+    });
     expect(getByTestId('mock-canvas')).toBeDefined();
   });
 });

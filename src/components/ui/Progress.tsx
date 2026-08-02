@@ -6,14 +6,24 @@ export interface ProgressProps extends React.HTMLAttributes<HTMLDivElement> {
   max?: number;
   indicatorColor?: string;
   showLabel?: boolean;
+  'aria-label'?: string;
 }
 
 export const Progress = forwardRef<HTMLDivElement, ProgressProps>(
-  ({ className, value, max = 100, indicatorColor = 'bg-amber-500', showLabel = false, ...props }, ref) => {
+  ({ className, value, max = 100, indicatorColor = 'bg-amber-500', showLabel = false, 'aria-label': ariaLabel = 'Progresso', ...props }, ref) => {
     const percentage = Math.min(100, Math.max(0, (value / max) * 100));
 
     return (
-      <div className={cn("flex flex-col gap-1.5 w-full", className)} {...props} ref={ref}>
+      <div 
+        className={cn("flex flex-col gap-1.5 w-full", className)} 
+        {...props} 
+        ref={ref}
+        role="progressbar"
+        aria-valuenow={Math.round(value)}
+        aria-valuemin={0}
+        aria-valuemax={max}
+        aria-label={ariaLabel}
+      >
         {showLabel && (
           <div className="flex justify-between text-xs text-white/60">
             <span>Progress</span>

@@ -36,6 +36,7 @@ export default function CreationPosition() {
         {POSITIONS.map(pos => (
           <button
             key={pos.id}
+            aria-pressed={position === pos.id}
             onClick={() => setPosition(pos.id)}
             className={`p-4 rounded-xl border-2 text-left transition-all ${
               position === pos.id 

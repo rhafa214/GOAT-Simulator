@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { useGamePhase, usePlayer } from '../engine/selectors';
-import CreationBasicInfo from './creation/CreationBasicInfo';
-import CreationPosition from './creation/CreationPosition';
-import CreationAppearance from './creation/CreationAppearance';
-import CreationDraftLength from './creation/CreationDraftLength';
-import CreationPersonality from './creation/CreationPersonality';
-import CreationAttributes from './creation/CreationAttributes';
-import CreationDraftClub from './creation/CreationDraftClub';
-import MainHub from './hub/MainHub';
-import EventScreen from './events/EventScreen';
-import MuseumView from './museum/MuseumView';
+import { Loader2 } from 'lucide-react';
 
-import PostMatchScreen from './hub/PostMatchScreen';
-import TransferHub from '../presentation/features/transfers/TransferHub';
-import MainMenu from './menu/MainMenu';
+const CreationBasicInfo = lazy(() => import('./creation/CreationBasicInfo'));
+const CreationPosition = lazy(() => import('./creation/CreationPosition'));
+const CreationAppearance = lazy(() => import('./creation/CreationAppearance'));
+const CreationDraftLength = lazy(() => import('./creation/CreationDraftLength'));
+const CreationPersonality = lazy(() => import('./creation/CreationPersonality'));
+const CreationAttributes = lazy(() => import('./creation/CreationAttributes'));
+const CreationDraftClub = lazy(() => import('./creation/CreationDraftClub'));
+const MainHub = lazy(() => import('./hub/MainHub'));
+const EventScreen = lazy(() => import('./events/EventScreen'));
+const MuseumView = lazy(() => import('./museum/MuseumView'));
+const PostMatchScreen = lazy(() => import('./hub/PostMatchScreen'));
+const TransferHub = lazy(() => import('../presentation/features/transfers/TransferHub'));
+const MainMenu = lazy(() => import('./menu/MainMenu'));
+
+function LoadingScreen() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-[50vh] text-zinc-400">
+      <Loader2 className="w-12 h-12 animate-spin text-yellow-500 mb-4" />
+      <span className="text-sm font-bold uppercase tracking-widest">Carregando Tela...</span>
+    </div>
+  );
+}
 
 export default function FlowController() {
   const phase = useGamePhase();
@@ -58,20 +68,22 @@ export default function FlowController() {
       </header>
 
       <main className="flex-1 flex flex-col items-center justify-center p-6 relative z-10">
-        {phase === 'MAIN_MENU' && <MainMenu />}
-        {phase === 'CREATION_BASIC_INFO' && <CreationBasicInfo />}
-        {phase === 'CREATION_POSITION' && <CreationPosition />}
-        {phase === 'CREATION_APPEARANCE' && <CreationAppearance />}
-        {phase === 'CREATION_DRAFT_LENGTH' && <CreationDraftLength />}
-        {phase === 'CREATION_ATTRIBUTES' && <CreationAttributes />}
-        {phase === 'CREATION_PERSONALITY' && <CreationPersonality />}
-        {phase === 'DRAFT_CLUB' && <CreationDraftClub />}
-        
-        {phase === 'EVENT' && <EventScreen />}
-        {phase === 'POST_MATCH' && <PostMatchScreen />}
-        {phase === 'HUB' && <MainHub />}
-        {phase === 'RETIREMENT' && <MuseumView />}
-        {phase === 'TRANSFERS' && <TransferHub />}
+        <Suspense fallback={<LoadingScreen />}>
+          {phase === 'MAIN_MENU' && <MainMenu />}
+          {phase === 'CREATION_BASIC_INFO' && <CreationBasicInfo />}
+          {phase === 'CREATION_POSITION' && <CreationPosition />}
+          {phase === 'CREATION_APPEARANCE' && <CreationAppearance />}
+          {phase === 'CREATION_DRAFT_LENGTH' && <CreationDraftLength />}
+          {phase === 'CREATION_ATTRIBUTES' && <CreationAttributes />}
+          {phase === 'CREATION_PERSONALITY' && <CreationPersonality />}
+          {phase === 'DRAFT_CLUB' && <CreationDraftClub />}
+          
+          {phase === 'EVENT' && <EventScreen />}
+          {phase === 'POST_MATCH' && <PostMatchScreen />}
+          {phase === 'HUB' && <MainHub />}
+          {phase === 'RETIREMENT' && <MuseumView />}
+          {phase === 'TRANSFERS' && <TransferHub />}
+        </Suspense>
       </main>
     </div>
   );

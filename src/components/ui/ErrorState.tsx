@@ -14,6 +14,7 @@ export const ErrorState = forwardRef<HTMLDivElement, ErrorStateProps>(
     return (
       <div 
         ref={ref}
+        role="alert"
         className={cn('flex flex-col items-center justify-center p-8 text-center border border-rose-500/20 rounded-2xl bg-rose-500/5', className)}
         {...props}
       >

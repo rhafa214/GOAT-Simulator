@@ -179,7 +179,18 @@ export default function MainMenu() {
             <div className="space-y-3">
               {saves.map(save => (
                 <div key={save.id} className="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center gap-4 backdrop-blur-md">
-                  <div className="flex-1 cursor-pointer" onClick={() => handleLoad(save.id)}>
+                  <div 
+                    className="flex-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-lg p-2 -m-2" 
+                    onClick={() => handleLoad(save.id)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        handleLoad(save.id);
+                      }
+                    }}
+                  >
                     <h3 className="font-bold text-lg text-white">{save.playerName || 'Jogador Desconhecido'}</h3>
                     <div className="flex items-center gap-3 text-xs font-bold text-zinc-400 mt-1 uppercase tracking-wider">
                       <span>{save.clubName}</span>

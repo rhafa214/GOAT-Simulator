@@ -41,8 +41,9 @@ export default function CreationBasicInfo() {
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="space-y-2">
-            <label className="text-xs font-semibold text-white/60 uppercase tracking-wider block">Nome do Jogador</label>
+            <label htmlFor="playerNameInput" className="text-xs font-semibold text-white/60 uppercase tracking-wider block">Nome do Jogador</label>
             <input 
+              id="playerNameInput"
               type="text" 
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -53,8 +54,9 @@ export default function CreationBasicInfo() {
           </div>
           
           <div className="space-y-2">
-            <label className="text-xs font-semibold text-white/60 uppercase tracking-wider block">Nacionalidade</label>
+            <label htmlFor="playerNationalitySelect" className="text-xs font-semibold text-white/60 uppercase tracking-wider block">Nacionalidade</label>
             <select 
+              id="playerNationalitySelect"
               value={nationality}
               onChange={(e) => setNationality(e.target.value)}
               className="w-full bg-black/50 border border-white/10 rounded-md px-4 py-3 text-white outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all appearance-none"

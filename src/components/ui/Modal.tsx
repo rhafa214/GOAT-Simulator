@@ -14,20 +14,66 @@ export interface ModalProps {
 
 export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, className }) => {
   const overlayRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const [titleId] = React.useState(() => `modal-title-${Math.random().toString(36).substring(2, 9)}`);
 
   useEffect(() => {
+    let previousFocus: HTMLElement | null = null;
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) onClose();
+
+      if (e.key === 'Tab' && isOpen && modalRef.current) {
+        const focusableElements = Array.from(
+          modalRef.current.querySelectorAll<HTMLElement>(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          )
+        );
+        if (focusableElements.length === 0) return;
+        
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
     };
     
     if (isOpen) {
+      previousFocus = document.activeElement as HTMLElement;
       document.body.style.overflow = 'hidden';
       document.addEventListener('keydown', handleKeyDown);
+
+      setTimeout(() => {
+        if (modalRef.current) {
+          const focusableElements = modalRef.current.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
+          const firstElement = focusableElements[0] as HTMLElement;
+          if (firstElement) {
+            firstElement.focus();
+          } else {
+            modalRef.current.focus();
+          }
+        }
+      }, 10);
     }
-    
+
     return () => {
       document.body.style.overflow = '';
       document.removeEventListener('keydown', handleKeyDown);
+      if (previousFocus && typeof previousFocus.focus === 'function') {
+        previousFocus.focus();
+      }
     };
   }, [isOpen, onClose]);
 
@@ -41,8 +87,11 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, 
         onClick={onClose}
       />
       <div 
+        ref={modalRef}
         role="dialog"
         aria-modal="true"
+        aria-labelledby={title ? titleId : undefined}
+        tabIndex={-1}
         className={cn(
           "relative z-50 w-full max-w-lg rounded-2xl bg-zinc-950 border border-white/10 shadow-2xl p-6 motion-safe:animate-in motion-safe:fade-in-90 motion-safe:zoom-in-95",
           className
@@ -50,7 +99,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, 
       >
         {(title || onClose) && (
           <div className="flex items-center justify-between mb-4">
-            {title && <h2 className="text-lg font-semibold text-white">{title}</h2>}
+            {title && <h2 id={titleId} className="text-lg font-semibold text-white">{title}</h2>}
             <IconButton 
               icon={<X size={18} />} 
               aria-label="Close modal" 
