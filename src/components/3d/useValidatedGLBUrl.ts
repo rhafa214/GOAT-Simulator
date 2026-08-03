@@ -39,8 +39,7 @@ async function fetchAndValidateGLB(url: string): Promise<string> {
     throw new Error('Corrupted GLB file. Invalid magic header. Please re-export from Tripo/Blender as a valid binary GLB.');
   }
   
-  const blob = new Blob([buffer], { type: 'model/gltf-binary' });
-  return URL.createObjectURL(blob);
+  return url;
 }
 
 export function useValidatedGLBUrl(url: string): string {

@@ -24,11 +24,12 @@ export default function AvatarGLTFModel({
   const group = useRef<THREE.Group>(null);
   
   // Validate and fetch the GLB securely before passing to GLTFLoader
-  const blobUrl = useValidatedGLBUrl(url);
+  const validatedUrl = useValidatedGLBUrl(url);
 
-  // Load the GLTF. 
-  // It throws a promise which is caught by the parent <Suspense>.
-  const { scene, materials, animations } = useGLTF(blobUrl);
+  console.log('AvatarGLTFModel - Received URL:', url);
+  console.log('AvatarGLTFModel - Final URL for useGLTF:', validatedUrl);
+
+  const { scene, materials, animations } = useGLTF(validatedUrl);
   
   // Clone the scene and skeleton safely to avoid mutating the cached useGLTF object
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);
