@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, ContactShadows, PerspectiveCamera } from '@react-three/drei';
-import AvatarModel from './AvatarModel';
+import AvatarRenderer from './AvatarRenderer';
 import { useAvatarManager } from './AvatarManager';
 
 interface AvatarSceneProps {
@@ -73,7 +73,7 @@ export default function AvatarScene({ clubColor = '#ffffff', pose = 'idle' }: Av
         
         <Suspense fallback={null}>
           {quality === 'high' && <Environment preset="city" />}
-          <AvatarModel clubColor={clubColor} pose={pose} />
+          <AvatarRenderer clubColor={clubColor} pose={pose} quality={quality} />
         </Suspense>
         
         {useContactShadows && (

@@ -4,7 +4,7 @@ import { render, act } from '@testing-library/react';
 import { expect, test, describe, vi, beforeEach, afterEach } from 'vitest';
 import { PlayerPortrait, AvatarErrorBoundary, PlayerPortraitFallback } from '../components/ui/PlayerPortrait';
 import AvatarScene from '../components/3d/AvatarScene';
-import AvatarModel from '../components/3d/AvatarModel';
+import AvatarModel from '../components/3d/LegacyAvatarModel';
 import { GameProvider } from '../engine/GameEngine';
 
 // Mock Three.js/Fiber elements since they don't render in jsdom easily
