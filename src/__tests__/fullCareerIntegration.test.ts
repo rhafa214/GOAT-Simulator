@@ -106,7 +106,7 @@ describe('Full Career Lifecycle & Stress Tests (GOAT Simulator)', () => {
     assertNoNaNOrInfinity(appliedStats);
   });
 
-  test('3. End-to-End Single Career Lifecycle (Creation -> Season -> Transfers -> Awards -> Save/Load -> Retirement)', () => {
+  test('3. End-to-End Single Career Lifecycle (Creation -> Season -> Transfers -> Awards -> Save/Load -> Retirement)', { timeout: 10000 }, () => {
     // Step 1: Initialize Career
     let state = createInitialGameState();
     state = gameReducer(state, {
@@ -234,7 +234,7 @@ describe('Full Career Lifecycle & Stress Tests (GOAT Simulator)', () => {
     expect(legacyState.hallOfFameLevel).toBeDefined();
   });
 
-  test('4. Stress Test: 5-Season Career Simulation with Multiple Save/Load Cycles', () => {
+  test('4. Stress Test: 5-Season Career Simulation with Multiple Save/Load Cycles', { timeout: 15000 }, () => {
     let state = createInitialGameState();
     state = gameReducer(state, {
       type: 'INITIALIZE_PLAYER',

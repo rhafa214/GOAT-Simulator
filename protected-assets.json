@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "assets": [
+    {
+      "path": "public/models/avatar/goat_base_human_v2.glb",
+      "readOnly": true,
+      "description": "GOAT Base Human v2 validated production avatar",
+      "expectedSize": 1279988,
+      "expectedMagic": "glTF",
+      "expectedHash": "fa98c638bc217100d9514db14fd96b77d69226ea678b0ea499b9b53eeb64ef2b"
+    }
+  ]
+}

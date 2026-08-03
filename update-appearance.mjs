@@ -1,107 +1,15 @@
-import React, { useState } from "react";
-import { useGameEngine } from "../../engine/GameEngine";
-import { motion } from "motion/react";
-import { StudioLayout } from './StudioLayout';
-import { PhysicalAppearance } from "../../types";
+import fs from 'fs';
 
-const SKIN_COLORS = [
-  { label: "Branco", value: "ffdbb4" },
-  { label: "Moreno Claro", value: "edb98a" },
-  { label: "Moreno", value: "fd9841" },
-  { label: "Pardo", value: "d08b5b" },
-  { label: "Negro", value: "ae5d29" },
-  { label: "Negro Escuro", value: "614335" },
-];
+const path = 'src/components/creation/CreationAppearance.tsx';
+let content = fs.readFileSync(path, 'utf8');
 
-const HAIR_STYLES = [
-  { label: "Curto", value: "shortHairShortFlat" },
-  { label: "Ondulado", value: "shortHairShortWaved" },
-  { label: "Espetado", value: "shortHairFrizzle" },
-  { label: "Dreads", value: "shortHairDreads01" },
-  { label: "Dreads Longos", value: "shortHairDreads02" },
-  { label: "Careca", value: "noHair" },
-  { label: "Longo", value: "longHairStraight" },
-  { label: "Coque", value: "longHairBun" },
-];
+const returnIndex = content.indexOf('return (', 100);
+const helperIndex = content.indexOf('function Section({');
 
-const HAIR_COLORS = [
-  { label: "Preto", value: "2c1b18" },
-  { label: "Castanho Escuro", value: "4a3123" },
-  { label: "Castanho Claro", value: "724133" },
-  { label: "Loiro", value: "b58143" },
-  { label: "Platinado", value: "e8e1e1" },
-  { label: "Ruivo", value: "ca4420" },
-  { label: "Grisalho", value: "e6e6e6" },
-  { label: "Colorido", value: "c93305" }, // Just a placeholder
-];
+const beforeReturn = content.substring(0, returnIndex);
+const helpers = content.substring(helperIndex);
 
-const FACIAL_HAIR = [
-  { label: "Sem Barba", value: "none" },
-  { label: "Barba Rala", value: "beardLight" },
-  { label: "Barba Média", value: "beardMedium" },
-  { label: "Barba Cheia", value: "beardMajestic" },
-  { label: "Cavanhaque", value: "moustaceMagnum" },
-  { label: "Bigode", value: "mustacheFancy" },
-];
-
-const EYES = [
-  { label: "Normal", value: "default" },
-  { label: "Feliz", value: "happy" },
-  { label: "Sério", value: "squint" },
-  { label: "Determinado", value: "surprised" },
-];
-
-const MOUTHS = [
-  { label: "Sério", value: "serious" },
-  { label: "Sorriso", value: "smile" },
-  { label: "Feliz", value: "twinkle" },
-];
-
-const NOSES = ["Pequeno", "Largo", "Fino", "Arrebitado", "Adunco"];
-const ACCESSORIES = [
-  { label: "Nenhum", value: "none" },
-  { label: "Óculos", value: "prescription01" },
-  { label: "Óculos Redondo", value: "round" },
-  { label: "Óculos Escuros", value: "sunglasses" },
-];
-
-const PHYSIQUES = ["Magra", "Atlética", "Musculosa", "Pesada"] as const;
-const BOOTS = [
-  "Pretas Clássicas",
-  "Neon Modernas",
-  "Brancas",
-  "Douradas",
-  "Personalizadas",
-];
-const SLEEVES = ["Curtas", "Longas", "Térmica"] as const;
-const CELEBRATIONS = [
-  "Salto e Soco no Ar",
-  "Dança",
-  "Silêncio",
-  "Mão na Orelha",
-  "Tirar Camisa",
-];
-const TATTOOS = ["Nenhuma", "Braço Fechado", "Pescoço", "Perna", "Múltiplas"];
-
-export default function CreationAppearance() {
-  const { state, dispatch } = useGameEngine();
-  const [appearance, setAppearance] = useState<PhysicalAppearance>(
-    state.player.appearance,
-  );
-
-  const update = (key: keyof PhysicalAppearance, value: number | string | boolean) => {
-    setAppearance((prev) => ({ ...prev, [key]: value }));
-  };
-
-  const handleNext = () => {
-    dispatch({
-      type: "INITIALIZE_PLAYER",
-      payload: { appearance, avatarUrl: "" },
-    }); // avatarUrl will be handled dynamically now
-    dispatch({ type: "CHANGE_PHASE", payload: "CREATION_DRAFT_LENGTH" });
-  };
-
-    const footer = (
+const newReturn = `  const footer = (
     <div className="flex gap-4">
       <button
         onClick={() => dispatch({ type: "CHANGE_PHASE", payload: "CREATION_POSITION" })}
@@ -178,9 +86,9 @@ export default function CreationAppearance() {
             <span className="font-bold text-sm">Usa Luvas (Jogadores de linha)</span>
             <button
               onClick={() => update("gloves", !appearance.gloves)}
-              className={`w-14 h-7 rounded-full transition-colors relative ${appearance.gloves ? "bg-yellow-500" : "bg-zinc-700"}`}
+              className={\`w-14 h-7 rounded-full transition-colors relative \${appearance.gloves ? "bg-yellow-500" : "bg-zinc-700"}\`}
             >
-              <div className={`w-5 h-5 bg-white rounded-full absolute top-1 transition-all ${appearance.gloves ? "left-8" : "left-1"}`} />
+              <div className={\`w-5 h-5 bg-white rounded-full absolute top-1 transition-all \${appearance.gloves ? "left-8" : "left-1"}\`} />
             </button>
           </div>
           
@@ -191,52 +99,17 @@ export default function CreationAppearance() {
   );
 }
 
-function Section({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div>
-      <h3 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-2">
-        {title}
-      </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{children}</div>
-    </div>
-  );
-}
+`;
 
-function Select({
-  label,
-  value,
-  options,
-  onChange,
-  className = "",
-}: {
-  label: string;
-  value: string;
-  options: { label: string; value: string }[];
-  onChange: (v: string) => void;
-  className?: string;
-}) {
-  return (
-    <div className={className}>
-      <label className="block text-[10px] font-black text-white/50 uppercase tracking-[0.2em] mb-2">
-        {label}
-      </label>
-      <select
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-white font-bold outline-none focus:border-yellow-500 transition-colors cursor-pointer appearance-none"
-      >
-        {options.map((opt) => (
-          <option key={opt.value} value={opt.value}>
-            {opt.label}
-          </option>
-        ))}
-      </select>
-    </div>
-  );
-}
+const newHelpers = helpers
+  .replace('PlayerPortrait', 'StudioLayout') // if any
+  .replace(/bg-zinc-950/g, 'bg-black/60')
+  .replace(/border-zinc-800\/50/g, 'border-white/10')
+  .replace(/border-zinc-800/g, 'border-white/10')
+  .replace(/text-xs font-bold text-zinc-500 uppercase tracking-wider/g, 'text-[10px] font-black text-white/50 uppercase tracking-[0.2em]')
+  .replace(/rounded-xl/g, 'rounded-xl');
+
+// Add import StudioLayout
+let newContent = beforeReturn.replace("import { PlayerPortrait } from \"../ui/PlayerPortrait\";", "import { StudioLayout } from './StudioLayout';");
+
+fs.writeFileSync(path, newContent + newReturn + newHelpers);

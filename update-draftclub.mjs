@@ -1,37 +1,12 @@
-import React, { useState } from 'react';
-import { useGameEngine } from '../../engine/GameEngine';
-import { motion } from 'motion/react';
-import { StudioLayout } from './StudioLayout';
-import { Club } from '../../types';
-import { STARTER_CLUBS } from '../../data/database';
-import { ArrowLeft, ShieldAlert } from 'lucide-react';
+import fs from 'fs';
 
-export default function CreationDraftClub() {
-  const { dispatch } = useGameEngine();
-  const [drafting, setDrafting] = useState(false);
-  const [selectedClub, setSelectedClub] = useState<Club | null>(null);
-  const [showExitConfirm, setShowExitConfirm] = useState(false);
+const path = 'src/components/creation/CreationDraftClub.tsx';
+let content = fs.readFileSync(path, 'utf8');
 
-  const handleDraft = () => {
-    setDrafting(true);
-    setTimeout(() => {
-      const club = STARTER_CLUBS[Math.floor(Math.random() * STARTER_CLUBS.length)];
-      setSelectedClub(club);
-      setDrafting(false);
-    }, 2000);
-  };
+const returnIndex = content.indexOf('return (', 100);
+const beforeReturn = content.substring(0, returnIndex);
 
-  const handleStartCareer = () => {
-    if (selectedClub) {
-      dispatch({ type: 'SETUP_CAREER', payload: { club: selectedClub } });
-    }
-  };
-
-  const handleConfirmExit = () => {
-    dispatch({ type: 'CHANGE_PHASE', payload: 'MAIN_MENU' });
-  };
-
-    const footer = selectedClub ? (
+const newReturn = `  const footer = selectedClub ? (
     <button 
       onClick={handleStartCareer}
       className="w-full bg-yellow-500 text-yellow-950 font-black text-sm py-4 rounded-xl hover:bg-yellow-400 transition-all uppercase tracking-widest shadow-[0_0_15px_rgba(234,179,8,0.2)] hover:shadow-[0_0_25px_rgba(234,179,8,0.4)]"
@@ -44,7 +19,7 @@ export default function CreationDraftClub() {
         onClick={() => setShowExitConfirm(true)}
         className="flex-1 bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-sm py-4 rounded-xl hover:bg-red-500/20 transition-colors uppercase tracking-widest"
       >
-        Cancelar Criação
+        Cancelar
       </button>
       <button 
         onClick={handleDraft}
@@ -65,8 +40,8 @@ export default function CreationDraftClub() {
       {showExitConfirm && (
         <div className="mb-6 p-6 bg-red-500/10 border border-red-500/30 rounded-2xl flex flex-col items-center text-center animate-in fade-in zoom-in duration-300">
           <ShieldAlert className="text-red-500 w-12 h-12 mb-3" />
-          <h3 className="text-lg font-black text-white mb-2">Cancelar Criação?</h3>
-          <p className="text-xs text-red-200 mb-6">Todo o progresso de atributos, nome e personalidade deste jogador será descartado.</p>
+          <h3 className="text-lg font-black text-white mb-2">Abandonar Criação?</h3>
+          <p className="text-xs text-red-200 mb-6">Todo o seu progresso de criação de jogador será perdido. Tem certeza?</p>
           <div className="flex gap-3 w-full">
             <button 
               onClick={() => setShowExitConfirm(false)}
@@ -99,7 +74,7 @@ export default function CreationDraftClub() {
             <div className="relative z-10 flex flex-col items-center">
               <div 
                 className="w-28 h-28 rounded-3xl flex items-center justify-center text-4xl shadow-2xl mb-6 transform transition-transform group-hover:scale-110 group-hover:rotate-3 duration-500"
-                style={{ backgroundColor: selectedClub.primaryColor, color: '#fff' }}
+                style={{ backgroundColor: selectedClub.primaryColor, color: selectedClub.secondaryColor || '#fff' }}
               >
                 {selectedClub.logo}
               </div>
@@ -109,7 +84,9 @@ export default function CreationDraftClub() {
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20" />
                 <span>Nível {selectedClub.reputation}/100</span>
               </div>
-              
+              <p className="text-sm text-zinc-300 bg-black/40 p-4 rounded-xl border border-white/5 italic">
+                "{selectedClub.description}"
+              </p>
             </div>
           </div>
         ) : (
@@ -126,3 +103,8 @@ export default function CreationDraftClub() {
     </StudioLayout>
   );
 }
+`;
+
+let newContent = beforeReturn.replace("import { motion } from 'motion/react';", "import { motion } from 'motion/react';\nimport { StudioLayout } from './StudioLayout';");
+
+fs.writeFileSync(path, newContent + newReturn);

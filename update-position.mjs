@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import fs from 'fs';
+
+const path = 'src/components/creation/CreationPosition.tsx';
+let content = `import React, { useState } from 'react';
 import { useGameEngine } from '../../engine/GameEngine';
 import { Position } from '../../types';
 import { StudioLayout } from './StudioLayout';
-import { motion } from 'motion/react';
 
 export default function CreationPosition() {
   const { state, dispatch } = useGameEngine();
@@ -24,23 +26,19 @@ export default function CreationPosition() {
 
   const footer = (
     <div className="flex gap-4">
-      <motion.button 
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
+      <button 
         onClick={() => dispatch({ type: 'CHANGE_PHASE', payload: 'CREATION_BASIC_INFO' })}
         className="flex-1 bg-zinc-900 border border-white/10 text-white font-bold text-sm py-4 rounded-xl hover:bg-zinc-800 transition-colors uppercase tracking-widest"
       >
         Voltar
-      </motion.button>
-      <motion.button 
-        whileHover={{ scale: position ? 1.02 : 1 }}
-        whileTap={{ scale: position ? 0.98 : 1 }}
+      </button>
+      <button 
         onClick={handleNext}
         disabled={!position}
         className="flex-[2] bg-yellow-500 text-yellow-950 font-black text-sm py-4 rounded-xl hover:bg-yellow-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest shadow-[0_0_15px_rgba(234,179,8,0.2)] hover:shadow-[0_0_25px_rgba(234,179,8,0.4)]"
       >
         Avançar
-      </motion.button>
+      </button>
     </div>
   );
 
@@ -50,28 +48,26 @@ export default function CreationPosition() {
       subtitle="Isso definirá seu foco e peso inicial dos atributos."
       footer={footer}
     >
-      <div className="space-y-4">
-        {POSITIONS.map((pos, index) => (
-          <motion.button
+      <div className="space-y-3">
+        {POSITIONS.map(pos => (
+          <button
             key={pos.id}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.05 }}
-            whileHover={{ scale: 1.02, x: 5 }}
-            whileTap={{ scale: 0.98 }}
             aria-pressed={position === pos.id}
             onClick={() => setPosition(pos.id)}
-            className={`w-full p-5 rounded-2xl border-2 text-left transition-all ${
+            className={\`w-full p-5 rounded-2xl border-2 text-left transition-all \${
               position === pos.id 
                 ? 'border-yellow-500 bg-yellow-500/10 shadow-[inset_0_0_20px_rgba(234,179,8,0.1)]' 
                 : 'border-white/5 bg-white/5 hover:border-white/20 hover:bg-white/10'
-            }`}
+            }\`}
           >
-            <div className={`font-black text-lg mb-1 transition-colors ${position === pos.id ? 'text-yellow-400' : 'text-white'}`}>{pos.label}</div>
+            <div className={\`font-black text-lg mb-1 \${position === pos.id ? 'text-yellow-400' : 'text-white'}\`}>{pos.label}</div>
             <div className="text-sm text-zinc-400 font-semibold">{pos.desc}</div>
-          </motion.button>
+          </button>
         ))}
       </div>
     </StudioLayout>
   );
 }
+`;
+
+fs.writeFileSync(path, content);

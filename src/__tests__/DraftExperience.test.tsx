@@ -20,8 +20,7 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 describe('Draft Experience — GOAT Simulator', () => {
-
-  test('renders draft controls and current attribute round', () => {
+  test('renders draft controls and current attribute round', async () => {
     render(
       <GameProvider>
         <DraftExperience initialMode="QUICK" />
@@ -34,7 +33,7 @@ describe('Draft Experience — GOAT Simulator', () => {
     expect(screen.getByText(/Progresso do Draft/i)).toBeInTheDocument();
   });
 
-  test('allows inspecting cards without automatic selection', () => {
+  test('allows inspecting cards without automatic selection', async () => {
     render(
       <GameProvider>
         <DraftExperience initialMode="QUICK" />
@@ -50,7 +49,7 @@ describe('Draft Experience — GOAT Simulator', () => {
     expect(screen.getAllByText(/Rodada 1 de 8/i)[0]).toBeInTheDocument();
   });
 
-  test('confirms choice only when clicking Confirmar Escolha', () => {
+  test('confirms choice only when clicking Confirmar Escolha', async () => {
     render(
       <GameProvider>
         <DraftExperience initialMode="QUICK" />
@@ -66,12 +65,12 @@ describe('Draft Experience — GOAT Simulator', () => {
     fireEvent.click(confirmBtn);
 
     // Expect progression to Round 2
-    waitFor(() => {
+    await waitFor(() => {
       expect(screen.getAllByText(/Rodada 2 de 8/i)[0]).toBeInTheDocument();
     });
   });
 
-  test('supports keyboard shortcuts for inspecting (1-5) and confirming (Enter)', () => {
+  test('supports keyboard shortcuts for inspecting (1-5) and confirming (Enter)', async () => {
     render(
       <GameProvider>
         <DraftExperience initialMode="QUICK" />
@@ -85,12 +84,12 @@ describe('Draft Experience — GOAT Simulator', () => {
     // Press 'Enter' key to confirm choice
     fireEvent.keyDown(window, { key: 'Enter' });
 
-    waitFor(() => {
+    await waitFor(() => {
       expect(screen.getAllByText(/Rodada 2 de 8/i)[0]).toBeInTheDocument();
     });
   });
 
-  test('opens and closes the choices review modal via button or shortcut (R)', () => {
+  test('opens and closes the choices review modal via button or shortcut (R)', async () => {
     render(
       <GameProvider>
         <DraftExperience initialMode="QUICK" />
@@ -99,17 +98,15 @@ describe('Draft Experience — GOAT Simulator', () => {
 
     // Press 'R' key
     fireEvent.keyDown(window, { key: 'R' });
-
     expect(screen.getByText(/Histórico de Escolhas do Draft/i)).toBeInTheDocument();
 
     // Close modal
     const closeBtn = screen.getByRole('button', { name: /Fechar \(Esc\)/i });
     fireEvent.click(closeBtn);
-
     expect(screen.queryByText(/Histórico de Escolhas do Draft/i)).not.toBeInTheDocument();
   });
 
-  test('toggles speed setting via A key', () => {
+  test('toggles speed setting via A key', async () => {
     render(
       <GameProvider>
         <DraftExperience initialMode="QUICK" />
@@ -117,7 +114,6 @@ describe('Draft Experience — GOAT Simulator', () => {
     );
 
     expect(screen.getByText(/1x/i)).toBeInTheDocument();
-
     // Press 'A' key to speed up
     fireEvent.keyDown(window, { key: 'A' });
     expect(screen.getByText(/2x/i)).toBeInTheDocument();
@@ -125,5 +121,4 @@ describe('Draft Experience — GOAT Simulator', () => {
     fireEvent.keyDown(window, { key: 'A' });
     expect(screen.getByText(/inst/i)).toBeInTheDocument();
   });
-
 });

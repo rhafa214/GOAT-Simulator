@@ -1,5 +1,5 @@
 import React, { useMemo, useRef, useEffect } from 'react';
-import { useGLTF } from '@react-three/drei';
+import { useGLTF, Text } from '@react-three/drei';
 import * as THREE from 'three';
 import { SkeletonUtils } from 'three-stdlib';
 import { useAvatarAnimation, AvatarAnimationState } from './anim/AvatarAnimationController';
@@ -15,9 +15,9 @@ interface AvatarGLTFModelProps {
 }
 
 export default function AvatarGLTFModel({ 
-  url, 
-  appearance, 
-  pose = 'idle',
+   url, 
+   appearance, 
+   pose = 'idle',
   clubColor,
   quality = 'low'
 }: AvatarGLTFModelProps) {
@@ -25,10 +25,6 @@ export default function AvatarGLTFModel({
   
   // Validate and fetch the GLB securely before passing to GLTFLoader
   const validatedUrl = useValidatedGLBUrl(url);
-
-  console.log('AvatarGLTFModel - Received URL:', url);
-  console.log('AvatarGLTFModel - Final URL for useGLTF:', validatedUrl);
-
   const { scene, materials, animations } = useGLTF(validatedUrl);
   
   // Clone the scene and skeleton safely to avoid mutating the cached useGLTF object
@@ -38,30 +34,24 @@ export default function AvatarGLTFModel({
   useAvatarAnimation(animations, group, pose);
 
   useEffect(() => {
-    if (import.meta.env.DEV) {
-      console.log('--- AvatarGLTFModel Loaded ---');
-      console.log('Meshes:', scene.children);
-      console.log('Animations found:', animations.length);
-      console.log('Materials:', Object.keys(materials));
-    }
-  }, [scene, animations, materials]);
-
-  useEffect(() => {
-    // Example logic for applying appearance
-    // This will be expanded once we have a real model with specific material slots
     clone.traverse((child) => {
       if ((child as THREE.Mesh).isMesh) {
         const mesh = child as THREE.Mesh;
-        mesh.castShadow = quality === 'high';
-        mesh.receiveShadow = quality === 'high';
+        mesh.castShadow = true;
+        mesh.receiveShadow = true;
+        
+        // Etapa 4 - Melhorar materiais para tirar aspecto de plástico
+        if (mesh.material) {
+          const mat = mesh.material as THREE.MeshStandardMaterial;
+          mat.roughness = 0.65;
+          mat.metalness = 0.15;
+          mat.envMapIntensity = 1.0;
+          mat.needsUpdate = true;
+        }
       }
       if ((child as THREE.Bone).isBone) {
         const bone = child as THREE.Bone;
         const normalizedName = bone.name.toLowerCase().replace(/mixamorig:?/g, '');
-        // Strategy for Mixamo rigs: flexible bone mapping
-        
-        // Very basic stub to apply colors if materials match expected names
-        // e.g. if (mesh.name === 'Body' && appearance?.skinColor) ...
       }
     });
   }, [clone, appearance, quality]);
@@ -69,17 +59,63 @@ export default function AvatarGLTFModel({
   // Cleanup clone when unmounted to free memory (but do NOT dispose shared geometry/material)
   useEffect(() => {
     return () => {
-      // SkeletonUtils.clone only clones the object graph, not geometries or materials.
-      // We must not dispose geometry or materials because they are cached and shared by useGLTF.
-      // If we dispose them here, re-rendering the component will result in invisible or broken meshes.
     };
   }, [clone]);
 
-  // Adjust model scale to human size (~1.8m) if original is 1m tall
-  // Rotate model to face camera if needed (assuming +Z is front, but we can rely on standard orientation)
   return (
     <group ref={group} dispose={null} scale={[1.8, 1.8, 1.8]} position={[0, 0, 0]}>
       <primitive object={clone} />
+      
+      {/* Etapa 5 - Uniforme Temporário (Overlay) */}
+      {(!clubColor || clubColor === '#ffffff') && (
+        <group>
+          {/* Camisa */}
+          <mesh position={[0, 0.62, 0]} castShadow>
+            <cylinderGeometry args={[0.22, 0.20, 0.45, 16]} />
+            <meshStandardMaterial color="#111111" roughness={0.8} />
+          </mesh>
+          <mesh position={[0, 0.78, 0]} castShadow>
+            <boxGeometry args={[0.55, 0.15, 0.22]} />
+            <meshStandardMaterial color="#111111" roughness={0.8} />
+          </mesh>
+          
+          {/* Escudo GOAT */}
+          <Text position={[0.08, 0.72, 0.115]} fontSize={0.035} color="#FFD700" fontWeight="bold">
+            GOAT
+          </Text>
+          
+          {/* Numero 07 Costas */}
+          <Text position={[0, 0.62, -0.115]} rotation={[0, Math.PI, 0]} fontSize={0.15} color="#FFD700" fontWeight="bold">
+            07
+          </Text>
+
+          {/* Calção */}
+          <mesh position={[0, 0.30, 0]} castShadow>
+            <cylinderGeometry args={[0.23, 0.23, 0.3, 16]} />
+            <meshStandardMaterial color="#111111" roughness={0.9} />
+          </mesh>
+
+          {/* Meiões */}
+          <mesh position={[-0.1, 0.12, 0]}>
+            <cylinderGeometry args={[0.08, 0.07, 0.2, 16]} />
+            <meshStandardMaterial color="#111111" />
+          </mesh>
+          <mesh position={[0.1, 0.12, 0]}>
+            <cylinderGeometry args={[0.08, 0.07, 0.2, 16]} />
+            <meshStandardMaterial color="#111111" />
+          </mesh>
+
+          {/* Chuteiras */}
+          <mesh position={[-0.1, 0.02, 0.03]}>
+            <boxGeometry args={[0.09, 0.06, 0.22]} />
+            <meshStandardMaterial color="#FFD700" roughness={0.3} metalness={0.6} />
+          </mesh>
+          <mesh position={[0.1, 0.02, 0.03]}>
+            <boxGeometry args={[0.09, 0.06, 0.22]} />
+            <meshStandardMaterial color="#FFD700" roughness={0.3} metalness={0.6} />
+          </mesh>
+        </group>
+      )}
     </group>
   );
 }

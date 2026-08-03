@@ -17,8 +17,9 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "prebuild": "node scripts/validate-glb.mjs public/models/avatar/goat_base_human_v2.glb",
-    "postbuild": "node scripts/validate-glb.mjs dist/models/avatar/goat_base_human_v2.glb && node scripts/compare-glb.mjs public/models/avatar/goat_base_human_v2.glb dist/models/avatar/goat_base_human_v2.glb"
+    "prebuild": "npm run validate:assets && node scripts/validate-glb.mjs public/models/avatar/goat_base_human_v2.glb",
+    "postbuild": "node scripts/validate-glb.mjs dist/models/avatar/goat_base_human_v2.glb && node scripts/compare-glb.mjs public/models/avatar/goat_base_human_v2.glb dist/models/avatar/goat_base_human_v2.glb",
+    "validate:assets": "node scripts/check-protected-assets.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

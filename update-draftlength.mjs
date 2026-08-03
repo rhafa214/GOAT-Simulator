@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import fs from 'fs';
+
+const path = 'src/components/creation/CreationDraftLength.tsx';
+let content = `import React, { useState } from 'react';
 import { useGameEngine } from '../../engine/GameEngine';
 import { Zap, Target } from 'lucide-react';
 import { StudioLayout } from './StudioLayout';
@@ -44,7 +47,7 @@ export default function CreationDraftLength() {
         <button 
           aria-pressed={selected === 'QUICK'}
           onClick={() => setSelected('QUICK')}
-          className={`w-full relative group bg-white/5 border-2 rounded-[1.5rem] p-6 text-left transition-all duration-300 overflow-hidden ${selected === 'QUICK' ? 'border-yellow-500 shadow-[0_0_40px_rgba(234,179,8,0.15)] bg-yellow-500/10' : 'border-white/10 hover:border-yellow-500/50 hover:bg-white/10'}`}
+          className={\`w-full relative group bg-white/5 border-2 rounded-[1.5rem] p-6 text-left transition-all duration-300 overflow-hidden \${selected === 'QUICK' ? 'border-yellow-500 shadow-[0_0_40px_rgba(234,179,8,0.15)] bg-yellow-500/10' : 'border-white/10 hover:border-yellow-500/50 hover:bg-white/10'}\`}
         >
           <div className="relative z-10 flex flex-col h-full">
             <div className="flex items-center gap-4 mb-4">
@@ -70,7 +73,7 @@ export default function CreationDraftLength() {
         <button 
           aria-pressed={selected === 'COMPLETE'}
           onClick={() => setSelected('COMPLETE')}
-          className={`w-full relative group bg-white/5 border-2 rounded-[1.5rem] p-6 text-left transition-all duration-300 overflow-hidden ${selected === 'COMPLETE' ? 'border-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.15)] bg-blue-500/10' : 'border-white/10 hover:border-blue-500/50 hover:bg-white/10'}`}
+          className={\`w-full relative group bg-white/5 border-2 rounded-[1.5rem] p-6 text-left transition-all duration-300 overflow-hidden \${selected === 'COMPLETE' ? 'border-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.15)] bg-blue-500/10' : 'border-white/10 hover:border-blue-500/50 hover:bg-white/10'}\`}
         >
           <div className="relative z-10 flex flex-col h-full">
             <div className="flex items-center gap-4 mb-4">
@@ -95,3 +98,6 @@ export default function CreationDraftLength() {
     </StudioLayout>
   );
 }
+`;
+
+fs.writeFileSync(path, content);

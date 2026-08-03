@@ -19,7 +19,8 @@ vi.mock('@react-three/drei', () => ({
     },
     animations: [],
     materials: {}
-  }))
+  })),
+  Text: ({ children }: any) => <group data-testid="mock-text">{children}</group>
 }));
 
 // Mock our custom hook
@@ -76,6 +77,7 @@ describe('AvatarGLTFModel', () => {
     render(
       <AvatarGLTFModel url="mixamo.glb" pose="idle" />
     );
+
     // useAvatarAnimation is called with the animations array
     expect(useAvatarAnimation).toHaveBeenCalledWith([{ name: 'mixamo.com' }], expect.anything(), 'idle');
   });
@@ -96,6 +98,7 @@ describe('AvatarGLTFModel', () => {
       <AvatarGLTFModel url="static.glb" pose="idle" />
     );
     expect(container).toBeDefined();
+
     // useAvatarAnimation should be called with an empty array of animations
     expect(useAvatarAnimation).toHaveBeenCalledWith([], expect.anything(), 'idle');
   });

@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import fs from 'fs';
+
+const path = 'src/components/creation/CreationBasicInfo.tsx';
+let content = `import React, { useState } from 'react';
 import { usePlayer } from '../../engine/selectors';
 import { useGameActions } from '../../engine/actions';
 import { StudioLayout } from './StudioLayout';
-import { motion } from 'motion/react';
 
 export default function CreationBasicInfo() {
   const player = usePlayer();
@@ -29,15 +31,13 @@ export default function CreationBasicInfo() {
   };
 
   const footer = (
-    <motion.button 
-      whileHover={{ scale: name.trim() ? 1.02 : 1 }}
-      whileTap={{ scale: name.trim() ? 0.98 : 1 }}
+    <button 
       onClick={handleNext}
       disabled={!name.trim()}
       className="w-full bg-yellow-500 text-yellow-950 font-black text-lg py-4 rounded-xl hover:bg-yellow-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest shadow-[0_0_15px_rgba(234,179,8,0.2)] hover:shadow-[0_0_25px_rgba(234,179,8,0.4)]"
     >
       Avançar
-    </motion.button>
+    </button>
   );
 
   return (
@@ -46,16 +46,9 @@ export default function CreationBasicInfo() {
       subtitle="O primeiro passo de uma lenda começa com o nome."
       footer={footer}
     >
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-8 shadow-inner relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent opacity-50" />
-        
-        <motion.div 
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.1 }}
-          className="space-y-3 group"
-        >
-          <label htmlFor="playerNameInput" className="text-[10px] font-black text-white/50 group-focus-within:text-yellow-500 uppercase tracking-[0.2em] block transition-colors">Nome do Jogador</label>
+      <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-6 shadow-inner">
+        <div className="space-y-3">
+          <label htmlFor="playerNameInput" className="text-[10px] font-black text-white/50 uppercase tracking-[0.2em] block">Nome do Jogador</label>
           <input 
             id="playerNameInput"
             type="text" 
@@ -63,29 +56,27 @@ export default function CreationBasicInfo() {
             onChange={(e) => setName(e.target.value)}
             placeholder="Seu nome"
             maxLength={18}
-            className="w-full bg-black/60 border border-white/10 rounded-xl px-5 py-4 text-white text-lg font-bold outline-none focus:border-yellow-500 focus:bg-black/80 hover:border-white/30 transition-all placeholder:text-white/20"
+            className="w-full bg-black/60 border border-white/10 rounded-xl px-5 py-4 text-white text-lg font-bold outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-all placeholder:text-white/20"
           />
-        </motion.div>
+        </div>
         
-        <motion.div 
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2 }}
-          className="space-y-3 group"
-        >
-          <label htmlFor="playerNationalitySelect" className="text-[10px] font-black text-white/50 group-focus-within:text-yellow-500 uppercase tracking-[0.2em] block transition-colors">Nacionalidade</label>
+        <div className="space-y-3">
+          <label htmlFor="playerNationalitySelect" className="text-[10px] font-black text-white/50 uppercase tracking-[0.2em] block">Nacionalidade</label>
           <select 
             id="playerNationalitySelect"
             value={nationality}
             onChange={(e) => setNationality(e.target.value)}
-            className="w-full bg-black/60 border border-white/10 rounded-xl px-5 py-4 text-white text-lg font-bold outline-none focus:border-yellow-500 focus:bg-black/80 hover:border-white/30 transition-all appearance-none cursor-pointer"
+            className="w-full bg-black/60 border border-white/10 rounded-xl px-5 py-4 text-white text-lg font-bold outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-all appearance-none cursor-pointer"
           >
             {NATIONS.map(n => (
               <option key={n.code} value={n.code} className="bg-zinc-900">{n.name}</option>
             ))}
           </select>
-        </motion.div>
+        </div>
       </div>
     </StudioLayout>
   );
 }
+`;
+
+fs.writeFileSync(path, content);

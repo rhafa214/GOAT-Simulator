@@ -49,27 +49,50 @@ export default function AvatarScene({ clubColor = '#ffffff', pose = 'idle' }: Av
   const useContactShadows = quality === 'high';
 
   return (
-    <div className="w-full h-full relative">
+    // Etapa 1 - Estúdio Esportivo Premium (Gradiente, fundo não totalmente preto)
+    <div className="w-full h-full relative bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-900 to-zinc-950">
       <Canvas shadows dpr={dpr}>
-        <PerspectiveCamera makeDefault position={[0, 1.5, 4]} fov={45} />
+        {/* Etapa 2 - Câmera (Ocupando ~65% do corpo sem cortar) */}
+        <PerspectiveCamera makeDefault position={[0, 0.9, 3.8]} fov={40} />
         <OrbitControls 
           enablePan={true}
           enableZoom={true}
-          minDistance={2}
-          maxDistance={6}
+          minDistance={2.5}
+          maxDistance={5.5}
           minPolarAngle={Math.PI / 4}
           maxPolarAngle={Math.PI / 2 + 0.1}
-          target={[0, 1, 0]}
+          target={[0, 0.9, 0]}
         />
         
-        <ambientLight intensity={0.5} />
+        {/* Etapa 3 - Iluminação (Key, Fill, Rim) */}
+        <ambientLight intensity={0.15} />
+        
+        {/* Key Light - Luz Principal */}
         <directionalLight 
-           position={[5, 5, 5]} 
-           intensity={1} 
+           position={[2, 2, 4]} 
+           intensity={1.5} 
+           color="#ffffff" 
            castShadow 
-           shadow-mapSize={quality === 'high' ? 1024 : 512}
+           shadow-mapSize={quality === 'high' ? 2048 : 512} 
+           shadow-bias={-0.0001}
         />
-        <directionalLight position={[-5, 5, -5]} intensity={0.5} color="#4b6cb7" />
+        
+        {/* Fill Light - Luz de Preenchimento (Azulada suave para contraste) */}
+        <directionalLight 
+           position={[-4, 1, 3]} 
+           intensity={0.6} 
+           color="#90b0d0" 
+         />
+         
+        {/* Rim Light - Luz Dourada Discreta nas Costas */}
+        <spotLight 
+           position={[1, 3, -4]} 
+           intensity={0.8} 
+           color="#ffdf80" 
+           angle={0.6}
+           penumbra={0.8}
+           castShadow={false}
+         />
         
         <Suspense fallback={null}>
           {quality === 'high' && <Environment preset="city" />}

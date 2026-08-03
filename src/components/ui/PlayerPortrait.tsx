@@ -77,9 +77,9 @@ export function PlayerPortraitFallback({ clubColor, onRetry }: { clubColor: stri
 }
 
 // 4. Main Self-Sufficient PlayerPortrait
-export function PlayerPortrait({ player, className = '' }: { player: PlayerAttributes, className?: string }) {
+export function PlayerPortrait({ player, className = '', clubColorOverride }: { player: PlayerAttributes, className?: string, clubColorOverride?: string }) {
   const { state } = useGameEngine();
-  const clubColor = state?.career?.currentClub?.primaryColor || '#1a1a1a';
+  const clubColor = clubColorOverride || state?.career?.currentClub?.primaryColor || '#111111';
   
   const [webGLSupported, setWebGLSupported] = useState<boolean | null>(null);
   const [retryKey, setRetryKey] = useState(0);
