@@ -17,7 +17,15 @@ export function AvatarManagerProvider({ children, initialAppearance }: { childre
     AppearanceValidator.validate(initialAppearance || {})
   );
   
-  const [quality, setQuality] = useState<'low' | 'high'>('high');
+  const [quality, setQuality] = useState<'low' | 'high'>('low');
+
+  const serializedInitial = useMemo(() => JSON.stringify(initialAppearance), [initialAppearance]);
+
+  React.useEffect(() => {
+    if (initialAppearance) {
+      setAppearanceState(AppearanceValidator.validate(initialAppearance));
+    }
+  }, [serializedInitial]);
 
   const updateAppearance = (updates: Partial<PhysicalAppearance>) => {
     setAppearanceState((prev) => AppearanceValidator.validate({ ...prev, ...updates }));

@@ -72,7 +72,7 @@ export default function AvatarScene({ clubColor = '#ffffff', pose = 'idle' }: Av
         <directionalLight position={[-5, 5, -5]} intensity={0.5} color="#4b6cb7" />
         
         <Suspense fallback={null}>
-          <Environment preset="city" />
+          {quality === 'high' && <Environment preset="city" />}
           <AvatarModel clubColor={clubColor} pose={pose} />
         </Suspense>
         
@@ -80,7 +80,7 @@ export default function AvatarScene({ clubColor = '#ffffff', pose = 'idle' }: Av
           <ContactShadows position={[0, 0, 0]} opacity={0.5} scale={10} blur={2} far={4} />
         )}
       </Canvas>
-      {process.env.NODE_ENV === 'development' && <FPSCounter />}
+      {import.meta.env.DEV && <FPSCounter />}
     </div>
   );
 }

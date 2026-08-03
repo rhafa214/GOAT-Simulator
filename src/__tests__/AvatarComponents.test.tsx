@@ -1,12 +1,10 @@
-import { AvatarManagerProvider } from '../components/3d/AvatarManager';
+import { AvatarManagerProvider, useAvatarManager } from '../components/3d/AvatarManager';
 import React from 'react';
 import { render, act } from '@testing-library/react';
-import { expect, test, describe, vi } from 'vitest';
-import { PlayerPortrait } from '../components/ui/PlayerPortrait';
+import { expect, test, describe, vi, beforeEach, afterEach } from 'vitest';
+import { PlayerPortrait, AvatarErrorBoundary, PlayerPortraitFallback } from '../components/ui/PlayerPortrait';
 import AvatarScene from '../components/3d/AvatarScene';
 import AvatarModel from '../components/3d/AvatarModel';
-
-
 import { GameProvider } from '../engine/GameEngine';
 
 // Mock Three.js/Fiber elements since they don't render in jsdom easily
@@ -59,30 +57,153 @@ const mockPlayer = {
 };
 
 describe('Avatar Components', () => {
+  const originalWebGLRenderingContext = (window as any).WebGLRenderingContext;
+
+  beforeEach(() => {
+    // Enable WebGL support by default
+    (window as any).WebGLRenderingContext = vi.fn();
+    vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockImplementation(function(this: HTMLCanvasElement, contextId: string) {
+      if (contextId === 'webgl' || contextId === 'experimental-webgl') {
+        return {} as any;
+      }
+      return null;
+    });
+  });
+
+  afterEach(() => {
+    (window as any).WebGLRenderingContext = originalWebGLRenderingContext;
+    vi.restoreAllMocks();
+  });
+
   test('AvatarModel renders without crashing', () => {
     const { container } = render(
-      <AvatarManagerProvider initialAppearance={mockAppearance}><AvatarModel clubColor="#ff0000" pose="idle" /></AvatarManagerProvider>
+      <AvatarManagerProvider initialAppearance={mockAppearance}>
+        <AvatarModel clubColor="#ff0000" pose="idle" />
+      </AvatarManagerProvider>
     );
     expect(container).toBeDefined();
   });
 
   test('AvatarScene renders Canvas and Model', () => {
     const { getByTestId } = render(
-      <AvatarManagerProvider initialAppearance={mockAppearance}><AvatarScene clubColor="#ff0000" pose="idle" /></AvatarManagerProvider>
+      <AvatarManagerProvider initialAppearance={mockAppearance}>
+        <AvatarScene clubColor="#ff0000" pose="idle" />
+      </AvatarManagerProvider>
     );
     expect(getByTestId('mock-canvas')).toBeDefined();
   });
 
-  test('PlayerPortrait renders correctly wrapped with GameProvider', async () => {
+  test('PlayerPortrait renderizado sem provider externo', async () => {
     const { getByTestId } = render(
       <GameProvider>
-        <AvatarManagerProvider initialAppearance={mockPlayer.appearance}><PlayerPortrait player={mockPlayer} /></AvatarManagerProvider>
+        <PlayerPortrait player={mockPlayer} />
       </GameProvider>
     );
-    // Because AvatarScene is now lazy-loaded, we need to wait for it
+
     await act(async () => {
-       await new Promise(resolve => setTimeout(resolve, 100)); // allow lazy component to load
+      await new Promise(resolve => setTimeout(resolve, 100));
     });
+
+    expect(getByTestId('player-portrait-container')).toBeDefined();
+  });
+
+  test('aparência passada ao provider', () => {
+    const TestConsumer = () => {
+      const { appearance } = useAvatarManager();
+      return <div data-testid="skin-color">{appearance.skinColor}</div>;
+    };
+
+    const { getByTestId } = render(
+      <AvatarManagerProvider initialAppearance={{ skinColor: 'aabbcc' }}>
+        <TestConsumer />
+      </AvatarManagerProvider>
+    );
+
+    expect(getByTestId('skin-color').textContent).toBe('aabbcc');
+  });
+
+  test('atualização da aparência', () => {
+    const TestConsumer = () => {
+      const { appearance } = useAvatarManager();
+      return <div data-testid="skin-color">{appearance.skinColor}</div>;
+    };
+
+    const { getByTestId, rerender } = render(
+      <AvatarManagerProvider initialAppearance={{ skinColor: '111111' }}>
+        <TestConsumer />
+      </AvatarManagerProvider>
+    );
+
+    expect(getByTestId('skin-color').textContent).toBe('111111');
+
+    rerender(
+      <AvatarManagerProvider initialAppearance={{ skinColor: '222222' }}>
+        <TestConsumer />
+      </AvatarManagerProvider>
+    );
+
+    expect(getByTestId('skin-color').textContent).toBe('222222');
+  });
+
+  test('erro do Canvas capturado pelo Error Boundary', () => {
+    const CrashingComponent = () => {
+      throw new Error('Simulated Canvas/3D Crash');
+    };
+
+    const fallback = <div data-testid="fallback-test">Custom Fallback</div>;
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    const { getByTestId } = render(
+      <AvatarErrorBoundary fallback={fallback}>
+        <CrashingComponent />
+      </AvatarErrorBoundary>
+    );
+
+    expect(getByTestId('fallback-test')).toBeDefined();
+    consoleSpy.mockRestore();
+  });
+
+  test('WebGL indisponível exibe fallback 2D', async () => {
+    // Disable WebGL support specifically for this test
+    delete (window as any).WebGLRenderingContext;
+    vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue(null);
+
+    const { getByTestId, queryByTestId } = render(
+      <GameProvider>
+        <PlayerPortrait player={mockPlayer} />
+      </GameProvider>
+    );
+
+    await act(async () => {
+      await new Promise(resolve => setTimeout(resolve, 100));
+    });
+
+    expect(getByTestId('player-portrait-fallback')).toBeDefined();
+    expect(queryByTestId('player-portrait-container')).toBeNull();
+  });
+
+  test('fallback 2D renderiza silhueta e botão de tentar novamente', () => {
+    const onRetrySpy = vi.fn();
+    const { getByTestId } = render(
+      <PlayerPortraitFallback clubColor="#00ff00" onRetry={onRetrySpy} />
+    );
+
+    expect(getByTestId('avatar-fallback-silhouette')).toBeDefined();
+    
+    const retryBtn = getByTestId('retry-avatar-button');
+    expect(retryBtn).toBeDefined();
+
+    retryBtn.click();
+    expect(onRetrySpy).toHaveBeenCalledTimes(1);
+  });
+
+  test('AvatarScene isolado com provider', () => {
+    const { getByTestId } = render(
+      <AvatarManagerProvider initialAppearance={mockAppearance}>
+        <AvatarScene clubColor="#112233" pose="idle" />
+      </AvatarManagerProvider>
+    );
+
     expect(getByTestId('mock-canvas')).toBeDefined();
   });
 });
