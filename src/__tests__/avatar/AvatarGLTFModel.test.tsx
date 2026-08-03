@@ -56,6 +56,25 @@ describe('AvatarGLTFModel', () => {
     expect(useAvatarAnimation).toHaveBeenCalledWith([], expect.anything(), 'idle');
   });
 
+  it('detects mixamo animation and plays correctly', () => {
+    // Override the mock to return an scene with a mixamo animation
+    (useGLTF as unknown as ReturnType<typeof vi.fn>).mockImplementationOnce(() => ({
+      scene: {
+        children: [{ isMesh: true, name: 'mesh', isSkinnedMesh: true }],
+        traverse: vi.fn(),
+        clone: vi.fn().mockReturnThis()
+      },
+      animations: [{ name: 'mixamo.com' }],
+      materials: {}
+    }));
+
+    render(
+      <AvatarGLTFModel url="mixamo.glb" pose="idle" />
+    );
+    // useAvatarAnimation is called with the animations array
+    expect(useAvatarAnimation).toHaveBeenCalledWith([{ name: 'mixamo.com' }], expect.anything(), 'idle');
+  });
+
   it('renders a static model when no animations or skeleton are present', () => {
     // Override the mock to return an empty scene with no animations
     (useGLTF as unknown as ReturnType<typeof vi.fn>).mockImplementationOnce(() => ({

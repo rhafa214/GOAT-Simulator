@@ -49,6 +49,92 @@ describe('AvatarRenderer', () => {
     expect(screen.getByTestId('avatar-gltf-model').textContent).toBe('/models/avatar/goat_base_human_v1.glb');
   });
 
+  it('prefers rigged model when available', async () => {
+    (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        version: "1.0.0",
+        models: [
+          {
+            id: "goat_base_human_v1_rigged",
+            name: "GOAT Base Human Rigged",
+            path: "goat_base_human_v1_rigged.glb",
+            status: "available",
+            version: "1.0.0",
+            rigType: "mixamo",
+            animations: ["idle"],
+            materials: [],
+            meshes: ["mesh"],
+            license: "Tripo AI",
+            fileSizeKB: 1000
+          },
+          {
+            id: "goat_base_human_v1",
+            name: "GOAT Base Human",
+            path: "goat_base_human_v1.glb",
+            status: "available",
+            version: "1.0.0",
+            rigType: "humanoid",
+            animations: [],
+            materials: [],
+            meshes: ["mesh"],
+            license: "Tripo AI",
+            fileSizeKB: 1000
+          }
+        ]
+      })
+    });
+    render(<AvatarRenderer />);
+    await waitFor(() => {
+      expect(screen.getByTestId('avatar-gltf-model')).toBeDefined();
+    });
+    // First available should be the rigged one
+    expect(screen.getByTestId('avatar-gltf-model').textContent).toBe('/models/avatar/goat_base_human_v1_rigged.glb');
+  });
+
+  it('falls back to static model if rigged is unavailable', async () => {
+    (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        version: "1.0.0",
+        models: [
+          {
+            id: "goat_base_human_v1_rigged",
+            name: "GOAT Base Human Rigged",
+            path: "goat_base_human_v1_rigged.glb",
+            status: "unavailable", // Unavailable!
+            version: "1.0.0",
+            rigType: "mixamo",
+            animations: ["idle"],
+            materials: [],
+            meshes: ["mesh"],
+            license: "Tripo AI",
+            fileSizeKB: 1000
+          },
+          {
+            id: "goat_base_human_v1",
+            name: "GOAT Base Human",
+            path: "goat_base_human_v1.glb",
+            status: "available",
+            version: "1.0.0",
+            rigType: "humanoid",
+            animations: [],
+            materials: [],
+            meshes: ["mesh"],
+            license: "Tripo AI",
+            fileSizeKB: 1000
+          }
+        ]
+      })
+    });
+    render(<AvatarRenderer />);
+    await waitFor(() => {
+      expect(screen.getByTestId('avatar-gltf-model')).toBeDefined();
+    });
+    // Should fallback to static
+    expect(screen.getByTestId('avatar-gltf-model').textContent).toBe('/models/avatar/goat_base_human_v1.glb');
+  });
+
   it('uses BASE_URL correctly for github pages', async () => {
     vi.stubEnv('BASE_URL', '/repo-name/');
     render(<AvatarRenderer />);

@@ -21,14 +21,39 @@ export function useAvatarAnimation(
   useEffect(() => {
     if (!actions || Object.keys(actions).length === 0) return;
 
-    // Determine the target action. If the requested animation doesn't exist, fallback to 'idle'
     let targetActionName = currentState;
-    if (!actions[targetActionName]) {
-      targetActionName = 'idle';
+    let bestMatchKey: string | undefined;
+
+    // 1. Exact match
+    if (actions[targetActionName]) {
+      bestMatchKey = targetActionName;
+    } else {
+      // 2. Case-insensitive or Mixamo fallback
+      const lowerTarget = targetActionName.toLowerCase();
+      const availableKeys = Object.keys(actions);
+      
+      bestMatchKey = availableKeys.find(key => {
+        const lowerKey = key.toLowerCase();
+        if (lowerTarget === 'idle' && (lowerKey.includes('idle') || lowerKey.includes('mixamo.com'))) {
+          return true;
+        }
+        return lowerKey.includes(lowerTarget);
+      });
+
+      // 3. Fallback to the first animation if requesting idle and there is at least one
+      if (!bestMatchKey && lowerTarget === 'idle' && availableKeys.length > 0) {
+        bestMatchKey = availableKeys[0];
+      }
     }
 
-    const currentAction = actions[targetActionName];
-    const prevAction = prevStateRef.current ? actions[prevStateRef.current] : null;
+    if (!bestMatchKey || !actions[bestMatchKey]) {
+      return;
+    }
+
+    const currentAction = actions[bestMatchKey];
+    const prevAction = prevStateRef.current && actions[prevStateRef.current] 
+      ? actions[prevStateRef.current] 
+      : null;
 
     if (currentAction) {
       if (prevAction && prevAction !== currentAction) {
@@ -37,7 +62,7 @@ export function useAvatarAnimation(
       } else {
         currentAction.reset().play();
       }
-      prevStateRef.current = targetActionName as AvatarAnimationState;
+      prevStateRef.current = bestMatchKey as AvatarAnimationState;
     }
 
     return () => {
