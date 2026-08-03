@@ -5,6 +5,11 @@ import AvatarGLTFModel from '../../components/3d/AvatarGLTFModel';
 import { useAvatarAnimation } from '../../components/3d/anim/AvatarAnimationController';
 import { useGLTF } from '@react-three/drei';
 
+// Mock our custom validation hook
+vi.mock('../../components/3d/useValidatedGLBUrl', () => ({
+  useValidatedGLBUrl: vi.fn((url) => url) // just return the url
+}));
+
 // Mock drei's useGLTF
 vi.mock('@react-three/drei', () => ({
   useGLTF: vi.fn(() => ({

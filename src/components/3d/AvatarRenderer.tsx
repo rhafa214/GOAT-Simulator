@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import LegacyAvatarModel from './LegacyAvatarModel';
 import AvatarGLTFModel from './AvatarGLTFModel';
-import { PlayerPortraitFallback } from './fallback/PlayerPortraitFallback';
 import { PhysicalAppearance } from '../../types';
 import { AvatarAssetManifest, AvatarModelDefinition } from '../../core/domain/avatar/types';
 import { ManifestValidator } from '../../core/domain/avatar/ManifestValidator';
@@ -16,7 +15,8 @@ interface AvatarRendererProps {
 
 function WebGLFallback({ error }: FallbackProps) {
   console.error("Avatar rendering error:", error);
-  return <PlayerPortraitFallback />;
+  // No HTML can be rendered inside Canvas. Returning a placeholder group.
+  return <group />;
 }
 
 export default function AvatarRenderer({

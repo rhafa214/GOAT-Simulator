@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import { SkeletonUtils } from 'three-stdlib';
 import { useAvatarAnimation, AvatarAnimationState } from './anim/AvatarAnimationController';
 import { PhysicalAppearance } from '../../types';
+import { useValidatedGLBUrl } from './useValidatedGLBUrl';
 
 interface AvatarGLTFModelProps {
   url: string;
@@ -22,9 +23,12 @@ export default function AvatarGLTFModel({
 }: AvatarGLTFModelProps) {
   const group = useRef<THREE.Group>(null);
   
+  // Validate and fetch the GLB securely before passing to GLTFLoader
+  const blobUrl = useValidatedGLBUrl(url);
+
   // Load the GLTF. 
   // It throws a promise which is caught by the parent <Suspense>.
-  const { scene, materials, animations } = useGLTF(url);
+  const { scene, materials, animations } = useGLTF(blobUrl);
   
   // Clone the scene and skeleton safely to avoid mutating the cached useGLTF object
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);
@@ -49,6 +53,11 @@ export default function AvatarGLTFModel({
         const mesh = child as THREE.Mesh;
         mesh.castShadow = quality === 'high';
         mesh.receiveShadow = quality === 'high';
+      }
+      if ((child as THREE.Bone).isBone) {
+        const bone = child as THREE.Bone;
+        const normalizedName = bone.name.toLowerCase().replace(/mixamorig:?/g, '');
+        // Strategy for Mixamo rigs: flexible bone mapping
         
         // Very basic stub to apply colors if materials match expected names
         // e.g. if (mesh.name === 'Body' && appearance?.skinColor) ...
