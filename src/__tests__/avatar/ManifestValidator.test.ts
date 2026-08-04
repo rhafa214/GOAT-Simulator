@@ -14,7 +14,7 @@ describe('ManifestValidator', () => {
           license: "MIT",
           author: "Author",
           source: "Source",
-          rigType: "humanoid",
+          rigType: "humanoid" as const,
           animations: ["idle"],
           materials: ["mat1"],
           meshes: ["mesh1"],
@@ -42,7 +42,7 @@ describe('ManifestValidator', () => {
           id: "model_1",
           path: "test.obj",
           license: "MIT",
-          rigType: "humanoid",
+          rigType: "humanoid" as const,
           animations: ["idle"],
           meshes: ["mesh1"],
           fileSizeKB: 1024
@@ -60,7 +60,7 @@ describe('ManifestValidator', () => {
         {
           id: "model_1",
           path: "test.glb",
-          rigType: "humanoid",
+          rigType: "humanoid" as const,
           animations: ["idle"],
           meshes: ["mesh1"],
           fileSizeKB: 1024
@@ -79,7 +79,7 @@ describe('ManifestValidator', () => {
           id: "model_1",
           path: "test.glb",
           license: "MIT",
-          rigType: "humanoid",
+          rigType: "humanoid" as const,
           meshes: ["mesh1"],
           fileSizeKB: 1024
         }
@@ -101,7 +101,7 @@ describe('ManifestValidator', () => {
       license: "MIT",
       author: "Author",
       source: "Source",
-      rigType: "humanoid",
+      rigType: "humanoid" as const,
       animations: ["idle"],
       materials: ["mat1"],
       meshes: ["mesh1"],
@@ -113,5 +113,55 @@ describe('ManifestValidator', () => {
     expect(url).toBe('/GOAT-Simulator/models/avatar/test.glb');
     
     vi.unstubAllEnvs();
+  });
+});
+
+describe('ManifestValidator - Pending Status', () => {
+  it('should allow missing fileSizeKB and meshes when status is pending', () => {
+    const pendingManifest = {
+      version: "1.0.0",
+      models: [
+        {
+          id: "model_pending",
+          path: "/models/characters/default/goat_player.glb",
+          license: "MIT",
+          rigType: "accurig",
+          animations: [],
+          status: "pending"
+        }
+      ]
+    };
+    
+    const result = ManifestValidator.validate(pendingManifest);
+    expect(result.models[0].status).toBe('pending');
+    expect(result.models[0].fileSizeKB).toBeUndefined();
+    expect(result.models[0].meshes).toEqual([]);
+  });
+
+  it('should resolve absolute path correctly with getModelUrl', () => {
+    vi.stubEnv('BASE_URL', '/GOAT-Simulator/');
+    
+    // Stub window object to test the URL resolution logic correctly
+    const originalWindow = global.window;
+    global.window = { location: { origin: 'http://localhost' } } as any;
+
+    const model = {
+      id: "model_absolute",
+      name: "Test Model",
+      path: "/models/characters/default/goat_player.glb",
+      version: "1.0.0",
+      license: "MIT",
+      author: "Author",
+      source: "Source",
+      rigType: "humanoid" as const,
+      animations: [],
+      status: "pending" as const
+    };
+    
+    const url = ManifestValidator.getModelUrl(model);
+    expect(url).toBe('/GOAT-Simulator/models/characters/default/goat_player.glb');
+    
+    vi.unstubAllEnvs();
+    global.window = originalWindow;
   });
 });

@@ -16,8 +16,24 @@ for (const asset of config.assets) {
   console.log(`\nValidating protected asset: ${asset.path}`);
   
   if (!fs.existsSync(assetPath)) {
-    console.error(`ERROR: Protected asset not found: ${assetPath}`);
-    hasError = true;
+    if (asset.pending) {
+      console.log(`WARNING: Protected asset is marked as pending and not found: ${assetPath}. Skipping validation.`);
+      continue;
+    } else {
+      console.error(`ERROR: Protected asset not found: ${assetPath}`);
+      hasError = true;
+      continue;
+    }
+  }
+
+  if (asset.pending) {
+    console.log(`WARNING: Protected asset is marked as pending but found on disk: ${assetPath}. Consider updating protected-assets.json with exact size and hash.`);
+    // Calculate and print current size and hash to help the user update the config
+    const stats = fs.statSync(assetPath);
+    console.log(`Current Size: ${stats.size} bytes`);
+    const fileBuffer = fs.readFileSync(assetPath);
+    const hash = crypto.createHash('sha256').update(fileBuffer).digest('hex');
+    console.log(`Current SHA-256: ${hash}`);
     continue;
   }
 
@@ -25,7 +41,7 @@ for (const asset of config.assets) {
   const fileSize = stats.size;
   console.log(`Size: ${fileSize} bytes`);
 
-  if (fileSize !== asset.expectedSize) {
+  if (asset.expectedSize !== null && fileSize !== asset.expectedSize) {
     console.error(`ERROR: File size mismatch! Expected ${asset.expectedSize}, got ${fileSize}`);
     hasError = true;
   }

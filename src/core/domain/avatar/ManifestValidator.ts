@@ -32,9 +32,16 @@ export class ManifestValidator {
       throw new Error(`Model path ${model.path} is not a valid GLTF/GLB file`);
     }
 
-    // Limit size check (e.g., must be informed)
-    if (typeof model.fileSizeKB !== 'number') {
-      throw new Error('Model missing fileSizeKB');
+    const status = model.status || 'unavailable';
+
+    if (status !== 'pending') {
+      // Limit size check (must be informed for non-pending models)
+      if (typeof model.fileSizeKB !== 'number') {
+        throw new Error('Model missing fileSizeKB');
+      }
+      if (!Array.isArray(model.meshes)) {
+        throw new Error('Model missing meshes list');
+      }
     }
 
     // Check animations and rig
@@ -44,10 +51,6 @@ export class ManifestValidator {
 
     if (!Array.isArray(model.animations)) {
       throw new Error('Model missing animations list');
-    }
-
-    if (!Array.isArray(model.meshes)) {
-      throw new Error('Model missing meshes list');
     }
 
     return {
@@ -61,9 +64,9 @@ export class ManifestValidator {
       rigType: model.rigType,
       animations: model.animations,
       materials: model.materials || [],
-      meshes: model.meshes,
+      meshes: model.meshes || [],
       fileSizeKB: model.fileSizeKB,
-      status: model.status || 'unavailable'
+      status: status
     };
   }
 
@@ -72,10 +75,23 @@ export class ManifestValidator {
    */
   static getModelUrl(model: AvatarModelDefinition): string {
     const baseUrl = import.meta.env.BASE_URL || '/';
-    const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
-    const cleanPath = model.path.startsWith('/') ? model.path : `/${model.path}`;
     
-    // We assume all models in manifest are relative to public/models/avatar/
+    if (model.path.startsWith('/')) {
+      // Create a URL object using the window origin
+      // so we can reliably combine BASE_URL and the path
+      try {
+        const origin = typeof window !== 'undefined' ? window.location.origin : 'http://localhost';
+        const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+        const resolved = new URL(cleanBaseUrl + model.path, origin);
+        return resolved.pathname;
+      } catch (e) {
+        return model.path;
+      }
+    }
+
+    // Otherwise, assume it is relative to public/models/avatar/
+    const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+    const cleanPath = `/${model.path}`;
     return `${cleanBaseUrl}/models/avatar${cleanPath}`;
   }
 }

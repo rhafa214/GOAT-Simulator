@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
+import { ErrorBoundary } from 'react-error-boundary';
 import LegacyAvatarModel from './LegacyAvatarModel';
 import AvatarGLTFModel from './AvatarGLTFModel';
 import { PhysicalAppearance } from '../../types';
@@ -13,12 +13,6 @@ interface AvatarRendererProps {
   quality?: 'low' | 'high';
 }
 
-function WebGLFallback({ error }: FallbackProps) {
-  console.error("Avatar rendering error:", error);
-  // No HTML can be rendered inside Canvas. Returning a placeholder group.
-  return <group />;
-}
-
 export default function AvatarRenderer({
   appearance,
   pose = 'idle',
@@ -27,7 +21,6 @@ export default function AvatarRenderer({
 }: AvatarRendererProps) {
   const [modelDef, setModelDef] = useState<AvatarModelDefinition | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     async function fetchManifest() {
@@ -39,7 +32,6 @@ export default function AvatarRenderer({
         if (!response.ok) {
           throw new Error('Manifest not found');
         }
-
         const data = await response.json();
         const manifest = ManifestValidator.validate(data);
         
@@ -53,7 +45,6 @@ export default function AvatarRenderer({
         setLoading(false);
       }
     }
-
     fetchManifest();
   }, []);
 
@@ -62,7 +53,10 @@ export default function AvatarRenderer({
   }
 
   return (
-    <ErrorBoundary FallbackComponent={WebGLFallback}>
+    <ErrorBoundary fallbackRender={({ error }) => {
+      console.error("Avatar rendering error:", error);
+      return <LegacyAvatarModel clubColor={clubColor} pose={pose} />;
+    }}>
       {modelDef ? (
         <React.Suspense fallback={<LegacyAvatarModel clubColor={clubColor} pose={pose} />}>
           <AvatarGLTFModel 
