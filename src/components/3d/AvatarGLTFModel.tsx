@@ -8,6 +8,7 @@ import {
   AvatarAnimationState,
 } from "./anim/AvatarAnimationController";
 import { PhysicalAppearance } from "../../types";
+import { useProceduralIdle } from "./anim/useProceduralIdle";
 import { useValidatedGLBUrl } from "./useValidatedGLBUrl";
 
 interface AvatarGLTFModelProps {
@@ -16,6 +17,7 @@ interface AvatarGLTFModelProps {
   pose?: AvatarAnimationState;
   clubColor?: string;
   quality?: "low" | "high";
+  idleEnabled?: boolean;
 }
 
 export default function AvatarGLTFModel({
@@ -24,6 +26,7 @@ export default function AvatarGLTFModel({
   pose = "idle",
   clubColor,
   quality = "low",
+  idleEnabled = true,
 }: AvatarGLTFModelProps) {
   const group = useRef<THREE.Group>(null);
   
@@ -36,6 +39,9 @@ export default function AvatarGLTFModel({
   
   // Hook up animations
   useAvatarAnimation(animations, group, pose);
+  
+  // Hook up procedural idle animation
+  useProceduralIdle({ scene: clone, idleEnabled: idleEnabled && pose === "idle" });
 
     // O modelo é padronizado em proporções humanas (aprox 1.8m).
   // Posicionamos rigidamente no chão (y = -1.5) para estabilidade no frame 1.
