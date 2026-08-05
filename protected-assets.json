@@ -5,9 +5,9 @@
       "path": "public/models/characters/default/goat_player.glb",
       "readOnly": true,
       "description": "GOAT Player v4 official avatar rigged with AccuRig",
-      "expectedSize": null,
-      "expectedHash": null,
-      "pending": true
+      "expectedSize": 9713384,
+      "expectedHash": "001fc097260b19893c4af2511d77ecdcd55711bf53d900be550f247fc0873330",
+      "expectedMagic": "glTF"
     }
   ]
 }

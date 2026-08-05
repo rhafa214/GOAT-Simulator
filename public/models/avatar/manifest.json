@@ -11,7 +11,14 @@
       "source": "Tripo AI + AccuRig + Blender",
       "rigType": "accurig",
       "animations": [],
-      "status": "pending"
+      "materials": [
+        "tripo_mat_2abcd2de"
+      ],
+      "meshes": [
+        "tripo_node_2abcd2de"
+      ],
+      "fileSizeKB": 9486,
+      "status": "available"
     },
     {
       "id": "goat_base_human_v2",
@@ -23,8 +30,12 @@
       "source": "Tripo AI v2.5",
       "rigType": "humanoid",
       "animations": [],
-      "materials": ["tripo_material_12e68761-f442-4e0f-aad4-3530029c882d"],
-      "meshes": ["meshes[0]"],
+      "materials": [
+        "tripo_material_12e68761-f442-4e0f-aad4-3530029c882d"
+      ],
+      "meshes": [
+        "meshes[0]"
+      ],
       "fileSizeKB": 1250,
       "status": "unavailable"
     }
