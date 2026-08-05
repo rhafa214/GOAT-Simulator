@@ -58,7 +58,7 @@ export default function AvatarRenderer({
       return <LegacyAvatarModel clubColor={clubColor} pose={pose} />;
     }}>
       {modelDef ? (
-        <React.Suspense fallback={<LegacyAvatarModel clubColor={clubColor} pose={pose} />}>
+        
           <AvatarGLTFModel 
             url={ManifestValidator.getModelUrl(modelDef)}
             appearance={appearance}
@@ -66,7 +66,7 @@ export default function AvatarRenderer({
             clubColor={clubColor}
             quality={quality}
           />
-        </React.Suspense>
+        
       ) : (
         <LegacyAvatarModel clubColor={clubColor} pose={pose} />
       )}

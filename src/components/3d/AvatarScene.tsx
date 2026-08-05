@@ -53,16 +53,17 @@ export default function AvatarScene({
             Ajustamos a câmera para y=0.5, z=5.5 e o target do OrbitControls para y=0.5 
             para focar confortavelmente no centro do corpo.
         */}
-        <PerspectiveCamera makeDefault position={[0, 0.5, 6]} fov={35} />
+        <PerspectiveCamera makeDefault position={[0, 0, 4.1]} fov={35} />
         
         <OrbitControls
+          makeDefault
           enablePan={false}
           enableZoom={true}
           minDistance={3.5}
           maxDistance={7.5}
           minPolarAngle={Math.PI / 3}
           maxPolarAngle={Math.PI / 2 + 0.05}
-          target={[0, 0.2, 0]}
+          target={[0, -0.6, 0]}
         />
         
         {/* Etapa 3 - Iluminação Reforçada */}

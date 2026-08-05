@@ -4,6 +4,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import AvatarGLTFModel from '../../components/3d/AvatarGLTFModel';
 import { useAvatarAnimation } from '../../components/3d/anim/AvatarAnimationController';
 import { useGLTF } from '@react-three/drei';
+import * as THREE from 'three';
 
 // Mock our custom validation hook
 vi.mock('../../components/3d/useValidatedGLBUrl', () => ({
@@ -31,15 +32,29 @@ vi.mock('../../components/3d/anim/AvatarAnimationController', () => ({
 // Mock three-stdlib
 vi.mock('three-stdlib', () => ({
   SkeletonUtils: {
-    clone: (scene: any) => ({
-      traverse: vi.fn()
-    })
+    clone: (scene: any) => {
+      const g = new THREE.Group();
+      g.traverse = vi.fn();
+      return g;
+    }
   }
 }));
 
 // Mock Canvas / fiber context
 vi.mock('@react-three/fiber', () => ({
-  useFrame: vi.fn(),
+  useFrame: vi.fn((callback) => callback()), // Execute the callback immediately to cover fade-in
+  useThree: vi.fn(() => ({
+     camera: {
+       type: 'PerspectiveCamera',
+       fov: 35,
+       position: { set: vi.fn() },
+       updateProjectionMatrix: vi.fn()
+     },
+     controls: {
+       target: { set: vi.fn() },
+       update: vi.fn()
+     }
+  })),
   Canvas: ({ children }: any) => <div data-testid="mock-canvas">{children}</div>
 }));
 
@@ -63,7 +78,6 @@ describe('AvatarGLTFModel', () => {
   });
 
   it('detects mixamo animation and plays correctly', () => {
-    // Override the mock to return an scene with a mixamo animation
     (useGLTF as unknown as ReturnType<typeof vi.fn>).mockImplementationOnce(() => ({
       scene: {
         children: [{ isMesh: true, name: 'mesh', isSkinnedMesh: true }],
@@ -77,13 +91,10 @@ describe('AvatarGLTFModel', () => {
     render(
       <AvatarGLTFModel url="mixamo.glb" pose="idle" />
     );
-
-    // useAvatarAnimation is called with the animations array
     expect(useAvatarAnimation).toHaveBeenCalledWith([{ name: 'mixamo.com' }], expect.anything(), 'idle');
   });
 
   it('renders a static model when no animations or skeleton are present', () => {
-    // Override the mock to return an empty scene with no animations
     (useGLTF as unknown as ReturnType<typeof vi.fn>).mockImplementationOnce(() => ({
       scene: {
         children: [{ isMesh: true, name: 'static_mesh' }],
@@ -98,14 +109,10 @@ describe('AvatarGLTFModel', () => {
       <AvatarGLTFModel url="static.glb" pose="idle" />
     );
     expect(container).toBeDefined();
-
-    // useAvatarAnimation should be called with an empty array of animations
     expect(useAvatarAnimation).toHaveBeenCalledWith([], expect.anything(), 'idle');
   });
 
   it('throws an error if GLTF load fails', () => {
-    // Because @react-three/drei hooks are meant to be run inside <Suspense> and Fiber Canvas,
-    // Testing Library throws Unhandled Error Bubbles when simulating render failing asynchronously.
     (useGLTF as unknown as ReturnType<typeof vi.fn>).mockImplementationOnce(() => {
       throw new Error('GLTF Error');
     });

@@ -24,7 +24,7 @@ export default function AvatarModel({ clubColor, pose }: AvatarModelProps) {
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
     if (group.current) {
-      group.current.position.y = Math.sin(t * 1.5) * 0.02; // Idle breathing
+      group.current.position.y = -1.5 + Math.sin(t * 1.5) * 0.02; // Idle breathing
     }
     if (headRef.current && pose === 'idle') {
       headRef.current.rotation.y = Math.sin(t * 0.5) * 0.15;

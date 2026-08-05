@@ -1,5 +1,6 @@
-import React, { useMemo, useRef, useEffect } from "react";
-import { useGLTF, Text } from "@react-three/drei";
+import React, { useMemo, useRef, useLayoutEffect } from "react";
+import { useGLTF } from "@react-three/drei";
+import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { SkeletonUtils } from "three-stdlib";
 import {
@@ -25,56 +26,82 @@ export default function AvatarGLTFModel({
   quality = "low",
 }: AvatarGLTFModelProps) {
   const group = useRef<THREE.Group>(null);
-
+  
   // Validate and fetch the GLB securely before passing to GLTFLoader
   const validatedUrl = useValidatedGLBUrl(url);
   const { scene, materials, animations } = useGLTF(validatedUrl);
-
+  
   // Clone the scene and skeleton safely to avoid mutating the cached useGLTF object
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);
-
+  
   // Hook up animations
   useAvatarAnimation(animations, group, pose);
 
-  useEffect(() => {
+    // O modelo é padronizado em proporções humanas (aprox 1.8m).
+  // Posicionamos rigidamente no chão (y = -1.5) para estabilidade no frame 1.
+  // A câmera em AvatarScene.tsx se encarregará de enquadrar os ~70% corretos,
+  // sem depender de BoundingBox flutuantes durante animações, evitando saltos de escala.
+  const yOffset = -1.5;
+
+  // Configuração inicial de materiais (opacidade 0 para transição suave)
+  useLayoutEffect(() => {
     clone.traverse((child) => {
       if ((child as THREE.Mesh).isMesh) {
         const mesh = child as THREE.Mesh;
         mesh.castShadow = true;
         mesh.receiveShadow = true;
-
-        // Etapa 4 - Melhorar materiais para tirar aspecto de plástico
         if (mesh.material) {
           const mat = mesh.material as THREE.MeshStandardMaterial;
           mat.roughness = 0.65;
           mat.metalness = 0.15;
           mat.envMapIntensity = 1.0;
+          
+          // Memoriza estado original de transparência
+          mat.userData.wasTransparent = mat.transparent;
+          
+          mat.transparent = true;
+          mat.opacity = 0;
           mat.needsUpdate = true;
         }
-      }
-      if ((child as THREE.Bone).isBone) {
-        const bone = child as THREE.Bone;
-        const normalizedName = bone.name
-          .toLowerCase()
-          .replace(/mixamorig:?/g, "");
       }
     });
   }, [clone, appearance, quality]);
 
-  // Cleanup clone when unmounted to free memory (but do NOT dispose shared geometry/material)
-  useEffect(() => {
-    return () => {};
-  }, [clone]);
+  // Fade-in discreto usando mutate direto no loop
+  const fadeRef = useRef({ val: 0 });
+  useFrame(() => {
+    if (fadeRef.current.val < 1) {
+      fadeRef.current.val = Math.min(fadeRef.current.val + 0.04, 1);
+      clone.traverse((child) => {
+        if ((child as THREE.Mesh).isMesh) {
+          const mat = (child as THREE.Mesh).material as THREE.MeshStandardMaterial;
+          if (mat) {
+            mat.opacity = fadeRef.current.val;
+            
+            // Restaura transparência original quando totalmente opaco
+            if (fadeRef.current.val >= 1 && !mat.userData.wasTransparent) {
+              mat.transparent = false;
+            }
+            // Força render sempre que atualiza a transparência
+            // mat.needsUpdate = true no useFrame pode impactar performance,
+            // mas THREE.js geralmente reage à mudança de mat.opacity e mat.transparent sem needsUpdate,
+            // exceto quando se muda transparent de true para false.
+            if (fadeRef.current.val >= 1 && !mat.userData.wasTransparent) {
+               mat.needsUpdate = true;
+            }
+          }
+        }
+      });
+    }
+  });
 
   return (
-    <group ref={group} dispose={null} scale={[2.0, 2.0, 2.0]} position={[0, -1.5, 0]}>
+    <group ref={group} dispose={null} position={[0, yOffset, 0]}>
       <primitive object={clone} />
     </group>
   );
 }
 
-// Ensure the GLTF is preloaded when this module is parsed (or handle dynamically)
-// Since url is dynamic here, we can't statically preload, but we can export a preloader helper
 export const preloadAvatarModel = (url: string) => {
   useGLTF.preload(url);
 };
