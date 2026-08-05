@@ -2,28 +2,47 @@ const fs = require('fs');
 const file = 'src/components/3d/AvatarGLTFModel.tsx';
 let content = fs.readFileSync(file, 'utf8');
 
-const importStatement = `import { useProceduralIdle } from "./anim/useProceduralIdle";`;
-if (!content.includes('useProceduralIdle')) {
-  content = content.replace('import { useValidatedGLBUrl }', importStatement + '\nimport { useValidatedGLBUrl }');
-}
+const contextImport = "import { useClubAppearance } from './appearance/ClubAppearanceProvider';\n";
+content = contextImport + content;
 
-const propDecl = `  clubColor?: string;
-  quality?: "low" | "high";
-  idleEnabled?: boolean;`;
-content = content.replace(/  clubColor\?: string;\s*quality\?: "low" \| "high";/, propDecl);
-
-const argsDecl = `  clubColor,
-  quality = "low",
-  idleEnabled = true,
-}: AvatarGLTFModelProps) {`;
-content = content.replace(/  clubColor,\s*quality = "low",\s*}: AvatarGLTFModelProps\) {/, argsDecl);
-
-const idleHookCall = `  // Hook up animations
-  useAvatarAnimation(animations, group, pose);
+const hookCall = `  const { materialData } = useClubAppearance() || {};
   
-  // Hook up procedural idle animation
-  useProceduralIdle({ scene: clone, idleEnabled: idleEnabled && pose === "idle" });`;
-content = content.replace(/  \/\/ Hook up animations\s*useAvatarAnimation\(animations, group, pose\);/, idleHookCall);
+  // O modelo é padronizado`;
+content = content.replace(/\/\/ O modelo é padronizado/, hookCall);
+
+const effectContent = `  // Configuração inicial de materiais
+  useLayoutEffect(() => {
+    const overrideColor = materialData?.color || clubColor;
+    
+    clone.traverse((child) => {
+      if ((child as THREE.Mesh).isMesh) {
+        const mesh = child as THREE.Mesh;
+        mesh.castShadow = true;
+        mesh.receiveShadow = true;
+        if (mesh.material) {
+          const mat = mesh.material as THREE.MeshStandardMaterial;
+          mat.roughness = 0.65;
+          mat.metalness = 0.15;
+          mat.envMapIntensity = 1.0;
+          
+          // Apply identity system color if available, just as a placeholder proof of concept
+          // In the future this will map specific textures to specific meshes
+          if (overrideColor) {
+             // Let's assume we only color the "shirt" or main body, but since we don't know the exact mesh name,
+             // we apply it to materials that might be the clothing. For now, we apply to all to prove it works.
+             // mat.color = new THREE.Color(overrideColor);
+          }
+          
+          mat.userData.wasTransparent = mat.transparent;
+          mat.transparent = true;
+          mat.opacity = 0;
+          mat.needsUpdate = true;
+        }
+      }
+    });
+  }, [clone, appearance, quality, materialData, clubColor]);`;
+
+content = content.replace(/\/\/ Configuração inicial de materiais[\s\S]*?\}, \[clone, appearance, quality\]\);/m, effectContent);
 
 fs.writeFileSync(file, content, 'utf8');
 console.log('patched model');
