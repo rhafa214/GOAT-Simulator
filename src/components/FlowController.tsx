@@ -1,4 +1,6 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useMemo } from 'react';
+import { usePageTitle } from '../hooks/usePageTitle';
+import { BRANDING } from '../core/constants/branding';
 import { useGamePhase, usePlayer } from '../engine/selectors';
 import { Loader2 } from 'lucide-react';
 
@@ -30,6 +32,29 @@ export default function FlowController() {
   const phase = useGamePhase();
   const player = usePlayer();
 
+  const pageTitle = useMemo(() => {
+    switch(phase) {
+      case 'MAIN_MENU': return 'Início';
+      case 'CREATION_BASIC_INFO':
+      case 'CREATION_POSITION':
+      case 'CREATION_APPEARANCE':
+      case 'CREATION_DRAFT_LENGTH':
+      case 'CREATION_ATTRIBUTES':
+      case 'CREATION_PERSONALITY':
+      case 'DRAFT_CLUB':
+        return 'Criação';
+      case 'HUB': return 'Central';
+      case 'EVENT': return 'Evento';
+      case 'MATCH': return 'Dia de Jogo';
+      case 'POST_MATCH': return 'Pós-Jogo';
+      case 'RETIREMENT': return 'Aposentadoria';
+      case 'TRANSFERS': return 'Mercado';
+      default: return '';
+    }
+  }, [phase]);
+
+  usePageTitle(pageTitle);
+
   return (
     <div className="flex-1 w-full min-h-screen flex flex-col relative overflow-hidden bg-black text-zinc-100 font-sans selection:bg-yellow-500/30">
       {/* Background ambient effect - Apple/PS5 style */}
@@ -48,8 +73,8 @@ export default function FlowController() {
               F
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold tracking-tight text-white/90">GOAT Simulator</h1>
-              <p className="text-xs text-zinc-500 font-bold uppercase tracking-wider">O Fenômeno</p>
+              <h1 className="text-xl font-bold tracking-tight text-white/90">{BRANDING.name}</h1>
+              <p className="text-xs text-zinc-500 font-bold uppercase tracking-wider">{BRANDING.slogan}</p>
             </div>
           </div>
 

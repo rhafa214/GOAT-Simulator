@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { BRANDING } from '../../core/constants/branding';
 import { useGameEngine } from '../../engine/GameEngine';
 import { SaveGameService, LocalStorageSaveRepository, SaveMetadata } from '../../core/domain/saveSystem';
 import { createInitialGameState } from '../../core/state/initialState';
@@ -207,7 +208,7 @@ export default function MainMenu() {
           GOAT SIMULATOR
         </h1>
         <p className="font-goat-body text-sm font-bold uppercase tracking-widest text-zinc-400 sm:text-base">
-          O Fenômeno — Construa seu Legado Imortal
+          {BRANDING.slogan} — Construa seu Legado Imortal
         </p>
       </div>
 
@@ -324,7 +325,7 @@ export default function MainMenu() {
 
       {/* Footer Info */}
       <footer className="relative z-10 mt-12 text-center text-xs font-semibold text-zinc-500">
-        <p>GOAT Simulator © 2026 — Todos os direitos reservados.</p>
+        <p>{BRANDING.name} © 2026 — Todos os direitos reservados.</p>
       </footer>
 
       {/* MODAL 1: SAVES MANAGER */}

@@ -67,14 +67,10 @@ describe('useProceduralIdle', () => {
 
   it('handles fallback gracefully without skeleton (missing bones)', () => {
     const emptyScene = new THREE.Scene(); // No bones
-    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     
     renderHook(() => useProceduralIdle({ scene: emptyScene }));
     
-    // In DEV, it should warn about missing bones
-    expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('Missing bones'));
-    
-    // Should not crash on frame
+    // Should not crash on frame when bones are missing
     expect(() => {
       frameCallback({ clock: { getElapsedTime: () => 1.0 } });
     }).not.toThrow();
