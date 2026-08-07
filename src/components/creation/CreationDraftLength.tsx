@@ -82,7 +82,7 @@ export default function CreationDraftLength() {
                  <div className="flex items-center gap-2 mt-1">
                     <span className="text-blue-500 text-[10px] font-bold uppercase tracking-widest">8-10 Min</span>
                     <span className="text-white/30">•</span>
-                    <span className="text-zinc-400 text-[10px] font-bold uppercase tracking-widest">20 Atributos</span>
+                    <span className="text-zinc-400 text-[10px] font-bold uppercase tracking-widest">17 Atributos</span>
                  </div>
                </div>
             </div>

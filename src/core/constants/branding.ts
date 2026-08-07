@@ -7,5 +7,9 @@ export const BRANDING = {
     primary: "#EAB308", // yellow-500
     secondary: "#f97316", // orange-500
     background: "#000000",
+  },
+  assets: {
+    shield: "/branding/goat-shield.png",
+    logoHorizontal: "/logos/goat-logo-horizontal.png",
   }
 };

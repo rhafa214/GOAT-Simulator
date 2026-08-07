@@ -79,7 +79,7 @@ export const DraftReviewModal: React.FC<DraftReviewModalProps> = ({
 
                   <div className="text-right">
                     <span className="text-2xl font-black text-amber-400 block">
-                      {selectedOpt.attributeValue}
+                      {selectedOpt.currentBonus[round.attributeId]}
                     </span>
                     {selectedOpt.dna && (
                       <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-purple-500/20 border border-purple-500/40 text-[10px] font-bold text-purple-300">

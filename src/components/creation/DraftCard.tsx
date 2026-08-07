@@ -1,3 +1,4 @@
+import { BRANDING } from '../../core/constants/branding';
 import React from 'react';
 import { motion } from 'motion/react';
 import { DraftOption } from '../../types';
@@ -42,7 +43,7 @@ export const DraftCard: React.FC<DraftCardProps> = ({
       onClick={onInspect}
       tabIndex={0}
       role="button"
-      aria-label={`Carta ${cardNumber}: ${option.name}, ${option.positionOrEra}, ${option.nationality}. ${showValue ? `${categoryName}: ${option.attributeValue}` : 'Atributo oculto'}`}
+      aria-label={`Carta ${cardNumber}: ${option.name}, ${option.positionOrEra}, ${option.nationality}. ${showValue ? `${categoryName}: ${option.currentBonus[categoryName as keyof typeof option.currentBonus]}` : 'Atributo oculto'}`}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -92,7 +93,7 @@ export const DraftCard: React.FC<DraftCardProps> = ({
               className="w-full h-full object-cover"
             />
           ) : (
-            <User className="w-10 h-10 text-zinc-400" />
+            <img src={BRANDING.assets.shield} alt="GOAT" className="w-10 h-10 object-contain opacity-60" />
           )}
         </div>
       </div>
@@ -108,7 +109,7 @@ export const DraftCard: React.FC<DraftCardProps> = ({
         </span>
         <div className="text-3xl font-black tracking-tight flex items-center justify-center gap-1">
           {showValue ? (
-            <span>{option.attributeValue}</span>
+            <span>{option.currentBonus[categoryName as keyof typeof option.currentBonus]}</span>
           ) : (
             <span className="flex items-center gap-1 text-zinc-400 animate-pulse">
               <HelpCircle size={20} />

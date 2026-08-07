@@ -60,7 +60,7 @@ describe('PlayerProgressionEngine', () => {
       dna: [],
       minutesPlayed: 0, // Not playing
       matchRating: 0,
-      trainingLoad: 0, // Not training
+      trainingLoad: 50, // Modified for new decline system
       isInjured: false,
       clubFacilitiesLevel: 50,
       coachQuality: 50

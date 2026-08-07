@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useGameEngine } from '../../engine/GameEngine';
-import { DraftEngine } from '../../core/domain/draftEngine';
+import { DraftEngine, applyDraftResultToPlayer } from '../../core/domain/draftEngine';
+import { calculatePlayerOverall } from '../../core/domain/playerUtils';
 import { DraftMode, DraftState, TechnicalStat, PlayerDNA } from '../../types';
 import { DraftCard } from './DraftCard';
 import { DraftFixedPanel } from './DraftFixedPanel';
@@ -42,16 +43,26 @@ export const DraftExperience: React.FC<DraftExperienceProps> = ({
   const currentRound = draftState.rounds[currentRoundIndex];
 
   // Selected technical stats applied so far
-  const statsApplied = useMemo(() => {
-    return draftEngine.applyToTechnicalStats(draftState);
+  const draftResult = useMemo(() => {
+    return draftEngine.getDraftResult(draftState);
   }, [draftState, draftEngine]);
 
+  const statsApplied = useMemo(() => {
+    // Current stats are base (50) + bonuses
+    const currentStats = { ...state.player.technical };
+    for (const stat of Object.keys(draftResult.current)) {
+      const ts = stat as TechnicalStat;
+      currentStats[ts] = Math.min(99, (currentStats[ts] || 50) + (draftResult.current[ts] || 0));
+    }
+    return currentStats;
+  }, [draftResult, state.player.technical]);
+
   const estimatedOvr = useMemo(() => {
-    return draftEngine.calculateEstimatedOverall(
+    return calculatePlayerOverall(
       statsApplied,
       state.player.position || 'ST'
     );
-  }, [statsApplied, state.player.position, draftEngine]);
+  }, [statsApplied, state.player.position]);
 
   // Keyboard navigation & shortcuts handler
   useEffect(() => {
@@ -129,12 +140,23 @@ export const DraftExperience: React.FC<DraftExperienceProps> = ({
 
   // Final completion handler: apply to global game state
   const handleFinalCompletion = () => {
-    const finalStats = draftEngine.applyToTechnicalStats(draftState) as Record<TechnicalStat, number>;
+    const finalResult = draftEngine.getDraftResult(draftState);
+    
+    // We construct the final object here or delegate to reducer.
+    // Since INITIALIZE_PLAYER replaces payload, we must construct it:
+    const newTechnical = { ...state.player.technical };
+    const newPotential = { ...(state.player.potential || state.player.technical) };
+    for (const stat of Object.keys(finalResult.current)) {
+      const ts = stat as TechnicalStat;
+      newTechnical[ts] = Math.min(99, (newTechnical[ts] || 50) + (finalResult.current[ts] || 0));
+      newPotential[ts] = Math.min(99, (newPotential[ts] || 50) + (finalResult.potential[ts] || 0));
+    }
 
     dispatch({
       type: 'INITIALIZE_PLAYER',
       payload: {
-        technical: finalStats,
+        technical: newTechnical,
+        potential: newPotential,
         dna: draftState.acquiredDNA
       }
     });
@@ -160,7 +182,7 @@ export const DraftExperience: React.FC<DraftExperienceProps> = ({
       <div className="w-full flex items-center justify-between p-4 bg-zinc-950/90 border-b border-zinc-800 rounded-2xl shadow-xl z-30">
         <div className="flex items-center gap-3">
           <span className="px-3 py-1 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 font-black text-xs uppercase tracking-wider">
-            Draft {mode === 'QUICK' ? 'Rápido (8)' : 'Completo (20)'}
+            Draft {mode === 'QUICK' ? 'Rápido (' + draftState.rounds.length + ')' : 'Completo (' + draftState.rounds.length + ')'}
           </span>
           <span className="text-zinc-400 font-bold text-xs hidden sm:inline">
             Rodada {currentRoundIndex + 1} de {totalRounds}
@@ -259,7 +281,7 @@ export const DraftExperience: React.FC<DraftExperienceProps> = ({
                   categoryName={currentRound.attributeId}
                   cardNumber={idx + 1}
                   isInspected={inspectedIndex === idx}
-                  isConfirmed={draftState.usedIdols.includes(option.idolId)}
+                  isConfirmed={currentRound.selectedOptionId === option.idolId}
                   visibilityMode={visibilityMode}
                   isRevealed={revealedCurrentRound && inspectedIndex === idx}
                   animationSpeed={animationSpeed}

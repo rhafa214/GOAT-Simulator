@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { useGameEngine } from './GameEngine';
 import { GameState } from '../types';
+import { calculatePlayerOverall } from '../core/domain/playerUtils';
 
 export function useGameState(): GameState {
   return useGameEngine().state;
@@ -41,10 +42,7 @@ export function useNews() {
 
 export function useOverall() {
   return useGameSelector(state => {
-    const technical = state.player.technical || {};
-    const values = Object.values(technical) as number[];
-    if (values.length === 0) return 70;
-    return Math.floor(values.reduce((a: number, b) => a + (b as number), 0) / values.length);
+    return calculatePlayerOverall(state.player.technical || {}, state.player.position);
   });
 }
 

@@ -199,7 +199,7 @@ export class LocalStorageSaveRepository implements SaveRepository {
   }
 }
 
-export const CURRENT_SCHEMA_VERSION = 2;
+export const CURRENT_SCHEMA_VERSION = 3;
 
 export class SaveGameService {
   constructor(private repository: SaveRepository) {}
@@ -407,6 +407,22 @@ export class SaveGameService {
       currentVersion = 2;
     }
 
+    if (currentVersion < 3) {
+      const player = this.isObject(dataObj.player) ? (dataObj.player as Record<string, unknown>) : {};
+      if (!this.isObject(player.potential)) {
+        if (this.isObject(player.technical)) {
+          player.potential = JSON.parse(JSON.stringify(player.technical));
+        } else {
+          player.potential = {
+            PAC: 70, SHO: 70, PAS: 70, DRI: 70, DEF: 50, PHY: 70,
+            HEA: 60, VIS: 60, WF: 3, SM: 3, CON: 70, ACC: 70, STA: 70, JUM: 60, FK: 60, PEN: 60, CRE: 60
+          };
+        }
+      }
+      dataObj.player = player;
+      currentVersion = 3;
+    }
+
     const metadata: SaveMetadata = this.isObject(file.metadata)
       ? (file.metadata as unknown as SaveMetadata)
       : {
@@ -440,6 +456,7 @@ export class SaveGameService {
     if (typeof player.name !== 'string') throw new Error('Player must have a string name');
     if (typeof player.age !== 'number') throw new Error('Player must have a numeric age');
     if (!this.isObject(player.technical)) throw new Error('Player must have technical stats object');
+    if (!this.isObject(player.potential)) throw new Error('Player must have potential stats object');
     if (!this.isObject(player.rpg)) throw new Error('Player must have rpg stats object');
     if (!this.isObject(player.relationships)) throw new Error('Player must have relationships object');
     if (!this.isObject(player.appearance)) throw new Error('Player must have appearance object');

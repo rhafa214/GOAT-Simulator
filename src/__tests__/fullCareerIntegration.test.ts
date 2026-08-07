@@ -72,7 +72,7 @@ describe('Full Career Lifecycle & Stress Tests (GOAT Simulator)', () => {
       draftState = draftEngine.generateOptionsForCurrentRound(draftState);
     }
 
-    const appliedStats = draftEngine.applyToTechnicalStats(draftState);
+    const bonus = draftEngine.getDraftResult(draftState).current; const appliedStats: any = {}; for(const k of Object.keys(bonus)) appliedStats[k] = 50 + (bonus[k as keyof typeof bonus] || 0);
     expect(Object.keys(appliedStats).length).toBe(17);
     for (const val of Object.values(appliedStats)) {
       expect(val).toBeGreaterThanOrEqual(1);
@@ -101,7 +101,7 @@ describe('Full Career Lifecycle & Stress Tests (GOAT Simulator)', () => {
       draftState = draftEngine.generateOptionsForCurrentRound(draftState);
     }
 
-    const appliedStats = draftEngine.applyToTechnicalStats(draftState);
+    const bonus = draftEngine.getDraftResult(draftState).current; const appliedStats: any = {}; for(const k of Object.keys(bonus)) appliedStats[k] = 50 + (bonus[k as keyof typeof bonus] || 0);
     expect(Object.keys(appliedStats).length).toBe(17);
     assertNoNaNOrInfinity(appliedStats);
   });

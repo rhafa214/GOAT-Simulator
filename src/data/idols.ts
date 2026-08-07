@@ -131,4 +131,85 @@ export const IDOLS: Idol[] = [
       { id: 'kaiser_libero', type: 'TRAIT', name: 'Kaiser', description: 'Líbero clássico, sai jogando', rarity: 'LEGENDARY', originId: 'beckenbauer' }
     ]
   }
+  ,
+  {
+    id: 'cruyff',
+    name: 'Johan Cruyff',
+    nationality: 'Holanda',
+    positionOrEra: 'CF - 1974',
+    baseStats: { PAC: 91, SHO: 92, PAS: 91, DRI: 94, SM: 5, WF: 4 },
+    dnaOptions: [{ id: 'cruyff_turn', type: 'TRAIT', name: 'Cruyff Turn', description: 'Giro imprevisível', rarity: 'LEGENDARY', originId: 'cruyff' }]
+  },
+  {
+    id: 'yashin',
+    name: 'Lev Yashin',
+    nationality: 'União Soviética',
+    positionOrEra: 'GK - 1960',
+    baseStats: { DEF: 95, PHY: 85, CON: 90, JUM: 95, HEA: 70 },
+    dnaOptions: [{ id: 'yashin_reflex', type: 'TRAIT', name: 'Aranha Negra', description: 'Reflexos impossíveis', rarity: 'LEGENDARY', originId: 'yashin' }]
+  },
+  {
+    id: 'xavi',
+    name: 'Xavi',
+    nationality: 'Espanha',
+    positionOrEra: 'CM - 2010',
+    baseStats: { PAC: 75, SHO: 75, PAS: 95, DRI: 90, DEF: 70, PHY: 65, VIS: 97 },
+    dnaOptions: [{ id: 'xavi_vision', type: 'TRAIT', name: 'Tiki-Taka', description: 'Passes curtos precisos', rarity: 'LEGENDARY', originId: 'xavi' }]
+  },
+  {
+    id: 'iniesta',
+    name: 'Andrés Iniesta',
+    nationality: 'Espanha',
+    positionOrEra: 'CM - 2010',
+    baseStats: { PAC: 78, SHO: 75, PAS: 94, DRI: 95, DEF: 65, PHY: 60, VIS: 96 },
+    dnaOptions: [{ id: 'iniesta_dribble', type: 'TRAIT', name: 'Ilusionista', description: 'Drible em espaços curtos', rarity: 'LEGENDARY', originId: 'iniesta' }]
+  },
+  {
+    id: 'cafu',
+    name: 'Cafu',
+    nationality: 'Brasil',
+    positionOrEra: 'RB - 2002',
+    baseStats: { PAC: 92, SHO: 70, PAS: 85, DRI: 85, DEF: 88, PHY: 85, STA: 98 },
+    dnaOptions: [{ id: 'cafu_stamina', type: 'TRAIT', name: 'Motorzinho', description: 'Vai e volta o jogo todo', rarity: 'EPIC', originId: 'cafu' }]
+  },
+  {
+    id: 'romario',
+    name: 'Romário',
+    nationality: 'Brasil',
+    positionOrEra: 'ST - 1994',
+    baseStats: { PAC: 90, SHO: 98, PAS: 80, DRI: 92, DEF: 30, PHY: 70, CON: 97 },
+    dnaOptions: [{ id: 'romario_finish', type: 'TRAIT', name: 'Gênio da Grande Área', description: 'Finalização fria', rarity: 'LEGENDARY', originId: 'romario' }]
+  },
+  {
+    id: 'rivaldo',
+    name: 'Rivaldo',
+    nationality: 'Brasil',
+    positionOrEra: 'CAM - 1999',
+    baseStats: { PAC: 85, SHO: 93, PAS: 90, DRI: 92, DEF: 40, PHY: 75, FK: 92 },
+    dnaOptions: [{ id: 'rivaldo_shot', type: 'TRAIT', name: 'Canhota Mágica', description: 'Chutes de fora da área', rarity: 'LEGENDARY', originId: 'rivaldo' }]
+  },
+  {
+    id: 'ronaldinho',
+    name: 'Ronaldinho Gaúcho',
+    nationality: 'Brasil',
+    positionOrEra: 'LW - 2005',
+    baseStats: { PAC: 91, SHO: 88, PAS: 92, DRI: 96, DEF: 40, PHY: 80, SM: 5 },
+    dnaOptions: [{ id: 'ronaldinho_smile', type: 'TRAIT', name: 'Bruxo', description: 'Dribles elásticos e fintas', rarity: 'LEGENDARY', originId: 'ronaldinho' }]
+  },
+  {
+    id: 'baggio',
+    name: 'Roberto Baggio',
+    nationality: 'Itália',
+    positionOrEra: 'CAM - 1994',
+    baseStats: { PAC: 85, SHO: 90, PAS: 90, DRI: 92, DEF: 40, PHY: 65, FK: 91 },
+    dnaOptions: [{ id: 'baggio_finesse', type: 'TRAIT', name: 'Divin Codino', description: 'Chute colocado e técnica', rarity: 'LEGENDARY', originId: 'baggio' }]
+  },
+  {
+    id: 'figo',
+    name: 'Luís Figo',
+    nationality: 'Portugal',
+    positionOrEra: 'RW - 2000',
+    baseStats: { PAC: 88, SHO: 85, PAS: 91, DRI: 92, DEF: 50, PHY: 75, CRE: 93 },
+    dnaOptions: [{ id: 'figo_cross', type: 'TRAIT', name: 'Cruzamento Letal', description: 'Assistências precisas da ponta', rarity: 'EPIC', originId: 'figo' }]
+  }
 ];

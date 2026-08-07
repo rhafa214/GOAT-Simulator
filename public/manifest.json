@@ -9,9 +9,9 @@
   "theme_color": "#EAB308",
   "icons": [
     {
-      "src": "/favicons/favicon.svg",
+      "src": "/branding/goat-shield.png",
       "sizes": "192x192 512x512",
-      "type": "image/svg+xml"
+      "type": "image/png"
     }
   ]
 }

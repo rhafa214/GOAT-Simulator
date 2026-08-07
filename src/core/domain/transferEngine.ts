@@ -1,6 +1,7 @@
 import { GameState, TransferProposal, Club, ProposalStatus, PlayerContract } from '../../types';
 import { SeededRNG } from '../../utils/rng';
 import { ALL_CLUBS } from '../../data/database';
+import { calculatePlayerOverall } from './playerUtils';
 
 export class TransferEngine {
   private rng: SeededRNG;
@@ -13,10 +14,7 @@ export class TransferEngine {
    * Calculates a player's overall rating.
    */
   public calculateOverall(state: GameState): number {
-    const technical = state.player.technical || {};
-    const values = Object.values(technical) as number[];
-    if (values.length === 0) return 70;
-    return Math.floor(values.reduce((a, b) => a + b, 0) / values.length);
+    return calculatePlayerOverall(state.player.technical || {}, state.player.position);
   }
 
   /**

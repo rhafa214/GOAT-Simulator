@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { DraftEngine } from '../core/domain/draftEngine';
-import { DraftState } from '../types';
+import { calculatePlayerOverall } from '../core/domain/playerUtils';
 
 describe('DraftEngine', () => {
   let engine: DraftEngine;
@@ -56,7 +56,7 @@ describe('DraftEngine', () => {
     state = engine.selectOption(state, firstOptionId);
 
     // After selecting, the idol should be in usedIdols
-    expect(state.usedIdols).toContain(firstOptionId);
+    expect(state.selectedIdolIds).toContain(firstOptionId);
 
     // Check next few rounds to see if it's less likely to appear. 
     // It's probabilistic, but we know weight is reduced by 90%
@@ -73,13 +73,13 @@ describe('DraftEngine', () => {
 
     expect(engine.isComplete(state)).toBe(true);
 
-    const stats = engine.applyToTechnicalStats(state);
+    const stats = engine.getDraftResult(state).current;
     
     // In QUICK mode, it should extrapolate other stats
     expect(stats.PAC).toBeDefined();
     expect(stats.ACC).toBeDefined(); // Extrapolated from PAC
 
-    const overall = engine.calculateEstimatedOverall(stats, 'ST');
+    const overall = calculatePlayerOverall(stats, 'ST');
     expect(overall).toBeGreaterThan(1);
     expect(overall).toBeLessThanOrEqual(99);
   });
@@ -103,5 +103,86 @@ describe('DraftEngine', () => {
     const nextState = newEngine.selectOption(state, state.rounds[1].options[0].idolId);
     
     expect(nextState.currentRoundIndex).toBe(2);
+  });
+});
+
+describe('DraftEngine - New Rules', () => {
+  it('should have exactly 8 rounds in QUICK mode and exactly COMPLETE_STATS length in COMPLETE mode', () => {
+    const engine = new DraftEngine(1);
+    const quickState = engine.initializeDraft('QUICK');
+    expect(quickState.rounds.length).toBe(8);
+
+    const completeState = engine.initializeDraft('COMPLETE');
+    expect(completeState.rounds.length).toBe(17); // Or COMPLETE_STATS.length
+  });
+
+  it('should not mutate original state', () => {
+    const engine = new DraftEngine(1);
+    const state = engine.initializeDraft('QUICK');
+    const originalStateStr = JSON.stringify(state);
+    
+    const nextState = engine.selectOption(state, state.rounds[0].options[0].idolId);
+    
+    expect(JSON.stringify(state)).toEqual(originalStateStr); // Unchanged
+    expect(nextState).not.toBe(state); // New object
+  });
+
+  it('should never contain duplicate options in the same round', () => {
+    const engine = new DraftEngine(42);
+    const state = engine.initializeDraft('QUICK');
+    
+    for (let i = 0; i < state.rounds[0].options.length; i++) {
+      for (let j = i + 1; j < state.rounds[0].options.length; j++) {
+        expect(state.rounds[0].options[i].idolId).not.toEqual(state.rounds[0].options[j].idolId);
+      }
+    }
+  });
+
+  it('should never show selected idols again in QUICK mode drafts simulation', () => {
+    // We simulate complete drafts
+    let passed = true;
+    for(let seed = 0; seed < 1000; seed++) {
+      const eng = new DraftEngine(seed);
+      let s = eng.initializeDraft('QUICK');
+      while (!eng.isComplete(s)) {
+        const round = s.rounds[s.currentRoundIndex];
+        const selectedIdol = round.options[0].idolId;
+        
+        // Ensure none of the options are already in selectedIdolIds
+        for (const opt of round.options) {
+           if (s.selectedIdolIds.includes(opt.idolId)) {
+             passed = false;
+             break;
+           }
+        }
+        if (!passed) break;
+
+        s = eng.selectOption(s, selectedIdol);
+      }
+      if (!passed) break;
+    }
+    expect(passed).toBe(true);
+  });
+
+  it('Current and Potential are different, and Potential is not used in current overall', () => {
+    const engine = new DraftEngine(42);
+    let state = engine.initializeDraft('QUICK');
+    while (!engine.isComplete(state)) {
+      state = engine.selectOption(state, state.rounds[state.currentRoundIndex].options[0].idolId);
+    }
+    const result = engine.getDraftResult(state);
+    
+    // Test they are different objects
+    expect(result.current).not.toBe(result.potential);
+    
+    // Usually potential is higher
+    let potentialHigher = false;
+    for (const k of Object.keys(result.current)) {
+      if ((result.potential[k as keyof typeof result.potential] || 0) > (result.current[k as keyof typeof result.current] || 0)) {
+        potentialHigher = true;
+        break;
+      }
+    }
+    expect(potentialHigher).toBe(true);
   });
 });

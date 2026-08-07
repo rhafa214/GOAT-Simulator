@@ -68,6 +68,7 @@ export function createInitialGameState(options?: Partial<GameState>): GameState 
       personality: '',
       appearance: { ...DEFAULT_APPEARANCE },
       technical: { ...DEFAULT_TECHNICAL_ATTRIBUTES },
+      potential: { ...DEFAULT_TECHNICAL_ATTRIBUTES },
       rpg: { ...DEFAULT_RPG_STATS },
       relationships: { ...DEFAULT_RELATIONSHIPS },
     },

@@ -177,7 +177,7 @@ export function advanceWeekLogic(state: GameState): GameState {
 
     // --- Progression Engine ---
     if (!newPlayer.progression) {
-      newPlayer.progression = PlayerProgressionEngine.initializeProgression(rng, 80 + Math.floor(avgTechnical / 5));
+      newPlayer.progression = PlayerProgressionEngine.initializeProgression(rng, Math.min(99, 80 + Math.floor(avgTechnical / 5) + rng.integer(-5, 5)));
     }
 
     const plan = newPlayer.trainingPlan || { focus: 'GENERAL', intensity: 'MEDIUM' };
@@ -238,7 +238,8 @@ export function advanceWeekLogic(state: GameState): GameState {
       injurySeverity: (matchLog && matchLog.injured) ? rng.integer(1, 100) : trainingInjurySeverity,
 
       clubFacilitiesLevel: state.career.currentClub ? (6 - state.career.currentClub.tier) * 20 : 50,
-      coachQuality: state.career.currentClub ? (6 - state.career.currentClub.tier) * 20 : 50
+      coachQuality: state.career.currentClub ? (6 - state.career.currentClub.tier) * 20 : 50,
+      potentialStats: newPlayer.potential
     };
 
     const progResult = PlayerProgressionEngine.processWeek(
@@ -260,7 +261,7 @@ export function advanceWeekLogic(state: GameState): GameState {
     // --- Progression Engine (No Match) ---
     if (!newPlayer.progression) {
        const avgTechnical = Object.values(state.player.technical).reduce((a, b) => a + b, 0) / 17;
-       newPlayer.progression = PlayerProgressionEngine.initializeProgression(rng, 80 + Math.floor(avgTechnical / 5));
+       newPlayer.progression = PlayerProgressionEngine.initializeProgression(rng, Math.min(99, 80 + Math.floor(avgTechnical / 5) + rng.integer(-5, 5)));
     }
 
     const plan = newPlayer.trainingPlan || { focus: 'GENERAL', intensity: 'MEDIUM' };
@@ -320,7 +321,8 @@ export function advanceWeekLogic(state: GameState): GameState {
       injurySeverity: trainingInjurySeverity,
 
       clubFacilitiesLevel: state.career.currentClub ? (6 - state.career.currentClub.tier) * 20 : 50,
-      coachQuality: state.career.currentClub ? (6 - state.career.currentClub.tier) * 20 : 50
+      coachQuality: state.career.currentClub ? (6 - state.career.currentClub.tier) * 20 : 50,
+      potentialStats: newPlayer.potential
     };
     const progResult = PlayerProgressionEngine.processWeek(
       newPlayer.technical,

@@ -69,8 +69,8 @@ export default function FlowController() {
       {phase !== 'HUB' && (
         <header className="p-4 md:p-6 flex items-center justify-between bg-black/40 backdrop-blur-3xl border-b border-white/5 sticky top-0 z-50 transition-all duration-500">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-yellow-500 to-orange-500 flex items-center justify-center text-black font-black text-xl shadow-[0_0_20px_rgba(234,179,8,0.2)]">
-              F
+            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-black/40 border border-white/5 shadow-[0_0_20px_rgba(234,179,8,0.15)] overflow-hidden">
+              <img src={BRANDING.assets.shield} alt="Escudo GOAT" className="w-full h-full object-contain p-1" />
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold tracking-tight text-white/90">{BRANDING.name}</h1>

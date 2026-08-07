@@ -1,3 +1,4 @@
+import { BRANDING } from '../../core/constants/branding';
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import { PlayerAttributes } from '../../types';
 import { useGameEngine } from '../../engine/GameEngine';
@@ -54,10 +55,7 @@ export function PlayerPortraitFallback({ clubColor, onRetry }: { clubColor: stri
     <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900 border border-zinc-800 rounded-3xl p-6 text-center gap-4" data-testid="player-portrait-fallback">
       {/* Visual representation of 2D/Silhouette */}
       <div className="w-24 h-24 rounded-full bg-zinc-800 border-2 flex items-center justify-center relative overflow-hidden" style={{ borderColor: clubColor }} data-testid="avatar-fallback-silhouette">
-        {/* Silhouette SVG */}
-        <svg className="w-16 h-16 text-zinc-500 mt-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-        </svg>
+        <img src={BRANDING.assets.shield} alt="GOAT" className="w-12 h-12 object-contain opacity-50" />
       </div>
       <div>
         <h4 className="text-sm font-bold text-zinc-200">Visualização 3D Indisponível</h4>

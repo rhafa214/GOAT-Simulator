@@ -96,6 +96,7 @@ export interface PlayerAttributes {
   trainingPlan?: TrainingPlan;
   dna?: PlayerDNA[];
   technical: Record<TechnicalStat, number>;
+  potential?: Record<TechnicalStat, number>;
   rpg: Record<RPGStat, number>;
   relationships: Record<RelationshipTarget, number>;
   age: number;
@@ -260,13 +261,17 @@ export interface TransferState {
 
 export type DraftMode = 'QUICK' | 'COMPLETE';
 
+export type CardRarity = 'COMMON' | 'RARE' | 'EPIC' | 'LEGEND' | 'GOAT';
+
 export interface DraftOption {
   idolId: string;
   name: string;
   nationality: string;
   positionOrEra: string;
   photoUrl?: string;
-  attributeValue: number;
+  currentBonus: Partial<Record<TechnicalStat, number>>;
+  potentialBonus: Partial<Record<TechnicalStat, number>>;
+  rarity: CardRarity;
   dna?: PlayerDNA;
 }
 
@@ -282,7 +287,8 @@ export interface DraftState {
   currentRoundIndex: number;
   rounds: DraftRound[];
   acquiredDNA: PlayerDNA[];
-  usedIdols: string[]; // Track to avoid duplication
+  seenIdolIds: string[];
+  selectedIdolIds: string[];
 }
 
 export interface GameState {
@@ -387,12 +393,15 @@ export type GameAction =
 
 import { Competition, CompetitionFixture, TeamStanding } from './core/domain/competition';
 
+export type GrowthProfile = 'Late Bloomer' | 'Wonderkid' | 'Consistent' | 'Explosive' | 'Late Peak' | 'Injury Prone' | 'High Discipline' | 'Low Discipline';
+
 export interface ProgressionState {
   developmentPoints: Partial<Record<TechnicalStat, number>>;
   temporaryForm: number; // -10 to 10
   potential: number; // 1-99
   consistency: number; // 1-20
-  growthCurve: 'EARLY_PEAK' | 'NORMAL' | 'LATE_BLOOMER';
+  growthProfile: GrowthProfile;
+  growthCurve?: 'EARLY_PEAK' | 'NORMAL' | 'LATE_BLOOMER';
   peakAge: number;
   declineAge: number;
   milestones: string[];

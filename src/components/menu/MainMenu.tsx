@@ -198,14 +198,30 @@ export default function MainMenu() {
       </div>
 
       {/* Main Brand Title & Slogan */}
-      <div className="relative z-10 mb-8 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-amber-400 mb-3">
+      <div className="relative z-10 mb-4 text-center flex flex-col items-center justify-center">
+        <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-amber-400 mb-2">
           <Sparkles className="h-3.5 w-3.5" />
           <span>Simulador Oficial de Carreira</span>
         </div>
 
-        <h1 className="font-goat-display text-5xl font-black uppercase tracking-wider text-amber-400 goat-gold-text-glow sm:text-7xl md:text-8xl">
-          GOAT SIMULATOR
+        {BRANDING.assets.logoHorizontal ? (
+          <img 
+            src={BRANDING.assets.logoHorizontal} 
+            alt={BRANDING.name} 
+            className="w-full max-w-[80%] sm:max-w-[420px] md:max-w-[520px] h-auto object-contain mx-auto mb-2"
+            onError={(e) => {
+              (e.target as HTMLImageElement).style.display = 'none';
+              const textFallback = document.getElementById('logo-fallback');
+              if (textFallback) textFallback.style.display = 'block';
+            }}
+          />
+        ) : null}
+        <h1 
+          id="logo-fallback" 
+          className="font-goat-display text-4xl font-black uppercase tracking-wider text-amber-400 goat-gold-text-glow sm:text-6xl md:text-7xl mb-2 mx-auto"
+          style={{ display: BRANDING.assets.logoHorizontal ? 'none' : 'block' }}
+        >
+          {BRANDING.name}
         </h1>
         <p className="font-goat-body text-sm font-bold uppercase tracking-widest text-zinc-400 sm:text-base">
           {BRANDING.slogan} — Construa seu Legado Imortal
@@ -214,7 +230,7 @@ export default function MainMenu() {
 
       {/* Dismissible Error Banner */}
       {error && (
-        <div className="relative z-10 mb-6 w-full animate-in fade-in slide-in-from-top-2">
+        <div className="relative z-10 mb-4 w-full animate-in fade-in slide-in-from-top-2">
           <GoatCard variant="defeat" className="flex items-start justify-between gap-3 p-4">
             <div className="flex items-center gap-3">
               <AlertCircle className="h-5 w-5 shrink-0 text-rose-400" />
@@ -362,7 +378,7 @@ export default function MainMenu() {
           </div>
         ) : saves.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 text-center text-zinc-500">
-            <User className="h-12 w-12 text-zinc-700 mb-3" />
+            <User className="h-12 w-12 text-zinc-700 mb-2" />
             <p className="font-bold text-zinc-300">Nenhum save localizado</p>
             <p className="text-xs text-zinc-500 max-w-sm mt-1">
               Inicie uma nova carreira para registrar o seu progresso no simulador.
